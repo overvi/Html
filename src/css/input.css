@@ -1,0 +1,64 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bulma-block-spacing: 0;
+  --bulma-primary-h: 68deg;
+  --bulma-primary-s: 19%;
+  --bulma-primary-l: 55%;
+  --bulma-link-h: 66deg;
+  --bulma-text: black;
+  --bulma-link-s: 22%;
+}
+
+[data-theme="dark"] {
+  --bulma-text: white;
+}
+
+.input {
+  --bulma-input-h: 57;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Light.woff2);
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Bold.woff2);
+    font-style: normal;
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Medium.woff2);
+    font-style: normal;
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Regular.woff2);
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Fat.woff2);
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  body {
+    @apply bg-gray-100 dark:bg-gray-950;
+    font-family: "Yekan", "sens-serif";
+  }
+}
+
+.popover-triangle::before {
+  clip-path: polygon(49% 32%, 0% 100%, 100% 100%);
+}

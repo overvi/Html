@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "apexcharts": "^3.51.0",
+    "i18next": "^23.12.2",
+    "vanilla-i18n": "^1.0.8"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  }
+}
