@@ -638,44 +638,20 @@ body {
   bottom: 0px;
 }
 
-.left-10{
-  left: 2.5rem;
+.left-0{
+  left: 0px;
 }
 
-.left-5{
-  left: 1.25rem;
+.left-10{
+  left: 2.5rem;
 }
 
 .top-0{
   top: 0px;
 }
 
-.top-11{
-  top: 2.75rem;
-}
-
-.left-0{
-  left: 0px;
-}
-
-.left-2{
-  left: 0.5rem;
-}
-
-.top-4{
-  top: 1rem;
-}
-
-.top-12{
-  top: 3rem;
-}
-
 .top-14{
   top: 3.5rem;
-}
-
-.right-0{
-  right: 0px;
 }
 
 .z-0{
@@ -748,12 +724,12 @@ body {
   margin-top: 1.25rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
-}
-
 .mt-9{
   margin-top: 2.25rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .block{
@@ -797,6 +773,10 @@ body {
   min-height: 540px;
 }
 
+.w-\[24rem\]{
+  width: 24rem;
+}
+
 .w-\[25rem\]{
   width: 25rem;
 }
@@ -820,10 +800,6 @@ body {
 
 .w-full{
   width: 100%;
-}
-
-.w-\[24rem\]{
-  width: 24rem;
 }
 
 .max-w-full{
@@ -888,12 +864,12 @@ body {
   gap: 1.5rem;
 }
 
-.gap-9{
-  gap: 2.25rem;
-}
-
 .gap-7{
   gap: 1.75rem;
+}
+
+.gap-9{
+  gap: 2.25rem;
 }
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -968,6 +944,11 @@ body {
   background-color: rgb(249 178 51 / var(--tw-bg-opacity));
 }
 
+.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .bg-green-600{
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
@@ -983,9 +964,14 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-50{
+.bg-gray-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -1026,8 +1012,8 @@ body {
   padding: 1.25rem;
 }
 
-.p-6{
-  padding: 1.5rem;
+.p-\[\.3rem\]{
+  padding: .3rem;
 }
 
 .px-3{
@@ -1043,6 +1029,16 @@ body {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-\[\.3rem\]{
+  padding-top: .3rem;
+  padding-bottom: .3rem;
 }
 
 .\!pb-10{
@@ -1063,10 +1059,6 @@ body {
 
 .pr-3{
   padding-right: 0.75rem;
-}
-
-.text-left{
-  text-align: left;
 }
 
 .text-center{
@@ -1120,6 +1112,16 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1129,6 +1131,12 @@ body {
 .shadow-none{
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1143,12 +1151,12 @@ body {
   transition-duration: 150ms;
 }
 
-.duration-700{
-  transition-duration: 700ms;
-}
-
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-700{
+  transition-duration: 700ms;
 }
 
 :root {
@@ -1182,74 +1190,14 @@ body {
   position: absolute;
 }
 
+.before\:-bottom-3::before{
+  content: var(--tw-content);
+  bottom: -0.75rem;
+}
+
 .before\:-top-\[2\.3rem\]::before{
   content: var(--tw-content);
   top: -2.3rem;
-}
-
-.before\:left-\[4\.2rem\]::before{
-  content: var(--tw-content);
-  left: 4.2rem;
-}
-
-.before\:left-0::before{
-  content: var(--tw-content);
-  left: 0px;
-}
-
-.before\:top-9::before{
-  content: var(--tw-content);
-  top: 2.25rem;
-}
-
-.before\:bottom-14::before{
-  content: var(--tw-content);
-  bottom: 3.5rem;
-}
-
-.before\:bottom-12::before{
-  content: var(--tw-content);
-  bottom: 3rem;
-}
-
-.before\:bottom-8::before{
-  content: var(--tw-content);
-  bottom: 2rem;
-}
-
-.before\:bottom-6::before{
-  content: var(--tw-content);
-  bottom: 1.5rem;
-}
-
-.before\:bottom-4::before{
-  content: var(--tw-content);
-  bottom: 1rem;
-}
-
-.before\:bottom-2::before{
-  content: var(--tw-content);
-  bottom: 0.5rem;
-}
-
-.before\:bottom-1::before{
-  content: var(--tw-content);
-  bottom: 0.25rem;
-}
-
-.before\:bottom-0::before{
-  content: var(--tw-content);
-  bottom: 0px;
-}
-
-.before\:-bottom-2::before{
-  content: var(--tw-content);
-  bottom: -0.5rem;
-}
-
-.before\:right-2::before{
-  content: var(--tw-content);
-  right: 0.5rem;
 }
 
 .before\:left-2::before{
@@ -1257,9 +1205,9 @@ body {
   left: 0.5rem;
 }
 
-.before\:-bottom-3::before{
+.before\:left-\[4\.2rem\]::before{
   content: var(--tw-content);
-  bottom: -0.75rem;
+  left: 4.2rem;
 }
 
 .before\:block::before{
@@ -1288,32 +1236,38 @@ body {
   border-radius: 9999px;
 }
 
-.before\:bg-red-600::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .before\:bg-white::before{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.ltr\:left-0:where([dir="ltr"], [dir="ltr"] *){
-  left: 0px;
+.before\:content-none::before{
+  --tw-content: none;
+  content: var(--tw-content);
 }
 
-.ltr\:right-\[unset\]:where([dir="ltr"], [dir="ltr"] *){
-  right: unset;
+.peer:checked ~ .peer-checked\:bg-red-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
 
-.ltr\:right-0:where([dir="ltr"], [dir="ltr"] *){
-  right: 0px;
+.peer:checked ~ .peer-checked\:bg-orange-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 178 51 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .ltr\:left-\[unset\]:where([dir="ltr"], [dir="ltr"] *){
   left: unset;
+}
+
+.ltr\:right-0:where([dir="ltr"], [dir="ltr"] *){
+  right: 0px;
 }
 
 .ltr\:ml-0:where([dir="ltr"], [dir="ltr"] *){
