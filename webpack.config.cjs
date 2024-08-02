@@ -6,6 +6,7 @@ module.exports = {
     home: "./src/ts/home.ts",
     main: "./src/ts/main.ts",
     sidebar: "./src/ts/sidebar.ts",
+    datacenter: "./src/ts/datacenter.ts",
   },
   devtool: "source-map",
 

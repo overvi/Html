@@ -58,21 +58,18 @@
     font-family: "Yekan", "sens-serif";
   }
 
-  
-
   .radio {
-    @apply  after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-orange-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2
+    @apply after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-orange-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2;
   }
-}
 
-.popover-triangle::before {
-  clip-path: polygon(49% 32%, 0% 100%, 100% 100%);
-}
+  .popover-triangle::before {
+    @apply [clip-path:polygon(49%_32%,0%_100%,100%_100%)];
+  }
 
-.radio-hidden:checked + .radio::after {
-  opacity: 1;
-}
-.radio-hidden:checked + .radio {
-  border: 0;
- 
+  .radio-hidden:checked + .radio::after {
+    @apply opacity-100;
+  }
+  .radio-hidden:checked + .radio {
+    @apply border-0;
+  }
 }

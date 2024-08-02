@@ -222,5 +222,10 @@
   "operator": "اپراتور",
   "saved": " ذخیره شد",
   "showMorePrices": "مشاهده قیمت های بیشتر",
-  "rooms": "اتاق ها"
+  "rooms": "اتاق ها",
+  "yearReservations": "آمار رزرو سالیانه",
+  "previousReservationDays": "روزهای رزرو قبلی",
+  "destinationReservationPercentage": "درصد رزرو مقصد",
+  "hotelInformationWithConfirmedOrder": "اطلاعات هتل با سفارش تایید شده",
+  "rankingOfBestsellingHotelsInMangotels": "رتبه بندی هتل های پرفروش منگوتلز"
 }

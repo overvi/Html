@@ -17,7 +17,7 @@
     <script src="/src/components/nav.js"></script>
     <link rel="stylesheet" href="/dist/css/output.css" />
 
-    <title>Messages</title>
+    <title>Voucher</title>
   </head>
   <body>
     <main>
@@ -217,168 +217,181 @@
             >
               <path
                 d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
-                stroke="black"
+                stroke="gray"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
                 d="M9 13.4924V11.2424"
-                stroke="black"
+                stroke="gray"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
 
-            <p data-i18n="nav"></p>
-            <p>/</p>
-            <p data-i18n="messages"></p>
+            <p class="text-gray-400" data-i18n="nav"></p>
+            <p class="text-gray-400">/</p>
+            <p class="text-gray-400" data-i18n="users"></p>
+            <p class="text-gray-400">/</p>
+            <p data-i18n="voucherSettings"></p>
           </div>
-          <div
-            class="bg-white mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
-            <h1 class="font-bold text-xl" data-i18n="type"></h1>
-            <div class="flex items-center gap-4 mt-4">
-              <div class="select is-rounded">
-                <select defaultValue="1" id="adult" style="width: 12rem">
-                  <option value="1">همه</option>
-                  <option value="2">With options</option>
-                </select>
-              </div>
-              <button
-                class="p-2 flex items-center gap-2 text-white bg-green-600 rounded-full"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.4"
-                    d="M11.0095 20.02C15.9856 20.02 20.0195 15.9861 20.0195 11.01C20.0195 6.03391 15.9856 2 11.0095 2C6.03343 2 1.99951 6.03391 1.99951 11.01C1.99951 15.9861 6.03343 20.02 11.0095 20.02Z"
-                    fill="white"
+          <div class="flex gap-10 *:basis-full">
+            <div
+              class="bg-white mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            >
+              <h1 class="font-bold text-xl" data-i18n="voucherSettings"></h1>
+              <form action="" class="space-y-5 my-3">
+                <div>
+                  <label for="" data-i18n="companyName"></label>
+                  <input
+                    data-i18n="[placeholder]companyName"
+                    class="input is-rounded"
+                    type="text"
+                    placeholder="Rounded input"
                   />
-                  <path
-                    d="M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z"
-                    fill="white"
+                </div>
+                <div>
+                  <label for="" data-i18n="phoneNumber"></label>
+                  <input
+                    data-i18n="[placeholder]phoneNumber"
+                    class="input is-rounded"
+                    type="text"
+                    placeholder="Rounded input"
                   />
-                </svg>
-                <p data-i18n="search"></p>
-              </button>
-            </div>
-            <div class="mt-6">
-              <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-950 rounded-b-3xl"
-              >
-                <table class="w-full font-semibold">
-                  <thead class="bg-gray-50 dark:bg-gray-950">
-                    <tr>
-                      <th
-                        class="p-3 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
-                        data-i18n="notification"
-                      ></th>
-                      <th class="p-3" data-i18n="date">تاریخ</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="">
-                      <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
-                      >
-                        <div class="flex items-center gap-2">
-                          <input
-                            type="radio"
-                            id="option4"
-                            name="options"
-                            class="hidden radio-hidden"
-                          />
-                          <label for="option4" class="radio mb-1"></label>
-                          <label for="option4"> تایید هتل در تاریخ</label>
-                        </div>
-                      </td>
-                      <td class="p-4">1403/5/4</td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
-                      >
-                        <div class="flex items-center gap-2">
-                          <input
-                            type="radio"
-                            name="options"
-                            id="option1"
-                            class="hidden radio-hidden"
-                          />
-                          <label for="option1" class="radio mb-1"></label>
-                          <label for="option1">
-                            test testt testttt tesssst tesssssssttttt</label
-                          >
-                        </div>
-                      </td>
-                      <td class="p-4">1403/5/4</td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
-                      >
-                        <div class="flex items-center gap-2">
-                          <input
-                            type="radio"
-                            id="option2"
-                            name="options"
-                            class="hidden radio-hidden"
-                          />
-                          <label for="option2" class="radio mb-1"></label>
-                          <label for="option2">
-                            test testt testttt tesssst tesssssssttttt</label
-                          >
-                        </div>
-                      </td>
-                      <td class="p-4">1403/5/4</td>
-                    </tr>
-                  </tbody>
-                  <tfoot
-                    class="bg-white border-t dark:border-gray-950 dark:bg-gray-950"
+                </div>
+                <div>
+                  <label for="" data-i18n="email"></label>
+                  <input
+                    data-i18n="[placeholder]email"
+                    class="input is-rounded"
+                    type="text"
+                    placeholder="Rounded input"
+                  />
+                </div>
+                <div>
+                  <label for="" data-i18n="address"></label>
+                  <input
+                    data-i18n="[placeholder]address"
+                    class="input is-rounded"
+                    type="text"
+                    placeholder="Rounded input"
+                  />
+                </div>
+                <div class="flex gap-[.5rem]">
+                  <p data-i18n="status"></p>
+                  :
+                  <div dir="ltr" class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      id="active"
+                      name="status"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="active" class="radio mb-1"></label>
+                    <label for="active" data-i18n="active"> </label>
+                  </div>
+                  <div dir="ltr" class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      id="inactive"
+                      name="status"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="inactive" class="radio mb-1"></label>
+                    <label for="inactive" data-i18n="deactive"> </label>
+                  </div>
+                </div>
+                <div>
+                  <h1 data-i18n="logo" class="font-bold text-xl"></h1>
+
+                  <div
+                    class="mt-3 text-sm border-gray-300 p-4 rounded-3xl border"
                   >
-                    <tr>
-                      <td colspan="5" class="p-4">
-                        <div class="flex gap-3 items-center">
-                          <div class="flex items-center gap-2">
-                            <input
-                              type="radio"
-                              id="option3"
-                              class="hidden radio-hidden"
-                              name="options"
+                    <div class="flex items-center gap-4">
+                      <input
+                        type="file"
+                        id="file-upload"
+                        class="mt-3 hidden"
+                        name="photo"
+                      />
+                      <label for="file-upload">
+                        <div
+                          class="outline-dashed outline-[2px] p-5 rounded-xl outline-gray-200"
+                        >
+                          <svg
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.5015 27H40.5015"
+                              stroke="#767676"
+                              stroke-width="1.88358"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
                             />
-                            <label for="option3" class="radio mb-1"></label>
-                            <label for="option3" data-i18n="selectMessages"
-                              >انتخاب همه اعلانات</label
-                            >
-                          </div>
-                          <div class="flex gap-3 items-center">
-                            <button
-                              data-i18n="remove"
-                              class="button hover:bg-red-500 hover:text-white is-small is-danger is-outlined rounded-full"
-                            >
-                              حذف
-                            </button>
-                            <button
-                              data-i18n="read"
-                              class="button hover:bg-orange-400 hover:!text-white !text-red-500 is-small is-warning is-outlined rounded-full"
-                            ></button
-                            ><button
-                              data-i18n="unread"
-                              class="button hover:bg-orange-400 hover:!text-white !text-red-500 is-small is-warning is-outlined rounded-full"
-                            >
-                              خوانده نشده
-                            </button>
-                          </div>
+                            <path
+                              d="M27.0015 40.5V13.5"
+                              stroke="#767676"
+                              stroke-width="1.88358"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg></div
+                      ></label>
+
+                      <div>
+                        <p class="text-sm">
+                          Supports .png and .jpg. Max size 2M.
+                        </p>
+                        <div
+                          class="rounded-full flex items-center border border-solid gap-2 p-2 px-4 w-fit font-yekan mt-3 text-orange-400 border-orange-400"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.4"
+                              d="M12 21.9995C17.5228 21.9995 22 17.5224 22 11.9995C22 6.47666 17.5228 1.99951 12 1.99951C6.47715 1.99951 2 6.47666 2 11.9995C2 17.5224 6.47715 21.9995 12 21.9995Z"
+                              fill="#F9B233"
+                            />
+                            <path
+                              d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
+                              fill="#F9B233"
+                            />
+                          </svg>
+                          <button data-i18n="uploadPhoto"></button>
                         </div>
-                      </td>
-                    </tr>
-                  </tfoot>
-                </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      data-i18n="save"
+                      class="mt-4 bg-green-500 border-0 text-white rounded-full font-yekan px-6 py-2"
+                    ></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div
+              class="bg-white mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            >
+              <h1 class="font-bold text-xl" data-i18n="voucherSettings"></h1>
+              <div
+                className="bg-white shadow-2xl mt-3 min-h-[44rem] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5"
+              >
+                <div>
+                  <div className=" rounded-3xl shadow-xl">
+                    <img src="../public/assets/images/voucher.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

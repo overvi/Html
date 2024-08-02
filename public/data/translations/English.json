@@ -218,5 +218,10 @@
   "operator": "Operator",
   "saved": "Saved",
   "showMorePrices": "Show More Prices",
-  "rooms": "Rooms"
+  "rooms": "Rooms",
+  "yearReservations": "Year Reservation Details",
+  "previousReservationDays": "Previous Reservation Days",
+  "destinationReservationPercentage": "Destination Reservation Percentage",
+  "hotelInformationWithConfirmedOrder": "Hotel Information With Confirmed Order",
+  "rankingOfBestsellingHotelsInMangotels": "Ranking Of Best Selling Hotels In Mangotels"
 }
