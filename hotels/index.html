@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en, ir" />
+    <meta name="description" content="Mangootels" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief description of your website."
+    />
+    <meta property="og:image" content="URL to your image" />
+
+    <script defer src="/dist/sidebar.bundle.js"></script>
+    <script defer src="/dist/main.bundle.js"></script>
+    <script defer src="/dist/hotels.bundle.js"></script>
+    <script src="/src/components/nav.js"></script>
+    <link rel="stylesheet" href="/dist/css/output.css" />
+    <style>
+      #map {
+        width: 100%;
+        height: 353px;
+        border-radius: 24px;
+      }
+    </style>
+    <title>Hotels</title>
+  </head>
+  <body>
+    <main>
+      <nav-bar></nav-bar>
+      <div class="flex gap-9">
+        <div class="me-16 ltr:mr-16">
+          <div
+            class="bg-white mx-3 dark:bg-gray-900 mb-3 rounded-full p-2 w-fit min-h-[540px] h-fit fixed flex justify-center items-center"
+          >
+            <div class="space-y-10 flex flex-col items-center">
+              <a
+                href="/"
+                class="bg-orange-400 w-[38px] p-2 rounded-full h-auto"
+              >
+                <svg
+                  class="max-w-full *:!fill-[#767676]"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="#767676"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M17.5117 17.2084V25.6551L3.51168 25.6784V17.2084L3.5 15.4584V8.24842C3.5 7.46675 3.89668 6.74338 4.53835 6.31171L9.20502 3.19673C9.98668 2.67173 11.0133 2.67173 11.795 3.19673L16.4616 6.31171C17.115 6.74338 17.5 7.46675 17.5 8.24842V15.4584L17.5117 17.2084Z"
+                  />
+                  <path
+                    d="M25.6668 24.7916H24.1851V21.2916C25.2935 20.93 26.0985 19.8916 26.0985 18.6666V16.3333C26.0985 14.805 24.8502 13.5566 23.3218 13.5566C21.7935 13.5566 20.5451 14.805 20.5451 16.3333V18.6666C20.5451 19.88 21.3385 20.9066 22.4235 21.28V24.7916H2.3335C1.85516 24.7916 1.4585 25.1883 1.4585 25.6666C1.4585 26.145 1.85516 26.5416 2.3335 26.5416H23.2518C23.2752 26.5416 23.2868 26.5533 23.3101 26.5533C23.3335 26.5533 23.3452 26.5416 23.3685 26.5416H25.6668C26.1452 26.5416 26.5418 26.145 26.5418 25.6666C26.5418 25.1883 26.1452 24.7916 25.6668 24.7916Z"
+                  />
+                  <path
+                    d="M17.5117 17.2083H3.51168L3.5 15.4583H17.5L17.5117 17.2083Z"
+                  />
+                  <path
+                    d="M10.5 26.5417C10.0217 26.5417 9.625 26.1451 9.625 25.6667V21.2917C9.625 20.8134 10.0217 20.4167 10.5 20.4167C10.9783 20.4167 11.375 20.8134 11.375 21.2917V25.6667C11.375 26.1451 10.9783 26.5417 10.5 26.5417Z"
+                  />
+                  <path
+                    d="M10.5002 12.5416C11.6277 12.5416 12.5418 11.6275 12.5418 10.4999C12.5418 9.37234 11.6277 8.45825 10.5002 8.45825C9.37258 8.45825 8.4585 9.37234 8.4585 10.4999C8.4585 11.6275 9.37258 12.5416 10.5002 12.5416Z"
+                  />
+                </svg>
+              </a>
+              <a href="/booking">
+                <svg
+                  class="max-w-full h-auto !active && *:!fill-[#767676]"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M25.6667 9.11159V9.91658H10.5V2.33325H18.8883C23.135 2.33325 25.6667 4.86492 25.6667 9.11159Z"
+                    fill="#767676"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M25.6667 18.0835V18.8885C25.6667 23.1352 23.135 25.6668 18.8883 25.6668H10.5V18.0835H25.6667Z"
+                    fill="#767676"
+                  />
+                  <path
+                    d="M10.4997 2.33325V25.6666H9.11134C4.86467 25.6666 2.33301 23.1349 2.33301 18.8883V9.11159C2.33301 4.86492 4.86467 2.33325 9.11134 2.33325H10.4997Z"
+                    fill="#767676"
+                  />
+                  <path
+                    opacity="0.6"
+                    d="M25.6667 9.91675H10.5V18.0834H25.6667V9.91675Z"
+                    fill="#767676"
+                  />
+                </svg>
+              </a>
+              <div>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M22.4002 17.2434C21.3969 18.165 20.0668 18.6784 18.7018 18.6667H7.43184C2.6835 18.3284 2.67184 11.4334 7.43184 11.095H7.47851C4.22351 2.04171 17.9785 -1.56332 19.5535 7.93335C23.9519 8.49335 25.7369 14.3384 22.4002 17.2434Z"
+                    fill="#767676"
+                  />
+                  <path
+                    d="M21.875 24.4998C21.875 24.9782 21.4783 25.3748 21 25.3748H16.3333C16.275 25.3748 16.2283 25.3748 16.17 25.3515C15.8316 26.2148 14.98 26.8332 14 26.8332C13.02 26.8332 12.1684 26.2148 11.83 25.3515C11.7717 25.3748 11.725 25.3748 11.6667 25.3748H7C6.52167 25.3748 6.125 24.9782 6.125 24.4998C6.125 24.0215 6.52167 23.6248 7 23.6248H11.6667C11.725 23.6248 11.7717 23.6248 11.83 23.6482C12.0634 23.0415 12.5417 22.5632 13.1483 22.3299C13.125 22.2715 13.125 22.2248 13.125 22.1665V18.6665H14.875V22.1665C14.875 22.2248 14.875 22.2715 14.8517 22.3299C15.4583 22.5632 15.9366 23.0415 16.17 23.6482C16.2283 23.6248 16.275 23.6248 16.3333 23.6248H21C21.4783 23.6248 21.875 24.0215 21.875 24.4998Z"
+                    fill="#767676"
+                  />
+                </svg>
+              </div>
+              <a>
+                <div>
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M14.0002 25.5501C20.4435 25.5501 25.6668 20.3268 25.6668 13.8835C25.6668 7.44014 20.4435 2.2168 14.0002 2.2168C7.55684 2.2168 2.3335 7.44014 2.3335 13.8835C2.3335 20.3268 7.55684 25.5501 14.0002 25.5501Z"
+                      fill="#767676"
+                    />
+                    <path
+                      d="M16.6369 14L14.8752 13.3817V9.42667H15.2952C16.2402 9.42667 17.0102 10.255 17.0102 11.27C17.0102 11.7483 17.4069 12.145 17.8852 12.145C18.3635 12.145 18.7602 11.7483 18.7602 11.27C18.7602 9.28667 17.2085 7.67667 15.2952 7.67667H14.8752V7C14.8752 6.52167 14.4785 6.125 14.0002 6.125C13.5219 6.125 13.1252 6.52167 13.1252 7V7.67667H12.3669C10.6402 7.67667 9.22852 9.135 9.22852 10.92C9.22852 13.0083 10.4418 13.6733 11.3635 14L13.1252 14.6183V18.5617H12.7052C11.7602 18.5617 10.9902 17.7333 10.9902 16.7183C10.9902 16.24 10.5935 15.8433 10.1152 15.8433C9.63685 15.8433 9.24018 16.24 9.24018 16.7183C9.24018 18.7017 10.7918 20.3117 12.7052 20.3117H13.1252V21C13.1252 21.4783 13.5219 21.875 14.0002 21.875C14.4785 21.875 14.8752 21.4783 14.8752 21V20.3233H15.6335C17.3602 20.3233 18.7719 18.865 18.7719 17.08C18.7602 14.98 17.5469 14.315 16.6369 14ZM11.9468 12.355C11.3518 12.145 10.9902 11.9467 10.9902 10.9317C10.9902 10.1033 11.6085 9.43833 12.3785 9.43833H13.1369V12.775L11.9468 12.355ZM15.6335 18.5733H14.8752V15.2367L16.0535 15.645C16.6485 15.855 17.0102 16.0533 17.0102 17.0683C17.0102 17.8967 16.3919 18.5733 15.6335 18.5733Z"
+                      fill="#767676"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mx-3">
+          <div class="flex dark:text-white gap-2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              class="dark:fill-white"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 13.4924V11.2424"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <p class="text-gray-400" data-i18n="nav"></p>
+            <p class="text-gray-400">/</p>
+            <p data-i18n="hotelsList"></p>
+          </div>
+          <div class="flex gap-10">
+            <div
+              class="bg-white w-[20rem] space-y-5 mt-3 min-h-[80vh] h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            >
+              <h1
+                data-i18n="foundedHotels"
+                class="text-xl text-nowrap font-bold border-b dark:border-b-gray-600 pb-5"
+              ></h1>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p data-i18n="hotelsName" class="text-base font-bold"></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <form class="mt-3 hidden collapse-content items-center gap-3">
+                  <div class="flex items-center gap-2">
+                    <input
+                      class="rounded-full input p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500"
+                      type="text"
+                      data-i18n="[placeholder]enterHotelName"
+                    />
+                    <button
+                      data-i18n="save"
+                      class="font-yekan rounded-3xl bg-orange-400 p-2 px-5 border-0"
+                    ></button>
+                  </div>
+                </form>
+              </div>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p data-i18n="price" class="text-base font-bold"></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="hidden collapse-content">
+                  <div class="tabs">
+                    <ul>
+                      <li class="m-auto">
+                        <a data-i18n="totalPrice"></a>
+                      </li>
+                      <li class="m-auto is-active">
+                        <a data-i18n="eachNightPrice"></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="p-2">
+                    <div class="my-5">
+                      <tc-range-slider
+                        slider-bg="#eee"
+                        slider-bg-hover="orange"
+                        slider-bg-fill="orange"
+                        pointer-border="1px solid orange"
+                        value1="20"
+                        value2="30"
+                      ></tc-range-slider>
+                    </div>
+                  </div>
+
+                  <form action="" class="flex gap-2">
+                    <div>
+                      <label data-i18n="least" for=""></label>
+                      <input type="text" class="input rounded-full" />
+                    </div>
+                    <p class="mt-8">-</p>
+                    <div>
+                      <label data-i18n="most" for=""></label>
+                      <input class="input rounded-full" type="text" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex *:font-yekan flex-col mt-3 gap-3">
+                  <div class="flex justify-between collapse-toggle">
+                    <p data-i18n="meals" class="text-base font-bold"></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="hidden space-y-4 collapse-content">
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        id="breakfest"
+                        name="options"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="breakfest" class="radio mb-1"></label>
+                      <label data-i18n="super" for="breakfest"> </label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        id="lunch"
+                        name="options"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="lunch" class="radio mb-1"></label>
+                      <label data-i18n="lunch" for="lunch"> </label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        id="dinner"
+                        name="options"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="dinner" class="radio mb-1"></label>
+                      <label data-i18n="breakfest" for="dinner"> </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p data-i18n="rates" class="text-base font-bold"></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-3 hidden collapse-content space-y-3">
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="one-star"
+                      name="rates"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="one-star" class="radio mb-1"></label>
+                    <label for="one-star">
+                      <img src="../public/assets/images/one-star.png" alt="" />
+                    </label>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="two-star"
+                      name="rates"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="two-star" class="radio mb-1"></label>
+                    <label for="two-star">
+                      <img src="../public/assets/images/two-star.png" alt="" />
+                    </label>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="three-star"
+                      name="rates"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="three-star" class="radio mb-1"></label>
+                    <label for="three-star">
+                      <img
+                        src="../public/assets/images/three-star.png"
+                        alt=""
+                      />
+                    </label>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="four-star"
+                      name="rates"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="four-star" class="radio mb-1"></label>
+                    <label for="four-star">
+                      <img src="../public/assets/images/four-star.png" alt="" />
+                    </label>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="five-s"
+                      name="rates"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="five-s" class="radio mb-1"></label>
+                    <label for="five-s">
+                      <img src="../public/assets/images/five-star.png" alt="" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p data-i18n="stayType" class="text-base font-bold"></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-3 space-y-4 hidden collapse-content">
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="hotel"
+                      name="meals"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="hotel" class="radio mb-1"></label>
+                    <label data-i18n="hotel" for="hotel"> </label>
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <input
+                      type="checkbox"
+                      id="ap"
+                      name="meals"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="ap" class="radio mb-1"></label>
+                    <label data-i18n="ap" for="ap"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="villa"
+                      name="meals"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="villa" class="radio mb-1"></label>
+                    <label data-i18n="villa" for="villa"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="hostel"
+                      name="meals"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="hostel" class="radio mb-1"></label>
+                    <label data-i18n="hostel" for="hostel"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="breakfest2"
+                      name="meals"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="breakfest2" class="radio mb-1"></label>
+                    <label data-i18n="breakfest" for="breakfest"> </label>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p
+                    data-i18n="selectedLocation"
+                    class="text-base font-bold"
+                  ></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-2 hidden collapse-content">
+                  <input
+                    type="text"
+                    data-i18n="[placeholder]wantedRegion"
+                    class="input rounded-full"
+                  />
+                </div>
+              </div>
+              <div class="dark:border-b-gray-600 pb-5">
+                <div class="flex justify-between collapse-toggle">
+                  <p data-i18n="hotelServices" class="text-base font-bold"></p>
+                  <div class="bg-gray-300 block p-1.5 rounded-full">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div
+                  class="hidden space-y-4 collapse-content *:font-yekan flex-col mt-3 gap-3"
+                >
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="pool"
+                      name="facilities"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="pool" class="radio mb-1"></label>
+                    <label data-i18n="pool" for="breakfest"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="gym"
+                      name="facilities"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="gym" class="radio mb-1"></label>
+                    <label data-i18n="gym" for="breakfest"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="transfer"
+                      name="facilities"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="transfer" class="radio mb-1"></label>
+                    <label data-i18n="transfer" for="breakfest"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="laundry"
+                      name="facilities"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="laundry" class="radio mb-1"></label>
+                    <label data-i18n="laundry" for="breakfest"> </label>
+                  </div>
+                  <div class="flex gap-2">
+                    <input
+                      type="checkbox"
+                      id="comm"
+                      name="facilities"
+                      class="hidden radio-hidden"
+                    />
+                    <label for="comm" class="radio mb-1"></label>
+                    <label data-i18n="comm" for="breakfest"> </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grow">
+              <div
+                class="bg-white flex gap-4 items-center mt-3 dark:bg-gray-900 justify-between dark:text-white dark:border-gray-500 rounded-3xl p-2"
+              >
+                <div class="mx-2 text-[15px] gap-5 flex items-center">
+                  <div class="flex gap-2 items-center">
+                    <button data-i18n="showType"></button>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.09586 3.91998L3.92584 1.75L1.75586 3.91998"
+                        stroke="#767676"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.92578 12.25V1.75"
+                        stroke="#767676"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.9043 10.0801L10.0743 12.2501L12.2443 10.0801"
+                        stroke="#767676"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.0742 1.75V12.25"
+                        stroke="#767676"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button data-i18n="hotelsName"></button>
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                        stroke="#ABABAB"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="flex !bg-orange-400 p-1 px-2 rounded-full text-white items-center gap-2"
+                  >
+                    <button data-i18n="rate"></button>
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                        stroke="white"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <button data-i18n="price"></button>
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                        stroke="#ABABAB"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <button data-i18n="category"></button>
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                        stroke="#ABABAB"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex *:cursor-pointer items-center ml-3 gap-3">
+                  <svg
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class="layout-simple-card-toggle"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M17.5 6.39V2.985C17.5 1.9275 17.02 1.5 15.8275 1.5H12.7975C11.605 1.5 11.125 1.9275 11.125 2.985V6.3825C11.125 7.4475 11.605 7.8675 12.7975 7.8675H15.8275C17.02 7.875 17.5 7.4475 17.5 6.39Z"
+                      fill="#767676"
+                    />
+                    <path
+                      d="M17.5 14.8275V11.7975C17.5 10.605 17.02 10.125 15.8275 10.125H12.7975C11.605 10.125 11.125 10.605 11.125 11.7975V14.8275C11.125 16.02 11.605 16.5 12.7975 16.5H15.8275C17.02 16.5 17.5 16.02 17.5 14.8275Z"
+                      fill="#767676"
+                    />
+                    <path
+                      d="M8.875 6.39V2.985C8.875 1.9275 8.395 1.5 7.2025 1.5H4.1725C2.98 1.5 2.5 1.9275 2.5 2.985V6.3825C2.5 7.4475 2.98 7.8675 4.1725 7.8675H7.2025C8.395 7.875 8.875 7.4475 8.875 6.39Z"
+                      fill="#767676"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M8.875 14.8275V11.7975C8.875 10.605 8.395 10.125 7.2025 10.125H4.1725C2.98 10.125 2.5 10.605 2.5 11.7975V14.8275C2.5 16.02 2.98 16.5 4.1725 16.5H7.2025C8.395 16.5 8.875 16.02 8.875 14.8275Z"
+                      fill="#767676"
+                    />
+                  </svg>
+                  <svg
+                    class="layout-cards-toggle"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="orange"
+                      opacity="0.4"
+                      d="M14.925 10.125H3.075C1.95 10.125 1.5 10.605 1.5 11.7975V14.8275C1.5 16.02 1.95 16.5 3.075 16.5H14.925C16.05 16.5 16.5 16.02 16.5 14.8275V11.7975C16.5 10.605 16.05 10.125 14.925 10.125Z"
+                    />
+                    <path
+                      fill="orange"
+                      d="M14.925 1.5H3.075C1.95 1.5 1.5 1.98 1.5 3.1725V6.2025C1.5 7.395 1.95 7.875 3.075 7.875H14.925C16.05 7.875 16.5 7.395 16.5 6.2025V3.1725C16.5 1.98 16.05 1.5 14.925 1.5Z"
+                    />
+                  </svg>
+                  <svg
+                    class="map-toggle"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      fill="#767676"
+                      d="M6.41979 2.50488V13.2524C6.16479 13.2599 5.90979 13.3199 5.72229 13.4324L3.95979 14.4374C2.72979 15.1424 1.71729 14.5574 1.71729 13.1324V5.83488C1.71729 5.36238 2.05479 4.77738 2.47479 4.53738L5.72229 2.67738C5.90979 2.57238 6.16479 2.51238 6.41979 2.50488Z"
+                    />
+                    <path
+                      fill="#767676"
+                      d="M11.7974 4.74745V15.495C11.5349 15.5025 11.2799 15.4575 11.0774 15.36L7.13992 13.3875C6.93742 13.29 6.68242 13.245 6.41992 13.2525V2.50495C6.68242 2.49745 6.93742 2.54245 7.13992 2.63995L11.0774 4.61245C11.2799 4.70995 11.5349 4.75495 11.7974 4.74745Z"
+                    />
+                    <path
+                      opacity="0.4"
+                      fill="#767676"
+                      d="M16.4999 4.86755V12.165C16.4999 12.6375 16.1624 13.2225 15.7424 13.4625L12.4949 15.3225C12.3074 15.4275 12.0524 15.4875 11.7974 15.495V4.74755C12.0524 4.74005 12.3074 4.68005 12.4949 4.56755L14.2574 3.56255C15.4874 2.85755 16.4999 3.44255 16.4999 4.86755Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="bg-white text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
+              >
+                <button class="px-2" data-i18n="activeFilter"></button> :
+
+                <div>
+                  <input class="peer z-30 hidden" type="checkbox" id="check" />
+                  <label
+                    htmlFor="check"
+                    class="peer-checked:hidden cursor-pointer"
+                  >
+                    <div
+                      class="flex gap-2 items-center dark:bg-gray-700 border-0 px-4 rounded-full bg-gray-100"
+                    >
+                      <span data-i18n="category"> </span
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.4"
+                          d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                          fill="#000"
+                        />
+                        <path
+                          d="M9.79502 9.00002L11.52 7.27502C11.7375 7.05752 11.7375 6.69752 11.52 6.48002C11.3025 6.26252 10.9425 6.26252 10.725 6.48002L9.00002 8.20502L7.27502 6.48002C7.05752 6.26252 6.69752 6.26252 6.48002 6.48002C6.26252 6.69752 6.26252 7.05752 6.48002 7.27502L8.20502 9.00002L6.48002 10.725C6.26252 10.9425 6.26252 11.3025 6.48002 11.52C6.59252 11.6325 6.73502 11.685 6.87752 11.685C7.02002 11.685 7.16252 11.6325 7.27502 11.52L9.00002 9.79502L10.725 11.52C10.8375 11.6325 10.98 11.685 11.1225 11.685C11.265 11.685 11.4075 11.6325 11.52 11.52C11.7375 11.3025 11.7375 10.9425 11.52 10.725L9.79502 9.00002Z"
+                          fill="#000"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+                <input class="peer z-30 hidden" type="checkbox" id="check2" />
+                <label
+                  htmlFor="check2"
+                  class="peer-checked:hidden cursor-pointer"
+                >
+                  <span
+                    class="flex dark:bg-gray-700 gap-2 items-center px-2 border-0 rounded-full bg-gray-100"
+                  >
+                    دو کیلومتر تا منطقه سعادت آباد
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.4"
+                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                        fill="#000"
+                      />
+                      <path
+                        d="M9.79502 9.00002L11.52 7.27502C11.7375 7.05752 11.7375 6.69752 11.52 6.48002C11.3025 6.26252 10.9425 6.26252 10.725 6.48002L9.00002 8.20502L7.27502 6.48002C7.05752 6.26252 6.69752 6.26252 6.48002 6.48002C6.26252 6.69752 6.26252 7.05752 6.48002 7.27502L8.20502 9.00002L6.48002 10.725C6.26252 10.9425 6.26252 11.3025 6.48002 11.52C6.59252 11.6325 6.73502 11.685 6.87752 11.685C7.02002 11.685 7.16252 11.6325 7.27502 11.52L9.00002 9.79502L10.725 11.52C10.8375 11.6325 10.98 11.685 11.1225 11.685C11.265 11.685 11.4075 11.6325 11.52 11.52C11.7375 11.3025 11.7375 10.9425 11.52 10.725L9.79502 9.00002Z"
+                        fill="#000"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div
+                class="bg-white map-container hidden dark:bg-gray-900 p-4 rounded-3xl my-4"
+              >
+                <div id="map" dir="rtl"></div>
+              </div>
+              <div
+                class="bg-white layout-cards flex mt-3 gap-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+              >
+                <img
+                  class="h-fit"
+                  src="../public/assets/images/espinas1.png"
+                  alt=""
+                />
+                <div class="flex gap-5 w-full">
+                  <div
+                    class="space-y-4 pl-[.65rem] border-l dark:border-l-gray-700"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-2">
+                        <h1
+                          data-i18n="espinasHotel"
+                          class="font-bold text-xl"
+                        ></h1>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.62 20.8101C12.28 20.9301 11.72 20.9301 11.38 20.8101C8.48 19.8201 2 15.6901 2 8.6901C2 5.6001 4.49 3.1001 7.56 3.1001C9.38 3.1001 10.99 3.9801 12 5.3401C13.01 3.9801 14.63 3.1001 16.44 3.1001C19.51 3.1001 22 5.6001 22 8.6901C22 15.6901 15.52 19.8201 12.62 20.8101Z"
+                            stroke="#F9B233"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="flex gap-3 items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.41979 2.50488V13.2524C6.16479 13.2599 5.90979 13.3199 5.72229 13.4324L3.95979 14.4374C2.72979 15.1424 1.71729 14.5574 1.71729 13.1324V5.83488C1.71729 5.36238 2.05479 4.77738 2.47479 4.53738L5.72229 2.67738C5.90979 2.57238 6.16479 2.51238 6.41979 2.50488Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M11.7974 4.74745V15.495C11.5349 15.5025 11.2799 15.4575 11.0774 15.36L7.13992 13.3875C6.93742 13.29 6.68242 13.245 6.41992 13.2525V2.50495C6.68242 2.49745 6.93742 2.54245 7.13992 2.63995L11.0774 4.61245C11.2799 4.70995 11.5349 4.75495 11.7974 4.74745Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4999 4.86755V12.165C16.4999 12.6375 16.1624 13.2225 15.7424 13.4625L12.4949 15.3225C12.3074 15.4275 12.0524 15.4875 11.7974 15.495V4.74755C12.0524 4.74005 12.3074 4.68005 12.4949 4.56755L14.2574 3.56255C15.4874 2.85755 16.4999 3.44255 16.4999 4.86755Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.66002 3.45004C6.06002 0.85504 2.15252 0.84754 1.55252 3.45004C1.20002 4.97254 2.16752 6.26254 3.00752 7.06504C3.62252 7.64254 4.59002 7.64254 5.20502 7.06504C6.04502 6.26254 7.00502 4.97254 6.66002 3.45004ZM4.13252 4.65004C3.72002 4.65004 3.38252 4.31254 3.38252 3.90004C3.38252 3.48754 3.71252 3.15004 4.12502 3.15004H4.13252C4.55252 3.15004 4.88252 3.48754 4.88252 3.90004C4.88252 4.31254 4.55252 4.65004 4.13252 4.65004Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M4.88232 3.8999C4.88232 4.3124 4.55232 4.6499 4.13232 4.6499C3.71982 4.6499 3.38232 4.3124 3.38232 3.8999C3.38232 3.4874 3.71232 3.1499 4.12482 3.1499H4.13232C4.55232 3.1499 4.88232 3.4874 4.88232 3.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4325 12.45C15.8325 9.85504 11.91 9.84754 11.3025 12.45C10.95 13.9725 11.9175 15.2625 12.765 16.065C13.38 16.6425 14.355 16.6425 14.97 16.065C15.8175 15.2625 16.785 13.9725 16.4325 12.45ZM13.8975 13.65C13.485 13.65 13.1475 13.3125 13.1475 12.9C13.1475 12.4875 13.4775 12.15 13.89 12.15H13.8975C14.31 12.15 14.6475 12.4875 14.6475 12.9C14.6475 13.3125 14.31 13.65 13.8975 13.65Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M14.6475 12.8999C14.6475 13.3124 14.31 13.6499 13.8975 13.6499C13.485 13.6499 13.1475 13.3124 13.1475 12.8999C13.1475 12.4874 13.4775 12.1499 13.89 12.1499H13.8975C14.31 12.1499 14.6475 12.4874 14.6475 12.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.00008 14.8125H6.99008C6.12008 14.8125 5.36258 14.2875 5.06258 13.4775C4.75508 12.6675 4.98008 11.775 5.63258 11.1975L11.6251 5.955C11.9851 5.64 11.9926 5.2125 11.8876 4.92C11.7751 4.6275 11.4901 4.3125 11.0101 4.3125H9.00008C8.69258 4.3125 8.43758 4.0575 8.43758 3.75C8.43758 3.4425 8.69258 3.1875 9.00008 3.1875H11.0101C11.8801 3.1875 12.6376 3.7125 12.9376 4.5225C13.2451 5.3325 13.0201 6.225 12.3676 6.8025L6.37508 12.045C6.01508 12.36 6.00758 12.7875 6.11258 13.08C6.22508 13.3725 6.51008 13.6875 6.99008 13.6875H9.00008C9.30758 13.6875 9.56258 13.9425 9.56258 14.25C9.56258 14.5575 9.30758 14.8125 9.00008 14.8125Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9 10.3125C9.3075 10.3125 9.5625 10.0575 9.5625 9.75V6C9.5625 5.6925 9.3075 5.4375 9 5.4375C8.6925 5.4375 8.4375 5.6925 8.4375 6V9.75C8.4375 10.0575 8.6925 10.3125 9 10.3125Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.69 11.7149C9.6525 11.6249 9.6 11.5424 9.5325 11.4674C9.4575 11.3999 9.375 11.3474 9.285 11.3099C9.105 11.2349 8.895 11.2349 8.715 11.3099C8.625 11.3474 8.5425 11.3999 8.4675 11.4674C8.4 11.5424 8.3475 11.6249 8.31 11.7149C8.2725 11.8049 8.25 11.9024 8.25 11.9999C8.25 12.0974 8.2725 12.1949 8.31 12.2849C8.3475 12.3824 8.4 12.4574 8.4675 12.5324C8.5425 12.5999 8.625 12.6524 8.715 12.6899C8.805 12.7274 8.9025 12.7499 9 12.7499C9.0975 12.7499 9.195 12.7274 9.285 12.6899C9.375 12.6524 9.4575 12.5999 9.5325 12.5324C9.6 12.4574 9.6525 12.3824 9.69 12.2849C9.7275 12.1949 9.75 12.0974 9.75 11.9999C9.75 11.9024 9.7275 11.8049 9.69 11.7149Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M5.33231 4.46996L12.0973 2.21246C15.1348 1.19996 16.7848 2.85746 15.7798 5.89496L13.5223 12.66C12.0073 17.2125 9.5173 17.2125 8.00231 12.66L7.33481 10.65L5.32481 9.98246C0.779805 8.47496 0.779805 5.99246 5.33231 4.46996Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08984 8.72242L11.9473 5.85742L9.08984 8.72242Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08992 9.285C8.94742 9.285 8.80492 9.2325 8.69242 9.12C8.47492 8.9025 8.47492 8.5425 8.69242 8.325L11.5424 5.46C11.7599 5.2425 12.1199 5.2425 12.3374 5.46C12.5549 5.6775 12.5549 6.0375 12.3374 6.255L9.48742 9.12C9.37492 9.225 9.23242 9.285 9.08992 9.285Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs">
+                      تهران، سعادت آباد، میدان بهرود، خیابان 33، هتل اسپیناس
+                      پالاس
+                      <svg
+                        width="18"
+                        height="18"
+                        class="-order-1"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.4"
+                          d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                          fill="#F9B233"
+                        />
+                        <path
+                          d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                          fill="#F9B233"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-gray-400 text-[14px]">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laboriosam molestias iste aspernatur perspiciatis,
+                      corporis est.
+                    </p>
+                    <p
+                      class="text-gray-400 collapse-content hidden text-[14px]"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laboriosam molestias iste aspernatur perspiciatis,
+                      corporis est.
+                    </p>
+                    <button class="collapse-toggle" data-i18n="seeMore"></button
+                    >...
+                  </div>
+                  <div class="mr-2 text-nowrap space-y-12">
+                    <img
+                      class="m-auto"
+                      src="../public/assets/images/five-star.png"
+                      alt=""
+                    />
+                    <div class="text-center">
+                      <p data-i18n="startPrice"></p>
+                      <p class="text-2xl text-green-500">
+                        <span class="font-bold">137.81</span> USD
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 bg-amber-400 p-2 rounded-full border-0 text-white px-4"
+                    >
+                      <button data-i18n="seeRooms"></button>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.4"
+                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M12.0002 15.0099C11.8102 15.0099 11.6202 14.9399 11.4702 14.7899L7.94016 11.2599C7.65016 10.9699 7.65016 10.4899 7.94016 10.1999C8.23016 9.90992 8.71016 9.90992 9.00016 10.1999L12.0002 13.1999L15.0002 10.1999C15.2902 9.90992 15.7702 9.90992 16.0602 10.1999C16.3502 10.4899 16.3502 10.9699 16.0602 11.2599L12.5302 14.7899C12.3802 14.9399 12.1902 15.0099 12.0002 15.0099Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="layout-simple-card hidden grid-cols-2 gap-8 ml-3">
+                <div
+                  class="bg-white space-y-5 mt-3 flex flex-col gap-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute bg-gray-300/50 rounded-t-2xl w-full p-2"
+                    >
+                      <div class="flex gap-3 items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.41979 2.50488V13.2524C6.16479 13.2599 5.90979 13.3199 5.72229 13.4324L3.95979 14.4374C2.72979 15.1424 1.71729 14.5574 1.71729 13.1324V5.83488C1.71729 5.36238 2.05479 4.77738 2.47479 4.53738L5.72229 2.67738C5.90979 2.57238 6.16479 2.51238 6.41979 2.50488Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M11.7974 4.74745V15.495C11.5349 15.5025 11.2799 15.4575 11.0774 15.36L7.13992 13.3875C6.93742 13.29 6.68242 13.245 6.41992 13.2525V2.50495C6.68242 2.49745 6.93742 2.54245 7.13992 2.63995L11.0774 4.61245C11.2799 4.70995 11.5349 4.75495 11.7974 4.74745Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4999 4.86755V12.165C16.4999 12.6375 16.1624 13.2225 15.7424 13.4625L12.4949 15.3225C12.3074 15.4275 12.0524 15.4875 11.7974 15.495V4.74755C12.0524 4.74005 12.3074 4.68005 12.4949 4.56755L14.2574 3.56255C15.4874 2.85755 16.4999 3.44255 16.4999 4.86755Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.66002 3.45004C6.06002 0.85504 2.15252 0.84754 1.55252 3.45004C1.20002 4.97254 2.16752 6.26254 3.00752 7.06504C3.62252 7.64254 4.59002 7.64254 5.20502 7.06504C6.04502 6.26254 7.00502 4.97254 6.66002 3.45004ZM4.13252 4.65004C3.72002 4.65004 3.38252 4.31254 3.38252 3.90004C3.38252 3.48754 3.71252 3.15004 4.12502 3.15004H4.13252C4.55252 3.15004 4.88252 3.48754 4.88252 3.90004C4.88252 4.31254 4.55252 4.65004 4.13252 4.65004Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M4.88232 3.8999C4.88232 4.3124 4.55232 4.6499 4.13232 4.6499C3.71982 4.6499 3.38232 4.3124 3.38232 3.8999C3.38232 3.4874 3.71232 3.1499 4.12482 3.1499H4.13232C4.55232 3.1499 4.88232 3.4874 4.88232 3.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4325 12.45C15.8325 9.85504 11.91 9.84754 11.3025 12.45C10.95 13.9725 11.9175 15.2625 12.765 16.065C13.38 16.6425 14.355 16.6425 14.97 16.065C15.8175 15.2625 16.785 13.9725 16.4325 12.45ZM13.8975 13.65C13.485 13.65 13.1475 13.3125 13.1475 12.9C13.1475 12.4875 13.4775 12.15 13.89 12.15H13.8975C14.31 12.15 14.6475 12.4875 14.6475 12.9C14.6475 13.3125 14.31 13.65 13.8975 13.65Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M14.6475 12.8999C14.6475 13.3124 14.31 13.6499 13.8975 13.6499C13.485 13.6499 13.1475 13.3124 13.1475 12.8999C13.1475 12.4874 13.4775 12.1499 13.89 12.1499H13.8975C14.31 12.1499 14.6475 12.4874 14.6475 12.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.00008 14.8125H6.99008C6.12008 14.8125 5.36258 14.2875 5.06258 13.4775C4.75508 12.6675 4.98008 11.775 5.63258 11.1975L11.6251 5.955C11.9851 5.64 11.9926 5.2125 11.8876 4.92C11.7751 4.6275 11.4901 4.3125 11.0101 4.3125H9.00008C8.69258 4.3125 8.43758 4.0575 8.43758 3.75C8.43758 3.4425 8.69258 3.1875 9.00008 3.1875H11.0101C11.8801 3.1875 12.6376 3.7125 12.9376 4.5225C13.2451 5.3325 13.0201 6.225 12.3676 6.8025L6.37508 12.045C6.01508 12.36 6.00758 12.7875 6.11258 13.08C6.22508 13.3725 6.51008 13.6875 6.99008 13.6875H9.00008C9.30758 13.6875 9.56258 13.9425 9.56258 14.25C9.56258 14.5575 9.30758 14.8125 9.00008 14.8125Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9 10.3125C9.3075 10.3125 9.5625 10.0575 9.5625 9.75V6C9.5625 5.6925 9.3075 5.4375 9 5.4375C8.6925 5.4375 8.4375 5.6925 8.4375 6V9.75C8.4375 10.0575 8.6925 10.3125 9 10.3125Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.69 11.7149C9.6525 11.6249 9.6 11.5424 9.5325 11.4674C9.4575 11.3999 9.375 11.3474 9.285 11.3099C9.105 11.2349 8.895 11.2349 8.715 11.3099C8.625 11.3474 8.5425 11.3999 8.4675 11.4674C8.4 11.5424 8.3475 11.6249 8.31 11.7149C8.2725 11.8049 8.25 11.9024 8.25 11.9999C8.25 12.0974 8.2725 12.1949 8.31 12.2849C8.3475 12.3824 8.4 12.4574 8.4675 12.5324C8.5425 12.5999 8.625 12.6524 8.715 12.6899C8.805 12.7274 8.9025 12.7499 9 12.7499C9.0975 12.7499 9.195 12.7274 9.285 12.6899C9.375 12.6524 9.4575 12.5999 9.5325 12.5324C9.6 12.4574 9.6525 12.3824 9.69 12.2849C9.7275 12.1949 9.75 12.0974 9.75 11.9999C9.75 11.9024 9.7275 11.8049 9.69 11.7149Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M5.33231 4.46996L12.0973 2.21246C15.1348 1.19996 16.7848 2.85746 15.7798 5.89496L13.5223 12.66C12.0073 17.2125 9.5173 17.2125 8.00231 12.66L7.33481 10.65L5.32481 9.98246C0.779805 8.47496 0.779805 5.99246 5.33231 4.46996Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08984 8.72242L11.9473 5.85742L9.08984 8.72242Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08992 9.285C8.94742 9.285 8.80492 9.2325 8.69242 9.12C8.47492 8.9025 8.47492 8.5425 8.69242 8.325L11.5424 5.46C11.7599 5.2425 12.1199 5.2425 12.3374 5.46C12.5549 5.6775 12.5549 6.0375 12.3374 6.255L9.48742 9.12C9.37492 9.225 9.23242 9.285 9.08992 9.285Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <img src="../public/assets/images/hotel.png" alt="" />
+                  </div>
+                  <div class="flex gap-5 flex-col">
+                    <div class="space-y-4 pl-[.65rem]">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 justify-between">
+                          <h1
+                            class="font-bold text-xl"
+                            data-i18n="espinasHotel"
+                          ></h1>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.62 20.8101C12.28 20.9301 11.72 20.9301 11.38 20.8101C8.48 19.8201 2 15.6901 2 8.6901C2 5.6001 4.49 3.1001 7.56 3.1001C9.38 3.1001 10.99 3.9801 12 5.3401C13.01 3.9801 14.63 3.1001 16.44 3.1001C19.51 3.1001 22 5.6001 22 8.6901C22 15.6901 15.52 19.8201 12.62 20.8101Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <img
+                          src="../public/assets/images/five-star.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex items-center gap-2 text-xs">
+                        تهران، سعادت آباد، میدان بهرود، خیابان 33، هتل اسپیناس
+                        پالاس{" "}
+                        <svg
+                          width="18"
+                          height="18"
+                          class="-order-1"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-gray-400 text-[14px]">
+                        <!-- {description.substring(
+                        0,
+                        expanded ? description.length : description.length / 2
+                      )}
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        class="block mt-3 border-0 shadow-none"
+                      >
+                        {expanded ? t("seeLess") : t("seeMore")}
+                      </button> -->
+                      </p>
+                      <div class="flex justify-between border-t pt-4">
+                        <div class="text-center">
+                          <p data-i18n="startPrice"></p>
+                          <p class="text-xl text-green-500">
+                            <span class="font-bold">137.81</span> USD
+                          </p>
+                        </div>
+                        <button
+                          data-i18n="seeRooms"
+                          class="bg-amber-400 rounded-full border-0 text-white px-4"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.4"
+                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12.0002 15.0099C11.8102 15.0099 11.6202 14.9399 11.4702 14.7899L7.94016 11.2599C7.65016 10.9699 7.65016 10.4899 7.94016 10.1999C8.23016 9.90992 8.71016 9.90992 9.00016 10.1999L12.0002 13.1999L15.0002 10.1999C15.2902 9.90992 15.7702 9.90992 16.0602 10.1999C16.3502 10.4899 16.3502 10.9699 16.0602 11.2599L12.5302 14.7899C12.3802 14.9399 12.1902 15.0099 12.0002 15.0099Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white space-y-5 mt-3 flex flex-col gap-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute bg-gray-300/50 rounded-t-2xl w-full p-2"
+                    >
+                      <div class="flex gap-3 items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.41979 2.50488V13.2524C6.16479 13.2599 5.90979 13.3199 5.72229 13.4324L3.95979 14.4374C2.72979 15.1424 1.71729 14.5574 1.71729 13.1324V5.83488C1.71729 5.36238 2.05479 4.77738 2.47479 4.53738L5.72229 2.67738C5.90979 2.57238 6.16479 2.51238 6.41979 2.50488Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M11.7974 4.74745V15.495C11.5349 15.5025 11.2799 15.4575 11.0774 15.36L7.13992 13.3875C6.93742 13.29 6.68242 13.245 6.41992 13.2525V2.50495C6.68242 2.49745 6.93742 2.54245 7.13992 2.63995L11.0774 4.61245C11.2799 4.70995 11.5349 4.75495 11.7974 4.74745Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4999 4.86755V12.165C16.4999 12.6375 16.1624 13.2225 15.7424 13.4625L12.4949 15.3225C12.3074 15.4275 12.0524 15.4875 11.7974 15.495V4.74755C12.0524 4.74005 12.3074 4.68005 12.4949 4.56755L14.2574 3.56255C15.4874 2.85755 16.4999 3.44255 16.4999 4.86755Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.66002 3.45004C6.06002 0.85504 2.15252 0.84754 1.55252 3.45004C1.20002 4.97254 2.16752 6.26254 3.00752 7.06504C3.62252 7.64254 4.59002 7.64254 5.20502 7.06504C6.04502 6.26254 7.00502 4.97254 6.66002 3.45004ZM4.13252 4.65004C3.72002 4.65004 3.38252 4.31254 3.38252 3.90004C3.38252 3.48754 3.71252 3.15004 4.12502 3.15004H4.13252C4.55252 3.15004 4.88252 3.48754 4.88252 3.90004C4.88252 4.31254 4.55252 4.65004 4.13252 4.65004Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M4.88232 3.8999C4.88232 4.3124 4.55232 4.6499 4.13232 4.6499C3.71982 4.6499 3.38232 4.3124 3.38232 3.8999C3.38232 3.4874 3.71232 3.1499 4.12482 3.1499H4.13232C4.55232 3.1499 4.88232 3.4874 4.88232 3.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4325 12.45C15.8325 9.85504 11.91 9.84754 11.3025 12.45C10.95 13.9725 11.9175 15.2625 12.765 16.065C13.38 16.6425 14.355 16.6425 14.97 16.065C15.8175 15.2625 16.785 13.9725 16.4325 12.45ZM13.8975 13.65C13.485 13.65 13.1475 13.3125 13.1475 12.9C13.1475 12.4875 13.4775 12.15 13.89 12.15H13.8975C14.31 12.15 14.6475 12.4875 14.6475 12.9C14.6475 13.3125 14.31 13.65 13.8975 13.65Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M14.6475 12.8999C14.6475 13.3124 14.31 13.6499 13.8975 13.6499C13.485 13.6499 13.1475 13.3124 13.1475 12.8999C13.1475 12.4874 13.4775 12.1499 13.89 12.1499H13.8975C14.31 12.1499 14.6475 12.4874 14.6475 12.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.00008 14.8125H6.99008C6.12008 14.8125 5.36258 14.2875 5.06258 13.4775C4.75508 12.6675 4.98008 11.775 5.63258 11.1975L11.6251 5.955C11.9851 5.64 11.9926 5.2125 11.8876 4.92C11.7751 4.6275 11.4901 4.3125 11.0101 4.3125H9.00008C8.69258 4.3125 8.43758 4.0575 8.43758 3.75C8.43758 3.4425 8.69258 3.1875 9.00008 3.1875H11.0101C11.8801 3.1875 12.6376 3.7125 12.9376 4.5225C13.2451 5.3325 13.0201 6.225 12.3676 6.8025L6.37508 12.045C6.01508 12.36 6.00758 12.7875 6.11258 13.08C6.22508 13.3725 6.51008 13.6875 6.99008 13.6875H9.00008C9.30758 13.6875 9.56258 13.9425 9.56258 14.25C9.56258 14.5575 9.30758 14.8125 9.00008 14.8125Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9 10.3125C9.3075 10.3125 9.5625 10.0575 9.5625 9.75V6C9.5625 5.6925 9.3075 5.4375 9 5.4375C8.6925 5.4375 8.4375 5.6925 8.4375 6V9.75C8.4375 10.0575 8.6925 10.3125 9 10.3125Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.69 11.7149C9.6525 11.6249 9.6 11.5424 9.5325 11.4674C9.4575 11.3999 9.375 11.3474 9.285 11.3099C9.105 11.2349 8.895 11.2349 8.715 11.3099C8.625 11.3474 8.5425 11.3999 8.4675 11.4674C8.4 11.5424 8.3475 11.6249 8.31 11.7149C8.2725 11.8049 8.25 11.9024 8.25 11.9999C8.25 12.0974 8.2725 12.1949 8.31 12.2849C8.3475 12.3824 8.4 12.4574 8.4675 12.5324C8.5425 12.5999 8.625 12.6524 8.715 12.6899C8.805 12.7274 8.9025 12.7499 9 12.7499C9.0975 12.7499 9.195 12.7274 9.285 12.6899C9.375 12.6524 9.4575 12.5999 9.5325 12.5324C9.6 12.4574 9.6525 12.3824 9.69 12.2849C9.7275 12.1949 9.75 12.0974 9.75 11.9999C9.75 11.9024 9.7275 11.8049 9.69 11.7149Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M5.33231 4.46996L12.0973 2.21246C15.1348 1.19996 16.7848 2.85746 15.7798 5.89496L13.5223 12.66C12.0073 17.2125 9.5173 17.2125 8.00231 12.66L7.33481 10.65L5.32481 9.98246C0.779805 8.47496 0.779805 5.99246 5.33231 4.46996Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08984 8.72242L11.9473 5.85742L9.08984 8.72242Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08992 9.285C8.94742 9.285 8.80492 9.2325 8.69242 9.12C8.47492 8.9025 8.47492 8.5425 8.69242 8.325L11.5424 5.46C11.7599 5.2425 12.1199 5.2425 12.3374 5.46C12.5549 5.6775 12.5549 6.0375 12.3374 6.255L9.48742 9.12C9.37492 9.225 9.23242 9.285 9.08992 9.285Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <img src="../public/assets/images/hotel.png" alt="" />
+                  </div>
+                  <div class="flex gap-5 flex-col">
+                    <div class="space-y-4 pl-[.65rem]">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 justify-between">
+                          <h1
+                            class="font-bold text-xl"
+                            data-i18n="espinasHotel"
+                          ></h1>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.62 20.8101C12.28 20.9301 11.72 20.9301 11.38 20.8101C8.48 19.8201 2 15.6901 2 8.6901C2 5.6001 4.49 3.1001 7.56 3.1001C9.38 3.1001 10.99 3.9801 12 5.3401C13.01 3.9801 14.63 3.1001 16.44 3.1001C19.51 3.1001 22 5.6001 22 8.6901C22 15.6901 15.52 19.8201 12.62 20.8101Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <img
+                          src="../public/assets/images/five-star.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex items-center gap-2 text-xs">
+                        تهران، سعادت آباد، میدان بهرود، خیابان 33، هتل اسپیناس
+                        پالاس{" "}
+                        <svg
+                          width="18"
+                          height="18"
+                          class="-order-1"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-gray-400 text-[14px]">
+                        <!-- {description.substring(
+                        0,
+                        expanded ? description.length : description.length / 2
+                      )}
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        class="block mt-3 border-0 shadow-none"
+                      >
+                        {expanded ? t("seeLess") : t("seeMore")}
+                      </button> -->
+                      </p>
+                      <div class="flex justify-between border-t pt-4">
+                        <div class="text-center">
+                          <p data-i18n="startPrice"></p>
+                          <p class="text-xl text-green-500">
+                            <span class="font-bold">137.81</span> USD
+                          </p>
+                        </div>
+                        <button
+                          data-i18n="seeRooms"
+                          class="bg-amber-400 rounded-full border-0 text-white px-4"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.4"
+                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12.0002 15.0099C11.8102 15.0099 11.6202 14.9399 11.4702 14.7899L7.94016 11.2599C7.65016 10.9699 7.65016 10.4899 7.94016 10.1999C8.23016 9.90992 8.71016 9.90992 9.00016 10.1999L12.0002 13.1999L15.0002 10.1999C15.2902 9.90992 15.7702 9.90992 16.0602 10.1999C16.3502 10.4899 16.3502 10.9699 16.0602 11.2599L12.5302 14.7899C12.3802 14.9399 12.1902 15.0099 12.0002 15.0099Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white space-y-5 mt-3 flex flex-col gap-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute bg-gray-300/50 rounded-t-2xl w-full p-2"
+                    >
+                      <div class="flex gap-3 items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.41979 2.50488V13.2524C6.16479 13.2599 5.90979 13.3199 5.72229 13.4324L3.95979 14.4374C2.72979 15.1424 1.71729 14.5574 1.71729 13.1324V5.83488C1.71729 5.36238 2.05479 4.77738 2.47479 4.53738L5.72229 2.67738C5.90979 2.57238 6.16479 2.51238 6.41979 2.50488Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M11.7974 4.74745V15.495C11.5349 15.5025 11.2799 15.4575 11.0774 15.36L7.13992 13.3875C6.93742 13.29 6.68242 13.245 6.41992 13.2525V2.50495C6.68242 2.49745 6.93742 2.54245 7.13992 2.63995L11.0774 4.61245C11.2799 4.70995 11.5349 4.75495 11.7974 4.74745Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4999 4.86755V12.165C16.4999 12.6375 16.1624 13.2225 15.7424 13.4625L12.4949 15.3225C12.3074 15.4275 12.0524 15.4875 11.7974 15.495V4.74755C12.0524 4.74005 12.3074 4.68005 12.4949 4.56755L14.2574 3.56255C15.4874 2.85755 16.4999 3.44255 16.4999 4.86755Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M6.66002 3.45004C6.06002 0.85504 2.15252 0.84754 1.55252 3.45004C1.20002 4.97254 2.16752 6.26254 3.00752 7.06504C3.62252 7.64254 4.59002 7.64254 5.20502 7.06504C6.04502 6.26254 7.00502 4.97254 6.66002 3.45004ZM4.13252 4.65004C3.72002 4.65004 3.38252 4.31254 3.38252 3.90004C3.38252 3.48754 3.71252 3.15004 4.12502 3.15004H4.13252C4.55252 3.15004 4.88252 3.48754 4.88252 3.90004C4.88252 4.31254 4.55252 4.65004 4.13252 4.65004Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M4.88232 3.8999C4.88232 4.3124 4.55232 4.6499 4.13232 4.6499C3.71982 4.6499 3.38232 4.3124 3.38232 3.8999C3.38232 3.4874 3.71232 3.1499 4.12482 3.1499H4.13232C4.55232 3.1499 4.88232 3.4874 4.88232 3.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M16.4325 12.45C15.8325 9.85504 11.91 9.84754 11.3025 12.45C10.95 13.9725 11.9175 15.2625 12.765 16.065C13.38 16.6425 14.355 16.6425 14.97 16.065C15.8175 15.2625 16.785 13.9725 16.4325 12.45ZM13.8975 13.65C13.485 13.65 13.1475 13.3125 13.1475 12.9C13.1475 12.4875 13.4775 12.15 13.89 12.15H13.8975C14.31 12.15 14.6475 12.4875 14.6475 12.9C14.6475 13.3125 14.31 13.65 13.8975 13.65Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M14.6475 12.8999C14.6475 13.3124 14.31 13.6499 13.8975 13.6499C13.485 13.6499 13.1475 13.3124 13.1475 12.8999C13.1475 12.4874 13.4775 12.1499 13.89 12.1499H13.8975C14.31 12.1499 14.6475 12.4874 14.6475 12.8999Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.00008 14.8125H6.99008C6.12008 14.8125 5.36258 14.2875 5.06258 13.4775C4.75508 12.6675 4.98008 11.775 5.63258 11.1975L11.6251 5.955C11.9851 5.64 11.9926 5.2125 11.8876 4.92C11.7751 4.6275 11.4901 4.3125 11.0101 4.3125H9.00008C8.69258 4.3125 8.43758 4.0575 8.43758 3.75C8.43758 3.4425 8.69258 3.1875 9.00008 3.1875H11.0101C11.8801 3.1875 12.6376 3.7125 12.9376 4.5225C13.2451 5.3325 13.0201 6.225 12.3676 6.8025L6.37508 12.045C6.01508 12.36 6.00758 12.7875 6.11258 13.08C6.22508 13.3725 6.51008 13.6875 6.99008 13.6875H9.00008C9.30758 13.6875 9.56258 13.9425 9.56258 14.25C9.56258 14.5575 9.30758 14.8125 9.00008 14.8125Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9 10.3125C9.3075 10.3125 9.5625 10.0575 9.5625 9.75V6C9.5625 5.6925 9.3075 5.4375 9 5.4375C8.6925 5.4375 8.4375 5.6925 8.4375 6V9.75C8.4375 10.0575 8.6925 10.3125 9 10.3125Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.69 11.7149C9.6525 11.6249 9.6 11.5424 9.5325 11.4674C9.4575 11.3999 9.375 11.3474 9.285 11.3099C9.105 11.2349 8.895 11.2349 8.715 11.3099C8.625 11.3474 8.5425 11.3999 8.4675 11.4674C8.4 11.5424 8.3475 11.6249 8.31 11.7149C8.2725 11.8049 8.25 11.9024 8.25 11.9999C8.25 12.0974 8.2725 12.1949 8.31 12.2849C8.3475 12.3824 8.4 12.4574 8.4675 12.5324C8.5425 12.5999 8.625 12.6524 8.715 12.6899C8.805 12.7274 8.9025 12.7499 9 12.7499C9.0975 12.7499 9.195 12.7274 9.285 12.6899C9.375 12.6524 9.4575 12.5999 9.5325 12.5324C9.6 12.4574 9.6525 12.3824 9.69 12.2849C9.7275 12.1949 9.75 12.0974 9.75 11.9999C9.75 11.9024 9.7275 11.8049 9.69 11.7149Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M5.33231 4.46996L12.0973 2.21246C15.1348 1.19996 16.7848 2.85746 15.7798 5.89496L13.5223 12.66C12.0073 17.2125 9.5173 17.2125 8.00231 12.66L7.33481 10.65L5.32481 9.98246C0.779805 8.47496 0.779805 5.99246 5.33231 4.46996Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08984 8.72242L11.9473 5.85742L9.08984 8.72242Z"
+                            fill="#767676"
+                          />
+                          <path
+                            d="M9.08992 9.285C8.94742 9.285 8.80492 9.2325 8.69242 9.12C8.47492 8.9025 8.47492 8.5425 8.69242 8.325L11.5424 5.46C11.7599 5.2425 12.1199 5.2425 12.3374 5.46C12.5549 5.6775 12.5549 6.0375 12.3374 6.255L9.48742 9.12C9.37492 9.225 9.23242 9.285 9.08992 9.285Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <img src="../public/assets/images/hotel.png" alt="" />
+                  </div>
+                  <div class="flex gap-5 flex-col">
+                    <div class="space-y-4 pl-[.65rem]">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 justify-between">
+                          <h1
+                            class="font-bold text-xl"
+                            data-i18n="espinasHotel"
+                          ></h1>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.62 20.8101C12.28 20.9301 11.72 20.9301 11.38 20.8101C8.48 19.8201 2 15.6901 2 8.6901C2 5.6001 4.49 3.1001 7.56 3.1001C9.38 3.1001 10.99 3.9801 12 5.3401C13.01 3.9801 14.63 3.1001 16.44 3.1001C19.51 3.1001 22 5.6001 22 8.6901C22 15.6901 15.52 19.8201 12.62 20.8101Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <img
+                          src="../public/assets/images/five-star.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex items-center gap-2 text-xs">
+                        تهران، سعادت آباد، میدان بهرود، خیابان 33، هتل اسپیناس
+                        پالاس{" "}
+                        <svg
+                          width="18"
+                          height="18"
+                          class="-order-1"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-gray-400 text-[14px]">
+                        <!-- {description.substring(
+                        0,
+                        expanded ? description.length : description.length / 2
+                      )}
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        class="block mt-3 border-0 shadow-none"
+                      >
+                        {expanded ? t("seeLess") : t("seeMore")}
+                      </button> -->
+                      </p>
+                      <div class="flex justify-between border-t pt-4">
+                        <div class="text-center">
+                          <p data-i18n="startPrice"></p>
+                          <p class="text-xl text-green-500">
+                            <span class="font-bold">137.81</span> USD
+                          </p>
+                        </div>
+                        <button
+                          data-i18n="seeRooms"
+                          class="bg-amber-400 rounded-full border-0 text-white px-4"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.4"
+                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M12.0002 15.0099C11.8102 15.0099 11.6202 14.9399 11.4702 14.7899L7.94016 11.2599C7.65016 10.9699 7.65016 10.4899 7.94016 10.1999C8.23016 9.90992 8.71016 9.90992 9.00016 10.1999L12.0002 13.1999L15.0002 10.1999C15.2902 9.90992 15.7702 9.90992 16.0602 10.1999C16.3502 10.4899 16.3502 10.9699 16.0602 11.2599L12.5302 14.7899C12.3802 14.9399 12.1902 15.0099 12.0002 15.0099Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

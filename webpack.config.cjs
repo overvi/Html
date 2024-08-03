@@ -7,6 +7,7 @@ module.exports = {
     main: "./src/ts/main.ts",
     sidebar: "./src/ts/sidebar.ts",
     datacenter: "./src/ts/datacenter.ts",
+    hotels: "./src/ts/hotels.ts",
   },
   devtool: "source-map",
 
@@ -17,9 +18,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/, // Use ts-loader for TypeScript files
+        test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

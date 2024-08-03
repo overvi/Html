@@ -56,11 +56,25 @@ const options: ApexCharts.ApexOptions = {
   ],
 };
 
+const getDataFromHtml = (): { categories: string[]; data: number[] } => {
+  const chartElement = document.getElementById("chart2");
+  if (chartElement) {
+    const categories = JSON.parse(
+      chartElement.getAttribute("data-categories") || "[]"
+    );
+    const data = JSON.parse(chartElement.getAttribute("data-series") || "[]");
+    return { categories, data };
+  }
+  return { categories: [], data: [] };
+};
+
+const { categories, data } = getDataFromHtml();
+
 const options2: ApexCharts.ApexOptions = {
   series: [
     {
       name: "Series 1",
-      data: [31, 40, 28, 51, 42, 109, 100],
+      data: data,
     },
   ],
 
@@ -102,20 +116,7 @@ const options2: ApexCharts.ApexOptions = {
   },
 
   xaxis: {
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
+    categories: categories,
     labels: {
       style: {
         fontSize: "12px",
@@ -132,6 +133,7 @@ const options2: ApexCharts.ApexOptions = {
     },
   },
 };
+
 const options3: ApexCharts.ApexOptions = {
   series: [
     {
