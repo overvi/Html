@@ -1108,9 +1108,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Map
-if ((mapbox_gl__WEBPACK_IMPORTED_MODULE_1___default())) {
-    console.log((mapbox_gl__WEBPACK_IMPORTED_MODULE_1___default()));
-}
 (mapbox_gl__WEBPACK_IMPORTED_MODULE_1___default().accessToken) =
     "pk.eyJ1Ijoic2tpbGxzMTAxIiwiYSI6ImNreXczMW8zbTA0bTYyb213NDBhcm85OHcifQ.L4xxw4JR6VWAk7dbteyMcg";
 if (mapbox_gl__WEBPACK_IMPORTED_MODULE_1___default().getRTLTextPluginStatus() !== "loaded") {
@@ -1139,9 +1136,7 @@ const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
 mapToggle === null || mapToggle === void 0 ? void 0 : mapToggle.addEventListener("click", () => {
     mapContainer === null || mapContainer === void 0 ? void 0 : mapContainer.classList.toggle("hidden");
-    map.on("render", function () {
-        map.resize();
-    });
+    map.resize();
     const mapIcon = document.querySelectorAll(".map-toggle path");
     mapIcon.forEach((path) => {
         path.style.fill == "orange"
@@ -1153,9 +1148,9 @@ const layoutCardToggle = document.querySelector(".layout-cards-toggle");
 const layoutCardsLayout = document.querySelector(".layout-cards");
 layoutCardToggle === null || layoutCardToggle === void 0 ? void 0 : layoutCardToggle.addEventListener("click", () => {
     layoutCardsLayout === null || layoutCardsLayout === void 0 ? void 0 : layoutCardsLayout.classList.remove("hidden");
-    layoutCardsLayout === null || layoutCardsLayout === void 0 ? void 0 : layoutCardsLayout.classList.add("flex");
+    layoutCardsLayout === null || layoutCardsLayout === void 0 ? void 0 : layoutCardsLayout.classList.add("block");
     layoutSimpleCards === null || layoutSimpleCards === void 0 ? void 0 : layoutSimpleCards.classList.add("hidden");
-    layoutSimpleCards === null || layoutSimpleCards === void 0 ? void 0 : layoutSimpleCards.classList.remove("flex");
+    layoutSimpleCards === null || layoutSimpleCards === void 0 ? void 0 : layoutSimpleCards.classList.remove("block");
     const simpleIcon = document.querySelectorAll(".layout-simple-card-toggle path");
     simpleIcon.forEach((path) => {
         path.style.fill = "gray";
@@ -1180,6 +1175,67 @@ layoutSimpleCardsToggle === null || layoutSimpleCardsToggle === void 0 ? void 0 
     mapIcon.forEach((path) => {
         path.style.fill = "orange";
     });
+});
+// Carousel
+let selectedSrc = 0;
+const bgImg = document.querySelectorAll(".carousel-container");
+bgImg.forEach((container, index) => {
+    const data = JSON.parse(container.getAttribute("data-srces") || "[]");
+    const buttons = container.querySelector(".buttons");
+    data.map((x, index) => {
+        buttons.innerHTML += ` 
+   <button
+                   type="text"
+                   class="p-0 m-0 dot-img mr-2"
+                 >
+                   <div  >
+                     <span
+                     
+                       class="${index == 0 && "bg-white"} size-3 dot-span block rounded-full border"
+                     ></span>
+                   </div>
+                 </button>`;
+    });
+    const updateSrc = (index2) => {
+        const images = container.querySelector(".carousel-img");
+        images.style.backgroundImage = `url(${data[index2]})`;
+        selectedSrc = index2;
+        const spans = container.querySelectorAll(".dot-span");
+        spans.forEach((item) => {
+            item.classList.remove("bg-white");
+        });
+        spans[selectedSrc].classList.add("bg-white");
+    };
+    const prev = container.querySelector(".prev-img");
+    const next = container.querySelector(".next-img");
+    const dots = container.querySelectorAll(".dot-img");
+    next === null || next === void 0 ? void 0 : next.addEventListener("click", () => {
+        if (selectedSrc + 1 == data.length) {
+            updateSrc(selectedSrc);
+        }
+        else {
+            updateSrc(selectedSrc + 1);
+        }
+    });
+    prev === null || prev === void 0 ? void 0 : prev.addEventListener("click", () => {
+        if (selectedSrc - 1 == -1) {
+            updateSrc(selectedSrc);
+        }
+        else {
+            updateSrc(selectedSrc - 1);
+        }
+    });
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            updateSrc(index);
+        });
+    });
+});
+// Base
+const moreRoomsPaneel = document.querySelector(".more-rooms");
+const moreRoomsToggle = document.querySelector(".more-rooms-toggle");
+moreRoomsToggle === null || moreRoomsToggle === void 0 ? void 0 : moreRoomsToggle.addEventListener("click", () => {
+    moreRoomsPaneel === null || moreRoomsPaneel === void 0 ? void 0 : moreRoomsPaneel.classList.toggle("hidden");
 });
 
 })();

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html", "./src/components/*.js"],
+  content: ["./**/*.html", "./src/components/*.js", "./src/ts/*.ts"],
   darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
