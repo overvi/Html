@@ -22,6 +22,16 @@
   --bulma-input-h: 57;
 }
 
+
+.tabs {
+  --bulma-tabs-link-active-border-bottom-color : orange;
+  --bulma-tabs-link-active-color : black;
+  --bulma-tabs-link-hover-border-bottom-color : transparent;
+  --bulma-border : transparent;
+}
+
+
+
 @layer base {
   @font-face {
     font-family: "Yekan";
@@ -70,6 +80,14 @@
     @apply opacity-100;
   }
   .radio-hidden:checked + .radio {
-    @apply border-0;
+     @apply border-0;
+  }
+
+  .tabs {
+    @apply text-sm
+  }
+  .tabs .is-active {
+    @apply font-semibold 
   }
 }
+

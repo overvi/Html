@@ -8,6 +8,7 @@ module.exports = {
     sidebar: "./src/ts/sidebar.ts",
     datacenter: "./src/ts/datacenter.ts",
     hotels: "./src/ts/hotels.ts",
+    hotelDetails: "./src/ts/hotelDetails.ts",
   },
   devtool: "source-map",
 

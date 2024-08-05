@@ -770,13 +770,13 @@
               <div
                 class="bg-white text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
               >
-                <button class="px-2" data-i18n="activeFilter"></button> :
+                <button class="px-2" data-i18n="activeFilter"></button>
 
                 <div>
                   <input class="peer z-30 hidden" type="checkbox" id="check" />
                   <label
-                    htmlFor="check"
-                    class="peer-checked:hidden cursor-pointer"
+                    for="check"
+                    class="peer-checked:hidden z-50 cursor-pointer"
                   >
                     <div
                       class="flex gap-2 items-center dark:bg-gray-700 border-0 px-4 rounded-full bg-gray-100"
@@ -803,10 +803,7 @@
                   </label>
                 </div>
                 <input class="peer z-30 hidden" type="checkbox" id="check2" />
-                <label
-                  htmlFor="check2"
-                  class="peer-checked:hidden cursor-pointer"
-                >
+                <label for="check2" class="peer-checked:hidden cursor-pointer">
                   <span
                     class="flex dark:bg-gray-700 gap-2 items-center px-2 border-0 rounded-full bg-gray-100"
                   >
