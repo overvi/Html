@@ -810,10 +810,6 @@ body {
   z-index: 1;
 }
 
-.-z-30{
-  z-index: -30;
-}
-
 .-order-1{
   order: -1;
 }
@@ -1088,6 +1084,10 @@ body {
 .size-8{
   width: 2rem;
   height: 2rem;
+}
+
+.\!h-\[100vh\]{
+  height: 100vh !important;
 }
 
 .h-16{
@@ -2741,14 +2741,6 @@ body {
 
 .group:hover .group-hover\:z-0{
   z-index: 0;
-}
-
-.group:hover .group-hover\:block{
-  display: block;
-}
-
-.group:hover .group-hover\:hidden{
-  display: none;
 }
 
 .group:hover .group-hover\:text-sky-400{

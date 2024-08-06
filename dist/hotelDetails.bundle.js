@@ -38,6 +38,15 @@ const ToggleImageViewer = () => {
     document.documentElement.classList.toggle("overflow-hidden");
     imageViewer.classList.toggle("hidden");
     if (!imageViewer.classList.contains("hidden")) {
+        // Position Image Viewer Aligned With User Scroll Position To Avoid Overflow
+        const scrollTop = window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
+        const scrollPercentage = (scrollTop / (documentHeight - viewportHeight)) * 100;
+        const viewerHeight = imageViewer.offsetHeight;
+        const absoluteTop = (scrollPercentage / 100) * (documentHeight - viewportHeight);
+        const adjustedTop = Math.min(absoluteTop, documentHeight - viewerHeight);
+        imageViewer.style.top = `${adjustedTop}px`;
         let currentImage = 0;
         const nextImage = document.querySelector(".next-img");
         const prevImage = document.querySelector(".prev-img");
