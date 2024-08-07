@@ -1,8 +1,9 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css";
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --bulma-block-spacing: 0;
@@ -20,6 +21,10 @@
 
 .input {
   --bulma-input-h: 57;
+}
+
+.content {
+  --bulma-content-heading-weight  : inherit;
 }
 
 
@@ -68,6 +73,7 @@
     font-family: "Yekan", "sens-serif";
   }
 
+
   .radio {
     @apply after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-orange-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2;
   }
@@ -89,5 +95,24 @@
   .tabs .is-active {
     @apply font-semibold 
   }
+
+  .step.active  svg {
+    @apply fill-orange-400 
+  }
+
+  .step.active .bs-stepper-label {
+   @apply text-black dark:text-white
+  } 
 }
 
+
+
+  @layer utilities {
+    .bordered-table tbody td:not(:first-child) {
+      @apply !border-r dark:!border-gray-700 ltr:!border-r-0 ltr:!border-l;
+    }
+    .bordered-table thead th:not(:first-child) {
+      @apply !border-r ltr:!border-r-0 ltr:!border-l !border-solid !border-gray-300 dark:!border-gray-700;
+    }
+   
+  }

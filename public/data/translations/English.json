@@ -223,5 +223,6 @@
   "previousReservationDays": "Previous Reservation Days",
   "destinationReservationPercentage": "Destination Reservation Percentage",
   "hotelInformationWithConfirmedOrder": "Hotel Information With Confirmed Order",
-  "rankingOfBestsellingHotelsInMangotels": "Ranking Of Best Selling Hotels In Mangotels"
+  "rankingOfBestsellingHotelsInMangotels": "Ranking Of Best Selling Hotels In Mangotels",
+  "adultOrChild": "Adult / Child"
 }

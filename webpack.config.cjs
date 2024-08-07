@@ -9,6 +9,8 @@ module.exports = {
     datacenter: "./src/ts/datacenter.ts",
     hotels: "./src/ts/hotels.ts",
     hotelDetails: "./src/ts/hotelDetails.ts",
+    booking: "./src/ts/booking.ts",
+    modal: "./src/ts/modal.ts",
   },
   devtool: "source-map",
 

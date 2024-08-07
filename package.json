@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "apexcharts": "^3.51.0",
+    "bs-stepper": "^1.7.0",
     "i18next": "^23.12.2",
     "mapbox-gl": "^3.5.2",
     "toolcool-range-slider": "^4.0.28",
