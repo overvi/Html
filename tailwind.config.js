@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        lines: "url('../src/assets/lines.png')",
-        nature: "url('../src/assets/nature.png')",
+        lines: "url('/public/assets/images/lines.png')",
+        nature: "url('/public/assets/images/nature.png')",
       },
       colors: {
         gray: {

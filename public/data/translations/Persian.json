@@ -228,5 +228,6 @@
   "destinationReservationPercentage": "درصد رزرو مقصد",
   "hotelInformationWithConfirmedOrder": "اطلاعات هتل با سفارش تایید شده",
   "rankingOfBestsellingHotelsInMangotels": "رتبه بندی هتل های پرفروش منگوتلز",
-  "adultOrChild": "بزرگسال / کودک"
+  "adultOrChild": "بزرگسال / کودک",
+  "roomDetails": "قوانین اتاق"
 }

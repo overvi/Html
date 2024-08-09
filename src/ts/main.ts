@@ -4,9 +4,11 @@ import ir from "../../public/data/translations/Persian.json";
 
 const langToggle = document.querySelector(".lang-toggle");
 
+const savedLanguage = localStorage.getItem("language") || "ir";
+
 i18next.init(
   {
-    lng: "ir",
+    lng: savedLanguage,
     debug: true,
     resources: {
       en: { translation: en },
@@ -17,6 +19,7 @@ i18next.init(
     updateContent();
   }
 );
+
 function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const keys = element.getAttribute("data-i18n")?.split(";") || [];
@@ -42,8 +45,12 @@ function updateContent() {
 }
 
 langToggle?.addEventListener("click", () => {
-  i18next.changeLanguage(i18next.language == "en" ? "ir" : "en");
-  updateContent();
+  const newLanguage = i18next.language === "en" ? "ir" : "en";
+  i18next.changeLanguage(newLanguage, () => {
+    updateContent();
+  });
+
+  localStorage.setItem("language", newLanguage);
 });
 
 // Change Theme
@@ -60,7 +67,7 @@ colorToggle?.addEventListener("click", () => {
 
 const savedColorMode = localStorage.getItem("colorMode");
 if (savedColorMode) {
-  document.documentElement.setAttribute("data-theme", savedColorMode);
+  document.documentElement.setAttribute("data-theme", "savedColorMode");
 }
 
 // Popover

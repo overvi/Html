@@ -11,6 +11,7 @@ module.exports = {
     hotelDetails: "./src/ts/hotelDetails.ts",
     booking: "./src/ts/booking.ts",
     modal: "./src/ts/modal.ts",
+    login: "./src/ts/login.ts",
   },
   devtool: "source-map",
 
