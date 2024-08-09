@@ -2565,7 +2565,7 @@ colorToggle === null || colorToggle === void 0 ? void 0 : colorToggle.addEventLi
 });
 const savedColorMode = localStorage.getItem("colorMode");
 if (savedColorMode) {
-    document.documentElement.setAttribute("data-theme", "savedColorMode");
+    document.documentElement.setAttribute("data-theme", savedColorMode);
 }
 // Popover
 const popovers = document.querySelectorAll(".popover");

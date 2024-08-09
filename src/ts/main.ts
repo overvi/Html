@@ -67,7 +67,7 @@ colorToggle?.addEventListener("click", () => {
 
 const savedColorMode = localStorage.getItem("colorMode");
 if (savedColorMode) {
-  document.documentElement.setAttribute("data-theme", "savedColorMode");
+  document.documentElement.setAttribute("data-theme", savedColorMode);
 }
 
 // Popover
