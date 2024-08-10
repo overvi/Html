@@ -35,6 +35,10 @@
   --bulma-border : transparent;
 }
 
+html[data-theme="dark"] .tabs {
+    --bulma-tabs-link-active-color : white
+}
+
 
 
 @layer base {
@@ -109,10 +113,10 @@
 
   @layer utilities {
     .bordered-table tbody td:not(:first-child) {
-      @apply !border-r dark:!border-gray-700 ltr:!border-r-0 ltr:!border-l;
+      @apply !border-r dark:!border-gray-700 border-gray-200 ltr:!border-r-0 ltr:!border-l;
     }
     .bordered-table thead th:not(:first-child) {
-      @apply !border-r ltr:!border-r-0 ltr:!border-l !border-solid !border-gray-300 dark:!border-gray-700;
+      @apply !border-r ltr:!border-r-0 ltr:!border-l !border-solid !border-gray-200 dark:!border-gray-700;
     }
    
   }

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en, ir" />
+    <meta name="description" content="Mangootels" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief description of your website."
+    />
+    <meta property="og:image" content="URL to your image" />
+
+    <script src="/src/components/nav.js"></script>
+    <script src="/src/components/side-bar.js"></script>
+    <script src="/dist/log.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/output.css" />
+
+    <title>Messages</title>
+  </head>
+  <body>
+    <main>
+      <nav-bar></nav-bar>
+      <div class="flex gap-9">
+        <side-bar></side-bar>
+
+        <div class="w-full mx-3">
+          <div class="flex dark:text-white gap-2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              class="dark:fill-white"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 13.4924V11.2424"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <p class="text-gray-400" data-i18n="nav"></p>
+            <p class="text-gray-400">/</p>
+            <p data-i18n="resevations"></p>
+          </div>
+          <div
+            class="bg-white space-y-20 mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-[#F9B233] bg-opacity-[10%] hover:outline hover:outline-1 hover:outline-orange-400 w-fit p-1 px-3 rounded-lg"
+              >
+                <div class="flex items-center">
+                  <p
+                    data-i18n="incomingReservations"
+                    class="text-sm font-bold"
+                  ></p>
+                  :
+                  <span class="text-orange-500 mx-2">۴۰ </span>
+                </div>
+              </div>
+              <div
+                class="bg-[#F9B233] bg-opacity-[10%] border-0 hover:outline hover:outline-1 hover:outline-orange-400 w-fit p-1 px-3 rounded-lg"
+              >
+                <div class="flex items-center">
+                  <p
+                    class="text-sm font-bold"
+                    data-i18n="payingReservations"
+                  ></p>
+                  :
+                  <span class="text-orange-500 mx-2">۴۰ </span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5 space-y-4">
+              <div class="flex *:basis-full items-center gap-5">
+                <div class="space-y-2">
+                  <label
+                    data-i18n="reservationDate"
+                    class="block"
+                    htmlFor="adult"
+                  >
+                  </label>
+                  <div class="is-rounded flex input overflow-hidden">
+                    <input
+                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      type="date"
+                    />
+                    <input
+                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      type="date"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label data-i18n="enterExit" class="block" htmlFor="adult">
+                  </label>
+                  <div class="is-rounded flex input overflow-hidden">
+                    <input
+                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      type="date"
+                    />
+                    <input
+                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      type="date"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    data-i18n="reservationNumber"
+                    class="block"
+                    htmlFor="adult"
+                  >
+                  </label>
+                  <div class="is-rounded">
+                    <input
+                      data-i18n="[placeholder]reservationNumber"
+                      class="outline-none input is-rounded"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label data-i18n="guests" class="block" htmlFor="adult">
+                  </label>
+                  <div class="is-rounded">
+                    <input
+                      data-i18n="[placeholder]suename"
+                      class="outline-none input is-rounded"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flex *:basis-full items-center gap-5">
+                <div class="space-y-2">
+                  <label data-i18n="hotelName" class="block" htmlFor="adult">
+                  </label>
+                  <div class="is-rounded">
+                    <input
+                      data-i18n="[placeholder]hotelName"
+                      class="outline-none input is-rounded"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    data-i18n="reservationStatus"
+                    class="block"
+                    htmlFor="adult"
+                  >
+                  </label>
+                  <div class="select is-rounded w-full">
+                    <select name="" id="" class="w-full !text-gray-400">
+                      <option
+                        value=""
+                        disabled
+                        data-i18n="all"
+                        selected
+                      ></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    data-i18n="balanceStatus"
+                    class="block"
+                    htmlFor="adult"
+                  >
+                  </label>
+                  <div class="select is-rounded w-full">
+                    <select name="" id="" class="w-full !text-gray-400">
+                      <option
+                        value=""
+                        disabled
+                        data-i18n="all"
+                        selected
+                      ></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    data-i18n="payingChannel"
+                    class="block"
+                    htmlFor="adult"
+                  >
+                  </label>
+                  <div class="select is-rounded w-full">
+                    <select name="" id="" class="w-full !text-gray-400">
+                      <option
+                        value=""
+                        disabled
+                        data-i18n="all"
+                        selected
+                      ></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 *:basis-[10%]">
+                <button class="button is-rounded" data-i18n="reset"></button>
+                <button
+                  class="button bg-orange-400 text-white border-0 is-rounded"
+                  data-i18n="search"
+                ></button>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between">
+                <div class="flex items-center gap-2">
+                  <p data-i18n="allReservation" class="text-gray-400"></p>
+                  <button
+                    class="button border-0 shadow-none bg-gray-100 dark:bg-gray-700 text-sm is-rounded"
+                    data-i18n="exportHistory"
+                  ></button>
+                  <div class="relative is-rounded">
+                    <div class="select z-30 opacity-0 w-full absolute bottom-0">
+                      <select name="" id="" class="w-full">
+                        <option value="">fd</option>
+                      </select>
+                    </div>
+                    <div
+                      class="flex bg-gray-100 dark:bg-gray-700 shadow-none border-0 text-sm gap-3 button is-rounded justify-between"
+                    >
+                      <button data-i18n="massActions"></button
+                      ><svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                          stroke="#ABABAB"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs border-b">
+                  <ul class="!grow-0 !border-transparent">
+                    <li data-tab="showList" class="m-auto tab is-active">
+                      <a data-i18n="showList"></a>
+                    </li>
+                    <li data-tab="showCard" class="m-auto tab">
+                      <a data-i18n="showCard"></a>
+                    </li>
+
+                    <li class="m-auto tab">
+                      <button disabled>
+                        <a data-i18n="groupReservation"></a>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-content text-sm mt-3" id="showList">
+                <div
+                  class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
+                >
+                  <table
+                    id="myTable"
+                    class="w-full bordered-table font-semibold"
+                  >
+                    <thead class="bg-gray-50 dark:bg-gray-950">
+                      <tr class="*:align-middle">
+                        <th>
+                          <p class="p-5" data-i18n="hotelConfirmationCode"></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-5 text-nowrap"
+                            data-i18n="hotelAndRoomName"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-5 text-nowrap"
+                            data-i18n="reservationDate"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-4 text-center text-nowrap"
+                            data-i18n="enterDate"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-4 text-center"
+                            data-i18n="stayDuration"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-4 text-center"
+                            data-i18n="extraditionStatus"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-4 text-center"
+                            data-i18n="paymentStatus"
+                          ></p>
+                        </th>
+                        <th>
+                          <p
+                            class="p-4 text-center"
+                            data-i18n="userProfile"
+                          ></p>
+                        </th>
+                        <th>
+                          <p class="p-4 text-center" data-i18n="action"></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p class="p-4">
+                            778899000 <br />
+                            hjk-78579 --
+                          </p>
+                        </td>
+                        <td>
+                          <p class="p-4">هتل اسپیناس Deluxe Room - Triple</p>
+                        </td>
+                        <td><p class="p-4">1403/03/8 7:44</p></td>
+                        <td>
+                          <p class="p-4">1403/03/8 1403/03/10 یک اتاق دو شب</p>
+                        </td>
+                        <td>
+                          <p class="p-4">test testt 2 مهمان</p>
+                        </td>
+                        <td>
+                          <div class="p-4">
+                            <p>غیر قابل استرداد</p>
+                            <p>137.5 <span>USD</span></p>
+                          </div>
+                        </td>
+
+                        <td class="p-5">
+                          <span
+                            class="rounded-full items-center gap-2 flex text-nowrap p-1 px-2 text-green-600 border border-green-600 bg-green-400/20 m-auto ml-10 w-fit"
+                          >
+                            <span
+                              class="size-2 bg-green-600 block rounded-full"
+                            ></span>
+                            تایید شده
+                          </span>
+                        </td>
+                        <td class="p-4">چارتر کننده API interface</td>
+
+                        <td class="p-4">
+                          <div class="flex flex-col">
+                            <a href="" class="underline text-orange-400">
+                              جزییات
+                            </a>
+                            <a class="underline text-green-400" href="">
+                              پرداخت
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="tab-content mt-7 text-sm hidden" id="showCard">
+                <div
+                  class="bg-gray-50 dark:bg-gray-950 p-3 rounded-t-3xl flex justify-between"
+                >
+                  <div class="flex items-center gap-5">
+                    <p class="font-bold">2223345568</p>
+                    <div class="flex items-center gap-2">
+                      <p data-i18n="connectionBase" class="text-gray-400"></p>
+                      <p>:</p>
+                      <p>Aj483</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <p data-i18n="operator" class="text-gray-400"></p>
+                      <p>:</p>
+                      <p>Aj483</p>
+                    </div>
+                  </div>
+                  <span
+                    data-i18n="confirmed"
+                    class="rounded-3xl bg-green-200 border-0 p-1 px-3"
+                  >
+                  </span>
+                </div>
+
+                <div
+                  class="border rounded-b-2xl dark:border-gray-950 overflow-hidden"
+                >
+                  <div class="flex">
+                    <div>
+                      <div class="flex w-[57rem]">
+                        <div
+                          class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
+                        >
+                          <h2 class="text-gray-400">نوع اتاق</h2>
+                          <p class="text-sm">Deluxe Room - Triple</p>
+                        </div>
+                        <div
+                          class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
+                        >
+                          <h2 class="text-gray-400">نوع اتاق</h2>
+                          <p class="text-sm">Deluxe Room - Triple</p>
+                        </div>
+                        <div
+                          class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
+                        >
+                          <h2 class="text-gray-400">نوع اتاق</h2>
+                          <p class="text-sm">Deluxe Room - Triple</p>
+                        </div>
+                      </div>
+                      <div class="flex w-[57rem]">
+                        <div class="flex">
+                          <div
+                            class="border-l ltr:border-l-0 ltr:border-r h-[9rem] dark:border-gray-950 p-4 w-[19rem]"
+                          >
+                            <h2 class="text-gray-400">نوع اتاق</h2>
+                            <p class="text-sm">Deluxe Room - Triple</p>
+                          </div>
+                          <div>
+                            <div class="flex">
+                              <div
+                                class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 w-[19rem]"
+                              >
+                                <h2 class="text-gray-400">نوع اتاق</h2>
+                                <p class="text-sm">Deluxe Room - Triple</p>
+                              </div>
+                              <div
+                                class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 w-[19rem]"
+                              >
+                                <h2 class="text-gray-400">نوع اتاق</h2>
+                                <p class="text-sm">Deluxe Room - Triple</p>
+                              </div>
+                            </div>
+                            <div class="flex">
+                              <div
+                                class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4 w-[19rem]"
+                              >
+                                <h2 class="text-gray-400">نوع اتاق</h2>
+                                <p class="text-sm">Deluxe Room - Triple</p>
+                              </div>
+                              <div
+                                class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4 w-[19rem]"
+                              >
+                                <h2 class="text-gray-400">نوع اتاق</h2>
+                                <p class="text-sm">Deluxe Room - Triple</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-auto pl-4">
+                      <div class="mb-2">
+                        <button
+                          data-i18n="details"
+                          class="bg-amber-500 rounded-full h-[2.5rem] font-bold border-0 w-full mr-2"
+                        ></button>
+                      </div>
+
+                      <div
+                        class="border border-amber-500 rounded-full mr-2 w-full"
+                      >
+                        <button
+                          data-i18n="pay"
+                          class="w-full px-24 border h-[2.5rem] text-amber-500"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex">
+                    <div
+                      class="border-l dark:border-gray-950 border-t p-4 basis-[68rem]"
+                    >
+                      <div class="flex items-center gap-20">
+                        <p class="mt-2">
+                          <span data-i18n="payingChannel" class="text-gray-400">
+                          </span>
+                        </p>
+                        <p class="mt-2">
+                          <span data-i18n="balanceStatus" class="text-gray-400">
+                          </span>
+                          :
+                          <span data-i18n="notPayed"></span>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 border-t dark:border-gray-950 basis-[19.3rem]"
+                    >
+                      <p class="mt-2">
+                        <span
+                          data-i18n="totalPrice"
+                          class="text-gray-400"
+                        ></span>
+                        128.4 USD
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content text-sm hidden" id="groupReservation"></div>
+            <div class="mt-3">
+              <div class="flex justify-between">
+                <div class="flex items-center gap-2">
+                  <button
+                    class="button border-0 shadow-none bg-gray-100 dark:bg-gray-700 text-sm is-rounded"
+                    data-i18n="exportHistory"
+                  ></button>
+                  <div class="relative is-rounded">
+                    <div class="select z-30 opacity-0 w-full absolute bottom-0">
+                      <select name="" id="" class="w-full">
+                        <option value="">fd</option>
+                      </select>
+                    </div>
+
+                    <div
+                      class="flex bg-gray-100 dark:bg-gray-700 shadow-none border-0 text-sm gap-3 button is-rounded justify-between"
+                    >
+                      <button data-i18n="massActions"></button
+                      ><svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.3002 3.72925L5.58353 6.44592C5.2627 6.76675 4.7377 6.76675 4.41686 6.44592L1.7002 3.72925"
+                          stroke="#ABABAB"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <div>
+                    <button class="prev-table ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="24"
+                        viewBox="0 0 25 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.8223 22C18.3451 22 22.8223 17.5228 22.8223 12C22.8223 6.47715 18.3451 2 12.8223 2C7.29942 2 2.82227 6.47715 2.82227 12C2.82227 17.5228 7.29942 22 12.8223 22Z"
+                          stroke="#F9B233"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.32227 12H15.3223"
+                          stroke="#F9B233"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3223 15L16.3223 12L13.3223 9"
+                          stroke="#F9B233"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <ul
+                    id="pagination"
+                    class="border pagination p-3 rounded-2xl items-center flex gap-3"
+                  ></ul>
+                  <div>
+                    <button class="next-table">
+                      <svg
+                        class="ltr:rotate-180"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                          stroke="#424242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.5 12H9.5"
+                          stroke="#424242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.5 9L8.5 12L11.5 15"
+                          stroke="#424242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p data-i18n="allReservation" class="text-gray-400 mx-3"></p>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.375 12.5625H13.6875V10.875C13.6875 10.5675 13.4325 10.3125 13.125 10.3125C12.8175 10.3125 12.5625 10.5675 12.5625 10.875V12.5625H10.875C10.5675 12.5625 10.3125 12.8175 10.3125 13.125C10.3125 13.4325 10.5675 13.6875 10.875 13.6875H12.5625V15.375C12.5625 15.6825 12.8175 15.9375 13.125 15.9375C13.4325 15.9375 13.6875 15.6825 13.6875 15.375V13.6875H15.375C15.6825 13.6875 15.9375 13.4325 15.9375 13.125C15.9375 12.8175 15.6825 12.5625 15.375 12.5625Z"
+                      fill="#767676"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M16.5 6.39V2.985C16.5 1.9275 16.02 1.5 14.8275 1.5H11.7975C10.605 1.5 10.125 1.9275 10.125 2.985V6.3825C10.125 7.4475 10.605 7.8675 11.7975 7.8675H14.8275C16.02 7.875 16.5 7.4475 16.5 6.39Z"
+                      fill="#767676"
+                    />
+                    <path
+                      d="M7.875 6.39V2.985C7.875 1.9275 7.395 1.5 6.2025 1.5H3.1725C1.98 1.5 1.5 1.9275 1.5 2.985V6.3825C1.5 7.4475 1.98 7.8675 3.1725 7.8675H6.2025C7.395 7.875 7.875 7.4475 7.875 6.39Z"
+                      fill="#767676"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M7.875 14.8275V11.7975C7.875 10.605 7.395 10.125 6.2025 10.125H3.1725C1.98 10.125 1.5 10.605 1.5 11.7975V14.8275C1.5 16.02 1.98 16.5 3.1725 16.5H6.2025C7.395 16.5 7.875 16.02 7.875 14.8275Z"
+                      fill="#767676"
+                    />
+                  </svg>
+                  <p class="text-gray-400" data-i18n="showFiveInPage"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/dist/main.bundle.js"></script>
+    <script src="/dist/tabs.bundle.js"></script>
+  </body>
+</html>
