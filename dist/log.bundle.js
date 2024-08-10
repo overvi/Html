@@ -7,6 +7,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tableBody = document.querySelector("#myTable tbody");
     const pagination = document.getElementById("pagination");
+    const selectRow = document.getElementById("selectRowInpage");
     const data = [
         {
             bookingId: "778899001",
@@ -75,9 +76,19 @@ document.addEventListener("DOMContentLoaded", () => {
             actions: '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
         },
     ];
-    const rowsPerPage = 5;
+    let rowsPerPage = 5;
     let currentPage = 1;
-    const totalPages = Math.ceil(data.length / rowsPerPage);
+    let totalPages = Math.ceil(data.length / rowsPerPage);
+    selectRow.addEventListener("change", (v) => {
+        const target = v.target;
+        rowsPerPage = parseInt(target.value);
+        currentPage = 1;
+        updateTotalPages();
+        displayTable(currentPage);
+    });
+    function updateTotalPages() {
+        totalPages = Math.ceil(data.length / rowsPerPage);
+    }
     function displayTable(page) {
         if (!tableBody)
             return;

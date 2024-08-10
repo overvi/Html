@@ -13,6 +13,9 @@ interface BookingData {
 document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.querySelector("#myTable tbody") as HTMLElement;
   const pagination = document.getElementById("pagination");
+  const selectRow = document.getElementById(
+    "selectRowInpage"
+  ) as HTMLInputElement;
 
   const data: BookingData[] = [
     {
@@ -92,9 +95,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const rowsPerPage = 5;
+  let rowsPerPage = 5;
   let currentPage = 1;
-  const totalPages = Math.ceil(data.length / rowsPerPage);
+  let totalPages = Math.ceil(data.length / rowsPerPage);
+
+  selectRow.addEventListener("change", (v) => {
+    const target = v.target as HTMLSelectElement;
+    rowsPerPage = parseInt(target.value);
+    currentPage = 1;
+    updateTotalPages();
+    displayTable(currentPage);
+  });
+
+  function updateTotalPages(): void {
+    totalPages = Math.ceil(data.length / rowsPerPage);
+  }
 
   function displayTable(page: number): void {
     if (!tableBody) return;
