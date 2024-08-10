@@ -217,7 +217,7 @@
   "paymentStatus": "وضعیت صورتحساب رزرواسیون",
   "userProfile": "پروفایل کاربر منبع رزرو",
   "action": "عملیات",
-  "showFiveInPage": "نمایش پنج در صفحه",
+  "showInPage": "نمایش  در صفحه",
   "connectionBase": "واحد ارتباطی",
   "operator": "اپراتور",
   "saved": " ذخیره شد",

@@ -212,7 +212,7 @@
   "extraditionStatus": "Cancellation Policies Total Price",
   "paymentStatus": "Reservation Invoice Status",
   "userProfile": "User Profile Reservation Source",
-  "showFiveInPage": "Show Five In Page",
+  "showInPage": "Show In Page",
   "action": "Action",
   "connectionBase": "Connection Base",
   "operator": "Operator",
