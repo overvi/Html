@@ -126,13 +126,17 @@ class Sidebar extends HTMLElement {
   }
 
   highlightCurrentPage() {
+    let currentPage = window.location.pathname;
     const activeClass =
       "bg-orange-400 p-2 side-tab w-[38px] rounded-full h-auto";
 
-    const currentPage = window.location.pathname;
     const homeRoutes = ["/", "/hotels", "/hotels/1"];
     const bookingRoutes = ["/booking", "/reservation", "/reservation/1"];
     const tabs = document.querySelectorAll(".side-tab");
+
+    if (currentPage !== "/") {
+      currentPage = currentPage.slice(0, -1);
+    }
 
     if (currentPage) {
       if (bookingRoutes.includes(currentPage)) {

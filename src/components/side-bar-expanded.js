@@ -194,9 +194,13 @@ class SidebarExpanded extends HTMLElement {
   highlightCurrentPage() {
     const activeClass = "block bg-orange-400 side-tab rounded-full p-1.5";
 
-    const currentPage = window.location.pathname;
+    let currentPage = window.location.pathname;
 
     const tabs = document.querySelectorAll(".side-tab");
+
+    if (currentPage !== "/") {
+      currentPage = currentPage.slice(0, -1);
+    }
 
     if (currentPage) {
       tabs.forEach((item) => {
