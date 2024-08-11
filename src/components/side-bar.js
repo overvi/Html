@@ -134,9 +134,11 @@ class Sidebar extends HTMLElement {
     const bookingRoutes = ["/booking", "/reservation", "/reservation/1"];
     const tabs = document.querySelectorAll(".side-tab");
 
-    if (currentPage !== "/") {
+    if (currentPage !== "/" && currentPage[currentPage.length] !== "/") {
       currentPage = currentPage.slice(0, -1);
     }
+
+    console.log(currentPage);
 
     if (currentPage) {
       if (bookingRoutes.includes(currentPage)) {
