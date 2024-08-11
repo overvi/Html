@@ -130,8 +130,8 @@ class Sidebar extends HTMLElement {
       "bg-orange-400 p-2 side-tab w-[38px] rounded-full h-auto";
 
     const currentPage = window.location.pathname;
-    const homeRoutes = ["/", "/hotels/", "/hotels/1/"];
-    const bookingRoutes = ["/booking/", "/reservation/", "/reservation/1/"];
+    const homeRoutes = ["/", "/hotels", "/hotels/1"];
+    const bookingRoutes = ["/booking", "/reservation", "/reservation/1"];
     const tabs = document.querySelectorAll(".side-tab");
 
     if (currentPage) {

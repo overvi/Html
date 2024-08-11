@@ -16,7 +16,7 @@ class SidebarExpanded extends HTMLElement {
   <div>
     <div class="bg-white h-[33rem] fixed mt-3 flex dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl">
       <div class="flex space-y-3 flex-col pt-20 rounded-full p-3 shadow-md gap-7 items-center">
-        <a href="/account/" class="mt-20 side-tab">
+        <a href="/account" class="mt-20 side-tab">
           <svg
             width="32"
             height="32"
@@ -36,7 +36,7 @@ class SidebarExpanded extends HTMLElement {
             />
           </svg>
         </a>
-        <a  href="/voucher/" class="side-tab"
+        <a  href="/voucher" class="side-tab"
  >
           <svg
             width="32"
@@ -75,7 +75,7 @@ class SidebarExpanded extends HTMLElement {
             />
           </svg>
         </a>
-        <a  href="/datacenter/" class="side-tab">
+        <a  href="/datacenter" class="side-tab">
           <svg
             width="32"
             height="32" 
@@ -95,7 +95,7 @@ class SidebarExpanded extends HTMLElement {
             />
           </svg>
         </a>
-        <a href="/messages/" class="side-tab">
+        <a href="/messages" class="side-tab">
           <svg
             width="32"
             height="32"
