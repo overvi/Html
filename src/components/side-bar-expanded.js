@@ -198,7 +198,7 @@ class SidebarExpanded extends HTMLElement {
 
     const tabs = document.querySelectorAll(".side-tab");
 
-    if (currentPage !== "/") {
+    if (currentPage !== "/" && currentPage[currentPage.length - 1] == "/") {
       currentPage = currentPage.slice(0, -1);
     }
 
