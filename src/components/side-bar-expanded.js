@@ -7,6 +7,7 @@ class SidebarExpanded extends HTMLElement {
     const content = this.Nav();
 
     this.innerHTML = content;
+    this.highlightCurrentPage();
   }
 
   Nav() {
@@ -15,27 +16,28 @@ class SidebarExpanded extends HTMLElement {
   <div>
     <div class="bg-white h-[33rem] fixed mt-3 flex dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl">
       <div class="flex space-y-3 flex-col pt-20 rounded-full p-3 shadow-md gap-7 items-center">
-        <a href="/account" class="mt-20">
+        <a href="/account/" class="mt-20 side-tab">
           <svg
             width="32"
             height="32"
             viewBox="0 0 32 32"
             fill="none"
-            class="block bg-orange-400 rounded-full p-1.5"
+            class="p-1.5"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               opacity="0.4"
               d="M16.0002 16.0001C19.6821 16.0001 22.6668 13.0153 22.6668 9.33341C22.6668 5.65152 19.6821 2.66675 16.0002 2.66675C12.3183 2.66675 9.3335 5.65152 9.3335 9.33341C9.3335 13.0153 12.3183 16.0001 16.0002 16.0001Z"
-              fill="black"
+              fill="gray"
             />
             <path
               d="M15.9999 19.3335C9.31988 19.3335 3.87988 23.8135 3.87988 29.3335C3.87988 29.7068 4.17322 30.0002 4.54655 30.0002H27.4532C27.8265 30.0002 28.1199 29.7068 28.1199 29.3335C28.1199 23.8135 22.6799 19.3335 15.9999 19.3335Z"
-              fill="black"
+              fill="gray"
             />
           </svg>
         </a>
-        <div>
+        <a  href="/voucher/" class="side-tab"
+ >
           <svg
             width="32"
             height="32"
@@ -72,11 +74,12 @@ class SidebarExpanded extends HTMLElement {
               fill="gray"
             />
           </svg>
-        </div>
-        <div>
+        </a>
+        <a  href="/datacenter/" class="side-tab">
           <svg
             width="32"
-            height="32"
+            height="32" 
+
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -91,11 +94,12 @@ class SidebarExpanded extends HTMLElement {
               fill="gray"
             />
           </svg>
-        </div>
-        <a href="/messages">
+        </a>
+        <a href="/messages/" class="side-tab">
           <svg
             width="32"
             height="32"
+   
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +120,7 @@ class SidebarExpanded extends HTMLElement {
           </svg>
         </a>
       </div>
-      <div class="space-y-12 mt-20 p-4 w-[11rem] flex flex-col font-bold pr-5">
+      <div class="space-y-14 mt-20 p-4 w-[11rem] flex flex-col font-bold pr-5">
         <div>
           <div class="flex justify-between collapse-toggle">
             <p data-i18n="management"></p>
@@ -138,12 +142,12 @@ class SidebarExpanded extends HTMLElement {
             </svg>
           </div>
           <div class="hidden collapse-content mt-1">
-            <div class="py-2 bg-orange-400 mt-3 rounded-full mb-3 px-2">
-              <a data-i18n="management" href=""></a>
+            <div class="py-2  mt-3 rounded-full mb-3 px-2">
+              <a data-i18n="management" href="/account"></a>
             </div>
             <div class="px-2">
-              <a data-i18n="deliverRegion" href="">
-                {" "}
+              <a data-i18n="deliverRegion" href="/delivery">
+            
               </a>
             </div>
           </div>
@@ -168,23 +172,17 @@ class SidebarExpanded extends HTMLElement {
           </svg>
         </div>
         <div class="hidden collapse-content mt-3">
-          <div class="py-2 bg-orange-400 m-0 rounded-full mb-3 px-2">
-            <a data-i18n="management" href="">
-              {" "}
-            </a>
-          </div>
-          <div class="px-2">
-            <a data-i18n="region" href="">
-              {" "}
+          <div class="py-2  m-0 rounded-full mb-1 px-2">
+            <a data-i18n="voucherSettings" href="/voucher">
             </a>
           </div>
         </div>
 
         <div>
-          <p data-i18n="database"></p>
+          <a href="/datacenter" data-i18n="database"></a>
         </div>
         <div>
-          <p data-i18n="messages"></p>
+          <a href="/messages" data-i18n="messages"></a>
         </div>
       </div>
     </div>
@@ -192,6 +190,24 @@ class SidebarExpanded extends HTMLElement {
 </div>;
 
               `;
+  }
+  highlightCurrentPage() {
+    const activeClass = "block bg-orange-400 side-tab rounded-full p-1.5";
+
+    const currentPage = window.location.pathname;
+
+    const tabs = document.querySelectorAll(".side-tab");
+
+    if (currentPage) {
+      tabs.forEach((item) => {
+        console.log(item.pathname, currentPage);
+        if (item.pathname == currentPage) {
+          console.log(item.pathname);
+          const svg = item.querySelector("svg");
+          svg.classList = activeClass;
+        }
+      });
+    }
   }
 }
 

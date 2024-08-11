@@ -7,6 +7,7 @@ class Sidebar extends HTMLElement {
     const content = this.Nav();
 
     this.innerHTML = content;
+    this.highlightCurrentPage();
   }
 
   Nav() {
@@ -18,7 +19,7 @@ class Sidebar extends HTMLElement {
   <div class="space-y-10 flex flex-col items-center">
     <a
       href="/"
-      class="bg-orange-400 w-[38px] p-2 rounded-full h-auto"
+      class="side-tab p-2"
     >
       <svg
         class="max-w-full *:!fill-[#767676]"
@@ -46,9 +47,9 @@ class Sidebar extends HTMLElement {
         />
       </svg>
     </a>
-    <a href="/booking">
+    <a href="/booking" class="side-tab">
       <svg
-        class="max-w-full h-auto !active && *:!fill-[#767676]"
+        class="max-w-full  h-auto !active && *:!fill-[#767676]"
         width="28"
         height="28"
         viewBox="0 0 28 28"
@@ -95,9 +96,11 @@ class Sidebar extends HTMLElement {
         />
       </svg>
     </div>
-    <a>
+    <a  class="side-tab">
       <div>
         <svg
+          class="max-w-full *:!fill-[#767676]"
+
           width="28"
           height="28"
           viewBox="0 0 28 28"
@@ -120,6 +123,24 @@ class Sidebar extends HTMLElement {
 </div>
 </div>
             `;
+  }
+
+  highlightCurrentPage() {
+    const activeClass =
+      "bg-orange-400 p-2 side-tab w-[38px] rounded-full h-auto";
+
+    const currentPage = window.location.pathname;
+    const homeRoutes = ["/", "/hotels/", "/hotels/1/"];
+    const bookingRoutes = ["/booking/", "/reservation/", "/reservation/1/"];
+    const tabs = document.querySelectorAll(".side-tab");
+
+    if (currentPage) {
+      if (bookingRoutes.includes(currentPage)) {
+        tabs[1].classList = activeClass;
+      } else if (homeRoutes.includes(currentPage)) {
+        tabs[0].classList = activeClass;
+      }
+    }
   }
 }
 

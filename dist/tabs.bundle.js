@@ -1,25 +1,2 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/*!************************!*\
-  !*** ./src/ts/tabs.ts ***!
-  \************************/
-
-const tabs = document.querySelectorAll(".tab");
-const tabContents = document.querySelectorAll(".tab-content");
-tabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
-        tabs.forEach((tab) => {
-            tab.classList.remove("is-active");
-        });
-        const target = tab.getAttribute("data-tab");
-        console.log(target);
-        tabContents.forEach((tc) => tc.classList.add("hidden"));
-        tab.classList.add("is-active");
-        document.getElementById(target).classList.remove("hidden");
-        !tab.classList.contains("is-active") && tab.classList.add("is-active");
-    });
-});
-
-/******/ })()
-;
+(()=>{"use strict";const t=document.querySelectorAll(".tab"),e=document.querySelectorAll(".tab-content");t.forEach((s=>{s.addEventListener("click",(function(){t.forEach((t=>{t.classList.remove("is-active")}));const c=s.getAttribute("data-tab");console.log(c),e.forEach((t=>t.classList.add("hidden"))),s.classList.add("is-active"),document.getElementById(c).classList.remove("hidden"),!s.classList.contains("is-active")&&s.classList.add("is-active")}))}))})();
 //# sourceMappingURL=tabs.bundle.js.map

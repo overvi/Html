@@ -1,18 +1,2 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/*!***************************!*\
-  !*** ./src/ts/sidebar.ts ***!
-  \***************************/
-
-// Collapse
-const collpaseToggle = document.querySelectorAll(".collapse-toggle");
-const collapseContent = document.querySelectorAll(".collapse-content");
-collpaseToggle.forEach((toggle, index) => {
-    toggle.addEventListener("click", () => {
-        collapseContent[index].classList.toggle("hidden");
-    });
-});
-
-/******/ })()
-;
+(()=>{"use strict";const e=document.querySelectorAll(".collapse-toggle"),l=document.querySelectorAll(".collapse-content");e.forEach(((e,t)=>{e.addEventListener("click",(()=>{l[t].classList.toggle("hidden")}))}))})();
 //# sourceMappingURL=sidebar.bundle.js.map
