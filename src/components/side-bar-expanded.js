@@ -123,7 +123,7 @@ class SidebarExpanded extends HTMLElement {
       <div class="space-y-14 mt-20 p-4 w-[11rem] flex flex-col font-bold pr-5">
         <div>
           <div class="flex justify-between collapse-toggle">
-            <p data-i18n="management"></p>
+            <p class="side-tab-title" data-i18n="management"></p>
             <svg
               width="10"
               height="10"
@@ -142,18 +142,16 @@ class SidebarExpanded extends HTMLElement {
             </svg>
           </div>
           <div class="hidden collapse-content mt-1">
-            <div class="py-2  mt-3 rounded-full mb-3 px-2">
+            <div class="py-2  side-tab-link mt-3 rounded-full mb-3 px-2">
               <a data-i18n="management" href="/account"></a>
             </div>
-            <div class="px-2">
-              <a data-i18n="deliverRegion" href="/delivery">
-            
-              </a>
+            <div class="px-2 moz side-tab-link py-2 side-tab-link mt-2 rounded-full ">
+              <a data-i18n="deliverRegion" href="/delivery"></a>
             </div>
           </div>
         </div>
-        <div class="flex collapse-toggle justify-between items-center">
-          <p data-i18n="users"></p>
+        <div class="flex  collapse-toggle justify-between items-center">
+          <p class="side-tab-title" data-i18n="users"></p>
           <svg
             width="10"
             height="10"
@@ -171,23 +169,23 @@ class SidebarExpanded extends HTMLElement {
             />
           </svg>
         </div>
-        <div class="hidden collapse-content mt-3">
-          <div class="py-2  m-0 rounded-full mb-1 px-2">
+        <div class="hidden collapse-content mt-5">
+          <div class="py-2 side-tab-link mt-2 rounded-full  px-2">
             <a data-i18n="voucherSettings" href="/voucher">
             </a>
           </div>
         </div>
 
-        <div>
+        <div class="side-tab-title" >
           <a href="/datacenter" data-i18n="database"></a>
         </div>
-        <div>
+        <div class="side-tab-title">
           <a href="/messages" data-i18n="messages"></a>
         </div>
       </div>
     </div>
   </div>
-</div>;
+</div>
 
               `;
   }
@@ -197,21 +195,26 @@ class SidebarExpanded extends HTMLElement {
     let currentPage = window.location.pathname;
 
     const tabs = document.querySelectorAll(".side-tab");
+    const sideTabs = document.querySelectorAll(".side-tab-link");
+    const sideTabTitles = document.querySelectorAll(".side-tab-title");
 
     if (currentPage !== "/" && currentPage[currentPage.length - 1] == "/") {
       currentPage = currentPage.slice(0, -1);
     }
 
-    if (currentPage) {
-      tabs.forEach((item) => {
-        console.log(item.pathname, currentPage);
-        if (item.pathname == currentPage) {
-          console.log(item.pathname);
-          const svg = item.querySelector("svg");
-          svg.classList = activeClass;
-        }
-      });
-    }
+    sideTabs.forEach((tab) => {
+      const tabContainer = tab.querySelector("a");
+      if (tabContainer.pathname == currentPage) {
+        tab.classList.add("bg-orange-400");
+      }
+    });
+
+    tabs.forEach((item, index) => {
+      if (item.pathname == currentPage) {
+        const svg = item.querySelector("svg");
+        svg.classList = activeClass;
+      }
+    });
   }
 }
 
