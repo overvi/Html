@@ -1103,10 +1103,6 @@ body {
   margin-top: .65rem;
 }
 
-.\!mt-2 {
-  margin-top: 0.5rem !important;
-}
-
 .block {
   display: block;
 }
@@ -1131,12 +1127,12 @@ body {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .size-2 {
@@ -1647,12 +1643,6 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-12 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .space-y-14 > :not([hidden]) ~ :not([hidden]) {
@@ -2443,10 +2433,6 @@ body {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
 }
 
 .text-left {
@@ -3253,6 +3239,14 @@ html[data-theme="dark"] .tabs {
   margin-left: 0.75rem;
 }
 
+.group.wide .group-\[\.wide\]\:mt-0 {
+  margin-top: 0px;
+}
+
+.group.wide .group-\[\.wide\]\:\!mt-0 {
+  margin-top: 0px !important;
+}
+
 .group.wide .group-\[\.wide\]\:block {
   display: block;
 }
@@ -3261,24 +3255,12 @@ html[data-theme="dark"] .tabs {
   display: flex;
 }
 
-.group.wide .group-\[\.wide\]\:grid {
-  display: grid;
-}
-
 .group.wide .group-\[\.wide\]\:hidden {
   display: none;
 }
 
-.group.wide .group-\[\.wide\]\:grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .group.wide .group-\[\.wide\]\:flex-row {
   flex-direction: row;
-}
-
-.group.wide .group-\[\.wide\]\:gap-8 {
-  gap: 2rem;
 }
 
 .group.wide .group-\[\.wide\]\:space-y-12 > :not([hidden]) ~ :not([hidden]) {
@@ -3295,19 +3277,12 @@ html[data-theme="dark"] .tabs {
   border-top-width: 0px;
 }
 
-.group.wide .group-\[\.wide\]\:bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+.group.wide .group-\[\.wide\]\:pt-0 {
+  padding-top: 0px;
 }
 
-.groupwide .group-\[wide\]\:bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.group.wide .group-\[\.wide\]\:bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+.group.wide .group-\[\.wide\]\:\!pt-0 {
+  padding-top: 0px !important;
 }
 
 .peer:checked ~ .peer-checked\:hidden {
