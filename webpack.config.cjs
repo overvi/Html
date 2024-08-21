@@ -35,7 +35,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js"], // Resolve these extensions
+    extensions: [".ts", ".js"],
   },
   devServer: {
     contentBase: "./dist",

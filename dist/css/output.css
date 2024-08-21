@@ -1103,8 +1103,8 @@ body {
   margin-top: .65rem;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
+.\!mt-2 {
+  margin-top: 0.5rem !important;
 }
 
 .block {
@@ -1133,6 +1133,10 @@ body {
 
 .hidden {
   display: none;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .size-2 {
@@ -1533,6 +1537,10 @@ body {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -2437,6 +2445,10 @@ body {
   padding-top: 1rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3231,6 +3243,71 @@ html[data-theme="dark"] .tabs {
 
 .group:disabled .group-disabled\:fill-gray-400 {
   fill: #9ca3af;
+}
+
+.group.wide .group-\[\.wide\]\:m-auto {
+  margin: auto;
+}
+
+.group.wide .group-\[\.wide\]\:ml-3 {
+  margin-left: 0.75rem;
+}
+
+.group.wide .group-\[\.wide\]\:block {
+  display: block;
+}
+
+.group.wide .group-\[\.wide\]\:flex {
+  display: flex;
+}
+
+.group.wide .group-\[\.wide\]\:grid {
+  display: grid;
+}
+
+.group.wide .group-\[\.wide\]\:hidden {
+  display: none;
+}
+
+.group.wide .group-\[\.wide\]\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.group.wide .group-\[\.wide\]\:flex-row {
+  flex-direction: row;
+}
+
+.group.wide .group-\[\.wide\]\:gap-8 {
+  gap: 2rem;
+}
+
+.group.wide .group-\[\.wide\]\:space-y-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.group.wide .group-\[\.wide\]\:border-l {
+  border-left-width: 1px;
+}
+
+.group.wide .group-\[\.wide\]\:border-t-0 {
+  border-top-width: 0px;
+}
+
+.group.wide .group-\[\.wide\]\:bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.groupwide .group-\[wide\]\:bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.group.wide .group-\[\.wide\]\:bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:hidden {

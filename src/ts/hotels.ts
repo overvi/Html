@@ -62,11 +62,7 @@ const layoutCardToggle = document.querySelector(".layout-cards-toggle");
 const layoutCardsLayout = document.querySelector(".layout-cards");
 
 layoutCardToggle?.addEventListener("click", () => {
-  layoutCardsLayout?.classList.remove("hidden");
-  layoutCardsLayout?.classList.add("block");
-
-  layoutSimpleCards?.classList.add("hidden");
-  layoutSimpleCards?.classList.remove("block");
+  layoutCardsLayout?.classList.add("wide");
 
   const simpleIcon = document.querySelectorAll(
     ".layout-simple-card-toggle path"
@@ -82,17 +78,13 @@ layoutCardToggle?.addEventListener("click", () => {
     path.style.fill = "orange";
   });
 });
+
 const layoutSimpleCardsToggle = document.querySelector(
   ".layout-simple-card-toggle"
 );
-const layoutSimpleCards = document.querySelector(".layout-simple-card");
 
 layoutSimpleCardsToggle?.addEventListener("click", () => {
-  layoutSimpleCards?.classList.remove("hidden");
-  layoutSimpleCards?.classList.add("grid");
-
-  layoutCardsLayout?.classList.add("hidden");
-  layoutCardsLayout?.classList.remove("flex");
+  layoutCardsLayout?.classList.remove("wide");
 
   const simpleIcon = document.querySelectorAll(
     ".layout-cards-toggle path"
@@ -182,9 +174,11 @@ bgImg.forEach((container, index) => {
 
 // Base
 
-const moreRoomsPaneel = document.querySelector(".more-rooms");
-const moreRoomsToggle = document.querySelector(".more-rooms-toggle");
+const moreRoomsPaneel = document.querySelectorAll(".more-rooms");
+const moreRoomsToggle = document.querySelectorAll(".more-rooms-toggle");
 
-moreRoomsToggle?.addEventListener("click", () => {
-  moreRoomsPaneel?.classList.toggle("hidden");
+moreRoomsToggle.forEach((item, index) => {
+  item?.addEventListener("click", () => {
+    moreRoomsPaneel[index]?.classList.toggle("!hidden");
+  });
 });
