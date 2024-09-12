@@ -2692,13 +2692,16 @@ html[data-theme="dark"] .tabs {
   display: none;
 }
 
-.group.wide .group-\[\.wide\]\:w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
+.group.wide .group-\[\.wide\]\:basis-full {
+  flex-basis: 100%;
 }
 
 .group.wide .group-\[\.wide\]\:flex-row {
   flex-direction: row;
+}
+
+.group.wide .group-\[\.wide\]\:justify-between {
+  justify-content: space-between;
 }
 
 .group.wide .group-\[\.wide\]\:space-y-12 > :not([hidden]) ~ :not([hidden]) {
