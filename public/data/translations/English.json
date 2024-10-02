@@ -225,5 +225,10 @@
   "hotelInformationWithConfirmedOrder": "Hotel Information With Confirmed Order",
   "rankingOfBestsellingHotelsInMangotels": "Ranking Of Best Selling Hotels In Mangotels",
   "adultOrChild": "Adult / Child",
-  "roomDetails": "Room Details"
+  "roomDetails": "Room Details",
+  "cart": "Cart",
+  "confirmReservation": "Complete Reservation",
+  "cartDetails": "Cart Details",
+  "numberOfPersons": "Persons",
+  "callSupport": "Call Support"
 }

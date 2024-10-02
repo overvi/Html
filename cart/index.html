@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en, ir" />
+    <meta name="description" content="Mangootels" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief description of your website."
+    />
+    <meta property="og:image" content="URL to your image" />
+
+    <script defer src="/dist/main.bundle.js"></script>
+
+    <script src="/src/components/nav.js"></script>
+    <script src="/src/components/side-bar.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/output.css" />
+
+    <style>
+      .content table:not(.vertical-table) th {
+        border: 0;
+      }
+      .content table:not(.vertical-table) tfoot td {
+        border-top: 1px solid lightgray;
+      }
+    </style>
+
+    <title>Booking</title>
+  </head>
+  <body>
+    <main>
+      <nav-bar></nav-bar>
+      <div class="flex gap-9">
+        <side-bar></side-bar>
+        <div class="w-full mx-3">
+          <div class="flex dark:text-white gap-2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              class=""
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 13.4924V11.2424"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <a href="/" class="text-gray-400" data-i18n="nav"></a>
+            <p class="text-gray-400">/</p>
+            <a href="/cart/" data-i18n="cart"></a>
+          </div>
+
+          <div
+            class="bg-white mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+          >
+            <div
+              class="border border-red-500 justify-between rounded-2xl flex gap-4 items-center bg-[#DC262626] p-2"
+            >
+              <div class="flex items-center gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    fill="#DC2626"
+                  />
+                  <path
+                    d="M12 13.75C12.41 13.75 12.75 13.41 12.75 13V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V13C11.25 13.41 11.59 13.75 12 13.75Z"
+                    fill="#DC2626"
+                  />
+                  <path
+                    d="M12.92 15.6189C12.87 15.4989 12.8 15.3889 12.71 15.2889C12.61 15.1989 12.5 15.1289 12.38 15.0789C12.14 14.9789 11.86 14.9789 11.62 15.0789C11.5 15.1289 11.39 15.1989 11.29 15.2889C11.2 15.3889 11.13 15.4989 11.08 15.6189C11.03 15.7389 11 15.8689 11 15.9989C11 16.1289 11.03 16.2589 11.08 16.3789C11.13 16.5089 11.2 16.6089 11.29 16.7089C11.39 16.7989 11.5 16.8689 11.62 16.9189C11.74 16.9689 11.87 16.9989 12 16.9989C12.13 16.9989 12.26 16.9689 12.38 16.9189C12.5 16.8689 12.61 16.7989 12.71 16.7089C12.8 16.6089 12.87 16.5089 12.92 16.3789C12.97 16.2589 13 16.1289 13 15.9989C13 15.8689 12.97 15.7389 12.92 15.6189Z"
+                    fill="#DC2626"
+                  />
+                </svg>
+                <p class="font-semibold">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است
+                </p>
+              </div>
+              <div
+                style="direction: rtl"
+                class="text-lg font-semibold flex items-center gap-4"
+                id="timer"
+              >
+                <span
+                  class="min block bg-white dark:bg-gray-900 p-2 py-1 rounded-xl"
+                  >00</span
+                >
+                <span>:</span>
+                <span
+                  class="sec block bg-white dark:bg-gray-900 p-2 py-1 rounded-xl"
+                  >15</span
+                >
+              </div>
+            </div>
+            <div class="mt-6">
+              <h1 class="text-2xl font-semibold" data-i18n="cartDetails"></h1>
+              <div class="border-collapse mt-7 rounded-3xl">
+                <table class="w-full font-semibold">
+                  <thead>
+                    <tr class="border-b">
+                      <th>
+                        <p class="p-2" data-i18n="hotel"></p>
+                      </th>
+                      <th>
+                        <p class="p-2" data-i18n="numberOfPersons"></p>
+                      </th>
+                      <th>
+                        <p class="p-2" data-i18n="enterAndExitDate"></p>
+                      </th>
+                      <th>
+                        <p class="p-2" data-i18n="eachNightPrice"></p>
+                      </th>
+                      <th>
+                        <p class="p-2" data-i18n="totalPrice"></p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="*:border-b">
+                    <tr>
+                      <td class="p-3 !w-[21rem]">
+                        <div class="flex gap-3">
+                          <img src="/public/assets/images/tree.png" alt="" />
+                          <div class="justify-between flex flex-col items-end">
+                            <p class="text-md font-bold">
+                              Ji Hotel Shenzhen Baoan <br />
+                              Pingzhou Metro Station 
+                            </p>
+                            <p>deluxe room</p>
+                            <div class="flex items-center gap-2 text-sm">
+                              <span>shanghai, shanghai</span>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                                  fill="gray"
+                                ></path>
+                                <path
+                                  d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                                  fill="gray"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-6">
+                        <p>2 بزرگسال-1 کودک 7 ساله</p>
+                      </td>
+                      <td class="py-6"><p>۱۴۰۳/۰۲/۱۴-۴۰۳/۰۲/۱۶</p></td>
+                      <td class="py-6"><p>۱۳۷.۸۱ USD</p></td>
+                      <td class="py-6"><p>۲۷۵.۶۲ USD</p></td>
+                      <td class="py-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="#DC2626"
+                          />
+                          <path
+                            d="M13.0594 11.9994L15.3594 9.69937C15.6494 9.40937 15.6494 8.92937 15.3594 8.63938C15.0694 8.34938 14.5894 8.34938 14.2994 8.63938L11.9994 10.9394L9.69937 8.63938C9.40937 8.34938 8.92937 8.34938 8.63938 8.63938C8.34938 8.92937 8.34938 9.40937 8.63938 9.69937L10.9394 11.9994L8.63938 14.2994C8.34938 14.5894 8.34938 15.0694 8.63938 15.3594C8.78938 15.5094 8.97937 15.5794 9.16937 15.5794C9.35937 15.5794 9.54937 15.5094 9.69937 15.3594L11.9994 13.0594L14.2994 15.3594C14.4494 15.5094 14.6394 15.5794 14.8294 15.5794C15.0194 15.5794 15.2094 15.5094 15.3594 15.3594C15.6494 15.0694 15.6494 14.5894 15.3594 14.2994L13.0594 11.9994Z"
+                            fill="#DC2626"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 !w-[21rem]">
+                        <div class="flex gap-3">
+                          <img src="/public/assets/images/tree.png" alt="" />
+                          <div class="justify-between flex flex-col items-end">
+                            <p class="text-md font-bold">
+                              Ji Hotel Shenzhen Baoan <br />
+                              Pingzhou Metro Station 
+                            </p>
+                            <p>deluxe room</p>
+                            <div class="flex items-center gap-2 text-sm">
+                              <span>shanghai, shanghai</span>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M12.0281 4.92909C11.4156 2.23409 9.06481 1.02075 6.99981 1.02075C6.99981 1.02075 6.99981 1.02075 6.99398 1.02075C4.93481 1.02075 2.57814 2.22825 1.96564 4.92325C1.28314 7.93325 3.12648 10.4824 4.79481 12.0866C5.41314 12.6816 6.20648 12.9791 6.99981 12.9791C7.79314 12.9791 8.58648 12.6816 9.19898 12.0866C10.8673 10.4824 12.7106 7.93909 12.0281 4.92909Z"
+                                  fill="gray"
+                                ></path>
+                                <path
+                                  d="M7.0001 7.85176C8.01492 7.85176 8.8376 7.02908 8.8376 6.01426C8.8376 4.99943 8.01492 4.17676 7.0001 4.17676C5.98527 4.17676 5.1626 4.99943 5.1626 6.01426C5.1626 7.02908 5.98527 7.85176 7.0001 7.85176Z"
+                                  fill="gray"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-6">
+                        <p>2 بزرگسال-1 کودک 7 ساله</p>
+                      </td>
+                      <td class="py-6"><p>۱۴۰۳/۰۲/۱۴-۴۰۳/۰۲/۱۶</p></td>
+                      <td class="py-6"><p>۱۳۷.۸۱ USD</p></td>
+                      <td class="py-6"><p>۲۷۵.۶۲ USD</p></td>
+                      <td class="py-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="#DC2626"
+                          />
+                          <path
+                            d="M13.0594 11.9994L15.3594 9.69937C15.6494 9.40937 15.6494 8.92937 15.3594 8.63938C15.0694 8.34938 14.5894 8.34938 14.2994 8.63938L11.9994 10.9394L9.69937 8.63938C9.40937 8.34938 8.92937 8.34938 8.63938 8.63938C8.34938 8.92937 8.34938 9.40937 8.63938 9.69937L10.9394 11.9994L8.63938 14.2994C8.34938 14.5894 8.34938 15.0694 8.63938 15.3594C8.78938 15.5094 8.97937 15.5794 9.16937 15.5794C9.35937 15.5794 9.54937 15.5094 9.69937 15.3594L11.9994 13.0594L14.2994 15.3594C14.4494 15.5094 14.6394 15.5794 14.8294 15.5794C15.0194 15.5794 15.2094 15.5094 15.3594 15.3594C15.6494 15.0694 15.6494 14.5894 15.3594 14.2994L13.0594 11.9994Z"
+                            fill="#DC2626"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="w-fit ltr:mr-0 ltr:ml-auto rtl:mr-auto mt-5 font-bold flex gap-5"
+              >
+                <p data-i18n="totalPrice"></p>
+                :
+                <p>۵۵۱.۲۴ USD</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-3xl stepper-interactive flex justify-between mb-3 p-3 text-sm mt-2 bg-white dark:bg-gray-950"
+          >
+            <div
+              class="border-0 prev button rounded-full font-bold flex items-center gap-2"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M7.99967 14.6668C11.6816 14.6668 14.6663 11.6821 14.6663 8.00016C14.6663 4.31826 11.6816 1.3335 7.99967 1.3335C4.31778 1.3335 1.33301 4.31826 1.33301 8.00016C1.33301 11.6821 4.31778 14.6668 7.99967 14.6668Z"
+                  fill="gray"
+                />
+                <path
+                  d="M10.333 7.50029H6.87297L8.01964 6.35362C8.21297 6.16029 8.21297 5.84029 8.01964 5.64695C7.8263 5.45362 7.5063 5.45362 7.31297 5.64695L5.31297 7.64695C5.11964 7.84029 5.11964 8.16029 5.31297 8.35362L7.31297 10.3536C7.41297 10.4536 7.53964 10.5003 7.6663 10.5003C7.79297 10.5003 7.91964 10.4536 8.01964 10.3536C8.21297 10.1603 8.21297 9.84029 8.01964 9.64695L6.87297 8.50029H10.333C10.6063 8.50029 10.833 8.27362 10.833 8.00029C10.833 7.72695 10.6063 7.50029 10.333 7.50029Z"
+                  fill="gray"
+                />
+              </svg>
+              <button data-i18n="prev"></button>
+            </div>
+            <div
+              class="flex next items-center px-8 py-2 gap-2 bg-[#2FAC66] group button text-white border-0 rounded-full font-bold"
+            >
+              <button data-i18n="confirmReservation"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script defer src="/dist/cart.bundle.js"></script>
+  </body>
+</html>

@@ -14,6 +14,7 @@ module.exports = {
     login: "./src/ts/login.ts",
     tabs: "./src/ts/tabs.ts",
     log: "./src/ts/log.ts",
+    cart: "./src/ts/cart.ts",
   },
   devtool: "source-map",
 

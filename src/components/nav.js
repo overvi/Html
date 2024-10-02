@@ -123,6 +123,72 @@ class Navbar extends HTMLElement {
     <div class="flex items-center gap-2">
       <button class="relative popover-toggle">
         <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M19.24 5.57859H18.84L15.46 2.19859C15.19 1.92859 14.75 1.92859 14.47 2.19859C14.2 2.46859 14.2 2.90859 14.47 3.18859L16.86 5.57859H7.14L9.53 3.18859C9.8 2.91859 9.8 2.47859 9.53 2.19859C9.26 1.92859 8.82 1.92859 8.54 2.19859L5.17 5.57859H4.77C3.87 5.57859 2 5.57859 2 8.13859C2 9.10859 2.2 9.74859 2.62 10.1686C2.86 10.4186 3.15 10.5486 3.46 10.6186C3.75 10.6886 4.06 10.6986 4.36 10.6986H19.64C19.95 10.6986 20.24 10.6786 20.52 10.6186C21.36 10.4186 22 9.81859 22 8.13859C22 5.57859 20.13 5.57859 19.24 5.57859Z" fill="#616161"/>
+<path d="M19.6509 10.7011H4.36094C4.06094 10.7011 3.75094 10.6911 3.46094 10.6211L4.72094 18.3011C5.00094 20.0211 5.75094 22.0011 9.08094 22.0011H14.6909C18.0609 22.0011 18.6609 20.3111 19.0209 18.4211L20.5309 10.6211C20.2509 10.6811 19.9509 10.7011 19.6509 10.7011ZM10.6109 17.1611C10.6109 17.5511 10.3009 17.8611 9.91094 17.8611C9.52094 17.8611 9.21094 17.5511 9.21094 17.1611V13.8611C9.21094 13.4711 9.52094 13.1611 9.91094 13.1611C10.3009 13.1611 10.6109 13.4711 10.6109 13.8611V17.1611ZM14.8909 17.1611C14.8909 17.5511 14.5809 17.8611 14.1909 17.8611C13.8009 17.8611 13.4909 17.5511 13.4909 17.1611V13.8611C13.4909 13.4711 13.8009 13.1611 14.1909 13.1611C14.5809 13.1611 14.8909 13.4711 14.8909 13.8611V17.1611Z" fill="#616161"/>
+</svg>
+
+        </div>
+        <div
+          class="popover transition-all ltr:right-0 ltr:left-[unset] origin-top-left duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+        >
+          <div
+            class="bg-white text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-3 before:left-2 before:size-7 before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
+          >
+            <div dir="rtl" class="font-yekan w-[25rem] p-2 rounded-full">
+              <div>
+              <div class='flex justify-between items-center w-full'>
+
+                <h1 data-i18n="cart" class="font-bold text-lg "></h1>
+                <div class="flex w-fit border-0  next items-center px-4 py-2 gap-2 bg-[#F6F6F6] dark:bg-gray-950  group button text-green-600 rounded-full font-bold">
+                           <svg class=" rtl:hidden " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="#2FAC66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.4999 12H3.66992" stroke="#2FAC66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <div  data-i18n="cart" class="rtl:mt-0 ltr:mt-[5px]"></div>
+              <svg class=" ltr:hidden " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="#2FAC66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.4999 12H3.66992" stroke="#2FAC66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </div>
+       
+                </div>
+                <div class="mt-5 border-y py-3">
+                  <div class="flex justify-between items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.4"
+                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                        fill="#DC2626"
+                      />
+                      <path
+                        d="M9.79502 9.00002L11.52 7.27502C11.7375 7.05752 11.7375 6.69752 11.52 6.48002C11.3025 6.26252 10.9425 6.26252 10.725 6.48002L9.00002 8.20502L7.27502 6.48002C7.05752 6.26252 6.69752 6.26252 6.48002 6.48002C6.26252 6.69752 6.26252 7.05752 6.48002 7.27502L8.20502 9.00002L6.48002 10.725C6.26252 10.9425 6.26252 11.3025 6.48002 11.52C6.59252 11.6325 6.73502 11.685 6.87752 11.685C7.02002 11.685 7.16252 11.6325 7.27502 11.52L9.00002 9.79502L10.725 11.52C10.8375 11.6325 10.98 11.685 11.1225 11.685C11.265 11.685 11.4075 11.6325 11.52 11.52C11.7375 11.3025 11.7375 10.9425 11.52 10.725L9.79502 9.00002Z"
+                        fill="#DC2626"
+                      />
+                    </svg>
+                    <div class="font-semibold flex flex-col items-end">
+                    <p class="font-bold">Ji Hotel Shenzhen Baoan Pingzhou Metro Station </p>
+                    <p>deluxe room</p>
+                    <p>2 adult - 1 kid...</p>
+                    </div>
+                  </div>
+                 
+                </div>
+         
+              </div>
+            </div>
+          </div>
+        </div>
+      </button>
+      <button class="relative popover-toggle">
+        <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
           <svg
             width="24"
             height="24"
