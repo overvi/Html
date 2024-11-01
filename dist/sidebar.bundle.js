@@ -1,2 +1,0 @@
-(()=>{"use strict";const e=document.querySelectorAll(".collapse-toggle"),l=document.querySelectorAll(".collapse-content");e.forEach(((e,t)=>{e.addEventListener("click",(()=>{l[t].classList.toggle("hidden")}))}))})();
-//# sourceMappingURL=sidebar.bundle.js.map

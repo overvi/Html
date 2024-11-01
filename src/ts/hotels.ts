@@ -1,52 +1,49 @@
 import "toolcool-range-slider";
-import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-
-// Map
-
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoic2tpbGxzMTAxIiwiYSI6ImNreXczMW8zbTA0bTYyb213NDBhcm85OHcifQ.L4xxw4JR6VWAk7dbteyMcg";
-
-if (mapboxgl.getRTLTextPluginStatus() !== "loaded") {
-  mapboxgl.setRTLTextPlugin(
-    "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js",
-    null,
-    true
-  );
-}
-
-const mapStyle = "mapbox://styles/mapbox/outdoors-v11";
-
-const map = new mapboxgl.Map({
-  container: "map",
-  style: mapStyle,
-  center: [51.389, 35.6892],
-  zoom: 9,
-  attributionControl: false,
-});
-
-let selectedMarker: any;
-
-map.on("click", function (e: any) {
-  if (selectedMarker) {
-    selectedMarker.remove();
-  }
-  selectedMarker = new mapboxgl.Marker().setLngLat(e.lngLat).addTo(map);
-});
-
-map.on("render", function () {
-  map.resize();
-});
-
-// Layout
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
 
-mapToggle?.addEventListener("click", () => {
+mapToggle?.addEventListener("click", async () => {
   mapContainer?.classList.toggle("hidden");
 
-  map.resize();
+  if (!mapContainer?.classList.contains("hidden")) {
+    const { default: mapboxgl } = await import("mapbox-gl");
+
+    mapboxgl.accessToken =
+      "pk.eyJ1Ijoic2tpbGxzMTAxIiwiYSI6ImNreXczMW8zbTA0bTYyb213NDBhcm85OHcifQ.L4xxw4JR6VWAk7dbteyMcg";
+
+    if (mapboxgl.getRTLTextPluginStatus() !== "loaded") {
+      mapboxgl.setRTLTextPlugin(
+        "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js",
+        null,
+        true
+      );
+    }
+
+    const mapStyle = "mapbox://styles/mapbox/outdoors-v11";
+
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: mapStyle,
+      center: [51.389, 35.6892],
+      zoom: 9,
+      attributionControl: false,
+    });
+
+    let selectedMarker: any;
+
+    map.on("click", function (e: any) {
+      if (selectedMarker) {
+        selectedMarker.remove();
+      }
+      selectedMarker = new mapboxgl.Marker().setLngLat(e.lngLat).addTo(map);
+    });
+
+    map.on("render", function () {
+      map.resize();
+    });
+  }
 
   const mapIcon = document.querySelectorAll(
     ".map-toggle path"
@@ -174,11 +171,11 @@ bgImg.forEach((container, index) => {
 
 // Base
 
-const moreRoomsPaneel = document.querySelectorAll(".more-rooms");
+const moreRoomsPanel = document.querySelectorAll(".more-rooms");
 const moreRoomsToggle = document.querySelectorAll(".more-rooms-toggle");
 
 moreRoomsToggle.forEach((item, index) => {
   item?.addEventListener("click", () => {
-    moreRoomsPaneel[index]?.classList.toggle("!hidden");
+    moreRoomsPanel[index]?.classList.toggle("!hidden");
   });
 });

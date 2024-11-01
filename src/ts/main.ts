@@ -1,3 +1,5 @@
+import "@/css/output.css";
+
 import i18next from "i18next";
 import en from "../../public/data/translations/English.json";
 import ir from "../../public/data/translations/Persian.json";

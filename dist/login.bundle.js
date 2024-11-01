@@ -1,2 +1,0 @@
-(()=>{"use strict";const e=document.querySelector(".toggle-password"),t=document.querySelector(".password-input");console.log(t,e),e.addEventListener("click",(()=>{t.type="text"==t.type?"password":"text"}))})();
-//# sourceMappingURL=login.bundle.js.map
