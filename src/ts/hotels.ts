@@ -1,4 +1,5 @@
 import "toolcool-range-slider";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");

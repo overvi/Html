@@ -21,12 +21,11 @@ module.exports = (env) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: "css/output.css",
+        filename: "css/[name].css",
       }),
     ],
     output: {
       filename: "js/[name].bundle.js",
-      cssFilename: "css/output.css",
       path: path.resolve(__dirname, "dist"),
       clean: true,
     },
