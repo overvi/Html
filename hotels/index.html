@@ -12,14 +12,15 @@
     />
     <meta property="og:image" content="URL to your image" />
 
-    <script defer src="/dist/js/sidebar.bundle.js"></script>
-    <script defer src="/dist/js/main.bundle.js"></script>
     <script src="/src/components/nav.js"></script>
     <script src="/src/components/side-bar.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+
     <link rel="stylesheet" href="/node_modules/mapbox-gl/dist/mapbox-gl.css" />
     <link rel="stylesheet" href="/dist/css/output.css" />
     <style>
@@ -2424,6 +2425,8 @@
         </div>
       </div>
     </main>
+    <script defer src="/dist/js/sidebar.bundle.js"></script>
+    <script defer src="/dist/js/main.bundle.js"></script>
     <script async src="/dist/js/hotels.bundle.js"></script>
   </body>
 </html>
