@@ -1,10 +1,11 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = (env) => {
   return {
-    mode: env.prod ? "productions" : "development",
+    mode: "development",
     entry: {
       home: "./src/ts/home.ts",
       main: "./src/ts/main.ts",
@@ -17,6 +18,8 @@ module.exports = (env) => {
       login: "./src/ts/login.ts",
       tabs: "./src/ts/tabs.ts",
       log: "./src/ts/log.ts",
+      darkMode: "./src/ts/darkMode.ts",
+      i18n: "./src/ts/i18n.ts",
       cart: "./src/ts/cart.ts",
     },
     plugins: [
@@ -28,6 +31,9 @@ module.exports = (env) => {
       filename: "js/[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
+    },
+    optimization: {
+      minimizer: [`...`, new CssMinimizerPlugin()],
     },
     module: {
       rules: [

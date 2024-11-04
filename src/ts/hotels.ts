@@ -1,5 +1,6 @@
 import "toolcool-range-slider";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { updateContent } from "./main";
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
@@ -177,5 +178,60 @@ const moreRoomsToggle = document.querySelectorAll(".more-rooms-toggle");
 moreRoomsToggle.forEach((item, index) => {
   item?.addEventListener("click", () => {
     moreRoomsPanel[index]?.classList.toggle("!hidden");
+  });
+});
+
+// Tabs
+
+const tabs = document.querySelectorAll(".tab-items");
+const tabContents = document.querySelectorAll(".tab-contents");
+
+tabs.forEach((tab, index) => {
+  const toggles = tab.querySelectorAll("button");
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const id = toggle.getAttribute("aria-target");
+
+      const target = tabContents[index].querySelector(
+        `div[id='${id}']`
+      ) as HTMLDivElement;
+
+      const tabContentChilds =
+        tabContents[index].querySelectorAll(".tab-content");
+
+      tabContentChilds.forEach((child) => {
+        if (child !== target) {
+          child.classList.add("hidden");
+        }
+      });
+
+      toggles.forEach((t) => {
+        if (t !== toggle) t.parentElement?.classList.remove("active-tab");
+      });
+
+      toggle.parentElement!.classList.add("active-tab");
+
+      target?.classList.contains("hidden") && target.classList.remove("hidden");
+    });
+  });
+});
+
+// Collapse
+
+const collpaseToggleText = document.querySelectorAll(".collapse-toggle-text");
+const collapseContentText = document.querySelectorAll(".collapse-content-text");
+
+collpaseToggleText.forEach((toggle, index) => {
+  toggle.addEventListener("click", () => {
+    collapseContentText[index].classList.toggle("hidden");
+
+    if (collapseContentText[index].classList.contains("hidden")) {
+      toggle.setAttribute("data-i18n", "seeMore");
+      updateContent();
+    } else {
+      toggle.setAttribute("data-i18n", "seeLess");
+      updateContent();
+    }
   });
 });

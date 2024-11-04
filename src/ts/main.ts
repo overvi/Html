@@ -1,20 +1,28 @@
 import "@/css/output.css";
 
 import i18next from "i18next";
-import en from "../../public/data/translations/English.json";
-import ir from "../../public/data/translations/Persian.json";
+import LocalStorageBackend from "i18next-localstorage-backend";
+import ChainedBackend from "i18next-chained-backend";
+import HttpBackend from "i18next-http-backend";
 
 const langToggle = document.querySelector(".lang-toggle");
 
-const savedLanguage = localStorage.getItem("language") || "ir";
+const lang = localStorage.getItem("language") || "ir";
 
-i18next.init(
+i18next.use(ChainedBackend).init(
   {
-    lng: savedLanguage,
-    debug: true,
-    resources: {
-      en: { translation: en },
-      ir: { translation: ir },
+    lng: lang!,
+    fallbackLng: "ir",
+    backend: {
+      backends: [LocalStorageBackend, HttpBackend],
+      backendOptions: [
+        {
+          expirationTime: 7 * 24 * 60 * 60 * 1000, // 7 days
+        },
+        {
+          loadPath: "../../public/data/translations/{{lng}}.json",
+        },
+      ],
     },
   },
   function (err, t) {
@@ -22,7 +30,7 @@ i18next.init(
   }
 );
 
-function updateContent() {
+export function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const keys = element.getAttribute("data-i18n")?.split(";") || [];
     keys.forEach((key) => {
@@ -38,18 +46,20 @@ function updateContent() {
       }
     });
   });
-
-  const direction = i18next.language === "ir" ? "rtl" : "ltr";
-  document.documentElement.setAttribute("dir", direction);
-  document.querySelectorAll('[dir="rtl"], [dir="ltr"]').forEach((element) => {
-    element.setAttribute("dir", direction);
-  });
 }
 
 langToggle?.addEventListener("click", () => {
-  const newLanguage = i18next.language === "en" ? "ir" : "en";
+  const newLanguage = i18next.language == "en" ? "ir" : "en";
+  console.log(newLanguage);
   i18next.changeLanguage(newLanguage, () => {
     updateContent();
+    document.documentElement.setAttribute(
+      "dir",
+      newLanguage == "ir" ? "rtl" : "ltr"
+    );
+    document.querySelectorAll('[dir="rtl"], [dir="ltr"]').forEach((element) => {
+      element.setAttribute("dir", newLanguage == "ir" ? "rtl" : "ltr");
+    });
   });
 
   localStorage.setItem("language", newLanguage);
@@ -63,14 +73,8 @@ colorToggle?.addEventListener("click", () => {
   const colorMode = document.documentElement.getAttribute("data-theme");
   const newColorMode = colorMode === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", newColorMode);
-
   localStorage.setItem("colorMode", newColorMode);
 });
-
-const savedColorMode = localStorage.getItem("colorMode");
-if (savedColorMode) {
-  document.documentElement.setAttribute("data-theme", savedColorMode);
-}
 
 // Popover
 

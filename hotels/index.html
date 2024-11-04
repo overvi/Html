@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,8 @@
       content="A brief description of your website."
     />
     <meta property="og:image" content="URL to your image" />
-
-    <script defer src="/dist/js/main.bundle.js"></script>
+    <script src="/dist/js/darkMode.bundle.js"></script>
+    <script src="/dist/js/i18n.bundle.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
@@ -38,7 +38,7 @@
       #map {
         width: 100%;
         height: 353px;
-        border-radius: 24px;
+        border-radius: 15px;
       }
     </style>
     <title>Hotels</title>
@@ -47,20 +47,24 @@
     <header>
       <nav class="p-4 justify-between flex gap-3 items-center">
         <div class="flex items-center gap-3">
-          <div class="rounded-full p-1 px-4 bg-white dark:bg-gray-900 w-fit">
-            <img
-              width="17"
-              height="25"
-              src="/public/assets/images/logo-orange.png"
-              alt=""
-            />
+          <div class="w-[49px] h-[46px] mr-[7px]">
+            <div
+              class="rounded-full fixed p-1 px-4 bg-white dark:bg-gray-900 w-fit"
+            >
+              <img
+                width="17"
+                height="25"
+                src="/public/assets/images/logo-orange.png"
+                alt=""
+              />
+            </div>
           </div>
           <button class="popover-toggle relative">
             <div
               class="bg-white flex justify-end dark:bg-gray-900 z-0 relative overflow-hidden rounded-full w-[27rem] h-[2.875rem]"
             >
               <div
-                class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-orange-400"
+                class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-primary-400"
               >
                 <svg
                   class="m-auto"
@@ -94,13 +98,13 @@
                 class="bg-white space-y-4 w-[27rem] text-right border-0 dark:bg-gray-900 rounded-3xl shadow-md p-4 z-50"
               >
                 <div
-                  class="hover:text-orange-400 pb-2 border-b transition-all duration-700 flex justify-between"
+                  class="hover:text-primary-400 pb-2 border-b transition-all duration-700 flex justify-between"
                 >
                   <div>رزررواسیون</div>
                   <div>123222kdjsfkderFD</div>
                 </div>
                 <div
-                  class="hover:text-orange-400 transition-all duration-700 flex justify-between"
+                  class="hover:text-primary-400 transition-all duration-700 flex justify-between"
                 >
                   <div>رزررواسیون</div>
                   <div>123222kdjsfkderFD</div>
@@ -788,107 +792,18 @@
             <p class="text-gray-400">/</p>
             <a href="hotels" data-i18n="hotelsList"></a>
           </div>
-          <div class="flex gap-10">
-            <div
-              class="bg-white w-[20rem] space-y-5 mt-3 min-h-[80vh] h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-            >
-              <h1
-                data-i18n="foundedHotels"
-                class="text-xl text-nowrap font-bold border-b dark:border-b-gray-600 pb-5"
-              ></h1>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p data-i18n="hotelsName" class="text-base font-bold"></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                <form class="mt-3 collapse-content items-center gap-3">
-                  <div class="flex items-center gap-2">
-                    <input
-                      class="rounded-full input p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500"
-                      type="text"
-                      data-i18n="[placeholder]enterHotelName"
-                    />
-                    <button
-                      data-i18n="save"
-                      class="font-yekan rounded-3xl bg-orange-400 p-2 px-5 border-0"
-                    ></button>
-                  </div>
-                </form>
-              </div>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p data-i18n="price" class="text-base font-bold"></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="collapse-content">
-                  <div class="tabs">
-                    <ul>
-                      <li class="m-auto">
-                        <a data-i18n="totalPrice"></a>
-                      </li>
-                      <li class="m-auto is-active">
-                        <a data-i18n="eachNightPrice"></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="p-2">
-                    <div class="my-5">
-                      <tc-range-slider
-                        slider-bg="#eee"
-                        slider-bg-hover="orange"
-                        slider-bg-fill="orange"
-                        pointer-border="1px solid orange"
-                        value1="20"
-                        value2="30"
-                      ></tc-range-slider>
-                    </div>
-                  </div>
-
-                  <form action="" class="flex gap-2">
-                    <div>
-                      <label data-i18n="least" for=""></label>
-                      <input type="text" class="input rounded-full" />
-                    </div>
-                    <p class="mt-8">-</p>
-                    <div>
-                      <label data-i18n="most" for=""></label>
-                      <input class="input rounded-full" type="text" />
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex *:font-yekan flex-col mt-3 gap-3">
+          <div class="flex gap-7">
+            <div class="w-[20rem]">
+              <div
+                class="bg-white h-[15rem] hotels-collapse overflow-auto fixed z-0 w-[20rem] space-y-5 mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+              >
+                <h1
+                  data-i18n="foundedHotels"
+                  class="text-xl text-nowrap font-bold border-b dark:border-b-gray-600 pb-5"
+                ></h1>
+                <div class="border-b dark:border-b-gray-600 pb-5">
                   <div class="flex justify-between collapse-toggle">
-                    <p data-i18n="meals" class="text-base font-bold"></p>
+                    <p data-i18n="hotelsName" class="text-base font-bold"></p>
                     <div class="bg-gray-300 block p-1.5 rounded-full">
                       <svg
                         width="12"
@@ -904,305 +819,1515 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="space-y-4 collapse-content">
+
+                  <form class="mt-3 collapse-content items-center gap-3">
                     <div class="flex items-center gap-2">
                       <input
-                        type="checkbox"
-                        id="breakfest"
-                        name="options"
-                        class="hidden radio-hidden"
+                        class="rounded-full input p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500"
+                        type="text"
+                        data-i18n="[placeholder]enterHotelName"
                       />
-                      <label for="breakfest" class="radio mb-1"></label>
-                      <label data-i18n="super" for="breakfest"> </label>
+                      <button
+                        data-i18n="save"
+                        class="font-yekan rounded-3xl bg-primary-400 p-2 px-5 border-0"
+                      ></button>
                     </div>
-                    <div class="flex items-center gap-2">
+                  </form>
+                </div>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p data-i18n="price" class="text-base font-bold"></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="collapse-content">
+                    <div class="tab-items bg-white dark:bg-gray-900 border-b">
+                      <ul class="flex p-3 relative overflow-visible">
+                        <li class="m-auto relative group active-tab">
+                          <button aria-target="totalPriceTab">
+                            <a data-i18n="totalPrice"></a>
+                          </button>
+
+                          <div
+                            class="h-[19px] rounded-2xl flex items-center justify-center opacity-0 group-[.active-tab]:opacity-100 -right-4 -left-4 -z-[10] absolute bg-primary-400 top-full"
+                          ></div>
+                        </li>
+                        <li class="m-auto relative group">
+                          <button aria-target="eachNightPriceTab">
+                            <a data-i18n="eachNightPrice"></a>
+                          </button>
+
+                          <div
+                            class="h-[19px] rounded-2xl flex items-center justify-center opacity-0 group-[.active-tab]:opacity-100 -right-4 -left-4 -z-[10] absolute bg-primary-400 top-full"
+                          ></div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-contents">
+                      <div class="tab-content" id="totalPriceTab">
+                        <div class="p-2">
+                          <div class="my-5">
+                            <tc-range-slider
+                              slider-bg="#eee"
+                              slider-bg-hover="orange"
+                              slider-bg-fill="orange"
+                              pointer-border="1px solid orange"
+                              value1="20"
+                              value2="30"
+                            ></tc-range-slider>
+                          </div>
+                        </div>
+
+                        <form action="" class="flex gap-2">
+                          <div>
+                            <label data-i18n="least" for=""></label>
+                            <input
+                              placeholder="50 USD"
+                              type="text"
+                              class="border-gray-300 input is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                            />
+                          </div>
+                          <p class="mt-8">-</p>
+                          <div>
+                            <label data-i18n="most" for=""></label>
+                            <input
+                              placeholder="100 USD"
+                              type="text"
+                              class="border-gray-300 input is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div
+                        class="hidden tab-content font-medium"
+                        id="eachNightPriceTab"
+                      >
+                        <div class="p-2">
+                          <div class="my-5">
+                            <tc-range-slider
+                              slider-bg="#eee"
+                              slider-bg-hover="orange"
+                              slider-bg-fill="orange"
+                              pointer-border="1px solid orange"
+                              value1="20"
+                              value2="30"
+                            ></tc-range-slider>
+                          </div>
+                        </div>
+
+                        <form action="" class="flex gap-2">
+                          <div>
+                            <label data-i18n="least" for=""></label>
+                            <input
+                              placeholder="50 USD"
+                              type="text"
+                              class="border-gray-300 input is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                            />
+                          </div>
+                          <p class="mt-8">-</p>
+                          <div>
+                            <label data-i18n="most" for=""></label>
+                            <input
+                              placeholder="100 USD"
+                              type="text"
+                              class="border-gray-300 input is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex *:font-yekan flex-col mt-3 gap-3">
+                    <div class="flex justify-between collapse-toggle">
+                      <p data-i18n="meals" class="text-base font-bold"></p>
+                      <div class="bg-gray-300 block p-1.5 rounded-full">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                            fill="#767676"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="space-y-1 collapse-content">
+                      <div
+                        class="flex bg-gray-50 dark:bg-gray-800 w-full rounded-lg p-1 items-center gap-2"
+                      >
+                        <input
+                          type="checkbox"
+                          id="breakfest"
+                          name="options"
+                          class="hidden w-full radio-hidden"
+                        />
+                        <label
+                          for="breakfest"
+                          class="radio aspect-square mb-1"
+                        ></label>
+                        <label data-i18n="super" class="w-full" for="breakfest">
+                        </label>
+                      </div>
+                      <div
+                        class="flex rounded-lg bg-gray-50 dark:bg-gray-800 p-1 items-center gap-2"
+                      >
+                        <input
+                          type="checkbox"
+                          id="lunch"
+                          name="options"
+                          class="hidden radio-hidden"
+                        />
+                        <label
+                          for="lunch"
+                          class="radio aspect-square mb-1"
+                        ></label>
+                        <label data-i18n="lunch" class="w-full" for="lunch">
+                        </label>
+                      </div>
+                      <div
+                        class="flex bg-gray-50 dark:bg-gray-800 p-1 rounded-lg items-center gap-2"
+                      >
+                        <input
+                          type="checkbox"
+                          id="dinner"
+                          name="options"
+                          class="hidden radio-hidden"
+                        />
+                        <label
+                          for="dinner"
+                          class="radio aspect-square mb-1"
+                        ></label>
+                        <label
+                          data-i18n="breakfest"
+                          class="w-full"
+                          for="dinner"
+                        >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p data-i18n="category" class="text-base font-bold"></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="mt-3 collapse-content space-y-1">
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
                       <input
                         type="checkbox"
-                        id="lunch"
-                        name="options"
+                        id="one-star"
+                        name="rates"
                         class="hidden radio-hidden"
                       />
-                      <label for="lunch" class="radio mb-1"></label>
-                      <label data-i18n="lunch" for="lunch"> </label>
+                      <label for="one-star" class="radio aspect-square"></label>
+                      <label
+                        for="one-star"
+                        class="flex w-full items-cener gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
                       <input
                         type="checkbox"
-                        id="dinner"
-                        name="options"
+                        id="two-star"
+                        name="rates"
                         class="hidden radio-hidden"
                       />
-                      <label for="dinner" class="radio mb-1"></label>
-                      <label data-i18n="breakfest" for="dinner"> </label>
+                      <label for="two-star" class="radio aspect-square"></label>
+                      <label
+                        for="two-star"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="three-star"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="three-star"
+                        class="radio aspect-square"
+                      ></label>
+                      <label
+                        for="three-star"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="four-star"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="four-star"
+                        class="radio aspect-square"
+                      ></label>
+                      <label
+                        for="four-star"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="five-s"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="five-s" class="radio aspect-square"></label>
+                      <label
+                        for="five-s"
+                        class="flex items-center gap-1 w-full"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
+                              fill="#F9B233"
+                              stroke="#F9B233"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p data-i18n="rates" class="text-base font-bold"></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
-                      />
-                    </svg>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p data-i18n="rates" class="text-base font-bold"></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
 
-                <div class="mt-3 collapse-content space-y-3">
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="one-star"
-                      name="rates"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="one-star" class="radio mb-1"></label>
-                    <label for="one-star">
-                      <img src="../public/assets/images/one-star.png" alt="" />
-                    </label>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="two-star"
-                      name="rates"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="two-star" class="radio mb-1"></label>
-                    <label for="two-star">
-                      <img src="../public/assets/images/two-star.png" alt="" />
-                    </label>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="three-star"
-                      name="rates"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="three-star" class="radio mb-1"></label>
-                    <label for="three-star">
-                      <img
-                        src="../public/assets/images/three-star.png"
-                        alt=""
-                      />
-                    </label>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="four-star"
-                      name="rates"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="four-star" class="radio mb-1"></label>
-                    <label for="four-star">
-                      <img src="../public/assets/images/four-star.png" alt="" />
-                    </label>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="five-s"
-                      name="rates"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="five-s" class="radio mb-1"></label>
-                    <label for="five-s">
-                      <img src="../public/assets/images/five-star.png" alt="" />
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p data-i18n="stayType" class="text-base font-bold"></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div class="mt-3 collapse-content space-y-1">
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
                     >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
+                      <input
+                        type="checkbox"
+                        id="one-rate"
+                        name="rates"
+                        class="hidden radio-hidden"
                       />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="mt-3 space-y-4 collapse-content">
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="hotel"
-                      name="meals"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="hotel" class="radio mb-1"></label>
-                    <label data-i18n="hotel" for="hotel"> </label>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <input
-                      type="checkbox"
-                      id="ap"
-                      name="meals"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="ap" class="radio mb-1"></label>
-                    <label data-i18n="ap" for="ap"> </label>
-                  </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="villa"
-                      name="meals"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="villa" class="radio mb-1"></label>
-                    <label data-i18n="villa" for="villa"> </label>
-                  </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="hostel"
-                      name="meals"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="hostel" class="radio mb-1"></label>
-                    <label data-i18n="hostel" for="hostel"> </label>
-                  </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="breakfest2"
-                      name="meals"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="breakfest2" class="radio mb-1"></label>
-                    <label data-i18n="breakfest" for="breakfest"> </label>
-                  </div>
-                </div>
-              </div>
-              <div class="border-b dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p
-                    data-i18n="selectedLocation"
-                    class="text-base font-bold"
-                  ></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      <label for="one-rate" class="radio aspect-square"></label>
+                      <label
+                        for="one-rate"
+                        class="flex w-full items-cener gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <path
+                              d="M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2V8L8 14Z"
+                              fill="#2FAC66"
+                            />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
                     >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
+                      <input
+                        type="checkbox"
+                        id="two-rate"
+                        name="rates"
+                        class="hidden radio-hidden"
                       />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="mt-2 collapse-content">
-                  <input
-                    type="text"
-                    data-i18n="[placeholder]wantedRegion"
-                    class="input rounded-full"
-                  />
-                </div>
-              </div>
-              <div class="dark:border-b-gray-600 pb-5">
-                <div class="flex justify-between collapse-toggle">
-                  <p data-i18n="hotelServices" class="text-base font-bold"></p>
-                  <div class="bg-gray-300 block p-1.5 rounded-full">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 10 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      <label for="two-rate" class="radio aspect-square"></label>
+                      <label
+                        for="two-rate"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
                     >
-                      <path
-                        d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
-                        fill="#767676"
+                      <input
+                        type="checkbox"
+                        id="three-rate"
+                        name="rates"
+                        class="hidden radio-hidden"
                       />
-                    </svg>
+                      <label
+                        for="three-rate"
+                        class="radio aspect-square"
+                      ></label>
+                      <label
+                        for="three-rate"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <path
+                              d="M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2V8L8 14Z"
+                              fill="#2FAC66"
+                            />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="four-rate"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="four-rate"
+                        class="radio aspect-square"
+                      ></label>
+                      <label
+                        for="four-rate"
+                        class="flex w-full items-center gap-1"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="five-r"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="five-r" class="radio aspect-square"></label>
+                      <label
+                        for="five-r"
+                        class="flex items-center gap-1 w-full"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <path
+                              d="M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2V8L8 14Z"
+                              fill="#2FAC66"
+                            />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="six-r"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="six-r" class="radio aspect-square"></label>
+                      <label for="six-r" class="flex items-center gap-1 w-full">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="seven-r"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="seven-r" class="radio aspect-square"></label>
+                      <label
+                        for="seven-r"
+                        class="flex items-center gap-1 w-full"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <path
+                              d="M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2V8L8 14Z"
+                              fill="#2FAC66"
+                            />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="eight-r"
+                        name="rates"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="eight-r" class="radio aspect-square"></label>
+                      <label
+                        for="eight-r"
+                        class="flex items-center gap-1 w-full"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <circle cx="8" cy="8" r="6" fill="#2FAC66" />
+                            <circle cx="8" cy="8" r="7.5" stroke="#2FAC66" />
+                          </svg>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 </div>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p data-i18n="stayType" class="text-base font-bold"></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
+                  </div>
 
-                <div
-                  class="space-y-4 collapse-content *:font-yekan flex-col mt-3 gap-3"
-                >
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="pool"
-                      name="facilities"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="pool" class="radio mb-1"></label>
-                    <label data-i18n="pool" for="breakfest"> </label>
+                  <div class="mt-3 space-y-1 collapse-content">
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="hotel"
+                        name="meals"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="hotel"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label data-i18n="hotel" class="w-full" for="hotel">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1 items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        id="ap"
+                        name="meals"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="ap" class="radio mb-1 aspect-square"></label>
+                      <label data-i18n="ap" class="w-full" for="ap"> </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="villa"
+                        name="meals"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="villa"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label data-i18n="villa" class="w-full" for="villa">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="hostel"
+                        name="meals"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="hostel"
+                        class="radio aspect-square mb-1"
+                      ></label>
+                      <label data-i18n="hostel" class="w-full" for="hostel">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="breakfest2"
+                        name="meals"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="breakfest2"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label
+                        data-i18n="breakfest"
+                        class="w-full"
+                        for="breakfest2"
+                      >
+                      </label>
+                    </div>
                   </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="gym"
-                      name="facilities"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="gym" class="radio mb-1"></label>
-                    <label data-i18n="gym" for="breakfest"> </label>
+                </div>
+                <div class="border-b dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p
+                      data-i18n="selectedLocation"
+                      class="text-base font-bold"
+                    ></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div class="flex gap-2">
+
+                  <div class="mt-2 collapse-content">
                     <input
-                      type="checkbox"
-                      id="transfer"
-                      name="facilities"
-                      class="hidden radio-hidden"
+                      type="text"
+                      data-i18n="[placeholder]wantedRegion"
+                      class="input rounded-full"
                     />
-                    <label for="transfer" class="radio mb-1"></label>
-                    <label data-i18n="transfer" for="breakfest"> </label>
                   </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="laundry"
-                      name="facilities"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="laundry" class="radio mb-1"></label>
-                    <label data-i18n="laundry" for="breakfest"> </label>
+                </div>
+                <div class="dark:border-b-gray-600 pb-5">
+                  <div class="flex justify-between collapse-toggle">
+                    <p
+                      data-i18n="hotelServices"
+                      class="text-base font-bold"
+                    ></p>
+                    <div class="bg-gray-300 block p-1.5 rounded-full">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
+                          fill="#767676"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div class="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="comm"
-                      name="facilities"
-                      class="hidden radio-hidden"
-                    />
-                    <label for="comm" class="radio mb-1"></label>
-                    <label data-i18n="comm" for="breakfest"> </label>
+
+                  <div
+                    class="space-y-1 collapse-content *:font-yekan flex-col mt-3 gap-3"
+                  >
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="pool"
+                        name="facilities"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="pool"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label data-i18n="pool" class="w-full" for="pool">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="gym"
+                        name="facilities"
+                        class="hidden radio-hidden"
+                      />
+                      <label for="gym" class="radio mb-1 aspect-square"></label>
+                      <label data-i18n="gym" class="w-full" for="gym"> </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="transfer"
+                        name="facilities"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="transfer"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label data-i18n="transfer" class="w-full" for="transfer">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="laundry"
+                        name="facilities"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="laundry"
+                        class="radio mb-1 aspect-square"
+                      ></label>
+                      <label data-i18n="laundry" class="w-full" for="laundry">
+                      </label>
+                    </div>
+                    <div
+                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id="comm"
+                        name="facilities"
+                        class="hidden radio-hidden"
+                      />
+                      <label
+                        for="comm"
+                        class="radio aspect-square mb-1"
+                      ></label>
+                      <label data-i18n="comm" class="w-full" for="comm">
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="grow">
               <div
-                class="bg-white flex gap-4 items-center mt-3 dark:bg-gray-900 justify-between dark:text-white dark:border-gray-500 rounded-3xl p-2"
+                class="bg-white flex text-[#767676] gap-4 items-center mt-3 dark:bg-gray-900 justify-between dark:text-white dark:border-gray-500 rounded-3xl p-2"
               >
                 <div class="mx-2 text-[15px] gap-5 flex items-center">
                   <div class="flex gap-2 items-center">
@@ -1259,7 +2384,7 @@
                     </svg>
                   </div>
                   <div
-                    class="flex !bg-orange-400 p-1 px-2 rounded-full text-white items-center gap-2"
+                    class="flex !bg-primary-400 p-1 px-2 rounded-full text-white items-center gap-2"
                   >
                     <button data-i18n="rate"></button>
                     <svg
@@ -1390,7 +2515,7 @@
                 </div>
               </div>
               <div
-                class="bg-white text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
+                class="bg-white text-[#767676] text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
               >
                 <button class="px-2" data-i18n="activeFilter"></button>
 
@@ -1451,7 +2576,7 @@
                 </label>
               </div>
               <div
-                class="bg-white map-container hidden dark:bg-gray-900 p-4 rounded-3xl my-4"
+                class="bg-white map-container hidden dark:bg-gray-900 p-4 rounded-3.5xl my-4"
               >
                 <div id="map" dir="rtl"></div>
               </div>
@@ -1461,7 +2586,7 @@
                   class="grid grid-cols-2 w-full gap-8 group-[.wide]:block group-[.wide]:ml-3"
                 >
                   <div
-                    class="mt-3 bg-white h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                    class="mt-3 bg-white h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -1570,14 +2695,18 @@
                           </div>
                           <div
                             data-srces='["/public/assets/images/espinas1.png", "/public/assets/images/espinas-2.png"]'
-                            class="relative carousel-container group rounded-[1rem] w-[327px] bg-black h-[206px] flex justify-center items-center flex-col"
+                            class="relative carousel-container overflow-hidden group/c rounded-[1rem] w-[327px] h-[206px] flex justify-center items-center flex-col"
                           >
                             <div
                               style="
                                 background-image: url('../public/assets/images/espinas1.png');
                               "
-                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover:z-0 group-hover:opacity-50 transition-all z-30"
+                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
                             ></div>
+                            <div
+                              class="overlay absolute inset-0 opacity-0 group-hover/c:opacity-100 bg-black/50 duration-700 transition-all"
+                            ></div>
+
                             <div
                               class="m-auto w-full justify-center items-center mx-3 z-10"
                             >
@@ -1789,17 +2918,23 @@
                               />
                             </svg>
                           </div>
-                          <p class="text-gray-400 text-[14px]">dfs</p>
-                          <p class="text-gray-400 collapse-content text-[14px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam molestias iste aspernatur
-                            perspiciatis, corporis est.
-                          </p>
+                          <div class="max-w-[40ch]">
+                            <p class="text-gray-400 text-[14px] inline">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Modi, natus!
+                            </p>
+                            <p
+                              class="text-gray-400 inline collapse-content-text text-[14px]"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Laboriosam molestias iste aspernatur
+                              perspiciatis, corporis est.
+                            </p>
+                          </div>
                           <button
-                            class="collapse-toggle"
-                            data-i18n="seeMore"
-                          ></button
-                          >...
+                            class="collapse-toggle-text mt-5 block"
+                            data-i18n="seeLess"
+                          ></button>
                         </div>
                         <div
                           class="mr-2 group-[.wide]:block justify-between group-[.wide]:border-t-0 border-t flex items-center text-nowrap group-[.wide]:space-y-12 space-y-6"
@@ -1816,7 +2951,7 @@
                             </p>
                           </div>
                           <div
-                            class="flex items-center gap-2 bg-amber-400 p-2 rounded-full border-0 text-white px-4"
+                            class="flex items-center gap-2 bg-primary-400 p-2 rounded-full border-0 text-white px-4"
                           >
                             <button
                               class="more-rooms-toggle"
@@ -1853,13 +2988,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
+                              class="text-primary-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -1871,7 +3006,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -1903,13 +3038,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -1921,7 +3056,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -1953,13 +3088,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -1971,7 +3106,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -2019,7 +3154,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-3 h-fit bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                    class="mt-3 h-fit bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -2128,13 +3263,16 @@
                           </div>
                           <div
                             data-srces='["/public/assets/images/espinas1.png", "/public/assets/images/espinas-2.png"]'
-                            class="relative m-auto carousel-container group rounded-[1rem] w-[327px] bg-black h-[206px] flex justify-center items-center flex-col"
+                            class="relative m-auto carousel-container overflow-hidden group/c rounded-[1rem] w-[327px] h-[206px] flex justify-center items-center flex-col"
                           >
                             <div
                               style="
                                 background-image: url('../public/assets/images/espinas1.png');
                               "
-                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover:z-0 group-hover:opacity-50 transition-all z-30"
+                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
+                            ></div>
+                            <div
+                              class="overlay absolute inset-0 opacity-0 group-hover/c:opacity-100 bg-black/50 duration-700 transition-all"
                             ></div>
                             <div
                               class="m-auto w-full justify-center items-center mx-3 z-10"
@@ -2347,20 +3485,23 @@
                               />
                             </svg>
                           </div>
-                          <p class="text-gray-400 text-[14px]">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Molestias, deserunt.
-                          </p>
-                          <p class="text-gray-400 collapse-content text-[14px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam molestias iste aspernatur
-                            perspiciatis, corporis est.
-                          </p>
+                          <div class="max-w-[40ch]">
+                            <p class="text-gray-400 text-[14px] inline">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Modi, natus!
+                            </p>
+                            <p
+                              class="text-gray-400 inline collapse-content-text text-[14px]"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Laboriosam molestias iste aspernatur
+                              perspiciatis, corporis est.
+                            </p>
+                          </div>
                           <button
-                            class="collapse-toggle"
-                            data-i18n="seeMore"
-                          ></button
-                          >...
+                            class="collapse-toggle-text mt-5 block"
+                            data-i18n="seeLess"
+                          ></button>
                         </div>
                         <div
                           class="mr-2 group-[.wide]:block justify-between group-[.wide]:border-t-0 border-t flex items-center text-nowrap group-[.wide]:space-y-12 space-y-6"
@@ -2377,7 +3518,7 @@
                             </p>
                           </div>
                           <div
-                            class="flex items-center gap-2 bg-amber-400 p-2 rounded-full border-0 text-white px-4"
+                            class="flex items-center gap-2 bg-primary-400 p-2 rounded-full border-0 text-white px-4"
                           >
                             <button
                               class="more-rooms-toggle"
@@ -2414,13 +3555,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
+                              class="text-primary-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2432,7 +3573,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -2464,13 +3605,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2482,7 +3623,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -2514,13 +3655,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2532,7 +3673,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -2580,7 +3721,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-3 h-fit bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+                    class="mt-3 h-fit bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -2689,13 +3830,16 @@
                           </div>
                           <div
                             data-srces='["/public/assets/images/espinas1.png", "/public/assets/images/espinas-2.png"]'
-                            class="relative m-auto carousel-container group rounded-[1rem] w-[327px] bg-black h-[206px] flex justify-center items-center flex-col"
+                            class="relative m-auto carousel-container overflow-hidden group/c rounded-[1rem] w-[327px] h-[206px] flex justify-center items-center flex-col"
                           >
                             <div
                               style="
                                 background-image: url('../public/assets/images/espinas1.png');
                               "
-                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover:z-0 group-hover:opacity-50 transition-all z-30"
+                              class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
+                            ></div>
+                            <div
+                              class="overlay absolute inset-0 opacity-0 group-hover/c:opacity-100 bg-black/50 duration-700 transition-all"
                             ></div>
                             <div
                               class="m-auto w-full justify-center items-center mx-3 z-10"
@@ -2908,21 +4052,23 @@
                               />
                             </svg>
                           </div>
-                          <p class="text-gray-400 text-[14px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam molestias iste aspernatur
-                            perspiciatis, corporis est.
-                          </p>
-                          <p class="text-gray-400 collapse-content text-[14px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam molestias iste aspernatur
-                            perspiciatis, corporis est.
-                          </p>
+                          <div class="max-w-[40ch]">
+                            <p class="text-gray-400 text-[14px] inline">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Modi, natus!
+                            </p>
+                            <p
+                              class="text-gray-400 inline collapse-content-text text-[14px]"
+                            >
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Laboriosam molestias iste aspernatur
+                              perspiciatis, corporis est.
+                            </p>
+                          </div>
                           <button
-                            class="collapse-toggle"
-                            data-i18n="seeMore"
-                          ></button
-                          >...
+                            class="collapse-toggle-text mt-5 block"
+                            data-i18n="seeLess"
+                          ></button>
                         </div>
                         <div
                           class="mr-2 group-[.wide]:block justify-between group-[.wide]:border-t-0 border-t flex items-center text-nowrap group-[.wide]:space-y-12 space-y-6"
@@ -2939,7 +4085,7 @@
                             </p>
                           </div>
                           <div
-                            class="flex items-center gap-2 bg-amber-400 p-2 rounded-full border-0 text-white px-4"
+                            class="flex items-center gap-2 bg-primary-400 p-2 rounded-full border-0 text-white px-4"
                           >
                             <button
                               class="more-rooms-toggle"
@@ -2976,13 +4122,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
+                              class="text-primary-400 px-5 p-1 rounded-xl block dark:bg-gray-900 bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2994,7 +4140,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -3026,13 +4172,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3044,7 +4190,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg
@@ -3076,13 +4222,13 @@
                           </p>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-orange-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
+                              class="text-primary-400 dark:bg-gray-900 px-5 p-1 rounded-xl block bg-orange-100"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3094,7 +4240,7 @@
                           </div>
                           <div>
                             <button
-                              class="bg-green-500 button text-white rounded-3xl"
+                              class="bg-green-500 border-0 button text-white rounded-3xl"
                             >
                               رزرو اتاق
                               <svg

@@ -1,13 +1,22 @@
 // Tables
 
-const togglePrices = document.querySelector(".toggle-more-prices");
-const morePrices = document.querySelectorAll(".more-prices");
+const togglePrices = document.querySelectorAll(".toggle-more-prices");
 
-togglePrices?.addEventListener("click", () => {
-  morePrices.forEach((item) => {
-    item.classList.toggle("hidden");
+
+togglePrices.forEach(priceToggle => {
+  priceToggle?.addEventListener("click", () => {
+    const priceTarget = priceToggle.getAttribute("aria-target")
+    const parsedPriceTarget = priceTarget?.substring(priceTarget.indexOf("-") + 1)
+
+    const morePrices = document.querySelectorAll(`.${parsedPriceTarget}`);
+
+    morePrices.forEach(price => {
+      price.classList.toggle("hidden")
+    })
+
+    document.querySelector(".showMorePriceSvg")?.classList.toggle("rotate-180")
   });
-});
+})
 
 const images = [
   "../../public/assets/images/espinas-viewer.png",

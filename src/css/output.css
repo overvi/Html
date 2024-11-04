@@ -49,6 +49,13 @@ html[data-theme="dark"] .tabs {
   }
   @font-face {
     font-family: "Yekan";
+    src: url(../../public/assets/fonts/yekan/YekanBakh-Heavy.woff2);
+    font-style: normal;
+    font-weight: 750;
+  }
+
+  @font-face {
+    font-family: "Yekan";
     src: url(../../public/assets/fonts/yekan/YekanBakh-Medium.woff2);
     font-style: normal;
     font-weight: 600;
@@ -109,4 +116,33 @@ html[data-theme="dark"] .tabs {
   .bordered-table thead th:not(:first-child) {
     @apply !border-r ltr:!border-r-0 ltr:!border-l !border-solid !border-gray-200 dark:!border-gray-700;
   }
+
+  .tab-items .active-tab {
+    font-family: "Yekan" !important;
+    font-weight: bold;
+  }
+
+  .tab-items ul li:not(.active-tab) a {
+    @apply text-[#ABABAB];
+  }
+
+  .h-d-t {
+    --bulma-tabs-border-bottom-style: none;
+    --bulma-tabs-link-padding: 0.5em 0;
+  }
+
+  .h-d-t > *:not(.first-child) {
+    margin-left: 1rem;
+  }
+
+  .h-d-t.is-active {
+    --bulma-tabs-link-active-color: #f9b233;
+  }
+}
+
+.hotels-collapse::-webkit-scrollbar {
+  display: none;
+}
+.hotels-collapse {
+  scrollbar-width: none;
 }
