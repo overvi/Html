@@ -16,8 +16,6 @@
     <script src="/dist/js/i18n.bundle.js"></script>
     <script defer src="/dist/js/main.bundle.js"></script>
 
-    <script defer src="/dist/js/home.bundle.js"></script>
-
     <script defer src="/dist/js/modal.bundle.js"></script>
     <script src="/src/components/nav.js"></script>
     <script src="/src/components/side-bar.js"></script>
@@ -325,7 +323,11 @@
               <div
                 class="rounded-2xl rounded-b-none p-14 bg-gradient-to-r from-[#f9b233]/25 to-[#FEB534]"
               >
-                <img src="/public/assets/images/hotel.png" alt="" />
+                <img
+                  fetchpriority="high"
+                  src="/public/assets/images/hotel.png"
+                  alt=""
+                />
               </div>
               <div
                 class="bg-white dark:bg-gray-900 dark:text-white before:left-[4.2rem] before:-top-[2.3rem] before:rounded-full before:content-[' '] before:h-[5rem] before:w-[4rem] before:block before:absolute before:bg-white dark:before:bg-gray-900 relative p-5 rounded-b-2xl"
@@ -344,5 +346,6 @@
         </div>
       </div>
     </main>
+    <script src="/dist/js/home.bundle.js"></script>
   </body>
 </html>
