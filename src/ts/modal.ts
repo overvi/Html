@@ -18,8 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add a click event on buttons to open a specific modal
   const modalTriggers =
     document.querySelectorAll<HTMLElement>(".js-modal-trigger");
+
   modalTriggers.forEach(($trigger) => {
     const modalId = $trigger.dataset.target;
+
     if (modalId) {
       const $target = document.getElementById(modalId);
       if ($target) {

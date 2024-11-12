@@ -1,6 +1,7 @@
 import "toolcool-range-slider";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { updateContent } from "./main";
+import "./main";
+import i18next from "i18next";
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
@@ -228,10 +229,10 @@ collpaseToggleText.forEach((toggle, index) => {
 
     if (collapseContentText[index].classList.contains("hidden")) {
       toggle.setAttribute("data-i18n", "seeMore");
-      updateContent();
+      toggle.innerHTML = i18next.t("seeMore");
     } else {
       toggle.setAttribute("data-i18n", "seeLess");
-      updateContent();
+      toggle.innerHTML = i18next.t("seeLess");
     }
   });
 });

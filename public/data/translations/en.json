@@ -16,7 +16,8 @@
   "successfulReservations": "Successful Reservations",
   "monthly": "Monthly",
   "weekly": "Weekly",
-  "cta": "'Cooporate With Us Best Stay For Your Customers '",
+  "collab": "Cooporate With Us",
+  "cta": "Best Stay For Your Customers",
   "accountDetails": "Account Details",
   "balance": "Account Balance",
   "customerInfo": "Customer Information",
@@ -144,7 +145,7 @@
   "parkingCost": "Parking cost: 150,000 Toman per person",
   "petsCost": "Pets cost: 300,000 Toman per night",
   "petsServices": "Pets services are free of charge.",
-  "warning": "*The above list may not be comprehensive. Costs may not include taxes and are subject to change.",
+  "warning": "The above list may not be comprehensive. Costs may not include taxes and are subject to change.",
   "desks": "Desk",
   "minibar": "Minibar",
   "microwave": "Microwave",
@@ -230,5 +231,8 @@
   "confirmReservation": "Complete Reservation",
   "cartDetails": "Cart Details",
   "numberOfPersons": "Persons",
-  "callSupport": "Call Support"
+  "callSupport": "Call Support",
+  "selectGuests": "Select Guests",
+  "acceptBooking": "Confirmation",
+  "showMoreDotless": "Show More"
 }

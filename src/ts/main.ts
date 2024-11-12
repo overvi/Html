@@ -5,6 +5,18 @@ import LocalStorageBackend from "i18next-localstorage-backend";
 import ChainedBackend from "i18next-chained-backend";
 import HttpBackend from "i18next-http-backend";
 
+function toggleTheme(
+  activeToggle: HTMLElement,
+  inactiveToggle: HTMLElement,
+  theme: string
+) {
+  inactiveToggle?.classList.remove("bg-primary-400");
+  activeToggle.classList.add("bg-primary-400");
+
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("colorMode", theme);
+}
+
 const langToggle = document.querySelector(".lang-toggle");
 
 const lang = localStorage.getItem("language") || "ir";
@@ -67,14 +79,19 @@ langToggle?.addEventListener("click", () => {
 
 // Change Theme
 
-const colorToggle = document.querySelector(".toggle-color-mode");
+const lightColorToggle = document.querySelector(
+  ".toggle-color-light"
+) as HTMLElement;
+const darkColorToggle = document.querySelector(
+  ".toggle-color-dark"
+) as HTMLElement;
 
-colorToggle?.addEventListener("click", () => {
-  const colorMode = document.documentElement.getAttribute("data-theme");
-  const newColorMode = colorMode === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", newColorMode);
-  localStorage.setItem("colorMode", newColorMode);
-});
+lightColorToggle?.addEventListener("click", () =>
+  toggleTheme(lightColorToggle, darkColorToggle, "light")
+);
+darkColorToggle?.addEventListener("click", () =>
+  toggleTheme(darkColorToggle, lightColorToggle, "dark")
+);
 
 // Popover
 

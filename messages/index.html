@@ -65,16 +65,16 @@
           <div
             class="bg-white mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
           >
-            <h1 class="font-bold text-xl" data-i18n="type"></h1>
+            <p class="font-medium" data-i18n="type"></p>
             <div class="flex items-center gap-4 mt-4">
               <div class="select is-rounded">
-                <select defaultValue="1" id="adult" style="width: 12rem">
+                <select defaultValue="1" id="adult" style="width: 285px">
                   <option value="1">همه</option>
                   <option value="2">With options</option>
                 </select>
               </div>
               <button
-                class="p-2 flex items-center gap-2 text-white bg-green-600 rounded-full"
+                class="p-2 px-3 flex items-center gap-2 text-white bg-green-500 rounded-full"
               >
                 <svg
                   width="24"
@@ -97,20 +97,23 @@
               </button>
             </div>
             <div class="mt-6">
-              <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-950 rounded-b-3xl"
-              >
-                <table class="w-full font-semibold">
+              <div>
+                <table class="w-full">
                   <thead class="bg-gray-50 dark:bg-gray-950">
-                    <tr>
+                    <tr class="*:!font-medium">
                       <th
-                        class="p-3 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-3 border-l dark:!text-white rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl ltr:border-r ltr:border-l-0 dark:border-gray-950"
                         data-i18n="notification"
                       ></th>
-                      <th class="p-3" data-i18n="date">تاریخ</th>
+                      <th
+                        class="p-3 rounded-tl-3.5xl dark:!text-white ltr:rounded-tl-none ltr:rounded-tr-3.5xl"
+                        data-i18n="date"
+                      >
+                        تاریخ
+                      </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="border">
                     <tr class="">
                       <td
                         class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
@@ -168,12 +171,14 @@
                     </tr>
                   </tbody>
                   <tfoot
-                    class="bg-white border-t dark:border-gray-950 dark:bg-gray-950"
+                    class="shadow-tbody-light data:shadow-tbody-dark rounded-b-3.5xl"
                   >
                     <tr>
                       <td colspan="5" class="p-4">
                         <div class="flex gap-3 items-center">
-                          <div class="flex items-center gap-2">
+                          <div
+                            class="flex items-center font-normal text-xs gap-2"
+                          >
                             <input
                               type="radio"
                               id="option3"
@@ -193,12 +198,14 @@
                               حذف
                             </button>
                             <button
-                              data-i18n="read"
-                              class="button hover:bg-orange-400 hover:!text-white !text-red-500 is-small is-warning is-outlined rounded-full"
-                            ></button
-                            ><button
                               data-i18n="unread"
-                              class="button hover:bg-orange-400 hover:!text-white !text-red-500 is-small is-warning is-outlined rounded-full"
+                              class="button hover:bg-primary-400 hover:!text-white text-primary-400 is-small is-warning is-outlined rounded-full"
+                            >
+                              خوانده نشده
+                            </button>
+                            <button
+                              data-i18n="unread"
+                              class="button hover:bg-primary-400 hover:!text-white text-primary-400 is-small is-warning is-outlined rounded-full"
                             >
                               خوانده نشده
                             </button>

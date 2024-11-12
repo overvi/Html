@@ -16,7 +16,7 @@
   \****************************/
 /***/ (() => {
 
-eval("\nconst savedColorMode = localStorage.getItem(\"colorMode\");\nif (savedColorMode) {\n    document.documentElement.setAttribute(\"data-theme\", savedColorMode);\n}\n\n\n//# sourceURL=webpack:///./src/ts/darkMode.ts?");
+eval("\nconst savedColorMode = localStorage.getItem(\"colorMode\");\nif (savedColorMode) {\n    document.documentElement.setAttribute(\"data-theme\", savedColorMode);\n}\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    const lightColorToggle = document.querySelector(\".toggle-color-light\");\n    const darkColorToggle = document.querySelector(\".toggle-color-dark\");\n    if (savedColorMode == \"light\") {\n        lightColorToggle.classList.add(\"bg-primary-400\");\n        darkColorToggle.classList.remove(\"bg-primary-400\");\n    }\n    else {\n        lightColorToggle.classList.remove(\"bg-primary-400\");\n        darkColorToggle.classList.add(\"bg-primary-400\");\n    }\n});\n\n\n//# sourceURL=webpack:///./src/ts/darkMode.ts?");
 
 /***/ })
 

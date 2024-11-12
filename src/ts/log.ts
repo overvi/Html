@@ -1,15 +1,3 @@
-interface BookingData {
-  bookingId: string;
-  hotel: string;
-  bookingDate: string;
-  stayDuration: string;
-  guests: string;
-  payment: string;
-  status: string;
-  provider: string;
-  actions: string;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.querySelector("#myTable tbody") as HTMLElement;
   const pagination = document.getElementById("pagination");
@@ -17,87 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "selectRowInpage"
   ) as HTMLInputElement;
 
-  const data: BookingData[] = [
-    {
-      bookingId: "778899001",
-      hotel: "هتل اسپیناس Deluxe Room - Triple",
-      bookingDate: "1403/03/8 7:44",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 2 مهمان",
-      payment: "غیر قابل استرداد<br>137.5 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-
-    {
-      bookingId: "778899010",
-      hotel: "هتل اسپیناس Deluxe Room - Suite",
-      bookingDate: "1403/03/8 11:00",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 4 مهمان",
-      payment: "قابل استرداد<br>200 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-    {
-      bookingId: "778899001",
-      hotel: "هتل اسپیناس Deluxe Room - Triple",
-      bookingDate: "1403/03/8 7:44",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 2 مهمان",
-      payment: "غیر قابل استرداد<br>137.5 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-
-    {
-      bookingId: "778899010",
-      hotel: "هتل اسپیناس Deluxe Room - Suite",
-      bookingDate: "1403/03/8 11:00",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 4 مهمان",
-      payment: "قابل استرداد<br>200 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-    {
-      bookingId: "778899001",
-      hotel: "هتل اسپیناس Deluxe Room - Triple",
-      bookingDate: "1403/03/8 7:44",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 2 مهمان",
-      payment: "غیر قابل استرداد<br>137.5 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-
-    {
-      bookingId: "778899010",
-      hotel: "هتل اسپیناس Deluxe Room - Suite",
-      bookingDate: "1403/03/8 11:00",
-      stayDuration: "1403/03/8 1403/03/10 یک اتاق دو شب",
-      guests: "test testt 4 مهمان",
-      payment: "قابل استرداد<br>200 USD",
-      status: "تایید شده",
-      provider: "چارتر کننده API interface",
-      actions:
-        '<a href="" class="underline text-orange-400">جزییات</a><br><a href="" class="underline text-green-400">پرداخت</a>',
-    },
-  ];
+  const data = document.querySelectorAll("#myTable tbody tr");
+  const dataArr = Array.from(data);
 
   let rowsPerPage = 5;
   let currentPage = 1;
-  let totalPages = Math.ceil(data.length / rowsPerPage);
+  let totalPages = Math.ceil(dataArr.length / rowsPerPage);
 
   selectRow.addEventListener("change", (v) => {
     const target = v.target as HTMLSelectElement;
@@ -118,30 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
-    const paginatedData = data.slice(start, end);
+    const paginatedData = dataArr.slice(start, end);
 
-    paginatedData.forEach((row: BookingData) => {
-      const tr = document.createElement("tr");
-
-      tr.innerHTML = `
-                  <td><p class="p-4">${row.bookingId}<br />hjk-78579 --</p></td>
-                  <td><p class="p-4">${row.hotel}</p></td>
-                  <td><p class="p-4">${row.bookingDate}</p></td>
-                  <td><p class="p-4">${row.stayDuration}</p></td>
-                  <td><p class="p-4">${row.guests}</p></td>
-                  <td><div class="p-4">${row.payment}</div></td>
-                  <td class="p-5">
-                      <span class="rounded-full items-center gap-2 flex text-nowrap p-1 px-2 text-green-600 border border-green-600 bg-green-400/20 m-auto ml-10 w-fit">
-                          <span class="size-2 bg-green-600 block rounded-full"></span>
-                          ${row.status}
-                      </span>
-                  </td>
-                  <td class="p-4">${row.provider}</td>
-                  <td class="p-4">
-                      <div class="flex flex-col">${row.actions}</div>
-                  </td>
-              `;
-      tableBody.appendChild(tr);
+    paginatedData.forEach((row) => {
+      document.querySelector("#myTable tbody")!.appendChild(row);
     });
 
     updatePagination(page);

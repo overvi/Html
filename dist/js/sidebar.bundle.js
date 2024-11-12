@@ -16,7 +16,7 @@
   \***************************/
 /***/ (() => {
 
-eval("\n// Collapse\nconst collpaseToggle = document.querySelectorAll(\".collapse-toggle\");\nconst collapseContent = document.querySelectorAll(\".collapse-content\");\ncollpaseToggle.forEach((toggle, index) => {\n    toggle.addEventListener(\"click\", () => {\n        collapseContent[index].classList.toggle(\"hidden\");\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/sidebar.ts?");
+eval("\n// Collapse\nconst collpaseToggle = document.querySelectorAll(\".collapse-toggle\");\nconst collapseContent = document.querySelectorAll(\".collapse-content\");\nconst collapseContentIcon = document.querySelectorAll(\".collapse-content-icon\");\ncollpaseToggle.forEach((toggle, index) => {\n    toggle.addEventListener(\"click\", () => {\n        collapseContent[index].classList.toggle(\"hidden\");\n        collapseContentIcon[index].classList.toggle(\"rotate-180\");\n        collapseContentIcon[index].classList.toggle(\"-translate-y-[1px]\");\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/sidebar.ts?");
 
 /***/ })
 

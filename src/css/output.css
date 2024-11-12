@@ -38,39 +38,34 @@ html[data-theme="dark"] .tabs {
 @layer base {
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Light.woff2);
+    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Light.woff2);
     font-style: normal;
+    font-weight: 300;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Bold.woff2);
+    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Bold.woff2);
     font-style: normal;
     font-weight: bold;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Heavy.woff2);
+    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-ExtraBlack.woff2);
     font-style: normal;
-    font-weight: 750;
+    font-weight: 800;
   }
 
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Medium.woff2);
+    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-SemiBold.woff2);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Regular.woff2);
+    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Regular.woff2);
     font-style: normal;
     font-weight: 400;
-  }
-  @font-face {
-    font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakh-Fat.woff2);
-    font-style: normal;
-    font-weight: 800;
   }
 
   body {
@@ -107,14 +102,32 @@ html[data-theme="dark"] .tabs {
   .step.active .bs-stepper-label {
     @apply text-black dark:text-white;
   }
+
+  .bs-stepper .step-trigger.disabled,
+  .bs-stepper .step-trigger:disabled {
+    @apply text-black opacity-100;
+  }
 }
 
 @layer utilities {
   .bordered-table tbody td:not(:first-child) {
-    @apply !border-r dark:!border-gray-700 border-gray-200 ltr:!border-r-0 ltr:!border-l;
+    --bulma-content-table-cell-border-width: 0 0 2px;
+    @apply !border-r-2 dark:!border-storm-700 !border-[#ECECEC] ltr:!border-r-0 ltr:!border-l-2;
+  }
+  .bordered-table tbody td:first-child {
+    --bulma-content-table-cell-border-width: 0 0 2px;
+    @apply dark:!border-storm-700 !border-[#ECECEC];
   }
   .bordered-table thead th:not(:first-child) {
-    @apply !border-r ltr:!border-r-0 ltr:!border-l !border-solid !border-gray-200 dark:!border-gray-700;
+    @apply !border-r-2 ltr:!border-r-0 ltr:!border-l-2 !border-solid !border-[#ECECEC] dark:!border-storm-700;
+  }
+
+  .bordered-table-narrow thead th:not(:first-child) {
+    @apply !border-r ltr:!border-r-0 ltr:!border-l;
+  }
+
+  .bordered-table-narrow tbody td:not(:first-child) {
+    @apply !border-r ltr:!border-r-0 ltr:!border-l;
   }
 
   .tab-items .active-tab {
@@ -137,6 +150,26 @@ html[data-theme="dark"] .tabs {
 
   .h-d-t.is-active {
     --bulma-tabs-link-active-color: #f9b233;
+  }
+
+  .prev-main:not(:disabled) {
+    @apply text-green-500 border py-0.5 px-3 border-green-500;
+  }
+
+  .prev-main:not(:disabled) svg path {
+    @apply fill-green-500;
+  }
+
+  .active-side-section {
+    transform-style: preserve-3d;
+    @apply bg-primary-400 scale-[1.15] before:rounded-sm before:block before:absolute  before:left-0  before:bg-primary-400 before:h-full before:w-[15px] p-2  w-[38px] rounded-full h-auto;
+  }
+  .active-side-section::before {
+    transform: translateZ(-1px) translateY(-23%) translateX(-70%);
+    @apply ltr:translate-x-[225%] ltr:-translate-y-[23%] ltr:-translate-z-1;
+  }
+  .active-side-section svg path {
+    @apply !fill-black;
   }
 }
 

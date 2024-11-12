@@ -7,7 +7,6 @@ module.exports = (env) => {
   return {
     mode: "development",
     entry: {
-      home: "./src/ts/home.ts",
       main: "./src/ts/main.ts",
       sidebar: "./src/ts/sidebar.ts",
       datacenter: "./src/ts/datacenter.ts",

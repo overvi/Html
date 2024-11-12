@@ -14,8 +14,6 @@
 
     <script src="/dist/js/darkMode.bundle.js"></script>
     <script src="/dist/js/i18n.bundle.js"></script>
-    <script defer src="/dist/js/main.bundle.js"></script>
-    <script defer src="/dist/js/booking.bundle.js"></script>
     <script defer src="/dist/js/modal.bundle.js"></script>
 
     <script src="/src/components/nav.js"></script>
@@ -25,11 +23,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
+
     <link rel="stylesheet" href="/dist/css/main.css" />
 
     <style>
@@ -118,11 +116,11 @@
               </div>
             </div>
             <div class="bs-stepper m-auto">
-              <div class="bs-stepper-header w-[46rem] m-auto" role="tablist">
-                <div class="step" data-target="#guest-list">
+              <div class="bs-stepper-header w-[50rem] m-auto" role="tablist">
+                <div class="step group" data-target="#guest-list">
                   <button
                     type="button"
-                    class="step-trigger flex flex-col"
+                    class="step-trigger !pl-0 flex flex-col"
                     role="tab"
                     aria-controls="guest-list"
                     id="guest-list-trigger"
@@ -132,6 +130,7 @@
                       height="40"
                       viewBox="0 0 40 40"
                       fill="gray"
+                      class="group-[.step-passed]:fill-primary-400"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -146,11 +145,24 @@
                       />
                     </svg>
 
-                    <span class="bs-stepper-label">لیست مسافران</span>
+                    <span
+                      class="bs-stepper-label group-[.step-passed]:text-primary-400"
+                      >لیست مسافران</span
+                    >
                   </button>
                 </div>
-                <div class="line"></div>
-                <div class="step" data-target="#accept">
+                <div
+                  style="flex: 1 0 32px"
+                  class="flex group items-center gap-3"
+                >
+                  <div
+                    class="h-[4px] w-full group-[.line-passed]:bg-primary-400 dark:bg-storm-950 bg-storm-50"
+                  ></div>
+                  <div
+                    class="size-[12px] group-[.line-passed]:bg-primary-400 dark:bg-storm-950 rounded-full bg-storm-50"
+                  ></div>
+                </div>
+                <div class="step peer group" data-target="#accept">
                   <button
                     type="button"
                     class="step-trigger flex flex-col"
@@ -163,6 +175,7 @@
                       height="40"
                       viewBox="0 0 40 40"
                       fill="gray"
+                      class="group-[.step-passed]:fill-primary-400"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -173,10 +186,23 @@
                         d="M17.6334 25.9666C17.3001 25.9666 16.9834 25.8333 16.7501 25.5999L12.0334 20.8833C11.5501 20.3999 11.5501 19.5999 12.0334 19.1166C12.5167 18.6333 13.3167 18.6333 13.8001 19.1166L17.6334 22.9499L26.2001 14.3833C26.6834 13.8999 27.4834 13.8999 27.9667 14.3833C28.4501 14.8666 28.4501 15.6666 27.9667 16.1499L18.5167 25.5999C18.2834 25.8333 17.9667 25.9666 17.6334 25.9666Z"
                       />
                     </svg>
-                    <span class="bs-stepper-label">تایید</span>
+                    <span
+                      class="bs-stepper-label group-[.step-passed]:text-primary-400"
+                      >تایید</span
+                    >
                   </button>
                 </div>
-                <div class="line"></div>
+                <div
+                  style="flex: 1 0 32px"
+                  class="flex group items-center gap-3"
+                >
+                  <div
+                    class="h-[4px] w-full group-[.line-passed]:bg-primary-400 dark:bg-storm-950 bg-storm-50"
+                  ></div>
+                  <div
+                    class="size-[12px] group-[.line-passed]:bg-primary-400 rounded-full dark:bg-storm-950 bg-storm-50"
+                  ></div>
+                </div>
 
                 <div class="step" data-target="#payment">
                   <button
@@ -217,14 +243,17 @@
                   aria-labelledby="guest-list-trigger"
                 >
                   <div>
-                    <h3
+                    <p
                       data-i18n="acceptUserDetails"
-                      class="!font-semibold"
-                    ></h3>
+                      class="!font-semibold text-xl"
+                    ></p>
                     <div
-                      class="rounded-2xl p-3 text-sm mt-2 bg-amber-50 dark:bg-gray-950"
+                      class="rounded-2xl p-3 text-xs mt-2 bg-primary-400/[5%] dark:bg-gray-950"
                     >
-                      <p data-i18n="contactDetailsInfo"></p>
+                      <p
+                        class="tracking-wide"
+                        data-i18n="contactDetailsInfo"
+                      ></p>
                     </div>
                   </div>
                   <div>
@@ -234,19 +263,19 @@
                       <table class="w-full vertical-table">
                         <tr>
                           <th
-                            class="p-3 bg-gray-50 border-b dark:bg-gray-950 border-l ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                            class="p-4 bg-storm-50 border-b dark:bg-gray-950 border-l ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="suename"
                           ></th>
-                          <td class="p-3 border-b dark:border-gray-700">
+                          <td class="p-4 border-b dark:border-gray-700">
                             fdsadfa22443
                           </td>
                         </tr>
                         <tr>
                           <th
-                            class="p-3 border-l bg-gray-50 dark:bg-gray-950 border-b ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                            class="p-4 border-l bg-storm-50 dark:bg-gray-950 border-b ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="email"
                           ></th>
-                          <td class="p-3 border-b dark:border-gray-700">
+                          <td class="p-4 border-b dark:border-gray-700">
                             <div class="flex justify-between">
                               <p class="!m-0">alireza@gmail.com</p>
                               <svg
@@ -276,39 +305,46 @@
                         </tr>
                         <tr>
                           <th
-                            class="p-3 border-l bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                            class="p-4 border-l bg-storm-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="phoneNumber"
                           ></th>
-                          <td class="p-3 dark:border-gray-700">0912999992</td>
+                          <td class="p-4 dark:border-gray-700">0912999992</td>
                         </tr>
                       </table>
                     </div>
                   </div>
                   <div class="mt-8">
-                    <h3 data-i18n="hotelDetails" class="!font-semibold"></h3>
-                    <div
-                      class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-                    >
-                      <table class="w-full bordered-table font-semibold">
-                        <thead class="bg-gray-50 dark:bg-gray-950">
+                    <p
+                      data-i18n="hotelDetails"
+                      class="!font-semibold text-xl"
+                    ></p>
+                    <div class="border-collapse mt-7 dark:border-gray-700">
+                      <table class="w-full bordered-table">
+                        <thead>
                           <tr>
-                            <th>
+                            <th
+                              class="w-[18%] ltr:rounded-tl-3xl ltr:rounded-tr-none rounded-tr-3xl bg-storm-50 dark:bg-gray-950"
+                            >
                               <p class="p-2" data-i18n="hotelName"></p>
                             </th>
-                            <th>
+                            <th class="bg-storm-50 dark:bg-gray-950">
                               <p class="p-2" data-i18n="room"></p>
                             </th>
-                            <th>
+                            <th class="bg-storm-50 dark:bg-gray-950">
                               <p class="p-2" data-i18n="bedType"></p>
                             </th>
-                            <th>
+                            <th
+                              class="w-[44%] ltr:rounded-tr-3xl ltr:rounded-tl-none rounded-tl-3xl bg-storm-50 dark:bg-gray-950"
+                            >
                               <p class="p-2" data-i18n="meals"></p>
                             </th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody
+                          class="shadow-tbody dark:shadow-tbody-dark rounded-b-3xl"
+                        >
                           <tr>
-                            <td>
+                            <td colspan="1">
                               <p class="p-4">Test 3232</p>
                             </td>
                             <td><p class="p-4">اتاق دو</p></td>
@@ -321,53 +357,30 @@
                   </div>
                   <div class="mt-14">
                     <div class="flex justify-between items-center">
-                      <h3
-                        class="!font-semibold mb-4"
+                      <p
+                        class="!font-semibold text-xl mb-4"
                         data-i18n="guestDetails"
-                      ></h3>
+                      ></p>
 
-                      <div
-                        data-target="modal-js-example"
-                        class="rounded-full js-modal-trigger h-fit flex items-center gap-2 button bg-[#2FAC66] border-0 text-white"
-                      >
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M12 21.9995C17.5228 21.9995 22 17.5224 22 11.9995C22 6.47666 17.5228 1.99951 12 1.99951C6.47715 1.99951 2 6.47666 2 11.9995C2 17.5224 6.47715 21.9995 12 21.9995Z"
-                            fill="white"
-                          />
-                          <path
-                            d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
-                            fill="white"
-                          />
-                        </svg>
-
-                        <button data-i18n="prevGuests"></button>
-                      </div>
-
-                      <div id="modal-js-example" class="modal">
-                        <div class="modal-background"></div>
+                      <div id="select-guests-modal" class="modal">
+                        <div
+                          class="modal-background bg-[hsla(221,14%,4%,0.45)]"
+                        ></div>
 
                         <div class="modal-content">
                           <div class="box text-right">
                             <div class="flex items-center justify-between">
-                              <h3
+                              <p
                                 data-i18n="prevGuests"
-                                class="!font-bold m-0"
-                              ></h3>
+                                class="!font-bold text-xl m-0"
+                              ></p>
                             </div>
                             <div class="my-7 flex justify-between items-center">
                               <div
                                 class="bg-white flex justify-end dark:bg-gray-900 z-0 relative overflow-hidden rounded-full w-[27rem] h-[2.875rem]"
                               >
                                 <div
-                                  class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-orange-400"
+                                  class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-primary-400"
                                 >
                                   <svg
                                     class="m-auto"
@@ -391,7 +404,7 @@
                                 <input
                                   type="text"
                                   placeholder="جستجوی نام و نام خانوادگی"
-                                  class="w-full bg-gray-50 h-full pl-2 dark:bg-gray-900 dark:text-white pr-3 absolute z-[1] top-0 shadow-none outline-none border-none"
+                                  class="w-full bg-storm-50 h-full pl-2 dark:bg-gray-900 dark:text-white pr-3 absolute z-[1] top-0 shadow-none outline-none border-none"
                                 />
                               </div>
                               <div>
@@ -405,10 +418,8 @@
                             <div
                               class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
                             >
-                              <table
-                                class="w-full bordered-table font-semibold"
-                              >
-                                <thead class="bg-gray-50 dark:bg-gray-950">
+                              <table class="w-full bordered-table">
+                                <thead class="bg-storm-50 dark:bg-gray-950">
                                   <tr>
                                     <th>
                                       <p class="p-2" data-i18n="name"></p>
@@ -421,7 +432,7 @@
                                     </th>
                                   </tr>
                                 </thead>
-                                acceptUserDetails
+
                                 <tbody>
                                   <tr class="*:!align-middle">
                                     <td>
@@ -495,32 +506,39 @@
                         ></button>
                       </div>
                     </div>
-                    <div
-                      class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-                    >
-                      <table class="w-full bordered-table font-semibold">
-                        <thead class="bg-gray-50 dark:bg-gray-950">
+                    <div class="mt-7 dark:border-gray-700">
+                      <table class="w-full bordered-table">
+                        <thead>
                           <tr>
-                            <th>
+                            <th
+                              class="w-[7%] bg-storm-50 rounded-tr-3xl ltr:rounded-tr-none ltr:rounded-tl-3xl dark:bg-gray-950"
+                            >
                               <p class="p-2" data-i18n="guests"></p>
                             </th>
-                            <th>
+                            <th class="bg-storm-50 dark:bg-gray-950">
                               <p class="p-2" data-i18n="gender"></p>
                             </th>
-                            <th>
-                              <p class="p-2" data-i18n="suename"></p>
+                            <th class="w-[17%] bg-storm-50 dark:bg-gray-950">
+                              <p class="p-2" data-i18n="name"></p>
                             </th>
-                            <th>
+                            <th class="w-[17%] bg-storm-50 dark:bg-gray-950">
+                              <p class="p-2" data-i18n="lastName"></p>
+                            </th>
+                            <th class="bg-storm-50 dark:bg-gray-950">
                               <div class="flex">
                                 <p class="p-2" data-i18n="adultOrChild"></p>
                               </div>
                             </th>
-                            <th>
+                            <th
+                              class="bg-storm-50 rounded-tl-3xl ltr:rounded-tl-none ltr:rounded-tr-3xl dark:bg-gray-950"
+                            >
                               <p class="p-2" data-i18n="action"></p>
                             </th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody
+                          class="shadow-tbody dark:shadow-tbody-dark rounded-b-3xl"
+                        >
                           <tr class="*:!align-middle">
                             <td>
                               <p>1</p>
@@ -533,6 +551,9 @@
                                   </select>
                                 </div>
                               </div>
+                            </td>
+                            <td class="!align-middle">
+                              <p>علی</p>
                             </td>
                             <td class="!align-middle">
                               <p>علی منث</p>
@@ -566,10 +587,16 @@
                                     <label for="1" class="radio mb-1"></label>
                                     <label for="1" data-i18n="adult"> </label>
                                   </div>
-                                  <div class="flex flex-col mb-7">
+                                  <div class="flex flex-col mb-4">
                                     <label for="">سن</label>
-                                    <div class="select is-rounded w-[5rem]">
-                                      <select name="" id="" class="w-[5rem]">
+                                    <div
+                                      class="select !h-fit after:!m-auto after:!-rotate-45 after:!bottom-0 after:!scale-[.7] after:!-top-[.2rem] is-rounded w-[5rem]"
+                                    >
+                                      <select
+                                        name=""
+                                        id=""
+                                        class="w-[5rem] !h-[2rem]"
+                                      >
                                         <option value="">1</option>
                                       </select>
                                     </div>
@@ -578,9 +605,10 @@
                               </div>
                             </td>
                             <td>
-                              <div>
+                              <div class="flex justify-center">
                                 <div
-                                  class="button flex items-center gap-2 w-fit rounded-full bg-orange-400 text-white border-0"
+                                  data-target="select-guests-modal"
+                                  class="button js-modal-trigger flex items-center gap-2 w-fit rounded-full bg-primary-400 text-white border-0"
                                 >
                                   <svg
                                     width="24"
@@ -600,7 +628,7 @@
                                     />
                                   </svg>
 
-                                  <button data-i18n="add"></button>
+                                  <button data-i18n="selectGuests"></button>
                                 </div>
                               </div>
                             </td>
@@ -619,7 +647,10 @@
                               </div>
                             </td>
                             <td class="!align-middle">
-                              <p>علی منث</p>
+                              <p>علی</p>
+                            </td>
+                            <td class="!align-middle">
+                              <p>منث</p>
                             </td>
                             <td>
                               <div>
@@ -650,10 +681,16 @@
                                     <label for="4" class="radio mb-1"></label>
                                     <label for="4" data-i18n="adult"> </label>
                                   </div>
-                                  <div class="flex flex-col mb-7">
+                                  <div class="flex flex-col mb-4">
                                     <label for="">سن</label>
-                                    <div class="select is-rounded w-[5rem]">
-                                      <select name="" id="" class="w-[5rem]">
+                                    <div
+                                      class="select !h-fit after:!m-auto after:!-rotate-45 after:!bottom-0 after:!scale-[.7] after:!-top-[.2rem] is-rounded w-[5rem]"
+                                    >
+                                      <select
+                                        name=""
+                                        id=""
+                                        class="w-[5rem] !h-[2rem]"
+                                      >
                                         <option value="">1</option>
                                       </select>
                                     </div>
@@ -662,9 +699,10 @@
                               </div>
                             </td>
                             <td>
-                              <div>
+                              <div class="flex justify-center">
                                 <div
-                                  class="button flex items-center gap-2 w-fit rounded-full bg-orange-400 text-white border-0"
+                                  data-target="select-guests-modal"
+                                  class="button js-modal-trigger flex items-center gap-2 w-fit rounded-full bg-primary-400 text-white border-0"
                                 >
                                   <svg
                                     width="24"
@@ -684,7 +722,7 @@
                                     />
                                   </svg>
 
-                                  <button data-i18n="add"></button>
+                                  <button data-i18n="selectGuests"></button>
                                 </div>
                               </div>
                             </td>
@@ -702,66 +740,77 @@
                 >
                   <div class="!mt-14">
                     <div class="space-y-10">
-                      <div>
-                        <div
-                          class="bg-gray-50 p-4 dark:bg-gray-950 rounded-t-2xl"
+                      <table class="w-full bordered-table">
+                        <thead>
+                          <tr>
+                            <th
+                              colspan="3"
+                              class="bg-storm-50 p-4 dark:bg-gray-950 rounded-t-3.5xl"
+                            >
+                              <p
+                                data-i18n="acceptUserDetails"
+                                class="text-xl m-0 !font-semibold"
+                              ></p>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody
+                          class="shadow-tbody dark:shadow-tbody-dark rounded-b-3.5xl"
                         >
-                          <h3
-                            data-i18n="acceptUserDetails"
-                            class="text-xl m-0 !font-semibold"
-                          ></h3>
-                        </div>
-                        <div
-                          class="flex border dark:border-gray-700 gap-4 rounded-b-[8px] p-4 h-full"
-                        >
-                          <div
-                            class="basis-[30%] border-l ltr:border-l-0 ltr:border-r dark:border-gray-700"
-                          >
-                            <p data-i18n="suename" class="text-gray-400"></p>
-                            <p class="font-semibold">علی مقیمی نژاد</p>
-                          </div>
+                          <tr>
+                            <td
+                              class="basis-[30%] p-4 border-l ltr:border-l-0 ltr:border-r dark:border-gray-700"
+                            >
+                              <p data-i18n="suename" class="text-gray-400"></p>
+                              <p class="font-semibold">علی مقیمی نژاد</p>
+                            </td>
 
-                          <div
-                            class="basis-[20%] border-l ltr:border-l-0 ltr:border-r dark:border-gray-700"
-                          >
-                            <p
-                              data-i18n="phoneNumber"
-                              class="text-gray-400"
-                            ></p>
-                            <p class="font-semibold">09909024</p>
-                          </div>
-                          <div class="basis-[50%]">
-                            <p data-i18n="email" class="text-gray-400"></p>
-                            <p class="font-semibold">ajking@gmail.com</p>
-                          </div>
-                        </div>
-                      </div>
+                            <td
+                              class="basis-[20%] p-4 border-l ltr:border-l-0 ltr:border-r dark:border-gray-700"
+                            >
+                              <p
+                                data-i18n="phoneNumber"
+                                class="text-gray-400"
+                              ></p>
+                              <p class="font-semibold">09909024</p>
+                            </td>
+                            <td class="basis-[50%] p-4">
+                              <p data-i18n="email" class="text-gray-400"></p>
+                              <p class="font-semibold">ajking@gmail.com</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                       <div>
-                        <h1
+                        <p
                           data-i18n="acceptGuestDetails"
-                          class="text-xl mb-2 !font-semibold"
-                        ></h1>
-                        <div
-                          class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-                        >
-                          <table class="w-full bordered-table font-semibold">
-                            <thead class="bg-gray-50 dark:bg-gray-950">
+                          class="text-2xl mb-2 !font-semibold"
+                        ></p>
+                        <div class="mt-7 dark:border-gray-700">
+                          <table class="w-full bordered-table">
+                            <thead>
                               <tr>
-                                <th>
+                                <th
+                                  class="bg-storm-50 dark:bg-gray-950 rounded-tr-3.5xl ltr:rounded-tl-3.5xl ltr:rounded-tr-none"
+                                >
                                   <p class="p-2" data-i18n="guests"></p>
                                 </th>
-                                <th>
+                                <th class="bg-storm-50 dark:bg-gray-950">
                                   <p class="p-2" data-i18n="gender"></p>
                                 </th>
-                                <th>
+                                <th class="bg-storm-50 dark:bg-gray-950">
                                   <p class="p-2" data-i18n="suename"></p>
                                 </th>
-                                <th>
+                                <th
+                                  class="bg-storm-50 dark:bg-gray-950 ltr:rounded-tr-3.5xl ltr:rounded-tl-none rounded-tl-3.5xl"
+                                >
                                   <p class="p-2" data-i18n="adultOrChild"></p>
                                 </th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody
+                              class="shadow-tbody dark:shadow-tbody-dark rounded-b-3.5xl"
+                            >
                               <tr>
                                 <td>
                                   <p class="p-4">Test 3232</p>
@@ -779,35 +828,29 @@
                                 <td><p class="p-4">صبحانه</p></td>
                               </tr>
                             </tbody>
-                            <tfoot>
-                              <tr>
-                                <td class="p-4">
-                                  <div class="flex items-center gap-1">
-                                    <p class="m-0" data-i18n="totalPrice"></p>
-                                    <p class="m-0">:</p>
-                                    <p>
-                                      <span class="text-green-600 font-bold"
-                                        >137.81 USD</span
-                                      >
-                                    </p>
-                                  </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </tfoot>
                           </table>
                         </div>
                       </div>
-                      <div>
+                      <div class="p-4 !mt-1">
+                        <div class="flex text-2xl items-center gap-1">
+                          <p class="m-0 font-bold" data-i18n="totalPrice"></p>
+                          <p class="m-0">:</p>
+                          <p>
+                            <span class="text-green-600 font-bold"
+                              >137.81 <span class="font-medium">USD</span></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="!mt-1">
                         <label
                           data-i18n="messageRequest"
                           class="mb-2 block"
                         ></label>
                         <textarea
                           data-i18n="[placeholder]messageRequest"
-                          class="rounded-[8px] textarea"
+                          class="rounded-2xl textarea"
+                          rows="3"
                         ></textarea>
                       </div>
                     </div>
@@ -847,10 +890,10 @@
                         fill="#2FAC66"
                       />
                     </svg>
-                    <h1
+                    <p
                       data-i18n="reservationSuccess"
                       class="!font-extrabold text-3xl"
-                    ></h1>
+                    ></p>
                     <div
                       class="p-2 bg-green-300/15 px-4 rounded-full text-green-400 border-green-500/25 border border-dashed"
                     >
@@ -902,17 +945,18 @@
             </div>
           </div>
           <div
-            class="rounded-3xl stepper-interactive flex justify-between mb-3 p-3 text-sm mt-2 bg-white dark:bg-gray-950"
+            class="rounded-3xl items-center stepper-interactive flex justify-between mb-3 p-3 text-sm mt-2 bg-white dark:bg-gray-950"
           >
-            <div
-              class="border-0 prev button rounded-full font-bold flex items-center gap-2"
+            <button
+              disabled
+              class="border-0 prev prev-main shadow-none button rounded-full font-bold flex items-center gap-2"
             >
               <svg
-                width="16"
-                height="16"
+                width="32"
+                height="32"
                 viewBox="0 0 16 16"
                 fill="none"
-                class="rotate-180"
+                class="rotate-180 ltr:rotate-0"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -925,18 +969,19 @@
                   fill="gray"
                 />
               </svg>
-              <button data-i18n="prev"></button>
-            </div>
-            <div
-              class="flex next items-center gap-2 bg-[#2FAC66] group button text-white border-0 rounded-full font-bold"
+              <p data-i18n="prev"></p>
+            </button>
+            <button
+              class="flex next-step w-[9.812rem] h-[2.5rem] px-2 gap-7 items-center justify-end bg-[#2FAC66] group button text-white border-0 rounded-full font-bold"
             >
+              <p data-i18n="next"></p>
               <svg
-                width="16"
-                height="16"
+                width="32"
+                height="32"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="group-disabled:fill-gray-400"
+                class="group-disabled:fill-gray-400 size-[32px] ltr:rotate-180"
               >
                 <path
                   opacity="0.4"
@@ -950,11 +995,11 @@
                   class="group-disabled:fill-gray-400"
                 />
               </svg>
-              <button data-i18n="next"></button>
-            </div>
+            </button>
           </div>
         </div>
       </div>
     </main>
+    <script defer src="/dist/js/booking.bundle.js"></script>
   </body>
 </html>

@@ -14,9 +14,10 @@ class Sidebar extends HTMLElement {
     return `
   <div class="me-16 ltr:mr-16">
 <div
-  class="bg-white mx-3 dark:bg-gray-900 mb-3 rounded-full p-2 w-fit min-h-[540px] h-fit fixed flex justify-center items-center"
+style="transform-style : preserve-3d"
+  class="bg-white mx-3 w-[60px] dark:bg-gray-900 mb-3 rounded-full p-2  min-h-[540px] h-fit fixed flex justify-center items-center"
 >
-  <div class="space-y-10 flex flex-col items-center">
+  <div style='transform-style : preserve-3d' class="space-y-10 flex flex-col items-center">
     <a
       href="/"
       class="side-tab p-2"
@@ -127,8 +128,6 @@ class Sidebar extends HTMLElement {
 
   highlightCurrentPage() {
     let currentPage = window.location.pathname;
-    const activeClass =
-      "bg-orange-400 p-2 side-tab w-[38px] rounded-full h-auto";
 
     const homeRoutes = ["/", "/hotels", "/hotels/1"];
     const bookingRoutes = ["/booking", "/reservation", "/reservation/1"];
@@ -140,9 +139,9 @@ class Sidebar extends HTMLElement {
 
     if (currentPage) {
       if (bookingRoutes.includes(currentPage)) {
-        tabs[1].classList = activeClass;
+        tabs[1].classList.add("active-side-section");
       } else if (homeRoutes.includes(currentPage)) {
-        tabs[0].classList = activeClass;
+        tabs[0].classList.add("active-side-section");
       }
     }
   }

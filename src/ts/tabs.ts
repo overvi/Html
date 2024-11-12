@@ -8,7 +8,6 @@ tabs.forEach((tab) => {
     });
 
     const target = (tab as HTMLElement).getAttribute("data-tab")!;
-    console.log(target);
 
     tabContents.forEach((tc) => tc.classList.add("hidden"));
 

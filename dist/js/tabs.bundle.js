@@ -16,7 +16,7 @@
   \************************/
 /***/ (() => {
 
-eval("\nconst tabs = document.querySelectorAll(\".tab\");\nconst tabContents = document.querySelectorAll(\".tab-content\");\ntabs.forEach((tab) => {\n    tab.addEventListener(\"click\", function () {\n        tabs.forEach((tab) => {\n            tab.classList.remove(\"is-active\");\n        });\n        const target = tab.getAttribute(\"data-tab\");\n        console.log(target);\n        tabContents.forEach((tc) => tc.classList.add(\"hidden\"));\n        tab.classList.add(\"is-active\");\n        document.getElementById(target).classList.remove(\"hidden\");\n        !tab.classList.contains(\"is-active\") && tab.classList.add(\"is-active\");\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/tabs.ts?");
+eval("\nconst tabs = document.querySelectorAll(\".tab\");\nconst tabContents = document.querySelectorAll(\".tab-content\");\ntabs.forEach((tab) => {\n    tab.addEventListener(\"click\", function () {\n        tabs.forEach((tab) => {\n            tab.classList.remove(\"is-active\");\n        });\n        const target = tab.getAttribute(\"data-tab\");\n        tabContents.forEach((tc) => tc.classList.add(\"hidden\"));\n        tab.classList.add(\"is-active\");\n        document.getElementById(target).classList.remove(\"hidden\");\n        !tab.classList.contains(\"is-active\") && tab.classList.add(\"is-active\");\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/tabs.ts?");
 
 /***/ })
 
