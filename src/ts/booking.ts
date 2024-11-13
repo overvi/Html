@@ -1,6 +1,6 @@
 import Stepper from "bs-stepper";
 import i18next from "i18next";
-import "./main";
+import "./i18n";
 
 interface StepperEventDetail {
   from: number;

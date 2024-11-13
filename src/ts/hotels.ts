@@ -1,7 +1,7 @@
 import "toolcool-range-slider";
 import "mapbox-gl/dist/mapbox-gl.css";
-import "./main";
 import i18next from "i18next";
+import "./i18n";
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
