@@ -74,7 +74,7 @@ html[data-theme="dark"] .tabs {
   }
 
   .radio {
-    @apply after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-orange-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2;
+    @apply after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-primary-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2;
   }
 
   .popover-triangle::before {
@@ -96,7 +96,7 @@ html[data-theme="dark"] .tabs {
   }
 
   .step.active svg {
-    @apply fill-orange-400;
+    @apply fill-primary-400;
   }
 
   .step.active .bs-stepper-label {
@@ -107,6 +107,20 @@ html[data-theme="dark"] .tabs {
   .bs-stepper .step-trigger:disabled {
     @apply text-black opacity-100;
   }
+
+  .select select {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+  }
+
+  .exp-side::-webkit-scrollbar {
+    display: none;
+  }
+  .exp-side {
+    scrollbar-width: none;
+  }
+
 }
 
 @layer utilities {
@@ -171,6 +185,19 @@ html[data-theme="dark"] .tabs {
   .active-side-section svg path {
     @apply !fill-black;
   }
+
+  .c-w {
+    @apply w-full max-w-[83.3125rem] px-4 mx-auto xxl:max-w-full xxl:px-12 ;
+  }
+
+  .more-rooms-expanded {
+    @apply bg-transparent text-primary-400 border border-primary-400
+  }
+
+  .input {
+    @apply !shadow-none
+  }
+  
 }
 
 .hotels-collapse::-webkit-scrollbar {

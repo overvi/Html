@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.innerHTML = `
           <button class="${
             i === page
-              ? "rounded-full px-3  bg-orange-400 text-white border-0"
+              ? "rounded-full px-3  bg-primary-400 text-white border-0"
               : "rounded-full px-3  border-0 shadow-xl"
           } py-0 flex items-center justify-center button">
             <p class="mt-1">${i}</p>

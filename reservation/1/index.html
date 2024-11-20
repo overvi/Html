@@ -29,10 +29,10 @@
   <body>
     <main>
       <nav-bar></nav-bar>
-      <div class="flex gap-9">
+      <div class="flex gap-6 xxl:gap-13 c-w">
         <side-bar></side-bar>
 
-        <div class="w-full mx-3">
+        <div class="w-full mt-8">
           <div class="flex dark:text-white gap-2">
             <svg
               width="18"
@@ -69,116 +69,121 @@
           <div
             class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
           >
-            <div>
-              <div
-                class="bg-[#FBFBFB] dark:bg-gray-950 items-center p-3 rounded-t-3xl flex justify-between"
+            <table class="bordered-table-narrow w-full">
+              <thead>
+                <tr>
+                  <td colspan="4">
+                    <div
+                      class="bg-[#FBFBFB] dark:bg-gray-950 items-center p-3 rounded-t-3xl flex justify-between"
+                    >
+                      <p class="font-medium text-xl mt-1">2223345568</p>
+                      <span
+                        class="rounded-full m-0 items-center gap-2 flex text-nowrap p-1 px-2 text-green-500 border border-green-500 bg-green-500/20 ml-10 w-fit"
+                      >
+                        <span
+                          class="size-2 bg-green-500 block rounded-full"
+                        ></span>
+                        <p data-i18n="confirmed"></p>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody
+                class="shadow-tbody-light dark:shadow-tbody-dark rounded-b-3.5xl"
               >
-                <p class="font-medium text-xl mt-1">2223345568</p>
-                <span
-                  class="rounded-full m-0 items-center gap-2 flex text-nowrap p-1 px-2 text-green-500 border border-green-500 bg-green-500/20 ml-10 w-fit"
-                >
-                  <span class="size-2 bg-green-500 block rounded-full"></span>
-                  <p data-i18n="confirmed"></p>
-                </span>
-              </div>
-              <div></div>
-              <div
-                class="border rounded-b-3.5xl dark:border-gray-950 overflow-hidden"
-              >
-                <div class="flex">
-                  <div class="basis-[76.1%]">
-                    <div class="flex">
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                      </div>
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                      </div>
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-b p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                <tr class="*:p-4 *:border-e">
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td rowspan="2" class="w-[20%]">
+                    <div class="m-auto flex justify-center items-center">
+                      <div class="mb-2">
+                        <button
+                          data-i18n="downloadVoucher"
+                          class="bg-primary-400 mt-8 mx-3 w-[16.25rem] text-white px-2 rounded-full h-[2.5rem] font-bold border-0 mr-2"
+                        ></button>
                       </div>
                     </div>
-                    <div class="flex w-full">
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                      </div>
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                      </div>
-                      <div
-                        class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4 basis-[25rem]"
-                      >
-                        <h2 class="text-gray-400">نوع اتاق</h2>
-                        <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                      </div>
+                  </td>
+                </tr>
+                <tr class="*:p-4 *:border-e *:border-b *:border-t">
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
                     </div>
-                  </div>
-                  <div class="m-auto">
-                    <div class="mb-2">
-                      <button
-                        data-i18n="downloadVoucher"
-                        class="bg-primary-400 mx-3 w-[16.25rem] text-white px-2 rounded-full h-[2.5rem] font-bold border-0 mr-2"
-                      ></button>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex box-border *:basis-[calc((100%-(851px/3))/3)] border-t w-full dark:border-gray-950"
-                >
-                  <div
-                    class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4"
-                  >
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                  <div
-                    class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4"
-                  >
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                  <div
-                    class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 p-4"
-                  >
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                  <div class="p-4 !basis-[20%]">
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                </div>
-                <div class="flex">
-                  <div
-                    class="border-l ltr:border-l-0 ltr:border-r dark:border-gray-950 border-t p-4 basis-[51rem]"
-                  >
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                  <div
-                    class="p-4 border-t dark:border-gray-950 basis-[49.9rem]"
-                  >
-                    <h2 class="text-gray-400">نوع اتاق</h2>
-                    <p class="text-sm font-medium">Deluxe Room - Triple</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="*:p-4 *:border-e *:border-b *:border-t">
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="*:p-4 *:border-t">
+                  <td colspan="2">
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <div>
+                      <h2 class="text-gray-400">نوع اتاق</h2>
+                      <p class="text-sm font-medium">Deluxe Room - Triple</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div
             class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
@@ -186,7 +191,7 @@
             <div class="flex justify-between items-center">
               <p data-i18n="hotelDetails" class="text-2xl"></p>
               <div
-                class="flex items-center rounded-full p-1 pl-4 pr-2 border border-orange-500 gap-2"
+                class="flex items-center rounded-full p-1 pl-4 pr-2 border border-primary-400 gap-2"
               >
                 <img src="/public/assets/images/espinas-rounded.png" alt="" />
                 <p class="text-base font-bold" data-i18n="espinsasHotel"></p>
@@ -277,7 +282,7 @@
             <div class="mt-5 rounded-3xl dark:border-gray-700">
               <table class="w-full bordered-table bordered-table-narrow">
                 <thead class="bg-[#FBFBFB] dark:bg-gray-950">
-                  <tr class="*:font-medium">
+                  <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3.5xl w-[20%] ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
                     >
@@ -325,7 +330,7 @@
             <div class="mt-5">
               <table class="w-full bordered-table bordered-table-narrow">
                 <thead class="bg-[#FBFBFB] dark:bg-gray-950">
-                  <tr class="*:font-medium">
+                  <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3xl ltr:rounded-tr-none ltr:rounded-tl-3xl"
                     >
@@ -380,7 +385,7 @@
             <div class="mt-5">
               <table class="w-full bordered-table bordered-table-narrow">
                 <thead class="bg-[#FBFBFB] dark:bg-gray-950">
-                  <tr class="*:font-medium">
+                  <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
                     >

@@ -30,10 +30,10 @@
   <body>
     <main>
       <nav-bar></nav-bar>
-      <div class="flex gap-9">
+      <div class="flex gap-6 xxl:gap-13 c-w">
         <side-bar></side-bar>
 
-        <div class="w-full mx-3">
+        <div class="w-full mt-8">
           <div class="flex dark:text-white gap-2">
             <svg
               width="18"
@@ -62,34 +62,8 @@
             <a href="/reservation/" data-i18n="resevations"></a>
           </div>
           <div
-            class="bg-white space-y-10 mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class="bg-white space-y-10 mt-5 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
           >
-            <div class="flex items-center gap-4">
-              <div
-                class="bg-[#F9B233] bg-opacity-[10%] hover:outline hover:outline-1 hover:outline-orange-400 w-fit p-1 px-3 rounded-lg"
-              >
-                <div class="flex items-center">
-                  <p
-                    data-i18n="incomingReservations"
-                    class="text-sm font-bold"
-                  ></p>
-                  :
-                  <span class="text-orange-500 mx-2">۴۰ </span>
-                </div>
-              </div>
-              <div
-                class="bg-[#F9B233] bg-opacity-[10%] border-0 hover:outline hover:outline-1 hover:outline-orange-400 w-fit p-1 px-3 rounded-lg"
-              >
-                <div class="flex items-center">
-                  <p
-                    class="text-sm font-bold"
-                    data-i18n="payingReservations"
-                  ></p>
-                  :
-                  <span class="text-orange-500 mx-2">۴۰ </span>
-                </div>
-              </div>
-            </div>
             <div class="mt-5 space-y-4">
               <div class="flex *:basis-full items-center gap-5">
                 <div class="space-y-2">
@@ -99,13 +73,15 @@
                     htmlFor="adult"
                   >
                   </label>
-                  <div class="is-rounded flex input overflow-hidden">
+                  <div
+                    class="is-rounded !shadow-none flex input overflow-hidden"
+                  >
                     <input
-                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      class="outline-none !shadow-none ring-0 border-0 input is-rounded"
                       type="date"
                     />
                     <input
-                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      class="outline-none !shadow-none ring-0 border-0 input is-rounded"
                       type="date"
                     />
                   </div>
@@ -113,13 +89,15 @@
                 <div class="space-y-2">
                   <label data-i18n="enterExit" class="block" htmlFor="adult">
                   </label>
-                  <div class="is-rounded flex input overflow-hidden">
+                  <div
+                    class="is-rounded !shadow-none flex input overflow-hidden"
+                  >
                     <input
-                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      class="outline-none ring-0 border-0 !shadow-none input is-rounded"
                       type="date"
                     />
                     <input
-                      class="outline-none ring-0 focus:shadow-none border-0 shadow-none input is-rounded"
+                      class="outline-none ring-0 border-0 !shadow-none input is-rounded"
                       type="date"
                     />
                   </div>
@@ -219,9 +197,12 @@
                 </div>
               </div>
               <div class="flex items-center gap-2 justify-end *:basis-[10%]">
-                <button class="button is-rounded" data-i18n="reset"></button>
                 <button
-                  class="button bg-primary-400 text-white !border-0 is-rounded"
+                  class="button is-rounded shadow-none"
+                  data-i18n="reset"
+                ></button>
+                <button
+                  class="button shadow-none bg-primary-400 text-white !border-0 is-rounded"
                   data-i18n="search"
                 ></button>
               </div>
@@ -366,7 +347,54 @@
 
                         <td class="p-4">
                           <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
+                            <a href="" class="underline text-primary-400">
+                              جزییات
+                            </a>
+                            <a class="underline text-green-400" href="">
+                              پرداخت
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="*:align-middle">
+                        <td>
+                          <p class="p-4">
+                            778899000 <br />
+                            hjk-78579 --
+                          </p>
+                        </td>
+                        <td>
+                          <p class="p-4">هتل اسپیناس Deluxe Room - Triple</p>
+                        </td>
+                        <td><p class="p-4">1403/03/8 7:44</p></td>
+                        <td>
+                          <p class="p-4">1403/03/8 1403/03/10 یک اتاق دو شب</p>
+                        </td>
+                        <td>
+                          <p class="p-4">test testt 2 مهمان</p>
+                        </td>
+                        <td>
+                          <div class="p-4">
+                            <p class="text-green-500">قابل استرداد</p>
+                            <p>137.5 <span>USD</span></p>
+                          </div>
+                        </td>
+
+                        <td class="p-5">
+                          <span
+                            class="rounded-full items-center gap-2 flex text-nowrap p-1 px-2 text-[#DC2626] border border-[#DC2626] bg-[#DC2626]/20 m-auto ml-10 w-fit"
+                          >
+                            <span
+                              class="size-2 bg-[#DC2626] block rounded-full"
+                            ></span>
+                            تایید شده
+                          </span>
+                        </td>
+                        <td class="p-4">چارتر کننده API interface</td>
+
+                        <td class="p-4">
+                          <div class="flex flex-col">
+                            <a href="" class="underline text-primary-400">
                               جزییات
                             </a>
                             <a class="underline text-green-400" href="">
@@ -413,7 +441,7 @@
 
                         <td class="p-4">
                           <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
+                            <a href="" class="underline text-primary-400">
                               جزییات
                             </a>
                             <a class="underline text-green-400" href="">
@@ -460,7 +488,7 @@
 
                         <td class="p-4">
                           <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
+                            <a href="" class="underline text-primary-400">
                               جزییات
                             </a>
                             <a class="underline text-green-400" href="">
@@ -507,7 +535,7 @@
 
                         <td class="p-4">
                           <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
+                            <a href="" class="underline text-primary-400">
                               جزییات
                             </a>
                             <a class="underline text-green-400" href="">
@@ -554,54 +582,7 @@
 
                         <td class="p-4">
                           <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
-                              جزییات
-                            </a>
-                            <a class="underline text-green-400" href="">
-                              پرداخت
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="*:align-middle">
-                        <td>
-                          <p class="p-4">
-                            778899000 <br />
-                            hjk-78579 --
-                          </p>
-                        </td>
-                        <td>
-                          <p class="p-4">هتل اسپیناس Deluxe Room - Triple</p>
-                        </td>
-                        <td><p class="p-4">1403/03/8 7:44</p></td>
-                        <td>
-                          <p class="p-4">1403/03/8 1403/03/10 یک اتاق دو شب</p>
-                        </td>
-                        <td>
-                          <p class="p-4">test testt 2 مهمان</p>
-                        </td>
-                        <td>
-                          <div class="p-4">
-                            <p>غیر قابل استرداد</p>
-                            <p>137.5 <span>USD</span></p>
-                          </div>
-                        </td>
-
-                        <td class="p-5">
-                          <span
-                            class="rounded-full items-center gap-2 flex text-nowrap p-1 px-2 text-[#DC2626] border border-[#DC2626] bg-[#DC2626]/20 m-auto ml-10 w-fit"
-                          >
-                            <span
-                              class="size-2 bg-[#DC2626] block rounded-full"
-                            ></span>
-                            تایید شده
-                          </span>
-                        </td>
-                        <td class="p-4">چارتر کننده API interface</td>
-
-                        <td class="p-4">
-                          <div class="flex flex-col">
-                            <a href="" class="underline text-orange-400">
+                            <a href="" class="underline text-primary-400">
                               جزییات
                             </a>
                             <a class="underline text-green-400" href="">

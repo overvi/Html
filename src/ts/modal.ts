@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add a click event on various child elements to close the parent modal
   const modalCloses = document.querySelectorAll<HTMLElement>(
-    ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
+    ".modal-background, .close-modal, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
   );
   modalCloses.forEach(($close) => {
     const $target = $close.closest<HTMLElement>(".modal");

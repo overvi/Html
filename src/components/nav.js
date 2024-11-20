@@ -11,16 +11,16 @@ class Navbar extends HTMLElement {
 
   Nav() {
     return `
-         <header>
-        <nav class="p-4 justify-between flex gap-3 items-center">
-          <div class="flex items-center gap-4">
-            <div class="w-[49px] h-[46px] mr-[2px]">
+         <header class='c-w' >
+        <nav class="pt-12 justify-between flex gap-3 items-center">
+          <div class="flex  items-center gap-4">
+            <div class="w-[60px] h-[60px]  ">
               <div
-                class="rounded-full fixed p-1 px-4 bg-white dark:bg-gray-900 w-fit"
+                class="rounded-full flex items-center justify-center w-[60px] h-[60px] fixed p-1 px-4 bg-white dark:bg-gray-900 "
               >
                 <img
-                  width="17"
-                  height="25"
+                  width="22"
+                  height="42"
                   src="/public/assets/images/logo-orange.png"
                   alt=""
                 />
@@ -28,10 +28,10 @@ class Navbar extends HTMLElement {
             </div>
             <button class="popover-toggle relative">
               <div
-                class="bg-white flex justify-end dark:bg-gray-900 z-0 relative overflow-hidden rounded-full w-[27rem] mr-[1.5rem] h-[2.875rem]"
+                class="bg-white flex justify-end dark:bg-gray-900 z-0 relative overflow-hidden rounded-full w-[27rem] xxl:ms-[2rem] ms-[.8rem] h-[2.875rem]"
               >
                 <div
-                  class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-orange-400"
+                  class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-primary-400"
                 >
                   <svg
                     class="m-auto"
@@ -65,13 +65,13 @@ class Navbar extends HTMLElement {
                   class="bg-white space-y-4 w-[27rem] text-right border-0 dark:bg-gray-900 rounded-3xl shadow-md p-4 z-50"
                 >
                   <div
-                    class="hover:text-orange-400 pb-2 border-b transition-all duration-700 flex justify-between"
+                    class="hover:text-primary-400 pb-2 border-b transition-all duration-700 flex justify-between"
                   >
                     <div>رزررواسیون</div>
                     <div>123222kdjsfkderFD</div>
                   </div>
                   <div
-                    class="hover:text-orange-400 transition-all duration-700 flex justify-between"
+                    class="hover:text-primary-400 transition-all duration-700 flex justify-between"
                   >
                     <div>رزررواسیون</div>
                     <div>123222kdjsfkderFD</div>
@@ -257,7 +257,7 @@ class Navbar extends HTMLElement {
                               fill="#DC2626"
                             />
                           </svg>
-                          <div class="font-semibold flex flex-col items-end">
+                          <div class=" flex flex-col items-end">
                             <p class="font-bold">
                               Ji Hotel Shenzhen Baoan Pingzhou Metro Station 
                             </p>
@@ -313,8 +313,8 @@ class Navbar extends HTMLElement {
                           <p data-i18n="contact" class="font-bold text-sm"></p>
                           <div class="flex items-center gap-2 mt-5">
                             <svg
-                              width="24"
-                              height="24"
+                              width="18"
+                              height="18"
                               viewBox="0 0 24 24"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"

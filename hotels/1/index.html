@@ -123,10 +123,10 @@
     </div>
     <main>
       <nav-bar></nav-bar>
-      <div class="flex gap-9">
+      <div class="flex gap-6 xxl:gap-13 c-w">
         <side-bar></side-bar>
 
-        <div class="w-full mx-3">
+        <div class="w-full mt-8">
           <div class="flex dark:text-white gap-2">
             <svg
               width="18"
@@ -157,11 +157,9 @@
             <a href="/hotels/1/" data-i18n="hotelDetails"></a>
           </div>
           <div
-            class="bg-white gap-12 flex mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
+            class="bg-white gap-12 flex mt-5 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl pt-[22px] pr-5 pl-[10px]"
           >
-            <div
-              class="basis-[75%] dark:border-gray-800 space-y-7 p-4 rounded-2xl"
-            >
+            <div class="basis-[75%] dark:border-gray-800 space-y-7 rounded-2xl">
               <div class="hotel-grid *:h-full gap-2">
                 <img
                   style="grid-area: one"
@@ -590,31 +588,42 @@
 
                       <div class="mt-9">
                         <table class="w-full">
-                          <thead class="bg-[#FBFBFB] dark:bg-gray-950">
-                            <tr class="text-center">
+                          <thead class="bg-storm-50 dark:bg-gray-950">
+                            <tr class="text-center h-[36px]">
                               <th
-                                class="p-3 border-l ltr:border-r ltr:border-l-0 dark:border-storm-950"
-                                data-i18n="allRooms"
-                              ></th>
-                              <th
-                                class="p-3 border-l ltr:border-r dark:border-storm-950"
-                                data-i18n="meals"
+                                class="rounded-tr-[21.16px] ltr:rounded-tr-none ltr:rounded-tl-[21.16px]"
                               >
-                                تاریخ
+                                <p
+                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  data-i18n="allRooms"
+                                ></p>
+                              </th>
+                              <th>
+                                <p
+                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  data-i18n="meals"
+                                ></p>
+                              </th>
+                              <th>
+                                <p
+                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  data-i18n="cancelingConditions"
+                                ></p>
+                              </th>
+                              <th>
+                                <p
+                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  data-i18n="priceNight"
+                                ></p>
                               </th>
                               <th
-                                class="p-3 border-l ltr:border-r dark:border-storm-950"
-                                data-i18n="cancelingConditions"
+                                class="rounded-tl-[21.16px] ltr:rounded-tl-none ltr:rounded-tr-[21.16px]"
                               >
-                                تاریخ
+                                <p
+                                  class="h-[36px] my-2 flex justify-center items-center dark:border-storm-950"
+                                  data-i18n="reserve"
+                                ></p>
                               </th>
-                              <th
-                                class="p-3 border-l ltr:border-r dark:border-storm-950"
-                                data-i18n="priceNight"
-                              >
-                                تاریخ
-                              </th>
-                              <th class="p-3" data-i18n="reserve">تاریخ</th>
                             </tr>
                           </thead>
                           <tbody
@@ -627,7 +636,7 @@
                               <th
                                 scope="row"
                                 rowspan="4"
-                                class="p-1.5 relative z-[50] bg-[#FBFBFB] align-middle dark:bg-storm-950"
+                                class="p-1.5 relative z-[50] bg-storm-50 align-middle dark:bg-storm-950"
                               >
                                 <div class=" ">
                                   <button class="popover-toggle relative">
@@ -992,7 +1001,7 @@
                                 </button>
                               </td>
                             </tr>
-                            <tr class="relative h-[30px]">
+                            <tr class="relative h-[30px] !border-b-0">
                               <td
                                 class="w-fit inset-0 right-[7rem] h-fit m-auto absolute"
                               >
@@ -1024,12 +1033,12 @@
                               </td>
                             </tr>
                             <tr
-                              class="price-list-1 more-prices hover:bg-storm-50 dark:hover:bg-storm-950"
+                              class="price-list-1 border-t more-prices hover:bg-storm-50 dark:hover:bg-storm-950"
                             >
                               <th
                                 scope="row"
                                 rowspan="3"
-                                class="p-1.5 relative rounded-br-[2rem] z-[50] align-middle dark:bg-storm-950 bg-[#FBFBFB]"
+                                class="p-1.5 relative rounded-br-[2rem] z-[50] align-middle dark:bg-storm-950 bg-storm-50"
                               >
                                 دلوکس دابل توبین
                               </th>

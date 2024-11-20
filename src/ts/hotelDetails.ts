@@ -2,21 +2,22 @@
 
 const togglePrices = document.querySelectorAll(".toggle-more-prices");
 
-
-togglePrices.forEach(priceToggle => {
+togglePrices.forEach((priceToggle) => {
   priceToggle?.addEventListener("click", () => {
-    const priceTarget = priceToggle.getAttribute("aria-target")
-    const parsedPriceTarget = priceTarget?.substring(priceTarget.indexOf("-") + 1)
+    const priceTarget = priceToggle.getAttribute("aria-target");
+    const parsedPriceTarget = priceTarget?.substring(
+      priceTarget.indexOf("-") + 1
+    );
 
     const morePrices = document.querySelectorAll(`.${parsedPriceTarget}`);
 
-    morePrices.forEach(price => {
-      price.classList.toggle("hidden")
-    })
+    morePrices.forEach((price) => {
+      price.classList.toggle("hidden");
+    });
 
-    document.querySelector(".showMorePriceSvg")?.classList.toggle("rotate-180")
+    document.querySelector(".showMorePriceSvg")?.classList.toggle("rotate-180");
   });
-})
+});
 
 const images = [
   "../../public/assets/images/espinas-viewer.png",

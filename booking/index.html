@@ -46,9 +46,9 @@
   <body>
     <main>
       <nav-bar></nav-bar>
-      <div class="flex gap-9">
+      <div class="flex gap-6 xxl:gap-13 c-w">
         <side-bar></side-bar>
-        <div class="w-full mx-3">
+        <div class="w-full mt-8">
           <div class="flex dark:text-white gap-2">
             <svg
               width="18"
@@ -78,16 +78,16 @@
           </div>
 
           <div
-            class="bg-white mt-3 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class="bg-white mt-5 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
           >
             <div
               class="bg-white flex gap-3 items-center *:basis-full dark:bg-gray-950 dark:text-white mt-3 rounded-3xl p-5 dark:shadow-none shadow-[0px_0px_10px_1px_rgba(0,0,0,0.10)]"
             >
               <div
-                class="flex items-center gap-3 border border-orange-300 p-3 rounded-2xl"
+                class="flex items-center gap-3 border border-primary-400 p-3 rounded-2xl"
               >
                 <p
-                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-orange-300 pl-2 border-l-orange-300"
+                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-primary-400 pl-2 border-l-primary-400"
                 >
                   fsda
                 </p>
@@ -95,10 +95,10 @@
                 <time datetime="{card.date}" class="font-bold"> fs </time>
               </div>
               <div
-                class="flex items-center gap-3 border border-orange-300 p-3 rounded-2xl"
+                class="flex items-center gap-3 border border-primary-400 p-3 rounded-2xl"
               >
                 <p
-                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-orange-300 pl-2 border-l-orange-300"
+                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-primary-400 pl-2 border-l-primary-400"
                 >
                   fsda
                 </p>
@@ -106,10 +106,10 @@
                 <time datetime="{card.date}" class="font-bold"> fs </time>
               </div>
               <div
-                class="flex items-center gap-3 border border-orange-300 p-3 rounded-2xl"
+                class="flex items-center gap-3 border border-primary-400 p-3 rounded-2xl"
               >
                 <p
-                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-orange-300 pl-2 border-l-orange-300"
+                  class="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-primary-400 pl-2 border-l-primary-400"
                 >
                   fsda
                 </p>
@@ -245,10 +245,7 @@
                   aria-labelledby="guest-list-trigger"
                 >
                   <div>
-                    <p
-                      data-i18n="acceptUserDetails"
-                      class="!font-semibold text-xl"
-                    ></p>
+                    <p data-i18n="acceptUserDetails" class="text-xl"></p>
                     <div
                       class="rounded-2xl p-3 text-xs mt-2 bg-primary-400/[5%] dark:bg-gray-950"
                     >
@@ -263,7 +260,7 @@
                       class="overflow-hidden mt-7 rounded-t-3xl border dark:border-gray-700 rounded-b-3xl"
                     >
                       <table class="w-full vertical-table">
-                        <tr>
+                        <tr class="*:font-medium">
                           <th
                             class="p-4 bg-storm-50 border-b dark:bg-gray-950 border-l ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="suename"
@@ -272,7 +269,7 @@
                             fdsadfa22443
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="*:font-medium">
                           <th
                             class="p-4 border-l bg-storm-50 dark:bg-gray-950 border-b ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="email"
@@ -305,7 +302,7 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="*:font-medium">
                           <th
                             class="p-4 border-l bg-storm-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
                             data-i18n="phoneNumber"
@@ -316,11 +313,8 @@
                     </div>
                   </div>
                   <div class="mt-8">
-                    <p
-                      data-i18n="hotelDetails"
-                      class="!font-semibold text-xl"
-                    ></p>
-                    <div class="border-collapse mt-7 dark:border-gray-700">
+                    <p data-i18n="hotelDetails" class="text-xl"></p>
+                    <div class="border-collapse mt-4 dark:border-gray-700">
                       <table class="w-full bordered-table">
                         <thead>
                           <tr>
@@ -357,19 +351,16 @@
                       </table>
                     </div>
                   </div>
-                  <div class="mt-14">
-                    <div class="flex justify-between items-center">
-                      <p
-                        class="!font-semibold text-xl mb-4"
-                        data-i18n="guestDetails"
-                      ></p>
+                  <div class="mt-[45px]">
+                    <div>
+                      <p class="text-xl" data-i18n="guestDetails"></p>
 
                       <div id="select-guests-modal" class="modal">
                         <div
                           class="modal-background bg-[hsla(221,14%,4%,0.45)]"
                         ></div>
 
-                        <div class="modal-content">
+                        <div class="modal-content rounded-3.5xl">
                           <div class="box text-right">
                             <div class="flex items-center justify-between">
                               <p
@@ -417,25 +408,29 @@
                                 </button>
                               </div>
                             </div>
-                            <div
-                              class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-                            >
+                            <div class="mt-7">
                               <table class="w-full bordered-table">
                                 <thead class="bg-storm-50 dark:bg-gray-950">
                                   <tr>
-                                    <th>
+                                    <th
+                                      class="rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
+                                    >
                                       <p class="p-2" data-i18n="name"></p>
                                     </th>
                                     <th>
                                       <p class="p-2" data-i18n="suename"></p>
                                     </th>
-                                    <th>
+                                    <th
+                                      class="rounded-tl-3.5xl ltr:rounded-tl-none ltr:rounded-tr-3.5xl"
+                                    >
                                       <p class="p-2" data-i18n="action"></p>
                                     </th>
                                   </tr>
                                 </thead>
 
-                                <tbody>
+                                <tbody
+                                  class="shadow-tbody dark:shadow-tbody-dark rounded-b-3.5xl"
+                                >
                                   <tr class="*:!align-middle">
                                     <td>
                                       <p class="p-4">علی</p>
@@ -508,7 +503,7 @@
                         ></button>
                       </div>
                     </div>
-                    <div class="mt-7 dark:border-gray-700">
+                    <div class="mt-4 dark:border-gray-700">
                       <table class="w-full bordered-table">
                         <thead>
                           <tr>
@@ -751,7 +746,7 @@
                             >
                               <p
                                 data-i18n="acceptUserDetails"
-                                class="text-xl m-0 !font-semibold"
+                                class="text-xl m-0"
                               ></p>
                             </th>
                           </tr>
@@ -763,8 +758,11 @@
                             <td
                               class="basis-[30%] p-4 border-l ltr:border-l-0 ltr:border-r dark:border-gray-700"
                             >
-                              <p data-i18n="suename" class="text-gray-400"></p>
-                              <p class="font-semibold">علی مقیمی نژاد</p>
+                              <p
+                                data-i18n="suename"
+                                class="text-gray-400 mb-1"
+                              ></p>
+                              <p>علی مقیمی نژاد</p>
                             </td>
 
                             <td
@@ -772,13 +770,16 @@
                             >
                               <p
                                 data-i18n="phoneNumber"
-                                class="text-gray-400"
+                                class="text-gray-400 mb-1"
                               ></p>
-                              <p class="font-semibold">09909024</p>
+                              <p>09909024</p>
                             </td>
                             <td class="basis-[50%] p-4">
-                              <p data-i18n="email" class="text-gray-400"></p>
-                              <p class="font-semibold">ajking@gmail.com</p>
+                              <p
+                                data-i18n="email"
+                                class="text-gray-400 mb-1"
+                              ></p>
+                              <p>ajking@gmail.com</p>
                             </td>
                           </tr>
                         </tbody>
@@ -786,7 +787,7 @@
                       <div>
                         <p
                           data-i18n="acceptGuestDetails"
-                          class="text-2xl mb-2 !font-semibold"
+                          class="text-2xl mb-2"
                         ></p>
                         <div class="mt-7 dark:border-gray-700">
                           <table class="w-full bordered-table">
@@ -833,25 +834,15 @@
                           </table>
                         </div>
                       </div>
-                      <div class="p-4 !mt-1">
-                        <div class="flex text-2xl items-center gap-1">
-                          <p class="m-0 font-bold" data-i18n="totalPrice"></p>
-                          <p class="m-0">:</p>
-                          <p>
-                            <span class="text-green-600 font-bold"
-                              >137.81 <span class="font-medium">USD</span></span
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="!mt-1">
+
+                      <div class="mt-5">
                         <label
                           data-i18n="messageRequest"
                           class="mb-2 block"
                         ></label>
                         <textarea
                           data-i18n="[placeholder]messageRequest"
-                          class="rounded-2xl textarea"
+                          class="rounded-2xl !shadow-none textarea"
                           rows="3"
                         ></textarea>
                       </div>
@@ -904,10 +895,7 @@
                         : 22870516781
                       </p>
                     </div>
-                    <p
-                      class="!font-semibold"
-                      data-i18n="reservationSuccess"
-                    ></p>
+                    <p class="" data-i18n="reservationSuccess"></p>
                     <div class="flex gap-3 items-center *:rounded-full">
                       <div
                         class="flex items-center gap-2 bg-green-500 button border-0 text-white"

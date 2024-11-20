@@ -12,10 +12,10 @@ class Sidebar extends HTMLElement {
 
   Nav() {
     return `
-  <div class="me-16 ltr:mr-16">
+  <div class="me-16 ltr:mr-16 mt-7.5">
 <div
 style="transform-style : preserve-3d"
-  class="bg-white mx-3 w-[60px] dark:bg-gray-900 mb-3 rounded-full p-2  min-h-[540px] h-fit fixed flex justify-center items-center"
+  class="bg-white w-[60px] dark:bg-gray-900 mb-3 rounded-full p-2  min-h-[80vh] h-fit fixed flex justify-center items-center"
 >
   <div style='transform-style : preserve-3d' class="space-y-10 flex flex-col items-center">
     <a

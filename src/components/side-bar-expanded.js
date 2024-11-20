@@ -12,15 +12,15 @@ class SidebarExpanded extends HTMLElement {
 
   Nav() {
     return `
-       <div class="ml-44 ltr:me-56 ltr:ml-4">
+       <div class="ml-44 ltr:me-44 ltr:ml-0 mt-7.5">
           <div>
             <div
-              class="bg-white h-[50rem] w-[12.75rem] flex fixed mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-b-[42px] rounded-tl-[42px] ltr:rounded-tl-none ltr:rounded-tr-[42px]"
+              class="bg-white exp-side h-[75vh] overflow-auto w-[12.75rem] flex fixed mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-[42px]"
             >
               <div
-                class="absolute h-full w-[56px] shadow-md rounded-full"
+                class="absolute h-[112%] top-0 w-[56px] bg-white dark:bg-gray-900 shadow-md rounded-full"
               ></div>
-              <div class="flex w-full space-y-3 flex-col rounded-full gap-7">
+              <div class="flex w-full space-y-3 z-[999999999] flex-col rounded-full gap-7">
                 <div class="flex group side-tab mt-20">
                   <a
                     href="/account"

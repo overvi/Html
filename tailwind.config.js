@@ -57,6 +57,13 @@ module.exports = {
   darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
+      screens: {
+        xxl: "1400px",
+      },
+      spacing: {
+        13: "3.375rem",
+        7.5: "1.875rem",
+      },
       fontFamily: {
         poppins: ["Poppins", "sens-serif"],
       },
@@ -72,9 +79,11 @@ module.exports = {
         600: "600",
         750: "750",
       },
+
       fontSize: {
         "4.5xl": "2.375rem",
         x: ".875rem",
+        "3.5xl": "2rem",
       },
 
       boxShadow: {

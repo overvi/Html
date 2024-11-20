@@ -178,7 +178,8 @@ const moreRoomsToggle = document.querySelectorAll(".more-rooms-toggle");
 
 moreRoomsToggle.forEach((item, index) => {
   item?.addEventListener("click", () => {
-    moreRoomsPanel[index]?.classList.toggle("!hidden");
+    moreRoomsPanel[index]?.classList.toggle("hidden");
+    item?.parentElement?.classList.toggle("more-rooms-expanded");
   });
 });
 

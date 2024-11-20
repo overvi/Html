@@ -30,18 +30,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
-
     <link rel="stylesheet" href="/dist/css/main.css" />
 
     <title>Home</title>
   </head>
   <body>
+    <nav-bar></nav-bar>
     <main>
-      <nav-bar></nav-bar>
-      <div class="flex gap-9">
+      <div class="flex c-w gap-6 xxl:gap-13">
         <side-bar></side-bar>
-        <div class="h-fit w-full">
-          <div class="flex mt-5 dark:text-white gap-2">
+        <div class="h-fit w-full mt-8">
+          <div class="flex dark:text-white gap-2">
             <svg
               width="18"
               height="18"
@@ -66,7 +65,7 @@
 
             <p data-i18n="nav"></p>
           </div>
-          <div class="flex mt-4 gap-6 w-full">
+          <div class="flex mt-5 gap-6 w-full">
             <div class="basis-[60%]">
               <div
                 class="bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
@@ -132,7 +131,11 @@
                   <div class="flex items-center justify-between">
                     <div class="flex gap-3 items-center">
                       <div>
-                        <label data-i18n="adult" class="block" htmlFor="adult">
+                        <label
+                          data-i18n="adult"
+                          class="block mb-1"
+                          htmlFor="adult"
+                        >
                         </label>
                         <div class="select is-rounded">
                           <select defaultValue="1" id="adult">
@@ -142,7 +145,11 @@
                         </div>
                       </div>
                       <div>
-                        <label data-i18n="child" htmlFor="child" class="block">
+                        <label
+                          data-i18n="child"
+                          htmlFor="child"
+                          class="block mb-1"
+                        >
                         </label>
                         <div class="select is-rounded">
                           <select defaultValue="1" id="child">
@@ -177,26 +184,32 @@
                           <p data-i18n="age"></p>
                         </button>
                         <div id="modal-js-example" class="modal">
-                          <div class="modal-background"></div>
+                          <div
+                            class="modal-background bg-[rgba(0,0,0,45%)]"
+                          ></div>
 
-                          <div class="modal-content w-[46rem]">
-                            <div class="box">
-                              <div class="mt-9 font-yekan">
-                                <h1
-                                  class="font-bold text-xl"
+                          <div class="modal-content w-[43rem] rounded-3.5xl">
+                            <div class="box w-[43rem] p-10">
+                              <div class="font-yekan">
+                                <p
+                                  class="font-bold text-2xl"
                                   data-i18n="childrensAge"
-                                ></h1>
-                                <p data-i18n="eachChildAge"></p>
-                                <div class="flex items-center gap-4 mt-4">
+                                ></p>
+                                <p class="mt-1" data-i18n="eachChildAge"></p>
+                                <div class="flex items-center gap-4 mt-7.5">
                                   <div>
                                     <label
                                       data-i18n="age"
                                       htmlFor="my-select"
-                                      class="block"
+                                      class="block mb-1"
                                     >
                                     </label>
-                                    <div class="select is-rounded">
-                                      <select defaultValue="1" id="child">
+                                    <div class="select is-rounded w-[8.75rem]">
+                                      <select
+                                        class="w-full"
+                                        defaultValue="1"
+                                        id="child"
+                                      >
                                         <option value="1">1</option>
                                         <option value="2">With options</option>
                                       </select>
@@ -206,11 +219,15 @@
                                     <label
                                       data-i18n="age"
                                       htmlFor="my-select"
-                                      class="block"
+                                      class="block mb-1"
                                     >
                                     </label>
-                                    <div class="select is-rounded">
-                                      <select defaultValue="1" id="child">
+                                    <div class="select is-rounded w-[8.75rem]">
+                                      <select
+                                        class="w-full"
+                                        defaultValue="1"
+                                        id="child"
+                                      >
                                         <option value="1">1</option>
                                         <option value="2">With options</option>
                                       </select>
@@ -220,11 +237,15 @@
                                     <label
                                       data-i18n="age"
                                       htmlFor="my-select"
-                                      class="block"
+                                      class="block mb-1"
                                     >
                                     </label>
-                                    <div class="select is-rounded">
-                                      <select defaultValue="1" id="child">
+                                    <div class="select is-rounded w-[8.75rem]">
+                                      <select
+                                        class="w-full"
+                                        defaultValue="1"
+                                        id="child"
+                                      >
                                         <option value="1">1</option>
                                         <option value="2">With options</option>
                                       </select>
@@ -234,15 +255,37 @@
                                     <label
                                       data-i18n="age"
                                       htmlFor="my-select"
-                                      class="block"
+                                      class="block mb-1"
                                     >
                                     </label>
-                                    <div class="select is-rounded">
-                                      <select defaultValue="1" id="child">
+                                    <div class="select is-rounded w-[8.75rem]">
+                                      <select
+                                        class="w-full"
+                                        defaultValue="1"
+                                        id="child"
+                                      >
                                         <option value="1">1</option>
                                         <option value="2">With options</option>
                                       </select>
                                     </div>
+                                  </div>
+                                </div>
+                                <div class="mt-[93px] gap-2 flex justify-end">
+                                  <div
+                                    class="border-state-error rounded-full border text-state-error"
+                                  >
+                                    <button
+                                      class="h-[40px] w-[115px]"
+                                      data-i18n="refuse"
+                                    ></button>
+                                  </div>
+                                  <div
+                                    class="bg-green-500 text-white rounded-full"
+                                  >
+                                    <button
+                                      class="h-[40px] w-[115px]"
+                                      data-i18n="accept"
+                                    ></button>
                                   </div>
                                 </div>
                               </div>
@@ -282,7 +325,7 @@
                 </form>
               </div>
             </div>
-            <div class="basis-[40%] mb-7 ml-12 ltr:mr-12 ltr:ml-0">
+            <div class="basis-[40%] mb-7">
               <div
                 class="rounded-2xl overflow-hidden relative rounded-b-none p-14 bg-gradient-to-r from-[#f9b233]/25 to-[#FEB534]"
               >
@@ -292,11 +335,11 @@
                   src="/public/assets/images/hotel.png"
                   alt=""
                 />
-                <div class="absolute top-24 left-36">
+                <div class="absolute top-20 right-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="367"
-                    height="329"
+                    width="327px"
+                    height="375px"
                     viewBox="0 0 367 369"
                     fill="none"
                   >
@@ -323,7 +366,7 @@
                     alt=""
                   />
                 </div>
-                <div class="mt-10 text-lg">
+                <div class="mt-10 text-[1.375rem]">
                   <p data-i18n="collab"></p>
                   <p data-i18n="cta"></p>
                 </div>
