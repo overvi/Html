@@ -1102,6 +1102,9 @@ video {
 .h-\[2\.5rem\] {
   height: 2.5rem;
 }
+.h-\[2\.75rem\] {
+  height: 2.75rem;
+}
 .h-\[2\.875rem\] {
   height: 2.875rem;
 }
@@ -2084,6 +2087,10 @@ video {
 .p-\[3px\] {
   padding: 3px;
 }
+.\!py-8 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2518,13 +2525,13 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-tbody {
-  --tw-shadow: 0 0 0 1px #d1d1d1;
-  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color);
+  --tw-shadow: inset 0 0 0 1px #d1d1d1;
+  --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-tbody-light {
-  --tw-shadow: 0 0 0 1px #ECECEC;
-  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color);
+  --tw-shadow: inset 0 0 0 1px #ECECEC;
+  --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-xl {
@@ -3608,8 +3615,8 @@ html[data-theme="dark"] .tabs {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .dark\:shadow-tbody-dark:where([data-theme="dark"], [data-theme="dark"] *) {
-  --tw-shadow: 0 0 0 1px #4f4f4f;
-  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color);
+  --tw-shadow: inset 0 0 0 1px #4f4f4f;
+  --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .\*\:dark\:text-white:where([data-theme="dark"], [data-theme="dark"] *) > * {

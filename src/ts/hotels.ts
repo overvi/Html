@@ -2,6 +2,8 @@ import "toolcool-range-slider";
 import "mapbox-gl/dist/mapbox-gl.css";
 import i18next from "i18next";
 import "./i18n";
+import Pagination from "./pagination"
+
 
 const mapToggle = document.querySelector(".map-toggle");
 const mapContainer = document.querySelector(".map-container");
@@ -221,10 +223,10 @@ tabs.forEach((tab, index) => {
 
 // Collapse
 
-const collpaseToggleText = document.querySelectorAll(".collapse-toggle-text");
+const collapseToggleText = document.querySelectorAll(".collapse-toggle-text");
 const collapseContentText = document.querySelectorAll(".collapse-content-text");
 
-collpaseToggleText.forEach((toggle, index) => {
+collapseToggleText.forEach((toggle, index) => {
   toggle.addEventListener("click", () => {
     collapseContentText[index].classList.toggle("hidden");
 
@@ -237,3 +239,9 @@ collpaseToggleText.forEach((toggle, index) => {
     }
   });
 });
+
+
+// Pagaination
+
+
+Pagination(".c-c" , ".c-c .c-c-item" , 3)
