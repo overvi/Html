@@ -34,7 +34,7 @@
       <div class="modal-background bg-[rgba(0,0,0,45%)]"></div>
 
       <div class="modal-content w-[43rem] rounded-3.5xl">
-        <div class="box w-[43rem] p-10">
+        <div class="box theme-color--primary w-[43rem] p-10">
           <div class="font-yekan">
             <p class="font-bold text-2xl" data-i18n="newAddress"></p>
             <p class="mt-1" data-i18n="addNewAddressDes"></p>
@@ -134,7 +134,7 @@
       <div class="modal-background bg-[rgba(0,0,0,45%)]"></div>
 
       <div class="modal-content w-[43rem] rounded-3.5xl">
-        <div class="box w-[43rem] p-10">
+        <div class="box theme-color--primary w-[43rem] p-10">
           <div class="font-yekan">
             <p class="font-bold text-2xl" data-i18n="editAddress"></p>
             <p class="mt-1" data-i18n="editAddressDes"></p>
@@ -235,7 +235,9 @@
       <div class="modal-background bg-[rgba(0,0,0,45%)]"></div>
 
       <div class="modal-content w-[35.6875rem] rounded-3.5xl">
-        <div class="box w-[35.6875rem] p-10">
+        <div
+          class="box theme-color--primary w-[35.6875rem] p-10"
+        >
           <div class="w-fit mx-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -267,11 +269,11 @@
             <button
               data-i18n="refuse"
               aria-label="close"
-              class="rounded-full close-modal text-green-500 border-solid min-h-[40px] min-w-[115px] border border-green-500"
+              class="rounded-full close-modal text-green-500 border-solid min-h-[40px] min-[115px] border border-green-500"
             ></button>
 
             <button
-              class="rounded-full close-modal justify-center flex items-center gap-1 bg-state-error text-white min-h-[40px] min-w-[115px]"
+              class="rounded-full close-modal justify-center flex items-center gap-1 bg-state-error text-white min-h-[40px] min-[115px]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -316,12 +318,12 @@
         <side-bar-expanded></side-bar-expanded>
 
         <div class="w-full mt-11">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
-              class="dark:fill-white"
+              class="dark:fillhite"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -350,7 +352,7 @@
             <a href="/delivery/" data-i18n="receive"></a>
           </div>
           <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+            class="theme-color--primary space-y-20 mt-5 rounded-3.5xl p-5"
           >
             <div class="flex items-center justify-between">
               <h1 class="font-bold text-xl" data-i18n="receive"></h1>
@@ -381,25 +383,25 @@
               </button>
             </div>
             <div class="mt-5">
-              <table class="w-full bordered-table">
+              <table class="w-full bordered-table theme-color-border">
                 <thead>
-                  <tr class="*:bg-[#FBFBFB] *:py-1.5 *:w-[13rem]">
+                  <tr class="*:py-1.5 *:w-[13rem]">
                     <th
-                      class="rounded-tr-3.5xl dark:bg-gray-950 ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
+                      class="rounded-tr-3.5xl theme-color--neutral theme-color-border ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
                     >
                       <p class="p-4" data-i18n="receiver"></p>
                     </th>
-                    <th class="dark:bg-gray-950">
+                    <th class="theme-color--neutral theme-color-border">
                       <p class="p-4" data-i18n="phoneNumber"></p>
                     </th>
-                    <th class="dark:bg-gray-950">
+                    <th class="theme-color--neutral theme-color-border">
                       <p class="p-4" data-i18n="deliverRegion"></p>
                     </th>
-                    <th class="dark:bg-gray-950">
+                    <th class="theme-color--neutral theme-color-border">
                       <p class="p-4" data-i18n="addressDetails"></p>
                     </th>
                     <th
-                      class="rounded-tl-3.5xl ltr:rounded-tl-none ltr:rounded-tr-3.5xl dark:bg-gray-950"
+                      class="rounded-tl-3.5xl ltr:rounded-tl-none ltr:rounded-tr-3.5xl theme-color--neutral theme-color-border"
                     >
                       <p class="p-4" data-i18n="actions"></p>
                     </th>

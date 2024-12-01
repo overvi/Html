@@ -15,6 +15,16 @@
     <script defer src="/dist/js/main.bundle.js"></script>
     <script src="/src/components/nav.js"></script>
 
+    <script>
+      const storeScroll = () => {
+        document.documentElement.dataset.scroll = window.scrollY.toString();
+      };
+
+      document.addEventListener("scroll", storeScroll, { passive: true });
+
+      storeScroll();
+    </script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
@@ -53,9 +63,9 @@
     <nav-bar></nav-bar>
     <main>
       <div class="flex gap-6 xxl:gap-13 c-w">
-        <side-bar></side-bar>
+        <side-bar class="scroll-based-sidebar"></side-bar>
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
@@ -83,29 +93,32 @@
             <a href="hotels" data-i18n="hotelsList"></a>
           </div>
           <div class="flex gap-6 mt-5">
-            <div class="w-[320px]">
+            <div class="w-[20rem]">
               <div
-                class="bg-white h-[27rem] hotels-collapse overflow-auto fixed z-0 w-[20rem] space-y-5 min-h-[76vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+                class="theme-color--primary h-[27rem] hide-scroll hotels-collapse overflow-auto fixed z-0 w-[20rem] space-y-5 min-h-[76vh] rounded-3.5xl p-5"
               >
                 <p
                   data-i18n="foundedHotels"
-                  class="font-bold border-b dark:border-b-gray-600 pb-5"
+                  class="font-bold border-b dark:theme-color-border pb-5"
                 ></p>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p data-i18n="hotelsName" class="text-base font-bold"></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
-                        viewBox="0 0 10 6"
                         class="collapse-content-icon -translate-y-[1px] rotate-180"
+                        viewBox="0 0 10 6"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -125,28 +138,31 @@
                     </div>
                   </form>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p data-i18n="price" class="text-base font-bold"></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
+                        class="collapse-content-icon -translate-y-[1px] rotate-180"
                         viewBox="0 0 10 6"
                         fill="none"
-                        class="collapse-content-icon -translate-y-[1px] rotate-180"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
                   </div>
 
                   <div class="collapse-content">
-                    <div class="tab-items bg-white dark:bg-gray-900 border-b">
+                    <div class="tab-items theme-color--primary border-b">
                       <ul
                         class="flex p-3 relative *:!font-normal overflow-visible"
                       >
@@ -176,11 +192,10 @@
                         <div class="p-2">
                           <div class="my-5">
                             <tc-range-slider
-                              slider-bg="#F6F6F6"
-                              slider-bg-hover="#F6F6F6"
                               slider-bg-fill="orange"
                               pointer-bg-hover="#fff"
                               pointer-bg-focus="#fff"
+                              class="tc-range"
                               pointer-border-hover="1px solid orange"
                               pointer-border-focus="1px solid orange"
                               pointer-shadow="none"
@@ -204,7 +219,7 @@
                             <input
                               placeholder="50 USD"
                               type="text"
-                              class="border-gray-300 !shadow-none input is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                              class="border-gray-300 !shadow-none input is-warning leading-[10rem] placeholder:text-gray-500 placeholder:text-[14px] rounded-full"
                             />
                           </div>
                           <p class="mt-8">-</p>
@@ -217,7 +232,7 @@
                             <input
                               placeholder="100 USD"
                               type="text"
-                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-gray-500 placeholder:text-[14px] rounded-full"
                             />
                           </div>
                         </form>
@@ -226,11 +241,10 @@
                         <div class="p-2">
                           <div class="my-5">
                             <tc-range-slider
-                              slider-bg="#F6F6F6"
-                              slider-bg-hover="#F6F6F6"
                               slider-bg-fill="orange"
                               pointer-bg-hover="#fff"
                               pointer-bg-focus="#fff"
+                              class="tc-range"
                               pointer-border-hover="1px solid orange"
                               pointer-border-focus="1px solid orange"
                               pointer-shadow="none"
@@ -254,7 +268,7 @@
                             <input
                               placeholder="50 USD"
                               type="text"
-                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-gray-500 placeholder:text-[14px] rounded-full"
                             />
                           </div>
                           <p class="mt-8">-</p>
@@ -267,7 +281,7 @@
                             <input
                               placeholder="100 USD"
                               type="text"
-                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-[#767676] placeholder:text-[14px] rounded-full"
+                              class="border-gray-300 input !shadow-none is-warning leading-[10rem] placeholder:text-gray-500 placeholder:text-[14px] rounded-full"
                             />
                           </div>
                         </form>
@@ -275,11 +289,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex *:font-yekan flex-col mt-3 gap-3">
                     <div class="flex justify-between collapse-toggle">
                       <p data-i18n="meals" class="text-base font-bold"></p>
-                      <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                      <div
+                        class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                      >
                         <svg
                           width="12"
                           height="12"
@@ -291,13 +307,14 @@
                           <path
                             d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                             fill="#767676"
+                            class="dark:fill-white"
                           />
                         </svg>
                       </div>
                     </div>
                     <div class="space-y-1 collapse-content">
                       <div
-                        class="flex bg-gray-50 dark:bg-gray-800 w-full rounded-lg p-1 items-center gap-2"
+                        class="flex theme-color--light w-full rounded-lg p-1 items-center gap-2"
                       >
                         <input
                           type="checkbox"
@@ -313,7 +330,7 @@
                         </label>
                       </div>
                       <div
-                        class="flex rounded-lg bg-gray-50 dark:bg-gray-800 p-1 items-center gap-2"
+                        class="flex rounded-lg theme-color--light p-1 items-center gap-2"
                       >
                         <input
                           type="checkbox"
@@ -329,7 +346,7 @@
                         </label>
                       </div>
                       <div
-                        class="flex bg-gray-50 dark:bg-gray-800 p-1 rounded-lg items-center gap-2"
+                        class="flex theme-color--light p-1 rounded-lg items-center gap-2"
                       >
                         <input
                           type="checkbox"
@@ -351,10 +368,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p data-i18n="category" class="text-base font-bold"></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
@@ -366,6 +385,7 @@
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -373,7 +393,7 @@
 
                   <div class="mt-3 collapse-content space-y-1">
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -475,7 +495,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -578,7 +598,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -687,7 +707,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -797,7 +817,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -906,10 +926,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p data-i18n="rates" class="text-base font-bold"></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
@@ -921,6 +943,7 @@
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -928,7 +951,7 @@
 
                   <div class="mt-3 collapse-content space-y-1">
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -971,7 +994,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1011,7 +1034,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1070,7 +1093,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1126,7 +1149,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1194,7 +1217,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1256,7 +1279,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1336,7 +1359,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex bg-gray-50 dark:bg-gray-800 rounded-lg p-1.5 gap-2 items-center"
+                      class="flex theme-color--light rounded-lg p-1.5 gap-2 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1414,10 +1437,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p data-i18n="stayType" class="text-base font-bold"></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
@@ -1429,6 +1454,7 @@
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -1436,7 +1462,7 @@
 
                   <div class="mt-3 space-y-1 collapse-content">
                     <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1 items-center"
+                      class="flex gap-2 theme-color--light rounded-lg p-1 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1452,7 +1478,7 @@
                       </label>
                     </div>
                     <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1 items-center"
+                      class="flex gap-2 theme-color--light rounded-lg p-1 items-center"
                     >
                       <input
                         type="checkbox"
@@ -1463,9 +1489,7 @@
                       <label for="ap" class="radio mb-1 aspect-square"></label>
                       <label data-i18n="ap" class="w-full" for="ap"> </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="villa"
@@ -1479,9 +1503,7 @@
                       <label data-i18n="villa" class="w-full" for="villa">
                       </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="hostel"
@@ -1495,9 +1517,7 @@
                       <label data-i18n="hostel" class="w-full" for="hostel">
                       </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="breakfest2"
@@ -1517,13 +1537,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="border-b dark:border-b-gray-600 pb-5">
+                <div class="border-b dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p
                       data-i18n="selectedLocation"
                       class="text-base font-bold"
                     ></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
@@ -1535,6 +1557,7 @@
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -1548,13 +1571,15 @@
                     />
                   </div>
                 </div>
-                <div class="dark:border-b-gray-600 pb-5">
+                <div class="dark:theme-color-border pb-5">
                   <div class="flex justify-between collapse-toggle">
                     <p
                       data-i18n="hotelServices"
                       class="text-base font-bold"
                     ></p>
-                    <div class="bg-storm-600/[40%] block p-1.5 rounded-full">
+                    <div
+                      class="bg-storm-600/[40%] dark:bg-storm-300 block p-1.5 rounded-full"
+                    >
                       <svg
                         width="12"
                         height="12"
@@ -1566,6 +1591,7 @@
                         <path
                           d="M8.53016 -0.0099225C8.34016 -0.0099225 8.15016 0.0600777 8.00016 0.210078L5.00016 3.21008L2.00016 0.210078C1.71016 -0.0799222 1.23016 -0.0799222 0.940156 0.210078C0.650156 0.500078 0.650156 0.980078 0.940156 1.27008L4.47016 4.80008C4.76016 5.09008 5.24016 5.09008 5.53016 4.80008L9.06016 1.27008C9.35016 0.980078 9.35016 0.500078 9.06016 0.210078C8.91016 0.0600777 8.72016 -0.0099225 8.53016 -0.0099225Z"
                           fill="#767676"
+                          class="dark:fill-white"
                         />
                       </svg>
                     </div>
@@ -1574,9 +1600,7 @@
                   <div
                     class="space-y-1 collapse-content *:font-yekan flex-col mt-3 gap-3"
                   >
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="pool"
@@ -1590,9 +1614,7 @@
                       <label data-i18n="pool" class="w-full" for="pool">
                       </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="gym"
@@ -1602,9 +1624,7 @@
                       <label for="gym" class="radio mb-1 aspect-square"></label>
                       <label data-i18n="gym" class="w-full" for="gym"> </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="transfer"
@@ -1618,9 +1638,7 @@
                       <label data-i18n="transfer" class="w-full" for="transfer">
                       </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="laundry"
@@ -1634,9 +1652,7 @@
                       <label data-i18n="laundry" class="w-full" for="laundry">
                       </label>
                     </div>
-                    <div
-                      class="flex gap-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-1"
-                    >
+                    <div class="flex gap-2 theme-color--light rounded-lg p-1">
                       <input
                         type="checkbox"
                         id="comm"
@@ -1655,15 +1671,355 @@
               </div>
             </div>
             <div class="grow basis-[71%]">
-              <!-- <div
-                class="bg-white flex text-[#767676] gap-4 items-center mt-3 dark:bg-gray-900 justify-between dark:text-white dark:border-gray-500 rounded-xl p-2"
-              >
-                fdsafdsa
-              </div> -->
               <div
-                class="bg-white flex text-[#767676] gap-4 items-center dark:bg-gray-900 justify-between dark:text-white dark:border-gray-500 rounded-3xl p-2"
+                class="theme-color--primary flex gap-4 items-center mt-3 rounded-2xl p-2"
               >
-                <div class="mx-2 text-[15px] gap-5 flex items-center">
+                <div
+                  class="font-medium basis-[25%] input is-rounded w-fit"
+                  aria-label="Selected location"
+                  role="textbox"
+                >
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M20.6201 8.45C19.5701 3.83 15.5401 1.75 12.0001 1.75C12.0001 1.75 12.0001 1.75 11.9901 1.75C8.4601 1.75 4.4201 3.82 3.3701 8.44C2.2001 13.6 5.3601 17.97 8.2201 20.72C9.2801 21.74 10.6401 22.25 12.0001 22.25C13.3601 22.25 14.7201 21.74 15.7701 20.72C18.6301 17.97 21.7901 13.61 20.6201 8.45Z"
+                      fill="#B0B0B0"
+                    />
+                    <path
+                      d="M12.0001 13.4602C13.7398 13.4602 15.1501 12.0499 15.1501 10.3102C15.1501 8.57046 13.7398 7.16016 12.0001 7.16016C10.2604 7.16016 8.8501 8.57046 8.8501 10.3102C8.8501 12.0499 10.2604 13.4602 12.0001 13.4602Z"
+                      fill="#B0B0B0"
+                    />
+                  </svg>
+                  <p class="ms-2">تهران</p>
+                </div>
+
+                <div
+                  class="relative dp-wrapper basis-[35%] font-medium rounded-full flex items-center border is-rounded w-fit"
+                >
+                  <div class="border-e p-1.5">
+                    <input
+                      id="start-date"
+                      class="theme-color--primary datepicker opacity-0 -z-50 absolute"
+                      aria-label="Start Date"
+                      type="date"
+                    />
+                    <label for="start-date" class="flex items-center gap-2">
+                      <svg
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                          fill="#B0B0B0"
+                        />
+                      </svg>
+                      <p
+                        data-i18n="startDate"
+                        aria-live="polite"
+                        class="text-storm-200 pe-3 dark:text-white font-yekan datepicker-value"
+                      ></p>
+                    </label>
+                  </div>
+                  <div class="p-1.5">
+                    <input
+                      id="end-date"
+                      class="theme-color--primary datepicker opacity-0 -z-50 absolute"
+                      aria-label="End Date"
+                      type="date"
+                    />
+                    <label for="end-date" class="flex items-center gap-2">
+                      <svg
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                          fill="#B0B0B0"
+                        />
+                        <path
+                          d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                          fill="#B0B0B0"
+                        />
+                      </svg>
+                      <p
+                        data-i18n="endDate"
+                        aria-live="polite"
+                        class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                      ></p>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="z-0 relative basis-[35%] font-medium">
+                  <button
+                    class="flex group toggle-room-filter peer items-center input is-rounded justify-between w-full"
+                  >
+                    <p id="room-details" aria-live="polite">
+                      <span id="t-count">0</span> مسافر ,
+                      <span id="room-count">1</span> اتاق
+                    </p>
+
+                    <svg
+                      class="group-[.opened-filter]:rotate-180"
+                      aria-hidden="hidden"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        d="M11.6199 5.22266L7.81655 9.02599C7.36738 9.47516 6.63238 9.47516 6.18322 9.02599L2.37988 5.22266"
+                        stroke="#B0B0B0"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <div
+                    id="room-filter"
+                    class="absolute hidden theme-color--primary right-0 rounded-b-3.5xl left-0 -z-50 rounded-t-3.5xl top-0 pb-2 border"
+                  >
+                    <div class="pt-14 px-2">
+                      <div
+                        id="rooms"
+                        class="max-h-[33.125rem] overflow-auto rooms-scroll"
+                      >
+                        <div class="room pl-2">
+                          <div class="flex items-center justify-between">
+                            <p>اتاق 1</p>
+                          </div>
+                          <div
+                            class="flex items-center mt-4 justify-between w-full"
+                          >
+                            <p data-i18n="adult"></p>
+                            <div class="flex items-center gap-2">
+                              <button
+                                aria-label="Decrease Adult"
+                                class="bg-gray-200 decrement-adult size-[20px] rounded-full flex items-center justify-center"
+                              >
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6 12L18 12"
+                                    class="stroke-gray-400"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                              <p aria-live="polite" class="mt-1 parent-count">
+                                0
+                              </p>
+                              <button
+                                aria-label="Increment Adult"
+                                class="bg-primary-100 increment-adult size-[20px] rounded-full flex items-center justify-center"
+                              >
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    id="Vector"
+                                    d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                                    class="stroke-primary-400"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center mt-4 justify-between w-full"
+                          >
+                            <p data-i18n="child"></p>
+                            <div class="flex items-center gap-2">
+                              <button
+                                aria-label="Decrease Child"
+                                class="bg-gray-200 decrement-child size-[20px] rounded-full flex items-center justify-center"
+                              >
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6 12L18 12"
+                                    class="stroke-gray-400"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                              <p class="mt-1 child-count" aria-live="polite">
+                                0
+                              </p>
+                              <button
+                                aria-label="Increase Child"
+                                class="bg-primary-100 increment-child size-[20px] rounded-full flex items-center justify-center"
+                              >
+                                <svg
+                                  role="img"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    id="Vector"
+                                    d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                                    class="stroke-primary-400"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="child-fields"></div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-2 mt-14">
+                        <div
+                          class="border basis-[60%] border-primary-400 text-primary-400 px-2 rounded-full"
+                        >
+                          <button
+                            class="min-h-[2.5rem] w-full"
+                            id="add-new-room"
+                            data-i18n="addNewRoom"
+                          ></button>
+                        </div>
+                        <div
+                          class="bg-green-500 basis-[40%] text-white rounded-full"
+                        >
+                          <button
+                            class="min-h-[2.5rem] w-full toggle-room-filter"
+                            data-i18n="accept"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  aria-label="Apply Filters"
+                  class="rounded-full bg-green-500 p-2"
+                >
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M11.0095 20.02C15.9856 20.02 20.0195 15.9861 20.0195 11.01C20.0195 6.03391 15.9856 2 11.0095 2C6.03343 2 1.99951 6.03391 1.99951 11.01C1.99951 15.9861 6.03343 20.02 11.0095 20.02Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M21.9901 18.9461C21.6601 18.3361 20.9601 17.9961 20.0201 17.9961C19.3101 17.9961 18.7001 18.2861 18.3401 18.7861C17.9801 19.2861 17.9001 19.9561 18.1201 20.6261C18.5501 21.9261 19.3001 22.2161 19.7101 22.2661C19.7701 22.2761 19.8301 22.2761 19.9001 22.2761C20.3401 22.2761 21.0201 22.0861 21.6801 21.0961C22.2101 20.3261 22.3101 19.5561 21.9901 18.9461Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="mt-4 flex text-gray-500 dark:text-white gap-4 items-center justify-between theme-color--primary rounded-2xl p-2"
+              >
+                <div class="mx-2 text-[0.9375rem] gap-5 flex items-center">
                   <div class="flex gap-2 items-center">
                     <button data-i18n="showType"></button>
                     <svg
@@ -1849,7 +2205,7 @@
                 </div>
               </div>
               <div
-                class="bg-white text-[#767676] text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-4 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-2"
+                class="theme-color--primary dark:text-white text-gray-500 text-[15px] flex gap-4 *:shadow-none *:border-0 items-center mt-4 rounded-2xl p-2"
               >
                 <button class="px-2" data-i18n="activeFilter"></button>
 
@@ -1860,7 +2216,7 @@
                     class="peer-checked:hidden z-50 cursor-pointer"
                   >
                     <div
-                      class="flex text-xs dark:text-white text-black py-1 dark:bg-gray-700 gap-2 items-center px-3 border-0 rounded-full bg-storm-50"
+                      class="flex text-xs theme-color--neutral py-1 gap-2 items-center px-3 border-0 rounded-full"
                     >
                       <span data-i18n="category"> </span
                       ><svg
@@ -1886,7 +2242,7 @@
                 <input class="peer z-30 hidden" type="checkbox" id="check2" />
                 <label for="check2" class="peer-checked:hidden cursor-pointer">
                   <span
-                    class="flex text-xs dark:text-white text-black py-1 dark:bg-gray-700 gap-2 items-center px-3 border-0 rounded-full bg-storm-50"
+                    class="flex text-xs py-1 gap-2 items-center px-3 border-0 rounded-full theme-color--neutral"
                   >
                     دو کیلومتر تا منطقه سعادت آباد
                     <svg
@@ -1910,7 +2266,7 @@
                 </label>
               </div>
               <div
-                class="bg-white map-container hidden dark:bg-gray-900 p-4 rounded-3.5xl my-4"
+                class="theme-color--primary map-container hidden p-4 rounded-3.5xl my-4"
               >
                 <div id="map" dir="rtl"></div>
               </div>
@@ -1920,7 +2276,7 @@
                   class="grid grid-cols-2 c-c w-full gap-8 group-[.wide]:block group-[.wide]:ml-3"
                 >
                   <div
-                    class="mt-5 c-c-item bg-white h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+                    class="mt-5 c-c-item theme-color--primary h-fit rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -2033,7 +2389,7 @@
                           >
                             <div
                               style="
-                                background-image: url('../public/assets/images/espinas1.png');
+                                background-image: url('/public/assets/images/espinas-2.png');
                               "
                               class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
                             ></div>
@@ -2102,7 +2458,7 @@
                         class="flex mt-4 group-[.wide]:justify-between group-[.wide]:!mt-0 group-[.wide]:flex-row flex-col gap-5 w-full"
                       >
                         <div
-                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:border-l-gray-700"
+                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:theme-color-border"
                         >
                           <div class="flex justify-between items-center">
                             <div class="flex items-center gap-2">
@@ -2214,6 +2570,7 @@
                                 height="18"
                                 viewBox="0 0 18 18"
                                 fill="none"
+                                class="theme-color-f"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -2235,6 +2592,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2265,6 +2623,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2286,6 +2645,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2468,20 +2828,20 @@
                     <div class="mt-5 hidden more-rooms">
                       <ul class="space-y-4">
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2518,20 +2878,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2568,20 +2928,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -2641,7 +3001,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-5 bg-white c-c-item  h-fit dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+                    class="mt-5 theme-color--primary c-c-item h-fit rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -2754,7 +3114,7 @@
                           >
                             <div
                               style="
-                                background-image: url('../public/assets/images/espinas1.png');
+                                background-image: url('/public/assets/images/espinas-2.png');
                               "
                               class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
                             ></div>
@@ -2823,7 +3183,7 @@
                         class="flex mt-4 group-[.wide]:justify-between group-[.wide]:!mt-0 group-[.wide]:flex-row flex-col gap-5 w-full"
                       >
                         <div
-                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:border-l-gray-700"
+                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:theme-color-border"
                         >
                           <div class="flex justify-between items-center">
                             <div class="flex items-center gap-2">
@@ -2934,6 +3294,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2956,6 +3317,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -2986,6 +3348,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -3007,6 +3370,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -3189,20 +3553,20 @@
                     <div class="mt-5 hidden more-rooms">
                       <ul class="space-y-4">
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3239,20 +3603,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3289,20 +3653,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3362,7 +3726,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-5 h-fit c-c-item  bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+                    class="mt-5 h-fit c-c-item theme-color--primary rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -3475,7 +3839,7 @@
                           >
                             <div
                               style="
-                                background-image: url('../public/assets/images/espinas1.png');
+                                background-image: url('/public/assets/images/espinas-2.png');
                               "
                               class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
                             ></div>
@@ -3543,7 +3907,7 @@
                         class="flex group-[.wide]:justify-between mt-4 group-[.wide]:!mt-0 group-[.wide]:flex-row flex-col gap-5 w-full"
                       >
                         <div
-                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:border-l-gray-700"
+                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:theme-color-border"
                         >
                           <div class="flex justify-between items-center">
                             <div class="flex items-center gap-2">
@@ -3654,6 +4018,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -3676,6 +4041,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -3705,6 +4071,7 @@
                               <svg
                                 width="18"
                                 height="18"
+                                class="theme-color-f"
                                 viewBox="0 0 18 18"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -3727,6 +4094,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -3909,20 +4277,20 @@
                     <div class="mt-5 hidden more-rooms">
                       <ul class="space-y-4">
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -3959,20 +4327,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -4009,20 +4377,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -4082,7 +4450,7 @@
                     </div>
                   </div>
                   <div
-                    class="mt-5 h-fit c-c-item  bg-white dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
+                    class="mt-5 h-fit c-c-item theme-color--primary rounded-3.5xl p-5"
                   >
                     <div
                       class="flex flex-col pt-4 group-[.wide]:!pt-0 group-[.wide]:flex-row gap-3"
@@ -4195,7 +4563,7 @@
                           >
                             <div
                               style="
-                                background-image: url('../public/assets/images/espinas1.png');
+                                background-image: url('/public/assets/images/espinas-2.png');
                               "
                               class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
                             ></div>
@@ -4263,7 +4631,7 @@
                         class="flex mt-4 group-[.wide]:justify-between group-[.wide]:!mt-0 group-[.wide]:flex-row flex-col gap-5 w-full"
                       >
                         <div
-                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:border-l-gray-700"
+                          class="space-y-4 group-[.wide]:basis-full pl-[.65rem] group-[.wide]:border-l dark:theme-color-border"
                         >
                           <div class="flex justify-between items-center">
                             <div class="flex items-center gap-2">
@@ -4374,6 +4742,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -4395,6 +4764,7 @@
                               <svg
                                 width="18"
                                 height="18"
+                                class="theme-color-f"
                                 viewBox="0 0 18 18"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -4425,6 +4795,7 @@
                               <svg
                                 width="18"
                                 height="18"
+                                class="theme-color-f"
                                 viewBox="0 0 18 18"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -4447,6 +4818,7 @@
                                 width="18"
                                 height="18"
                                 viewBox="0 0 18 18"
+                                class="theme-color-f"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
@@ -4630,20 +5002,20 @@
                     <div class="mt-5 hidden more-rooms">
                       <ul class="space-y-4">
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -4680,20 +5052,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -4730,20 +5102,20 @@
                           </div>
                         </li>
                         <li
-                          class="flex gap-7 text-[13px] justify-between dark:bg-gray-950 bg-gray-50 p-1.5 rounded-2xl items-center"
+                          class="flex gap-7 text-[13px] justify-between theme-color--light p-1.5 rounded-2xl items-center"
                         >
                           <p class="font-semibold mr-2">
                             اتاق Deluxe Room - Triple
                           </p>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               data-i18n="breakfest"
                             ></span>
                           </div>
                           <div>
                             <span
-                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block dark:bg-gray-900"
+                              class="text-primary-400 text-xs bg-primary-400/[15%] px-3 p-1.5 rounded-lg block"
                               >یک وعده ناهار یا شام انتخابی</span
                             >
                           </div>
@@ -4803,8 +5175,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="bg-white !py-8 h-[2.75rem] mt-4 flex items-center justify-center dark:bg-gray-900 rounded-full">
-                  <div class="flex gap-3  items-center">
+                <div
+                  class="bg-white !py-8 h-[2.75rem] mt-4 flex items-center justify-center dark:theme-color--primary rounded-full"
+                >
+                  <div class="flex gap-3 items-center">
                     <div>
                       <button class="prev-table mt-2 ltr:rotate-180">
                         <svg

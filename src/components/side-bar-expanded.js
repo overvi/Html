@@ -15,10 +15,10 @@ class SidebarExpanded extends HTMLElement {
        <div class="ml-44 ltr:me-44 ltr:ml-0 mt-7.5">
           <div>
             <div
-              class="bg-white exp-side h-[75vh] overflow-auto w-[12.75rem] flex fixed mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-[42px]"
+              class="theme-color hide-scroll theme-color--primary exp-side h-[75vh] overflow-auto w-[12.75rem] flex fixed mt-3   dark:border-gray-500 rounded-[42px]"
             >
               <div
-                class="absolute h-[112%] top-0 w-[56px] bg-white dark:bg-gray-900 shadow-md rounded-full"
+                class="absolute h-[112%] top-0 w-[56px] theme-color theme-color--primary shadow-md rounded-full"
               ></div>
               <div class="flex w-full space-y-3 z-[999999999] flex-col rounded-full gap-7">
                 <div class="flex group side-tab mt-20">
@@ -29,6 +29,7 @@ class SidebarExpanded extends HTMLElement {
                     <svg
                       width="32"
                       height="32"
+                      class='theme-color-f'
                       viewBox="0 0 32 32"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +55,7 @@ class SidebarExpanded extends HTMLElement {
                       <svg
                         width="10"
                         height="10"
+                        class='dark:*:stroke-white'
                         viewBox="0 0 10 10"
                         fill="none"
                         class="group-[.active-side-tab]:rotate-180"
@@ -92,6 +94,7 @@ class SidebarExpanded extends HTMLElement {
                     <svg
                       width="32"
                       height="32"
+                         class='theme-color-f'
                       viewBox="0 0 32 32"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +142,7 @@ class SidebarExpanded extends HTMLElement {
                       <p class="side-tab-title" data-i18n="users">کاربران</p>
                       <svg
                         width="10"
-                        class="group-[.active-side-tab]:rotate-180"
+                        class="group-[.active-side-tab]:rotate-180 dark:*:stroke-white" 
                         height="10"
                         viewBox="0 0 10 10"
                         fill="none"
@@ -151,6 +154,7 @@ class SidebarExpanded extends HTMLElement {
                           stroke-width="1.5"
                           class="group-[.active-side-tab]:stroke-primary-400"
                           stroke-miterlimit="10"
+                          
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         ></path>
@@ -175,6 +179,7 @@ class SidebarExpanded extends HTMLElement {
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
+                         class='theme-color-f'
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -207,6 +212,7 @@ class SidebarExpanded extends HTMLElement {
                   >
                     <svg
                       width="32"
+                         class='theme-color-f'
                       height="32"
                       viewBox="0 0 24 24"
                       fill="none"

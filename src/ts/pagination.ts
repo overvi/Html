@@ -1,13 +1,13 @@
-import i18next from "i18next";
+import { retranslate } from "./util";
 
 
-export default function Pagination (target : string , htmlData : string ,rpg : number) {
+export default function Pagination (target : string , htmlData : string ,rpg : number , p ?: string) {
     document.addEventListener("DOMContentLoaded" , () => {
 
         const tableBody = document.querySelector(target) as HTMLElement;
-        const pagination = document.getElementById("pagination");
+        const pagination = document.getElementById(p ?`pagination${p}` :"pagination");
         const selectRow = document.getElementById(
-          "selectRowInpage"
+          `selectRowInpage${p}`
         ) as HTMLInputElement;
       
         const data = document.querySelectorAll(htmlData);
@@ -44,21 +44,7 @@ export default function Pagination (target : string , htmlData : string ,rpg : n
           
       
           paginatedData.forEach((row) => {
-            row.querySelectorAll("[data-i18n]").forEach((element) => {
-                const keys = element.getAttribute("data-i18n")?.split(";") || [];
-                keys.forEach((key) => {
-                  const [attr, i18nKey] = key.includes("]")
-                    ? key.split("]")
-                    : ["innerHTML", key];
-                  if (attr && i18nKey) {
-                    if (attr === "innerHTML") {
-                      element.innerHTML = i18next.t(i18nKey);
-                    } else {
-                      element.setAttribute(attr.slice(1), i18next.t(i18nKey));
-                    }
-                  }
-                });
-              });
+            retranslate(row)
             document.querySelector(target)!.appendChild(row);
           });
       

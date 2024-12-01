@@ -16,7 +16,7 @@ class Navbar extends HTMLElement {
           <div class="flex  items-center gap-4">
             <div class="w-[60px] h-[60px]  ">
               <div
-                class="rounded-full flex items-center justify-center w-[60px] h-[60px] fixed p-1 px-4 bg-white dark:bg-gray-900 "
+                class="rounded-full flex items-center justify-center w-[60px] h-[60px] fixed p-1 px-4 bg-white dark:bg-storm-600 "
               >
                 <img
                   width="22"
@@ -28,7 +28,7 @@ class Navbar extends HTMLElement {
             </div>
             <button class="popover-toggle relative">
               <div
-                class="bg-white flex justify-end dark:bg-gray-900 z-0 relative overflow-hidden rounded-full w-[27rem] xxl:ms-[2rem] ms-[.8rem] h-[2.875rem]"
+                class="bg-white flex  justify-end dark:bg-storm-600 z-0 relative overflow-hidden rounded-full w-[27rem] xxl:ms-[2.3rem] ms-[.8rem] h-[2.875rem]"
               >
                 <div
                   class="rounded-full justify-between z-10 flex h-[46px] w-[46px] relative bg-primary-400"
@@ -37,6 +37,7 @@ class Navbar extends HTMLElement {
                     class="m-auto"
                     width="24"
                     height="24"
+                    class='theme-color-f'
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,14 +56,14 @@ class Navbar extends HTMLElement {
                 <input
                   type="text"
                   data-i18n="[placeholder]reservationSearch"
-                  class="w-full h-full pl-2 dark:bg-gray-900 dark:text-white pr-3 absolute z-[1] top-0 shadow-none outline-none border-none"
+                  class="w-full  h-full pl-2 dark:bg-storm-600 dark:text-white pr-3 absolute z-[1] top-0 shadow-none outline-none border-none"
                 />
               </div>
               <div
                 class="popover transition-all ltr:right-0 ltr:left-[unset] origin-center duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
               >
                 <div
-                  class="bg-white space-y-4 w-[27rem] text-right border-0 dark:bg-gray-900 rounded-3xl shadow-md p-4 z-50"
+                  class="bg-white space-y-4 w-[27rem] text-right border-0 dark:bg-storm-600 rounded-3xl shadow-md p-4 z-50"
                 >
                   <div
                     class="hover:text-primary-400 pb-2 border-b transition-all duration-700 flex justify-between"
@@ -81,11 +82,12 @@ class Navbar extends HTMLElement {
             </button>
 
             <button class="lang-toggle">
-              <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+              <div class="rounded-full p-2 bg-white dark:bg-storm-600 w-fit">
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                    class='theme-color-f'
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -109,6 +111,7 @@ class Navbar extends HTMLElement {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
+                      class='theme-color-f'
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -130,7 +133,7 @@ class Navbar extends HTMLElement {
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    class="fill-gray-600"
+                      class='theme-color-f'
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -150,10 +153,11 @@ class Navbar extends HTMLElement {
           </div>
           <div class="flex items-center gap-4">
             <button class="relative popover-toggle">
-              <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+              <div class="rounded-full p-2 bg-white dark:bg-storm-600 w-fit">
                 <svg
                   width="24"
                   height="24"
+                    class='theme-color-f'
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +177,7 @@ class Navbar extends HTMLElement {
                 class="popover transition-all mt-2 ltr:right-0 ltr:left-[unset] origin-top-left duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
               >
                 <div
-                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
+                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-storm-600 dark:before:bg-storm-600 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
                 >
                   <div dir="rtl" class="font-yekan w-[25rem] p-2 rounded-full">
                     <div>
@@ -272,10 +276,11 @@ class Navbar extends HTMLElement {
               </div>
             </button>
             <button class="relative popover-toggle">
-              <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+              <div class="rounded-full p-2 bg-white dark:bg-storm-600 w-fit">
                 <svg
                   width="24"
                   height="24"
+                  class='theme-color-f'
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +308,7 @@ class Navbar extends HTMLElement {
                 class="popover transition-all mt-2 ltr:right-0 ltr:left-[unset] origin-top-left duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
               >
                 <div
-                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-5 z-50"
+                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-storm-600 dark:before:bg-storm-600 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-5 z-50"
                 >
                   <div dir="rtl" class="font-yekan w-[25rem] p-2 rounded-full">
                     <div>
@@ -343,6 +348,7 @@ class Navbar extends HTMLElement {
                             <svg
                               width="18"
                               height="18"
+                        
                               viewBox="0 0 18 18"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -380,17 +386,19 @@ class Navbar extends HTMLElement {
               </div>
             </button>
             <button class="popover-toggle relative">
-              <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+              <div class="rounded-full p-2 bg-white dark:bg-storm-600 w-fit">
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  class='white-except'
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12.62 20.8101C12.28 20.9301 11.72 20.9301 11.38 20.8101C8.48 19.8201 2 15.6901 2 8.6901C2 5.6001 4.49 3.1001 7.56 3.1001C9.38 3.1001 10.99 3.9801 12 5.3401C13.01 3.9801 14.63 3.1001 16.44 3.1001C19.51 3.1001 22 5.6001 22 8.6901C22 15.6901 15.52 19.8201 12.62 20.8101Z"
                     stroke="#F9B233"
+                    
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -401,7 +409,7 @@ class Navbar extends HTMLElement {
                 class="popover transition-all mt-2 ltr:right-0 ltr:left-[unset] origin-top-left duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
               >
                 <div
-                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
+                  class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-storm-600 dark:before:bg-storm-600 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
                 >
                   <div dir="rtl" class="font-yekan w-[25rem] p-2 rounded-full">
                     <div>
@@ -470,7 +478,7 @@ class Navbar extends HTMLElement {
               <button class="popover-toggle relative">
                 <div
                   tabindex="0"
-                  class="rounded-full !pe-4 relative cursor-pointer flex items-center gap-2 p-1 bg-white dark:bg-gray-900 w-fit"
+                  class="rounded-full !pe-4 relative cursor-pointer flex items-center gap-2 p-1 bg-white dark:bg-storm-600 w-fit"
                 >
                   <img src="/public/assets/images/780.png" alt="" />
                   <p class="dark:text-white">هفت هشتاد</p>
@@ -479,7 +487,7 @@ class Navbar extends HTMLElement {
                   class="popover transition-all mt-2 origin-top-left duration-500 scale-0 left-0 ltr:right-0 ltr:left-[unset] top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
                 >
                   <div
-                    class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
+                    class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-storm-600 dark:before:bg-storm-600 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
                   >
                     <div class="font-yekan w-[24rem] rounded-full">
                       <div class="border-b pb-3 p-2 text-right">
@@ -500,7 +508,7 @@ class Navbar extends HTMLElement {
                         <div class="flex items-center gap-2">
                           <a
                             data-i18n="showMoreDotless"
-                            class="flex items-center text-xs text-slate-400 gap-2"
+                            class="flex items-center text-xs text-gray-500 dark:text-white gap-2"
                           >
                           </a>
                           <svg
@@ -539,7 +547,7 @@ class Navbar extends HTMLElement {
                       >
                         <a class="flex flex-col justify-center items-center">
                           <div
-                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-gray-900"
+                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-storm-600"
                           >
                             <svg
                               width="32"
@@ -563,7 +571,7 @@ class Navbar extends HTMLElement {
                         </a>
                         <a class="flex flex-col justify-center items-center">
                           <div
-                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-gray-900"
+                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-storm-600"
                           >
                             <svg
                               width="32"
@@ -587,7 +595,7 @@ class Navbar extends HTMLElement {
                         </a>
                         <a class="flex flex-col justify-center items-center">
                           <div
-                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-gray-900"
+                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-storm-600"
                           >
                             <svg
                               width="32"
@@ -630,7 +638,7 @@ class Navbar extends HTMLElement {
                         </a>
                         <a class="flex flex-col justify-center items-center">
                           <div
-                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-gray-900"
+                            class="rounded-full w-fit p-2 bg-primary-400/[10%] dark:bg-storm-600"
                           >
                             <svg
                               width="32"
@@ -658,11 +666,12 @@ class Navbar extends HTMLElement {
                 </div>
               </button>
               <button class="relative popover-toggle">
-                <div class="rounded-full p-2 bg-white dark:bg-gray-900 w-fit">
+                <div class="rounded-full p-2 bg-white dark:bg-storm-600 w-fit">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
+                    class='theme-color-f'
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -685,7 +694,7 @@ class Navbar extends HTMLElement {
                   class="popover transition-all mt-2 origin-top-left ltr:right-0 ltr:left-[unset] duration-500 scale-0 left-0 top-14 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
                 >
                   <div
-                    class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
+                    class="bg-white mt-2 text-right border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-storm-600 dark:before:bg-storm-600 before:block before:content-[' '] before:bg-white before:-bottom-[1.2rem] before:left-[0.2rem] before:w-[2.5rem] before:h-[2.75rem] before:absolute border rounded-3xl shadow-md p-4 !pb-10 z-50"
                   >
                     <div class="font-yekan w-[25rem] p-2 pb-20 rounded-full">
                       <div>
@@ -699,7 +708,7 @@ class Navbar extends HTMLElement {
                           <div class="flex items-center gap-2">
                             <a
                               data-i18n="showMoreDotless"
-                              class="flex items-center text-[#767676] text-xs gap-2"
+                              class="flex items-center dark:text-white text-gray-500 text-xs gap-2"
                             >
                             </a>
                             <svg

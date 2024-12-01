@@ -88,10 +88,12 @@ module.exports = {
 
       boxShadow: {
         tbody: `inset 0 0 0 1px ${colors.storm[200]}`,
-        "tbody-dark": `inset 0 0 0 1px ${colors.storm[700]}`,
+        "tbody-dark": `inset 0 0 0 1px ${colors.storm[500]}`,
         "tbody-light": `inset 0 0 0 1px #ECECEC`,
       },
-      colors,
+      colors: {
+        ...colors,
+      },
     },
   },
   plugins: [

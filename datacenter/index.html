@@ -36,7 +36,7 @@
         <side-bar-expanded></side-bar-expanded>
 
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
@@ -63,9 +63,7 @@
             <p>/</p>
             <a href="/datacenter" data-i18n="database"></a>
           </div>
-          <div
-            class="bg-white space-y-4 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
+          <div class="space-y-4 mt-5 theme-color--primary rounded-3xl p-5">
             <div class="flex gap-3 items-center">
               <div>
                 <label class="block mb-2" htmlFor="hotelName">Level </label>
@@ -91,7 +89,7 @@
               </div>
               <div class="mt-7">
                 <a
-                  class="p-2 flex items-center gap-2 text-white bg-green-600 rounded-full"
+                  class="p-2 px-3 flex items-center gap-2 text-white bg-green-500 rounded-full"
                 >
                   <svg
                     width="24"
@@ -116,11 +114,100 @@
             </div>
           </div>
           <div
-            class="bg-white mt-3 flex justify-between dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class="theme-color--primary mt-3 flex justify-between rounded-3xl p-5"
           >
             <div>
               <div class="flex justify-between items-center">
-                <h1 class="font-bold text-xl" data-i18n="resevations"></h1>
+                <p class="font-bold text-xl" data-i18n="resevations"></p>
+                <div class="space-y-2 dp-wrapper text-nowrap">
+                  <div>
+                    <div class="input bg-transparent gap-2 is-rounded">
+                      <div class="relative">
+                        <input
+                          id="reservations-start"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="reservations-start"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                        </label>
+                      </div>
+
+                      <span>-</span>
+                      <div class="relative w-full">
+                        <input
+                          id="reservations-end"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="reservations-end"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                          <svg
+                            class="self-end"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              opacity="0.4"
+                              d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="mt-4 flex gap-5 text-center">
@@ -151,14 +238,12 @@
               <div class="self-st" id="chart"></div>
             </div>
           </div>
-          <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
+          <div class="theme-color--primary space-y-4 mt-3 rounded-3xl p-5">
             <div class="flex justify-between items-center">
-              <h1
+              <p
                 class="font-bold text-xl"
                 data-i18n="successfulReservations"
-              ></h1>
+              ></p>
               <div class="flex items-center gap-2">
                 <div class="select is-rounded">
                   <select id="adult" class="w-[13rem] !text-gray-400">
@@ -176,6 +261,95 @@
                       <option value="1">1</option>
                       <option value="2">With options</option>
                     </select>
+                  </div>
+                </div>
+                <div class="space-y-2 dp-wrapper text-nowrap">
+                  <div>
+                    <div class="input bg-transparent gap-2 is-rounded">
+                      <div class="relative">
+                        <input
+                          id="sucessfull-start"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="sucessfull-start"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                        </label>
+                      </div>
+
+                      <span>-</span>
+                      <div class="relative w-full">
+                        <input
+                          id="prev-end"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="prev-end"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                          <svg
+                            class="self-end"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              opacity="0.4"
+                              d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -186,11 +360,9 @@
               id="chart2"
             ></div>
           </div>
-          <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
+          <div class="theme-color--primary space-y-4 mt-3 rounded-3xl p-5">
             <div class="flex justify-between items-center">
-              <h1 class="font-bold text-xl" data-i18n="yearReservations"></h1>
+              <p class="font-bold text-xl" data-i18n="yearReservations"></p>
               <div class="flex items-center gap-2">
                 <div class="select is-rounded">
                   <select id="adult" class="w-[13rem] !text-gray-400">
@@ -210,81 +382,351 @@
                     </select>
                   </div>
                 </div>
+                <div class="space-y-2 dp-wrapper text-nowrap">
+                  <div>
+                    <div class="input bg-transparent gap-2 is-rounded">
+                      <div class="relative">
+                        <input
+                          id="year-start"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="year-start"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                        </label>
+                      </div>
+
+                      <span>-</span>
+                      <div class="relative w-full">
+                        <input
+                          id="year-end"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="year-end"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                          <svg
+                            class="self-end"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              opacity="0.4"
+                              d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="chart3"></div>
           </div>
           <div class="flex *:basis-full gap-5">
             <div
-              class="bg-gray-50 space-y-4 mt-3 dark:bg-gray-700 dark:text-white dark:border-gray-500 rounded-3xl"
+              class="bg-[#F8F8F8] h-fit self-end dark:bg-storm-700 space-y-4 mt-3 rounded-3xl"
             >
-              <div
-                class="bg-gray-50 mt-[.65rem] p-4 dark:bg-gray-700 rounded-3xl"
-              >
+              <div class="pt-5 px-4 pb-[4.5rem] rounded-3xl">
                 <div class="flex justify-between items-center">
-                  <h1
+                  <p
                     class="font-bold text-xl"
                     data-i18n="previousReservationDays"
-                  ></h1>
+                  ></p>
+                  <div class="space-y-2 dp-wrapper text-nowrap">
+                    <div>
+                      <div class="input bg-transparent gap-2 is-rounded">
+                        <div class="relative">
+                          <input
+                            id="sucessfull-start"
+                            class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                            aria-label="Start Date"
+                            type="date"
+                          />
+                          <label
+                            for="sucessfull-start"
+                            class="flex justify-between w-full items-center gap-2"
+                          >
+                            <p
+                              aria-live="polite"
+                              class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                            >
+                              1403-5-5
+                            </p>
+                          </label>
+                        </div>
+
+                        <span>-</span>
+                        <div class="relative w-full">
+                          <input
+                            id="successful-end"
+                            class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                            aria-label="Start Date"
+                            type="date"
+                          />
+                          <label
+                            for="successful-end"
+                            class="flex justify-between w-full items-center gap-2"
+                          >
+                            <p
+                              aria-live="polite"
+                              class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                            >
+                              1403-5-5
+                            </p>
+                            <svg
+                              class="self-end"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                opacity="0.4"
+                                d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                                fill="#B0B0B0"
+                              />
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="bg-white dark:bg-gray-900 rounded-3xl p-5">
+              <div class="theme-color--primary rounded-3xl p-5">
                 <div id="chart4"></div>
               </div>
             </div>
             <div
-              class="space-y-4 bg-gray-50 mt-3 dark:bg-gray-700 dark:text-white dark:border-gray-500 rounded-3xl"
+              class="space-y-4 bg-[#F8F8F8] dark:bg-storm-700 mt-3 rounded-3xl"
             >
-              <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-5">
-                <div class="flex gap-2 items-center">
-                  <h1
-                    class="font-bold text-xl"
-                    data-i18n="destinationReservationPercentage"
-                  ></h1>
-                  <button class="popover-toggle relative">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M9.91699 10.7508H7.58366L4.98782 12.4775C4.60282 12.7342 4.08366 12.46 4.08366 11.9933V10.7508C2.33366 10.7508 1.16699 9.58415 1.16699 7.83415V4.33415C1.16699 2.58415 2.33366 1.41748 4.08366 1.41748H9.91699C11.667 1.41748 12.8337 2.58415 12.8337 4.33415V7.83415C12.8337 9.58415 11.667 10.7508 9.91699 10.7508Z"
-                        fill="#F9B233"
-                      />
-                      <path
-                        d="M6.99957 7.06445C6.7604 7.06445 6.56207 6.86612 6.56207 6.62695V6.50448C6.56207 5.82781 7.05789 5.4953 7.24456 5.36697C7.46039 5.22114 7.53039 5.12197 7.53039 4.97031C7.53039 4.67864 7.29123 4.43945 6.99957 4.43945C6.7079 4.43945 6.46875 4.67864 6.46875 4.97031C6.46875 5.20947 6.27042 5.40781 6.03125 5.40781C5.79208 5.40781 5.59375 5.20947 5.59375 4.97031C5.59375 4.19447 6.22373 3.56445 6.99957 3.56445C7.7754 3.56445 8.40539 4.19447 8.40539 4.97031C8.40539 5.63531 7.91541 5.9678 7.73457 6.0903C7.50707 6.24196 7.43707 6.34114 7.43707 6.50448V6.62695C7.43707 6.87195 7.23873 7.06445 6.99957 7.06445Z"
-                        fill="#F9B233"
-                      />
-                      <path
-                        d="M7 8.5166C6.755 8.5166 6.5625 8.31827 6.5625 8.0791C6.5625 7.83993 6.76083 7.6416 7 7.6416C7.23917 7.6416 7.4375 7.83993 7.4375 8.0791C7.4375 8.31827 7.245 8.5166 7 8.5166Z"
-                        fill="#F9B233"
-                      />
-                    </svg>
-
-                    <div
-                      class="popover transition-all ltr:right-0 ltr:left-[unset] origin-center duration-500 scale-0 -left-[15.4rem] top-6 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
-                    >
-                      <div
-                        class="bg-white w-[34rem] text-center border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] dark:bg-gray-900 dark:before:bg-gray-900 before:block before:content-[' '] before:bg-white before:-bottom-3 before:left-60 before:size-7 before:absolute border rounded-3xl shadow-md p-2 z-50"
+              <div class="rounded-3xl p-5">
+                <div class="flex gap-2 items-center justify-between">
+                  <div class="flex gap-2 items-center">
+                    <p
+                      class="font-bold text-xl"
+                      data-i18n="destinationReservationPercentage"
+                    ></p>
+                    <button class="popover-toggle relative">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        آمار رزروهای تایید شده ماهانه، بر اساس کشور/منطقه و سطح
-                        شهر، و نسبت مقصد رزرو.
+                        <path
+                          opacity="0.4"
+                          d="M9.91699 10.7508H7.58366L4.98782 12.4775C4.60282 12.7342 4.08366 12.46 4.08366 11.9933V10.7508C2.33366 10.7508 1.16699 9.58415 1.16699 7.83415V4.33415C1.16699 2.58415 2.33366 1.41748 4.08366 1.41748H9.91699C11.667 1.41748 12.8337 2.58415 12.8337 4.33415V7.83415C12.8337 9.58415 11.667 10.7508 9.91699 10.7508Z"
+                          fill="#F9B233"
+                        />
+                        <path
+                          d="M6.99957 7.06445C6.7604 7.06445 6.56207 6.86612 6.56207 6.62695V6.50448C6.56207 5.82781 7.05789 5.4953 7.24456 5.36697C7.46039 5.22114 7.53039 5.12197 7.53039 4.97031C7.53039 4.67864 7.29123 4.43945 6.99957 4.43945C6.7079 4.43945 6.46875 4.67864 6.46875 4.97031C6.46875 5.20947 6.27042 5.40781 6.03125 5.40781C5.79208 5.40781 5.59375 5.20947 5.59375 4.97031C5.59375 4.19447 6.22373 3.56445 6.99957 3.56445C7.7754 3.56445 8.40539 4.19447 8.40539 4.97031C8.40539 5.63531 7.91541 5.9678 7.73457 6.0903C7.50707 6.24196 7.43707 6.34114 7.43707 6.50448V6.62695C7.43707 6.87195 7.23873 7.06445 6.99957 7.06445Z"
+                          fill="#F9B233"
+                        />
+                        <path
+                          d="M7 8.5166C6.755 8.5166 6.5625 8.31827 6.5625 8.0791C6.5625 7.83993 6.76083 7.6416 7 7.6416C7.23917 7.6416 7.4375 7.83993 7.4375 8.0791C7.4375 8.31827 7.245 8.5166 7 8.5166Z"
+                          fill="#F9B233"
+                        />
+                      </svg>
+
+                      <div
+                        class="popover transition-all ltr:right-0 ltr:left-[unset] origin-center duration-500 scale-0 -left-[15.4rem] top-6 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+                      >
+                        <div
+                          class="w-[34rem] text-center border-0 popover-triangle ltr:before:right-2 ltr:before:left-[unset] theme-color--primary dark:before:theme-color--primary before:block before:content-[' '] before:bg-white before:-bottom-3 before:left-60 before:size-7 before:absolute border rounded-3xl shadow-md p-2 z-50"
+                        >
+                          آمار رزروهای تایید شده ماهانه، بر اساس کشور/منطقه و
+                          سطح شهر، و نسبت مقصد رزرو.
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="space-y-2 dp-wrapper text-nowrap">
+                    <div>
+                      <div class="input bg-transparent gap-2 is-rounded">
+                        <div class="relative">
+                          <input
+                            id="dest-per-start"
+                            class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                            aria-label="Start Date"
+                            type="date"
+                          />
+                          <label
+                            for="dest-per-start"
+                            class="flex justify-between w-full items-center gap-2"
+                          >
+                            <p
+                              aria-live="polite"
+                              class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                            >
+                              1403-5-5
+                            </p>
+                          </label>
+                        </div>
+
+                        <span>-</span>
+                        <div class="relative w-full">
+                          <input
+                            id="dest-per-end"
+                            class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                            aria-label="Start Date"
+                            type="date"
+                          />
+                          <label
+                            for="dest-per-end"
+                            class="flex justify-between w-full items-center gap-2"
+                          >
+                            <p
+                              aria-live="polite"
+                              class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                            >
+                              1403-5-5
+                            </p>
+                            <svg
+                              class="self-end"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                opacity="0.4"
+                                d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                                fill="#B0B0B0"
+                              />
+                              <path
+                                d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                                fill="#B0B0B0"
+                              />
+                            </svg>
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </button>
+                  </div>
                 </div>
                 <div class="select block is-rounded mt-3 w-fit mr-auto">
-                  <select id="adult" class="w-[10rem] !text-gray-400">
+                  <select
+                    id="adult"
+                    class="w-[10rem] !bg-transparent !text-gray-400"
+                  >
                     <option value="d" disabled selected>کشور/منطقه</option>
                     <option value="1">1</option>
                     <option value="2">With options</option>
                   </select>
                 </div>
               </div>
-              <div class="bg-white p-2 dark:bg-gray-900 rounded-3xl">
+              <div class="theme-color--primary p-2 rounded-3xl">
                 <div id="chart5"></div>
 
                 <div class="rounded-full mr-auto border p-2 px-4 w-fit">
@@ -293,27 +735,114 @@
               </div>
             </div>
           </div>
-          <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
+          <div class="theme-color--primary space-y-4 mt-3 rounded-3xl p-5">
             <div class="flex justify-between items-center">
-              <h1
+              <p
                 class="font-bold text-xl"
                 data-i18n="hotelInformationWithConfirmedOrder"
-              ></h1>
-              <div class="select block is-rounded w-fit">
-                <select id="adult" class="w-[10rem] !text-gray-400">
-                  <option value="d" disabled selected>هتل های 5 ستاره</option>
-                  <option value="1">1</option>
-                  <option value="2">With options</option>
-                </select>
+              ></p>
+              <div class="flex items-center gap-2">
+                <div class="select block is-rounded w-fit">
+                  <select id="adult" class="min-w-[13rem] !text-gray-400">
+                    <option value="d" disabled selected>هتل های 5 ستاره</option>
+                    <option value="1">1</option>
+                    <option value="2">With options</option>
+                  </select>
+                </div>
+                <div class="space-y-2 dp-wrapper text-nowrap">
+                  <div>
+                    <div class="input bg-transparent gap-2 is-rounded">
+                      <div class="relative">
+                        <input
+                          id="hotel-start"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="hotel-start"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                        </label>
+                      </div>
+
+                      <span>-</span>
+                      <div class="relative w-full">
+                        <input
+                          id="hotel-end"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="hotel-end"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                          <svg
+                            class="self-end"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              opacity="0.4"
+                              d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="chart6"></div>
           </div>
-          <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
-          >
+          <div class="theme-color--primary space-y-4 mt-3 rounded-3xl p-5">
             <div class="flex justify-between items-center">
               <h1
                 class="font-bold text-xl"
@@ -328,41 +857,47 @@
               </div>
             </div>
             <div>
-              <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-950 rounded-b-3xl"
-              >
-                <table class="w-full font-semibold">
-                  <thead class="bg-gray-50 dark:bg-gray-950">
+              <div>
+                <table class="w-full font-semibold bordered-table">
+                  <thead>
                     <tr>
                       <th
-                        class="p-3 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-4 rounded-tr-3.5xl ltr:rounded-tr-0 ltr:rounded-tl-3.5xl theme-color--neutral theme-color-border"
                       >
                         لیست
                       </th>
-                      <th class="p-3 border-l">نام هتل</th>
+                      <th class="p-4 theme-color--neutral theme-color-border">
+                        نام هتل
+                      </th>
                       <th
-                        class="p-3 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-4 theme-color--neutral theme-color-border"
                         data-i18n="notification"
                       >
                         امتیاز
                       </th>
-                      <th class="p-3 border-l">شهر</th>
-                      <th class="p-3">کشور / منطقه</th>
+                      <th class="p-4 theme-color--neutral theme-color-border">
+                        شهر
+                      </th>
+                      <th
+                        class="p-4 rounded-tl-3.5xl ltr:rounded-tl-0 ltr:rounded-tr-3.5xl theme-color--neutral theme-color-border"
+                      >
+                        کشور / منطقه
+                      </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody
+                    class="shadow-tbody dark:shadow-tbody-dark rounded-b-3.5xl"
+                  >
                     <tr class="align-middle">
-                      <td class="p-4 border-l align-middle">
+                      <td class="p-4 align-middle">
                         <div
                           class="bg-orange-400 p-[.4rem] rounded-full w-fit px-4 text-center"
                         >
                           1
                         </div>
                       </td>
-                      <td class="p-4 border-l align-middle">
-                        Shinagawa Prince Hotel
-                      </td>
-                      <td class="p-4 border-l align-middle">
+                      <td class="p-4 align-middle">Shinagawa Prince Hotel</td>
+                      <td class="p-4 align-middle">
                         <div class="flex items-center gap-2">
                           <svg
                             width="16"
@@ -375,7 +910,7 @@
                               d="M9.15327 2.34025L10.3266 4.68692C10.4866 5.01359 10.9133 5.32692 11.2733 5.38692L13.3999 5.74025C14.7599 5.96692 15.0799 6.95359 14.0999 7.92692L12.4466 9.58025C12.1666 9.86025 12.0133 10.4003 12.0999 10.7869L12.5733 12.8336C12.9466 14.4536 12.0866 15.0803 10.6533 14.2336L8.65994 13.0536C8.29994 12.8403 7.70661 12.8403 7.33994 13.0536L5.34661 14.2336C3.91994 15.0803 3.05327 14.4469 3.42661 12.8336L3.89994 10.7869C3.98661 10.4003 3.83327 9.86025 3.55327 9.58025L1.89994 7.92692C0.926606 6.95359 1.23994 5.96692 2.59994 5.74025L4.72661 5.38692C5.07994 5.32692 5.50661 5.01359 5.66661 4.68692L6.83994 2.34025C7.47994 1.06692 8.51994 1.06692 9.15327 2.34025Z"
                               fill="#F9B233"
                               stroke="#F9B233"
-                              stroke-width="0.995137"
+                              strokeidth="0.995137"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -383,7 +918,7 @@
                           <p class="mt-2">4.5</p>
                         </div>
                       </td>
-                      <td class="p-4 border-l align-middle">ازمیر</td>
+                      <td class="p-4 align-middle">ازمیر</td>
                       <td class="p-4 align-middle">ترکیه</td>
                     </tr>
                   </tbody>
@@ -394,5 +929,6 @@
         </div>
       </div>
     </main>
+    <script src="/dist/js/datepicker.bundle.js"></script>
   </body>
 </html>

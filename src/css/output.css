@@ -10,10 +10,20 @@
   --bulma-link-h: 66deg;
   --bulma-text: black;
   --bulma-link-s: 22%;
+
+  --tc-bg: #f6f6f6;
+  --tc-bg-hover: #f6f6f6;
 }
 
 [data-theme="dark"] {
   --bulma-text: white;
+  --tc-bg: #6d6d6d;
+  --tc-bg-hover: #6d6d6d;
+}
+
+.tc-range {
+  --panel-bg: var(--tc-bg);
+  --panel-bg-hover: var(--tc-bg-hover);
 }
 
 .input {
@@ -38,38 +48,38 @@ html[data-theme="dark"] .tabs {
 @layer base {
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Light.woff2);
+    src: url(/public/assets/fonts/yekan/YekanBakhFaNum-Light.woff2);
     font-style: normal;
     font-weight: 300;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Bold.woff2);
+    src: url(/public/assets/fonts/yekan/YekanBakhFaNum-Bold.woff2);
     font-style: normal;
     font-weight: bold;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-ExtraBlack.woff2);
+    src: url(/public/assets/fonts/yekan/YekanBakhFaNum-ExtraBlack.woff2);
     font-style: normal;
     font-weight: 800;
   }
 
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-SemiBold.woff2);
+    src: url(/public/assets/fonts/yekan/YekanBakhFaNum-SemiBold.woff2);
     font-style: normal;
     font-weight: 500;
   }
   @font-face {
     font-family: "Yekan";
-    src: url(../../public/assets/fonts/yekan/YekanBakhFaNum-Regular.woff2);
+    src: url(/public/assets/fonts/yekan/YekanBakhFaNum-Regular.woff2);
     font-style: normal;
     font-weight: 400;
   }
 
   body {
-    @apply bg-gray-100 dark:bg-gray-950 min-h-screen;
+    @apply bg-gray-100 dark:bg-storm-900 min-h-screen;
     font-family: "Yekan", "sens-serif";
   }
 
@@ -86,6 +96,10 @@ html[data-theme="dark"] .tabs {
   }
   .radio-hidden:checked + .radio {
     @apply border-0;
+  }
+
+  .theme-dark-svg path {
+    @apply fill-gray-500 dark:fill-white;
   }
 
   .tabs {
@@ -112,36 +126,40 @@ html[data-theme="dark"] .tabs {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none !important;
+    @apply dark:bg-storm-600 dark:border-storm-200 dark:!text-white;
   }
 
-  .exp-side::-webkit-scrollbar {
+  .hide-scroll::-webkit-scrollbar {
     display: none;
   }
-  .exp-side {
+  .hide-scroll {
     scrollbar-width: none;
   }
 
+  .button {
+    @apply dark:bg-storm-600;
+  }
 }
 
 @layer utilities {
   .bordered-table tbody td:not(:first-child) {
     --bulma-content-table-cell-border-width: 0 0 2px;
-    @apply !border-r-2 dark:!border-storm-700 !border-[#ECECEC] ltr:!border-r-0 ltr:!border-l-2;
+    @apply !border-r-2 dark:!border-storm-500  !border-[#ECECEC] ltr:!border-r-0 ltr:!border-l-2;
   }
   .bordered-table tbody td:first-child {
     --bulma-content-table-cell-border-width: 0 0 2px;
-    @apply dark:!border-storm-700 !border-[#ECECEC];
+    @apply !border-[#ECECEC] dark:!border-storm-500;
   }
   .bordered-table thead th:not(:first-child) {
-    @apply !border-r-2 ltr:!border-r-0 ltr:!border-l-2 !border-solid !border-[#ECECEC] dark:!border-storm-700;
+    @apply !border-r-2 ltr:!border-r-0 dark:!border-storm-500  ltr:!border-l-2 !border-solid !border-[#ECECEC];
   }
 
   .bordered-table-narrow thead th:not(:first-child) {
-    @apply !border-r ltr:!border-r-0 ltr:!border-l;
+    @apply !border-r ltr:!border-r-0 dark:!border-storm-500  ltr:!border-l;
   }
 
   .bordered-table-narrow tbody td:not(:first-child) {
-    @apply !border-r ltr:!border-r-0 ltr:!border-l;
+    @apply !border-r ltr:!border-r-0 dark:!border-storm-500  ltr:!border-l;
   }
 
   .tab-items .active-tab {
@@ -167,7 +185,7 @@ html[data-theme="dark"] .tabs {
   }
 
   .prev-main:not(:disabled) {
-    @apply text-green-500 border py-0.5 px-3 border-green-500;
+    @apply text-green-500 border  border-green-500;
   }
 
   .prev-main:not(:disabled) svg path {
@@ -187,22 +205,116 @@ html[data-theme="dark"] .tabs {
   }
 
   .c-w {
-    @apply w-full max-w-[83.3125rem] px-4 mx-auto xxl:max-w-full xxl:px-12 ;
+    @apply w-full max-w-[83.3125rem] px-4 mx-auto xxl:max-w-full xxl:px-12;
   }
 
   .more-rooms-expanded {
-    @apply bg-transparent text-primary-400 border border-primary-400
+    @apply bg-transparent text-primary-400 border border-primary-400;
   }
 
-  .input {
-    @apply !shadow-none
+  .input,
+  .textarea {
+    @apply !shadow-none dark:bg-storm-600 dark:border-storm-200;
   }
-  
-}
 
-.hotels-collapse::-webkit-scrollbar {
-  display: none;
-}
-.hotels-collapse {
-  scrollbar-width: none;
+  input::placeholder {
+    @apply dark:!text-white;
+  }
+
+  .select-age:has(:checked:disabled) {
+    @apply text-gray-400;
+  }
+
+  .theme-color-border {
+    @apply dark:!border-storm-500;
+  }
+
+  .theme-color--primary {
+    @apply bg-white dark:bg-storm-600;
+  }
+
+  .theme-color--secondary {
+    @apply bg-white dark:bg-storm-900;
+  }
+
+  .theme-color--neutral {
+    @apply bg-storm-50 dark:bg-storm-500;
+  }
+
+  .theme-color--light {
+    @apply bg-gray-50 dark:bg-storm-500;
+  }
+
+  .theme-color-f path {
+    @apply fill-gray-500 dark:fill-white;
+  }
+
+  .theme-color-f-contrast path {
+    @apply fill-black dark:fill-white;
+  }
+
+  .theme-color-text--secondary {
+    @apply text-gray-500 dark:text-white
+  }
+
+  .th-hover:has(td:hover) {
+    @apply bg-storm-50 dark:theme-color--neutral;
+  }
+
+  .rooms-scroll::-webkit-scrollbar {
+    width: 1px !important;
+    scrollbar-width: 1px !important;
+    padding-left: 1rem;
+  }
+  .rooms-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .rooms-scroll::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 ml-5;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .tab-active-before.is-active::after {
+    @apply block;
+  }
+
+  .dp-style {
+    @apply border-storm-100 border-2 border-solid;
+  }
+
+ .dp-multiple .dp-style:nth-child(1):not(.dp-active) {
+    @apply border-e-0
+  }
+ .dp-multiple .dp-style:nth-child(2):not(.dp-active) {
+    @apply border-s-0
+  }
+
+  .dp-focus:not(.dp-active) {
+    @apply opacity-30;
+  }
+
+  .scroll-based-sidebar {
+    @apply transition-all duration-700
+  }
+
+  html:not([data-scroll='0']) .scroll-based-sidebar {
+    @apply mt-12 
+  }
+ 
+  .dp-multiple .datepicker-value {
+    @apply text-x font-normal
+  }
+
+  .dp-multiple .dp-active .datepicker-value {
+   @apply text-base
+  }
+
+
+
+ .select:has(select:focus)::after {
+    @apply !rotate-[134deg]  !-mt-[.1375em]
+  }
 }

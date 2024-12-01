@@ -20,6 +20,8 @@ module.exports = (env) => {
       darkMode: "./src/ts/darkMode.ts",
       i18n: "./src/ts/i18n.ts",
       cart: "./src/ts/cart.ts",
+      datepicker: "./src/ts/datepicker.ts",
+      home: "./src/ts/index.ts",
     },
     plugins: [
       new MiniCssExtractPlugin({

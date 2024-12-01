@@ -15,6 +15,7 @@
     <script src="/dist/js/darkMode.bundle.js"></script>
     <script src="/dist/js/i18n.bundle.js"></script>
     <script defer src="/dist/js/main.bundle.js"></script>
+    <script defer src="/dist/js/modal.bundle.js"></script>
 
     <script src="/src/components/nav.js"></script>
     <script src="/src/components/side-bar.js"></script>
@@ -27,18 +28,78 @@
     <title>Messages</title>
   </head>
   <body>
+    <div id="cancel-reservation-modal" class="modal">
+      <div class="modal-background bg-[hsla(221,14%,4%,0.45)]"></div>
+
+      <div class="modal-content rounded-3.5xl">
+        <div class="box !p-0 theme-color--primary">
+          <div class="w-full flex justify-end">
+            <button
+              class="close-modal pe-5 pt-5 w-fit block"
+              aria-label="Close Modal"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                role="img"
+              >
+                <path
+                  opacity="0.4"
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  fill="#DC2626"
+                />
+                <path
+                  d="M13.06 12.0004L15.36 9.70035C15.65 9.41035 15.65 8.93035 15.36 8.64035C15.07 8.35035 14.59 8.35035 14.3 8.64035L12 10.9404L9.69998 8.64035C9.40998 8.35035 8.92999 8.35035 8.63999 8.64035C8.34999 8.93035 8.34999 9.41035 8.63999 9.70035L10.94 12.0004L8.63999 14.3004C8.34999 14.5904 8.34999 15.0704 8.63999 15.3604C8.78999 15.5104 8.97999 15.5804 9.16999 15.5804C9.35999 15.5804 9.54998 15.5104 9.69998 15.3604L12 13.0604L14.3 15.3604C14.45 15.5104 14.64 15.5804 14.83 15.5804C15.02 15.5804 15.21 15.5104 15.36 15.3604C15.65 15.0704 15.65 14.5904 15.36 14.3004L13.06 12.0004Z"
+                  fill="#DC2626"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-[2.5rem] pt-[1rem]">
+            <div>
+              <p
+                data-i18n="cancelReservation"
+                class="text-2xl font-bold m-0"
+              ></p>
+            </div>
+            <p data-i18n="cancelConditions" class="text-state-error mt-5"></p>
+            <ul class="pt-2 px-4 font-light text-base list-disc">
+              <li>fdsafdasfdsafdasfdsafdasfdsafdasfdsafdas</li>
+              <li>
+                fdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdas
+                fdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdasfdsafdas
+              </li>
+              <li>fdsafdasfdsafdasfdsafdas</li>
+              <li>fdsafdasfdsafdasfdsafdas</li>
+            </ul>
+          </div>
+          <div class="flex w-full justify-end p-5">
+            <div
+              class="border-state-error mt-3 rounded-full border text-state-error"
+            >
+              <button
+                class="min-h-[2.5rem] ltr:px-2 min-w-[115px] close-modal"
+                data-i18n="cancelReservation"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main>
       <nav-bar></nav-bar>
       <div class="flex gap-6 xxl:gap-13 c-w">
         <side-bar></side-bar>
 
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
-              class="dark:fill-white"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -66,15 +127,13 @@
             <p class="text-gray-400">/</p>
             <a href="/reservation/" data-i18n="reservationDetails"></a>
           </div>
-          <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
-          >
+          <div class="theme-color--primary space-y-20 mt-5 rounded-3.5xl p-5">
             <table class="bordered-table-narrow w-full">
               <thead>
                 <tr>
                   <td colspan="4">
                     <div
-                      class="bg-[#FBFBFB] dark:bg-gray-950 items-center p-3 rounded-t-3xl flex justify-between"
+                      class="bg-[#FBFBFB] dark:theme-color--neutral items-center p-3 rounded-t-3xl flex justify-between"
                     >
                       <p class="font-medium text-xl mt-1">2223345568</p>
                       <span
@@ -92,7 +151,9 @@
               <tbody
                 class="shadow-tbody-light dark:shadow-tbody-dark rounded-b-3.5xl"
               >
-                <tr class="*:p-4 *:border-e">
+                <tr
+                  class="*:p-4 [&:not(:last-child)]:*:border-e *:theme-color-border"
+                >
                   <td>
                     <div>
                       <h2 class="text-gray-400">نوع اتاق</h2>
@@ -122,7 +183,9 @@
                     </div>
                   </td>
                 </tr>
-                <tr class="*:p-4 *:border-e *:border-b *:border-t">
+                <tr
+                  class="*:p-4 *:theme-color-border [&:not(:last-child)]:*:border-e *:border-b *:border-t"
+                >
                   <td>
                     <div>
                       <h2 class="text-gray-400">نوع اتاق</h2>
@@ -142,7 +205,9 @@
                     </div>
                   </td>
                 </tr>
-                <tr class="*:p-4 *:border-e *:border-b *:border-t">
+                <tr
+                  class="*:p-4 *:theme-color-border [&:not(:last-child)]:*:border-e *:border-b *:border-t"
+                >
                   <td>
                     <div>
                       <h2 class="text-gray-400">نوع اتاق</h2>
@@ -185,9 +250,7 @@
               </tbody>
             </table>
           </div>
-          <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
-          >
+          <div class="theme-color--primary space-y-20 mt-5 rounded-3.5xl p-5">
             <div class="flex justify-between items-center">
               <p data-i18n="hotelDetails" class="text-2xl"></p>
               <div
@@ -279,9 +342,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-5 rounded-3xl dark:border-gray-700">
+            <div class="mt-5 rounded-3xl">
               <table class="w-full bordered-table bordered-table-narrow">
-                <thead class="bg-[#FBFBFB] dark:bg-gray-950">
+                <thead class="bg-[#FBFBFB] dark:theme-color--neutral">
                   <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3.5xl w-[20%] ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
@@ -321,15 +384,13 @@
               </table>
             </div>
           </div>
-          <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
-          >
+          <div class="theme-color--primary space-y-20 mt-5 rounded-3.5xl p-5">
             <div class="flex justify-between items-center">
               <p data-i18n="stayDetails" class="text-2xl"></p>
             </div>
             <div class="mt-5">
               <table class="w-full bordered-table bordered-table-narrow">
-                <thead class="bg-[#FBFBFB] dark:bg-gray-950">
+                <thead class="bg-[#FBFBFB] dark:theme-color--neutral">
                   <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3xl ltr:rounded-tr-none ltr:rounded-tl-3xl"
@@ -376,15 +437,13 @@
             </div>
           </div>
 
-          <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl p-5"
-          >
+          <div class="theme-color--primary space-y-20 mt-5 rounded-3.5xl p-5">
             <div class="flex justify-between items-center">
               <p data-i18n="cancelingConditions" class="text-2xl"></p>
             </div>
             <div class="mt-5">
               <table class="w-full bordered-table bordered-table-narrow">
-                <thead class="bg-[#FBFBFB] dark:bg-gray-950">
+                <thead class="bg-[#FBFBFB] dark:theme-color--neutral">
                   <tr class="*:font-medium *:py-1.5">
                     <th
                       class="rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
@@ -430,17 +489,24 @@
             </div>
           </div>
           <div
-            class="bg-white space-y-20 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3.5xl px-5 py-3"
+            class="theme-color--primary mb-4 space-y-20 mt-5 rounded-3.5xl px-3 py-3"
           >
-            <div class="flex gap-3">
-              <button
-                data-i18n="pay"
-                class="bg-amber-500 py-1 text-white rounded-2xl border-0 px-11"
-              ></button>
-              <button
-                data-i18n="cancel"
-                class="rounded-2xl ml-3 py-1 border-solid border text-gray-300 px-11"
-              ></button>
+            <div class="flex gap-5 justify-end">
+              <div
+                class="border-state-error rounded-full border text-state-error"
+              >
+                <button
+                  class="min-h-[2.5rem] ltr:px-2 min-w-[115px] js-modal-trigger"
+                  data-i18n="cancelReservation"
+                  data-target="cancel-reservation-modal"
+                ></button>
+              </div>
+              <div class="bg-green-500 text-white rounded-full">
+                <button
+                  class="min-h-[2.5rem] min-w-[115px]"
+                  data-i18n="newTicket"
+                ></button>
+              </div>
             </div>
           </div>
         </div>

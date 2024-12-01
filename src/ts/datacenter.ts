@@ -234,7 +234,7 @@ const options4: ApexCharts.ApexOptions = {
   ],
 
   chart: {
-    height: 250,
+    height: 200,
 
     events: {
       mounted: (chart) => {

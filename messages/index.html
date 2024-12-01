@@ -35,35 +35,35 @@
         <side-bar-expanded></side-bar-expanded>
 
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
-              class="dark:fill-white"
+              class="dark:fill-transparent"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
-                stroke="black"
+                stroke="gray"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
                 d="M9 13.4924V11.2424"
-                stroke="black"
+                stroke="gray"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
 
-            <a href="/" data-i18n="nav"></a>
+            <a href="/nav" class="text-gray-400" data-i18n="nav"></a>
             <p>/</p>
-            <a href="messages" data-i18n="messages"></a>
+            <a href="/messages" data-i18n="messages"></a>
           </div>
           <div
-            class="bg-white mt-5 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class=" mt-5 min-h-[80vh] theme-color--primary rounded-3xl p-5"
           >
             <p class="font-medium" data-i18n="type"></p>
             <div class="flex items-center gap-4 mt-4">
@@ -99,24 +99,24 @@
             <div class="mt-6">
               <div>
                 <table class="w-full">
-                  <thead class="bg-gray-50 dark:bg-gray-950">
+                  <thead class="theme-color--neutral">
                     <tr class="*:!font-medium">
                       <th
-                        class="p-3 border-l dark:!text-white rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-3 border-l theme-color-border  rounded-tr-3.5xl ltr:rounded-tr-none ltr:rounded-tl-3.5xl ltr:border-r ltr:border-l-0 "
                         data-i18n="notification"
                       ></th>
                       <th
-                        class="p-3 rounded-tl-3.5xl dark:!text-white ltr:rounded-tl-none ltr:rounded-tr-3.5xl"
+                        class="p-3 rounded-tl-3.5xl theme-color-border  ltr:rounded-tl-none ltr:rounded-tr-3.5xl"
                         data-i18n="date"
                       >
                         تاریخ
                       </th>
                     </tr>
                   </thead>
-                  <tbody class="border">
+                  <tbody class="border border-b-0 theme-color-border">
                     <tr class="">
                       <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-4 border-l ltr:border-r ltr:border-l-0 theme-color-border"
                       >
                         <div class="flex items-center gap-2">
                           <input
@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                       <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-4 border-l ltr:border-r ltr:border-l-0 theme-color-border"
                       >
                         <div class="flex items-center gap-2">
                           <input
@@ -152,7 +152,7 @@
                     </tr>
                     <tr>
                       <td
-                        class="p-4 border-l ltr:border-r ltr:border-l-0 dark:border-gray-950"
+                        class="p-4 border-l ltr:border-r ltr:border-l-0 theme-color-border"
                       >
                         <div class="flex items-center gap-2">
                           <input
@@ -171,7 +171,7 @@
                     </tr>
                   </tbody>
                   <tfoot
-                    class="shadow-tbody-light data:shadow-tbody-dark rounded-b-3.5xl"
+                    class="shadow-tbody-light  dark:shadow-tbody-dark rounded-b-3.5xl"
                   >
                     <tr>
                       <td colspan="5" class="p-4">

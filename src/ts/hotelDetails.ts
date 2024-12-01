@@ -1,3 +1,5 @@
+import "./carousel";
+
 // Tables
 
 const togglePrices = document.querySelectorAll(".toggle-more-prices");

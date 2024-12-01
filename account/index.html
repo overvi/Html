@@ -34,7 +34,7 @@
       <div class="flex gap-13 c-w">
         <side-bar-expanded></side-bar-expanded>
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
@@ -62,7 +62,7 @@
             <a href="/account" data-i18n="accountCenter"></a>
           </div>
           <div
-            class="bg-white space-y-4 mt-5 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class=" theme-color--primary space-y-4 mt-5 rounded-3xl p-5"
           >
             <div class="flex justify-between items-center">
               <h1 class="font-bold text-xl" data-i18n="userDetails"></h1>
@@ -77,31 +77,33 @@
                 ></button>
               </div>
             </div>
-            <div class="bg-amber-50 dark:bg-gray-950 p-1.5 rounded-full">
+            <div
+              class="bg-[#F9B233]/[5%] dark:theme-color--neutral dark:bg-storm- p-1.5 rounded-full"
+            >
               <p class="text-sm" data-i18n="userDetailsMessage"></p>
             </div>
             <div>
               <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-700 rounded-b-3xl"
+                class="overflow-hidden mt-7 rounded-t-3xl border theme-color-border rounded-b-3xl"
               >
-                <table class="w-full">
-                  <tr>
+                <table class="w-full vertical-table">
+                  <tr class="*:font-medium">
                     <th
-                      class="p-3 bg-gray-50 border-b dark:bg-gray-950 border-l ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-4 theme-color--neutral theme-color-border border-b border-l ltr:border-r ltr:border-l-0"
                       data-i18n="suename"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-4 theme-color-border border-b">
                       fdsadfa22443
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="*:font-medium">
                     <th
-                      class="p-3 border-l bg-gray-50 dark:bg-gray-950 border-b ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-4 border-l theme-color--neutral theme-color-border border-b ltr:border-r ltr:border-l-0"
                       data-i18n="email"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-4 theme-color-border border-b">
                       <div class="flex justify-between">
-                        <p>alireza@gmail.com</p>
+                        <p class="!m-0">alireza@gmail.com</p>
                         <svg
                           width="24"
                           height="24"
@@ -127,19 +129,19 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="*:font-medium">
                     <th
-                      class="p-3 border-l bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-4 border-l theme-color--neutral theme-color-border ltr:border-r ltr:border-l-0"
                       data-i18n="phoneNumber"
                     ></th>
-                    <td class="p-3 dark:border-gray-700">0912999992</td>
+                    <td class="p-4">0912999992</td>
                   </tr>
                 </table>
               </div>
             </div>
           </div>
           <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class=" theme-color--primary space-y-4 mt-3 rounded-3xl p-5"
           >
             <div class="flex justify-between items-center">
               <h1 class="font-bold text-xl" data-i18n="messages"></h1>
@@ -153,56 +155,54 @@
 
             <div>
               <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-700 rounded-b-3xl"
+                class="overflow-hidden rounded-3xl border theme-color-border"
               >
                 <table class="w-full">
                   <tr>
                     <th
-                      class="p-3 border-l bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color-border border-e theme-color--neutral ltr:border-r ltr:border-l-0"
                       data-i18n="confirmWay"
                     ></th>
-                    <td class="p-3 dark:border-gray-700">ایمیل , پیامک</td>
+                    <td class="p-3">ایمیل , پیامک</td>
                   </tr>
                 </table>
               </div>
             </div>
           </div>
           <div
-            class="bg-white space-y-4 mt-3 dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl p-5"
+            class=" theme-color--primary space-y-4 mt-3 rounded-3xl p-5"
           >
             <div class="flex justify-between items-center">
               <h1 class="font-bold text-xl" data-i18n="customerInfo"></h1>
             </div>
 
             <div>
-              <div
-                class="overflow-hidden rounded-t-3xl border dark:border-gray-700 rounded-b-3xl"
-              >
+              <div class="overflow-hidden rounded-t-3xl border theme-color-border rounded-b-3xl">
                 <table class="w-full">
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="customerNumber"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-3 border-b theme-color-border">
                       fdsadfa22443
                     </td>
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="customerName"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-3 border-b theme-color-border">
                       alireza@gmail.com
                     </td>
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="status"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-3 border-b theme-color-border">
                       <div
                         class="border-green-600 text-sm border-solid border px-3 items-center gap-1 flex bg-green-300/40 w-fit p-1 rounded-full"
                       >
@@ -215,36 +215,34 @@
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="phoneNumber"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
-                      0912999992
-                    </td>
+                    <td class="p-3 border-b theme-color-border">0912999992</td>
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="address"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">
+                    <td class="p-3 border-b theme-color-border">
                       تهران و تهران
                     </td>
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l border-b bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral border-b theme-color-border"
                       data-i18n="balance"
                     ></th>
-                    <td class="p-3 border-b dark:border-gray-700">0 تومان</td>
+                    <td class="p-3 border-b theme-color-border">0 تومان</td>
                   </tr>
                   <tr>
                     <th
-                      class="p-3 border-l bg-gray-50 dark:bg-gray-950 ltr:border-r ltr:border-l-0 dark:border-gray-700"
+                      class="p-3 theme-color--neutral theme-color-border ltr:border-r ltr:border-l-0"
                     >
                       اعتبار معوق
                     </th>
-                    <td class="p-3 dark:border-gray-700">0 تومان</td>
+                    <td class="p-3 theme-color-border">0 تومان</td>
                   </tr>
                 </table>
               </div>

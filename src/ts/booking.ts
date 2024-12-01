@@ -35,12 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
       nextP!.innerHTML = i18next.t("acceptBooking");
       next?.classList.replace("gap-7", "gap-2");
       next?.classList.replace("w-[9.812rem]", "w-[11.5rem]");
+      interactive?.classList.add("second-step");
     } else {
       nextP?.setAttribute("data-i18n", "next");
       nextP!.innerHTML = i18next.t("next");
       next?.classList.replace("gap-2", "gap-7");
       next?.classList.remove("w-[11.5rem]");
       next?.classList.add("w-[9.812rem]");
+      interactive?.classList.remove("second-step");
     }
     if (event.detail.from < event.detail.to) {
       stepTriggers[event.detail.indexStep - 1].parentElement!.classList.add(

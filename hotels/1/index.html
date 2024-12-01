@@ -127,7 +127,7 @@
         <side-bar></side-bar>
 
         <div class="w-full mt-8">
-          <div class="flex dark:text-white gap-2">
+          <div class="flex gap-2">
             <svg
               width="18"
               height="18"
@@ -157,66 +157,66 @@
             <a href="/hotels/1/" data-i18n="hotelDetails"></a>
           </div>
           <div
-            class="bg-white gap-12 flex mt-5 min-h-[80vh] dark:bg-gray-900 dark:text-white dark:border-gray-500 rounded-3xl pt-[22px] pr-5 pl-[10px]"
+            class="theme-color--primary gap-12 flex mt-5 min-h-[80vh] rounded-3xl pt-[22px] ps-5"
           >
-            <div class="basis-[75%] dark:border-gray-800 space-y-7 rounded-2xl">
-              <div class="hotel-grid *:h-full gap-2">
-                <img
-                  style="grid-area: one"
-                  class="h-full"
-                  src="../../public/assets/images/hotel1.png"
-                  alt=""
-                />
-                <img
-                  class="w-[100%]"
-                  src="../../public/assets/images/hotel-3.png"
-                  alt=""
-                />
-                <img
-                  class="w-[100%]"
-                  style="grid-area: two"
-                  src="../../public/assets/images/hotel2.png"
-                  alt=""
-                />
-                <div class="relative group h-full">
-                  <button class="viewer-toggler h-full">
-                    <img
-                      class="!w-full image-preview h-full"
-                      src="../../public/assets/images/hotel-more.png"
-                      alt=""
-                    />
-                  </button>
-                  <div
-                    class="absolute viewer-toggler cursor-pointer flex items-center justify-center text-white rounded-2xl bg-[rgba(0,0,0,.5)] text-center h-[7rem] w-[7rem] inset-0 m-auto"
-                  >
-                    <div>
+            <div class="basis-[80%] space-y-7">
+              <div
+                data-srces='["/public/assets/images/espinas-big.png", "/public/assets/images/espinas1.png" , "/public/assets/images/espinas-big.png" , "/public/assets/images/espinas1.png" , "/public/assets/images/espinas-big.png"]'
+                class="relative big-active-dot min-h-[23rem] rounded-3.5xl overflow-hidden carousel-container group/c w-full flex justify-center items-center flex-col"
+              >
+                <div
+                  style="
+                    background-image: url('/public/assets/images/espinas-big.png');
+                  "
+                  class="absolute carousel-img inset-0 bg-center bg-cover group-hover/c:z-0 bg-none transition-all z-30"
+                ></div>
+                <div
+                  class="overlay absolute inset-0 opacity-0 group-hover/c:opacity-100 bg-black/50 duration-700 transition-all"
+                ></div>
+
+                <div
+                  class="m-auto w-full justify-center items-center mx-3 z-10"
+                >
+                  <div class="flex w-[95%] mt-8 justify-between mx-auto">
+                    <button
+                      type="text"
+                      aria-label="Prev Image"
+                      class="prev-img ltr:rotate-180 bg-white/40 rounded-full size-[26.67px] flex items-center justify-center"
+                    >
                       <svg
-                        class="m-auto"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        width="8"
+                        height="12"
+                        viewBox="0 0 6 12"
+                        fill="none"
                       >
                         <path
-                          d="M6.00098 12H18.001"
-                          stroke="white"
-                          stroke-width="1.88358"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.001 18V6"
-                          stroke="white"
-                          stroke-width="1.88358"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          d="M1.32003 11.7069C1.0667 11.7069 0.813364 11.6135 0.613364 11.4135C0.226698 11.0269 0.226698 10.3869 0.613364 10.0002L4.61336 6.00021L0.613364 2.00021C0.226698 1.61354 0.226698 0.973542 0.613364 0.586875C1.00003 0.200208 1.64003 0.200208 2.0267 0.586875L6.73337 5.29354C7.12003 5.68021 7.12003 6.32021 6.73337 6.70688L2.0267 11.4135C1.8267 11.6135 1.57336 11.7069 1.32003 11.7069Z"
+                          fill="white"
                         />
                       </svg>
-                      <p class="text-sm mt-3" dir="rtl">۳ تصویر دیگر ...</p>
-                    </div>
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Next Image"
+                      class="next-img rotate-180 ltr:rotate-0 bg-white/40 rounded-full size-[26.67px] flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="8"
+                        height="12"
+                        viewBox="0 0 6 12"
+                        fill="none"
+                      >
+                        <path
+                          d="M1.32003 11.7069C1.0667 11.7069 0.813364 11.6135 0.613364 11.4135C0.226698 11.0269 0.226698 10.3869 0.613364 10.0002L4.61336 6.00021L0.613364 2.00021C0.226698 1.61354 0.226698 0.973542 0.613364 0.586875C1.00003 0.200208 1.64003 0.200208 2.0267 0.586875L6.73337 5.29354C7.12003 5.68021 7.12003 6.32021 6.73337 6.70688L2.0267 11.4135C1.8267 11.6135 1.57336 11.7069 1.32003 11.7069Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
+                <div class="mx-auto gap-1 flex mb-2 z-10 buttons"></div>
               </div>
               <div class="flex justify-between">
                 <div
@@ -290,7 +290,7 @@
                       <path
                         d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
                         stroke="#F9B233"
-                        stroke-width="1.5"
+                        strokeidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -307,7 +307,7 @@
                       <path
                         d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
                         stroke="#F9B233"
-                        stroke-width="1.5"
+                        strokeidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -324,7 +324,7 @@
                       <path
                         d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
                         stroke="#F9B233"
-                        stroke-width="1.5"
+                        strokeidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -341,7 +341,7 @@
                       <path
                         d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
                         stroke="#F9B233"
-                        stroke-width="1.5"
+                        strokeidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -358,7 +358,7 @@
                       <path
                         d="M10.2977 2.63248L11.6177 5.27248C11.7977 5.63998 12.2777 5.99248 12.6827 6.05998L15.0752 6.45748C16.6052 6.71248 16.9652 7.82248 15.8627 8.91748L14.0027 10.7775C13.6877 11.0925 13.5152 11.7 13.6127 12.135L14.1452 14.4375C14.5652 16.26 13.5977 16.965 11.9852 16.0125L9.74268 14.685C9.33768 14.445 8.67018 14.445 8.25768 14.685L6.01518 16.0125C4.41018 16.965 3.43518 16.2525 3.85518 14.4375L4.38768 12.135C4.48518 11.7 4.31268 11.0925 3.99768 10.7775L2.13768 8.91748C1.04268 7.82248 1.39518 6.71248 2.92518 6.45748L5.31768 6.05998C5.71518 5.99248 6.19518 5.63998 6.37518 5.27248L7.69518 2.63248C8.41518 1.19998 9.58518 1.19998 10.2977 2.63248Z"
                         stroke="#F9B233"
-                        stroke-width="1.5"
+                        strokeidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -398,7 +398,7 @@
                         data-tab="allRooms"
                         class="m-auto relative font-medium group h-d-t tab is-active"
                       >
-                        <a data-i18n="allRooms"></a>
+                        <a role="text" data-i18n="allRooms"></a>
                         <div
                           class="items-center hidden group-[.is-active]:flex relative gap-2"
                         >
@@ -414,7 +414,7 @@
                         data-tab="details"
                         class="m-auto relative group font-medium h-d-t tab"
                       >
-                        <a data-i18n="details"></a>
+                        <a role="text" data-i18n="details"></a>
                         <div
                           class="items-center hidden group-[.is-active]:flex relative gap-4"
                         >
@@ -430,7 +430,7 @@
                         data-tab="laws"
                         class="m-auto font-medium h-d-t relative group tab"
                       >
-                        <a data-i18n="laws"></a>
+                        <a role="text" data-i18n="laws"></a>
                         <div
                           class="items-center hidden group-[.is-active]:flex relative gap-4"
                         >
@@ -446,7 +446,7 @@
                         data-tab="services"
                         class="m-auto font-medium h-d-t tab relative group"
                       >
-                        <a data-i18n="services"></a>
+                        <a role="text" data-i18n="services"></a>
                         <div
                           class="items-center hidden group-[.is-active]:flex relative gap-4"
                         >
@@ -460,7 +460,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="tab-content text-sm" id="allRooms">
+                  <div class="tab-content text-xs" id="allRooms">
                     <div class="p-3">
                       <div class="flex justify-between items-center">
                         <div class="flex items-center gap-3">
@@ -488,7 +488,7 @@
                           </svg>
                           <button
                             type="text"
-                            class="flex gap-2 items-center bg-gray-50 dark:bg-gray-950 p-1 px-2 rounded-full"
+                            class="flex gap-2 items-center theme-color--neutral p-1 px-2 rounded-full"
                           >
                             <p data-i18n="roomType">:</p>
                             <p data-i18n="all" class="text-orange-400"></p>
@@ -510,7 +510,7 @@
                           </button>
                           <button
                             type="text"
-                            class="flex gap-2 items-center bg-gray-50 dark:bg-gray-950 p-1 px-2 rounded-full"
+                            class="flex gap-2 items-center theme-color--neutral p-1 px-2 rounded-full"
                           >
                             <p data-i18n="bedType"></p>
                             <p data-i18n="all" class="text-orange-400"></p>
@@ -532,7 +532,7 @@
                           </button>
                           <button
                             type="text"
-                            class="flex gap-2 items-center bg-gray-50 dark:bg-gray-950 p-1 px-2 rounded-full"
+                            class="flex gap-2 items-center theme-color--neutral p-1 px-2 rounded-full"
                           >
                             <p data-i18n="price"></p>
                             <p data-i18n="all" class="text-orange-400"></p>
@@ -554,7 +554,7 @@
                           </button>
                           <button
                             type="text"
-                            class="flex gap-2 items-center bg-gray-50 dark:bg-gray-950 p-1 px-2 rounded-full"
+                            class="flex gap-2 items-center theme-color--neutral p-1 px-2 rounded-full"
                           >
                             <p data-i18n="meals"></p>
                             <p data-i18n="all" class="text-orange-400"></p>
@@ -588,31 +588,33 @@
 
                       <div class="mt-9">
                         <table class="w-full">
-                          <thead class="bg-storm-50 dark:bg-gray-950">
-                            <tr class="text-center h-[36px]">
+                          <thead
+                            class="theme-color-border theme-color--neutral"
+                          >
+                            <tr class="text-center *:text-sm h-[36px]">
                               <th
                                 class="rounded-tr-[21.16px] ltr:rounded-tr-none ltr:rounded-tl-[21.16px]"
                               >
                                 <p
-                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  class="border-l theme-color-border h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0"
                                   data-i18n="allRooms"
                                 ></p>
                               </th>
                               <th>
                                 <p
-                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  class="border-l h-[36px] px-3 theme-color-border my-2 flex justify-center items-center ltr:border-r ltr:border-l-0"
                                   data-i18n="meals"
                                 ></p>
                               </th>
                               <th>
                                 <p
-                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  class="border-l theme-color-border h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0"
                                   data-i18n="cancelingConditions"
                                 ></p>
                               </th>
                               <th>
                                 <p
-                                  class="border-l h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0 dark:border-storm-950"
+                                  class="border-l theme-color-border h-[36px] my-2 flex justify-center items-center ltr:border-r ltr:border-l-0"
                                   data-i18n="priceNight"
                                 ></p>
                               </th>
@@ -620,7 +622,7 @@
                                 class="rounded-tl-[21.16px] ltr:rounded-tl-none ltr:rounded-tr-[21.16px]"
                               >
                                 <p
-                                  class="h-[36px] my-2 flex justify-center items-center dark:border-storm-950"
+                                  class="h-[36px] my-2 flex justify-center items-center"
                                   data-i18n="reserve"
                                 ></p>
                               </th>
@@ -629,29 +631,26 @@
                           <tbody
                             class="text-center [&:not(:last-child)]:*:border-b shadow-tbody-light dark:shadow-tbody-dark rounded-b-3.5xl"
                           >
-                            <tr
-                              style="box-sizing: border-box"
-                              class="hover:bg-storm-50 dark:hover:bg-storm-950"
-                            >
+                            <tr class="th-hover">
                               <th
                                 scope="row"
                                 rowspan="4"
-                                class="p-1.5 relative z-[50] bg-storm-50 align-middle dark:bg-storm-950"
+                                class="p-1.5 text-sm relative z-[50] theme-color--neutral theme-color-border align-middle"
                               >
                                 <div class=" ">
                                   <button class="popover-toggle relative">
                                     <div>دلوکس دابل توبین</div>
                                     <div
-                                      class="popover m-auto top-0 right-[15rem] w-[20rem] left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-right duration-500 scale-0 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+                                      class="popover dark:bg-red-500 m-auto top-0 right-[15rem] w-[20rem] left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-right duration-500 scale-0 z-50 shadow-md bottom-0 absolute"
                                     >
                                       <div
-                                        class="border-0 before:top-0 before:!bottom-0 popover-triangle before:shadow-black dark:bg-gray-900 before:rotate-90 dark:before:bg-gray-900 before:block before:content-[' '] before:m-auto before:-right-5 before:bg-white before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
+                                        class="border-0 before:top-0 before:!bottom-0 popover-triangle before:shadow-black before:rotate-90 dark:before:theme-color--primary before:block before:content-[' '] before:m-auto before:-right-5 before:bg-white before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
                                       >
                                         <div
-                                          class="bg-white p-2 ml dark:bg-black rounded-3xl"
+                                          class="p-2 ml theme-color--primary rounded-3xl"
                                         >
                                           <div
-                                            class="rounded-3xl bg-white dark:bg-gray-950 p-3"
+                                            class="rounded-3xl theme-color--primary p-3"
                                           >
                                             <img
                                               src="../../public/assets/images/spinas-popover.png"
@@ -709,16 +708,16 @@
                                       <p class="text-gray-400">صبحانه</p>
                                     </div>
                                     <div
-                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute theme-color--primary"
                                     >
                                       <div
-                                        class="border-0 popover-triangle dark:bg-gray-900 before:rotate-180 dark:before:bg-gray-900 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
+                                        class="border-0 popover-triangle theme-color--primary before:rotate-180 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
                                       >
                                         <div
                                           class="bg-primary-400 rounded-3xl p-4 ml"
                                         >
                                           <div
-                                            class="rounded-3xl bg-white dark:bg-gray-950 p-3"
+                                            class="rounded-3xl theme-color--primary p-3"
                                           >
                                             <p class="border-b pb-2">
                                               بکشنبه 03 / 16
@@ -734,9 +733,7 @@
                                               </p>
                                             </div>
                                           </div>
-                                          <div
-                                            class="mt-3 text-right dark:text-black text-white"
-                                          >
+                                          <div class="mt-3 text-right">
                                             <p>نوع اتاق : دلوکس کابل توبین</p>
                                             <p>نوع تخت: یک تخت دونفره</p>
                                             <p>
@@ -774,9 +771,10 @@
                               </td>
                               <td class="p-2 align-middle">
                                 <button
-                                  class="button gap-2 py-1 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -797,7 +795,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="hover:bg-storm-50 dark:hover:bg-storm-950"
+                              class="hover:bg-storm-50 dark:hover:theme-color--neutral"
                             >
                               <td class="p-2 align-middle">
                                 <div>
@@ -807,16 +805,16 @@
                                       <p class="text-gray-400">صبحانه</p>
                                     </div>
                                     <div
-                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute theme-color--primary"
                                     >
                                       <div
-                                        class="border-0 popover-triangle dark:bg-gray-900 before:rotate-180 dark:before:bg-gray-900 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
+                                        class="border-0 popover-triangle before:rotate-180 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
                                       >
                                         <div
                                           class="bg-primary-400 rounded-3xl p-4 ml"
                                         >
                                           <div
-                                            class="rounded-3xl bg-white dark:bg-gray-950 p-3"
+                                            class="rounded-3xl theme-color--primary p-3"
                                           >
                                             <p class="border-b pb-2">
                                               بکشنبه 03 / 16
@@ -832,9 +830,7 @@
                                               </p>
                                             </div>
                                           </div>
-                                          <div
-                                            class="mt-3 text-right dark:text-black text-white"
-                                          >
+                                          <div class="mt-3 text-right">
                                             <p>نوع اتاق : دلوکس کابل توبین</p>
                                             <p>نوع تخت: یک تخت دونفره</p>
                                             <p>
@@ -872,9 +868,10 @@
                               </td>
                               <td class="p-2 align-middle">
                                 <button
-                                  class="button py-1 gap-2 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -895,7 +892,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="hover:bg-storm-50 dark:hover:bg-storm-950"
+                              class="hover:bg-storm-50 dark:hover:theme-color--neutral"
                             >
                               <td class="p-2 align-middle">
                                 <div>
@@ -905,16 +902,16 @@
                                       <p class="text-gray-400">صبحانه</p>
                                     </div>
                                     <div
-                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute bg-white dark:bg-gray-950"
+                                      class="popover w-[20rem] -top-[16rem] right-0 left-0 mx-auto translate-x-[35%] rounded-3xl h-fit transition-all ltr:right-0 ltr:left-[unset] origin-bottom duration-500 scale-0 z-50 shadow-md bottom-0 absolute"
                                     >
                                       <div
-                                        class="border-0 popover-triangle dark:bg-gray-900 before:rotate-180 dark:before:bg-gray-900 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
+                                        class="border-0 popover-triangle before:rotate-180 before:block before:content-[' '] before:m-auto before:right-0 before:left-0 before:bg-primary-400 before:-bottom-6 ltr:before:right-2 ltr:before:left-[unset] before:size-7 before:absolute border rounded-3xl shadow-md z-50"
                                       >
                                         <div
                                           class="bg-primary-400 rounded-3xl p-4 ml"
                                         >
                                           <div
-                                            class="rounded-3xl bg-white dark:bg-gray-950 p-3"
+                                            class="rounded-3xl theme-color--primary p-3"
                                           >
                                             <p class="border-b pb-2">
                                               بکشنبه 03 / 16
@@ -930,9 +927,7 @@
                                               </p>
                                             </div>
                                           </div>
-                                          <div
-                                            class="mt-3 text-right dark:text-black text-white"
-                                          >
+                                          <div class="mt-3 text-right">
                                             <p>نوع اتاق : دلوکس کابل توبین</p>
                                             <p>نوع تخت: یک تخت دونفره</p>
                                             <p>
@@ -956,7 +951,9 @@
                               <td class="p-2 align-middle">
                                 <div>
                                   <p class="text-green-500">قابل استرداد</p>
-                                  <div class="text-[11px] mt-1 text-storm-500">
+                                  <div
+                                    class="text-[11px] mt-1 text-storm-500 dark:text-white"
+                                  >
                                     <p class="leading-[.7]">
                                       قبل از 1403/10/06 - 20:00
                                     </p>
@@ -979,9 +976,10 @@
                               </td>
                               <td class="p-2 align-middle">
                                 <button
-                                  class="button gap-2 py-1 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -1033,12 +1031,12 @@
                               </td>
                             </tr>
                             <tr
-                              class="price-list-1 border-t more-prices hover:bg-storm-50 dark:hover:bg-storm-950"
+                              class="price-list-1 th-hover border-t more-prices"
                             >
                               <th
                                 scope="row"
                                 rowspan="3"
-                                class="p-1.5 relative rounded-br-[2rem] z-[50] align-middle dark:bg-storm-950 bg-storm-50"
+                                class="p-1.5 text-sm relative rounded-br-[2rem] z-[50] align-middle theme-color--neutral theme-color-border"
                               >
                                 دلوکس دابل توبین
                               </th>
@@ -1065,9 +1063,10 @@
                               </td>
                               <td class="p-2 align-middle">
                                 <button
-                                  class="button py-1 gap-2 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -1088,7 +1087,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="price-list-1 more-prices hover:bg-storm-50 dark:hover:bg-storm-950"
+                              class="price-list-1 more-prices hover:bg-storm-50 dark:hover:theme-color--neutral"
                             >
                               <td class="p-2">
                                 <div>
@@ -1113,9 +1112,10 @@
                               </td>
                               <td class="p-2 align-middle">
                                 <button
-                                  class="button gap-2 py-1 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -1139,7 +1139,7 @@
                               class="price-list-1 rounded-bl-3.5xl more-prices group"
                             >
                               <td
-                                class="p-2 group-hover:bg-storm-50 dark:group-hover:bg-storm-950"
+                                class="p-2 group-hover:bg-storm-50 dark:group-hover:theme-color--neutral"
                               >
                                 <div>
                                   <p>یک تخت دو نفر1ه</p>
@@ -1147,14 +1147,14 @@
                                 </div>
                               </td>
                               <td
-                                class="p-2 group-hover:bg-storm-50 dark:group-hover:bg-storm-950"
+                                class="p-2 group-hover:bg-storm-50 dark:group-hover:theme-color--neutral"
                               >
                                 <div>
                                   <p class="text-state-error">قابل استرداد</p>
                                 </div>
                               </td>
                               <td
-                                class="p-2 group-hover:bg-storm-50 dark:group-hover:bg-storm-950"
+                                class="p-2 group-hover:bg-storm-50 dark:group-hover:theme-color--neutral"
                               >
                                 <div>
                                   <p class="font-semibold">
@@ -1166,12 +1166,13 @@
                                 </div>
                               </td>
                               <td
-                                class="p-2 align-middle rounded-bl-3.5xl group-hover:bg-storm-50 dark:group-hover:bg-storm-950"
+                                class="p-2 align-middle rounded-bl-3.5xl group-hover:bg-storm-50 dark:group-hover:theme-color--neutral"
                               >
                                 <button
-                                  class="button py-1 gap-2 border-0 rounded-full bg-green-500 text-white"
+                                  class="button gap-2 py-2 border-0 rounded-full bg-green-500 text-sm text-white"
                                 >
-                                  رزرو<svg
+                                  <p class="text-xs" data-i18n="selectRoom"></p>
+                                  <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -1205,7 +1206,7 @@
                         ></p>
                         <div class="flex items-center gap-3">
                           <div
-                            class="flex items-center gap-2 text-base font-semibold dark:bg-gray-950 bg-storm-50 w-fit rounded-xl p-3"
+                            class="flex items-center gap-2 text-base font-semibold theme-color--neutral w-fit rounded-xl p-3"
                           >
                             <svg
                               width="24"
@@ -1236,7 +1237,7 @@
                           </div>
                           <div>
                             <div
-                              class="flex dark:bg-gray-950 items-center gap-2 text-base font-semibold bg-storm-50 w-fit rounded-xl p-3"
+                              class="flex theme-color--neutral items-center gap-2 text-base font-semibold w-fit rounded-xl p-3"
                             >
                               تهران، سعادت آباد، میدان بهرود، خیابان 33، هتل
                               اسپیناس پالاس
@@ -1265,23 +1266,23 @@
                       <div class="space-y-6 mt-8 text-base">
                         <div class="space-y-3">
                           <p class="font-semibold" data-i18n="hotelDetails"></p>
-                          <p data-i18n="lorem" class="tracking-wide"></p>
+                          <p data-i18n="lorem" class="trackingide"></p>
                         </div>
                         <div class="space-y-3">
                           <p data-i18n="allRooms" class="font-semibold"></p>
-                          <p data-i18n="lorem" class="tracking-wide"></p>
+                          <p data-i18n="lorem" class="trackingide"></p>
                         </div>
                         <div class="space-y-3">
                           <p data-i18n="lunch" class="font-semibold"></p>
-                          <p data-i18n="lorem" class="tracking-wide"></p>
+                          <p data-i18n="lorem" class="trackingide"></p>
                         </div>
                         <div class="space-y-3">
                           <p data-i18n="rests" class="font-semibold"></p>
-                          <p data-i18n="lorem" class="tracking-wide"></p>
+                          <p data-i18n="lorem" class="trackingide"></p>
                         </div>
                         <div class="space-y-3">
                           <p data-i18n="jobsAddition" class="font-semibold"></p>
-                          <p data-i18n="lorem" class="tracking-wide"></p>
+                          <p data-i18n="lorem" class="trackingide"></p>
                         </div>
                       </div>
                     </div>
@@ -1364,14 +1365,14 @@
                           data-i18n="enterConditions"
                           class="font-semibold"
                         ></p>
-                        <p class="tracking-wide" data-i18n="lorem"></p>
+                        <p class="trackingide" data-i18n="lorem"></p>
                       </div>
                       <div class="space-y-3">
                         <p
                           data-i18n="infoBeforeEnter"
                           class="font-semibold"
                         ></p>
-                        <p class="tracking-wide" data-i18n="lorem"></p>
+                        <p class="trackingide" data-i18n="lorem"></p>
                       </div>
                       <div class="space-y-3">
                         <p data-i18n="costs" class="font-semibold"></p>
@@ -1395,28 +1396,28 @@
                     <div class="flex items-center gap-3">
                       <div
                         data-i18n="gym"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
 
                       <div
                         data-i18n="pool"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
                       <div
                         data-i18n="light"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
                       <div
                         data-i18n="desks"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
                       <div
                         data-i18n="microwave"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
                       <div
                         data-i18n="minibar"
-                        class="flex items-center dark:bg-gray-950 gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
+                        class="flex items-center theme-color--prmiary gap-2 font-bold bg-primary-400/[.11] w-fit rounded-xl p-3"
                       ></div>
                     </div>
                   </div>
@@ -1424,10 +1425,11 @@
               </div>
             </div>
             <div
-              class="border dark:border-gray-800 basis-[25%] h-fit space-y-5 p-4 rounded-2xl"
+              class="border me-[34px] theme-color-border basis-[30%] h-fit space-y-5 p-5 rounded-3.5xl"
             >
-              <div class="border-b pb-4 dark:border-gray-800">
-                <p class="text-2xl text-green-500">
+              <div class="border-b pb-4 theme-color-border">
+                <p data-i18n="startPrice"></p>
+                <p class="text-2xl mt-1 text-green-500">
                   <span class="font-bold">137.81</span> USD /
                   <span
                     data-i18n="eachNight"
@@ -1436,20 +1438,100 @@
                   </span>
                 </p>
               </div>
-              <div class="space-y-3 border-b pb-5 dark:border-gray-800">
-                <div>
-                  <label
-                    data-i18n="enterExit"
-                    class="mb-2 block"
-                    htmlFor="date"
-                  >
-                  </label>
-                  <!-- <JalaliLocaleListener />
+              <div class="space-y-3 border-b pb-5 theme-color-border">
+                <div class="space-y-2 dp-wrapper text-nowrap">
+                  <div>
+                    <label
+                      for="reservation-date-start"
+                      data-i18n="enterAndExitDate"
+                      class="block mb-1"
+                    ></label>
+                    <div class="input gap-2 is-rounded">
+                      <div class="relative">
+                        <input
+                          id="departure"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="departure"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                        </label>
+                      </div>
 
-                  <RangePicker
-                    id="date"
-                    class="rounded-full w-fit font-yekan  py-[.4rem]  "
-                  /> -->
+                      <span>-</span>
+                      <div class="relative w-full">
+                        <input
+                          id="return"
+                          class="theme-color--primary opacity-0 -z-50 datepicker absolute"
+                          aria-label="Start Date"
+                          type="date"
+                        />
+                        <label
+                          for="return"
+                          class="flex justify-between w-full items-center gap-2"
+                        >
+                          <p
+                            aria-live="polite"
+                            class="text-storm-200 dark:text-white font-yekan datepicker-value"
+                          >
+                            1403-5-5
+                          </p>
+                          <svg
+                            class="self-end"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              opacity="0.4"
+                              d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                            <path
+                              d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
+                              fill="#B0B0B0"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <label data-i18n="guests" class="block mb-2" htmlFor="guests">
@@ -1467,161 +1549,26 @@
                   </div>
                 </div>
               </div>
-              <div class="pb-5 border-b dark:border-gray-800">
-                <div class="flex items-center justify-between">
-                  <h1
-                    data-i18n="selectedOptions"
-                    class="font-bold text-xl"
-                  ></h1>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.8025 3.9225C14.595 3.8025 13.3875 3.7125 12.1725 3.645V3.6375L12.0075 2.6625C11.895 1.9725 11.73 0.9375 9.975 0.9375H8.01C6.2625 0.9375 6.0975 1.9275 5.9775 2.655L5.82 3.615C5.1225 3.66 4.425 3.705 3.7275 3.7725L2.1975 3.9225C1.8825 3.9525 1.6575 4.23 1.6875 4.5375C1.7175 4.845 1.9875 5.07 2.3025 5.04L3.8325 4.89C7.7625 4.5 11.7225 4.65 15.6975 5.0475C15.72 5.0475 15.735 5.0475 15.7575 5.0475C16.0425 5.0475 16.29 4.83 16.32 4.5375C16.3425 4.23 16.1175 3.9525 15.8025 3.9225Z"
-                      fill="#DC2626"
-                    />
-                    <path
-                      opacity="0.3991"
-                      d="M14.4226 6.105C14.2426 5.9175 13.9951 5.8125 13.7401 5.8125H4.26006C4.00506 5.8125 3.75006 5.9175 3.57756 6.105C3.40506 6.2925 3.30756 6.5475 3.32256 6.81L3.78756 14.505C3.87006 15.645 3.97506 17.07 6.59256 17.07H11.4076C14.0251 17.07 14.1301 15.6525 14.2126 14.505L14.6776 6.8175C14.6926 6.5475 14.5951 6.2925 14.4226 6.105Z"
-                      fill="#DC2626"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.18506 12.75C7.18506 12.4393 7.4369 12.1875 7.74756 12.1875H10.2451C10.5557 12.1875 10.8076 12.4393 10.8076 12.75C10.8076 13.0607 10.5557 13.3125 10.2451 13.3125H7.74756C7.4369 13.3125 7.18506 13.0607 7.18506 12.75Z"
-                      fill="#DC2626"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M6.5625 9.75C6.5625 9.43934 6.81434 9.1875 7.125 9.1875H10.875C11.1857 9.1875 11.4375 9.43934 11.4375 9.75C11.4375 10.0607 11.1857 10.3125 10.875 10.3125H7.125C6.81434 10.3125 6.5625 10.0607 6.5625 9.75Z"
-                      fill="#DC2626"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <div class="flex *:font-yekan flex-col mt-3 gap-3">
-                    <div
-                      class="flex justify-between items-center gap-2 custom-checkbox w-full bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:border p-1 rounded-xl"
-                    >
-                      <div class="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="breakfest"
-                          name="options"
-                          class="hidden radio-hidden"
-                        />
-                        <label for="breakfest" class="radio mb-1"></label>
-                        <label class="flex justify-between" for="breakfest">
-                          <p data-i18n="breakfest"></p>
-                        </label>
-                      </div>
 
-                      <p class="ml-4">USD20</p>
-                    </div>
-
-                    <div
-                      class="flex justify-between items-center gap-2 custom-checkbox w-full bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:border p-1 rounded-xl"
-                    >
-                      <div class="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="pool"
-                          name="options"
-                          class="hidden radio-hidden"
-                        />
-                        <label for="pool" class="radio mb-1"></label>
-                        <label class="flex justify-between" for="pool">
-                          <p data-i18n="pool"></p>
-                        </label>
-                      </div>
-
-                      <p class="ml-4">USD20</p>
-                    </div>
-
-                    <div
-                      class="flex justify-between items-center gap-2 custom-checkbox w-full bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:border p-1 rounded-xl"
-                    >
-                      <div class="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="parking"
-                          name="options"
-                          class="hidden radio-hidden"
-                        />
-                        <label for="parking" class="radio mb-1"></label>
-                        <label class="flex justify-between" for="parking">
-                          <p data-i18n="parking"></p>
-                        </label>
-                      </div>
-
-                      <p class="ml-4">USD20</p>
-                    </div>
-
-                    <div
-                      class="flex justify-between items-center gap-2 custom-checkbox w-full bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:border p-1 rounded-xl"
-                    >
-                      <div class="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="additionalBlanket"
-                          name="options"
-                          class="hidden radio-hidden"
-                        />
-                        <label
-                          for="additionalBlanket"
-                          class="radio mb-1"
-                        ></label>
-                        <label
-                          class="flex justify-between"
-                          for="additionalBlanket"
-                        >
-                          <p data-i18n="additionalBlanket"></p>
-                        </label>
-                      </div>
-
-                      <p class="ml-4">USD20</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pb-5 border-b dark:border-gray-800">
-                <h1 data-i18n="price" class="font-bold text-xl"></h1>
+              <div class="pb-5 pt-4 border-b theme-color-border">
+                <p data-i18n="price" class="font-bold"></p>
                 <div
-                  class="w-full custom-checkbox bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:border p-3 rounded-xl"
+                  class="flex items-center justify-between theme-color--neutral rounded-2xl p-4 py-5 mt-1"
                 >
-                  <div class="flex justify-between">
-                    <p data-i18n="oneNight"></p>
-                    <p>USD 10</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p data-i18n="breakfest"></p>
-                    <p>USD 10</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p data-i18n="pool"></p>
-                    <p>USD 10</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p data-i18n="parking"></p>
-                    <p>USD 10</p>
-                  </div>
+                  <p>یک شب</p>
+                  <p>137 USD</p>
                 </div>
               </div>
               <div>
                 <div
                   class="text-2xl text-green-500 flex items-center justify-between"
                 >
-                  <p data-i18n="totalPrice"></p>
+                  <p class="font-bold text-base" data-i18n="totalPrice"></p>
                   <p><span class="font-bold">137.81</span> USD</p>
                 </div>
                 <button
                   data-i18n="roomReserve"
-                  class="w-full py-2 bg-amber-500 border-0 rounded-full text-white mt-2"
+                  class="w-full py-2 bg-amber-500 border-0 rounded-full text-white mt-3"
                 ></button>
               </div>
             </div>
@@ -1629,6 +1576,7 @@
         </div>
       </div>
     </main>
+    <script src="/dist/js/datepicker.bundle.js"></script>
     <script defer src="/dist/js/hotelDetails.bundle.js"></script>
     <script defer src="/dist/js/tabs.bundle.js"></script>
   </body>
