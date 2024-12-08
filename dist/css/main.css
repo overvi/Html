@@ -735,6 +735,9 @@ video {
 .inset-0 {
   inset: 0px;
 }
+.-bottom-3 {
+  bottom: -0.75rem;
+}
 .-left-4 {
   left: -1rem;
 }
@@ -744,8 +747,8 @@ video {
 .-right-4 {
   right: -1rem;
 }
-.-top-10 {
-  top: -2.5rem;
+.-top-8 {
+  top: -2rem;
 }
 .-top-\[16rem\] {
   top: -16rem;
@@ -759,11 +762,11 @@ video {
 .left-0 {
   left: 0px;
 }
-.left-10 {
-  left: 2.5rem;
-}
 .left-20 {
   left: 5rem;
+}
+.left-\[2\.8rem\] {
+  left: 2.8rem;
 }
 .left-\[4rem\] {
   left: 4rem;
@@ -1159,6 +1162,9 @@ video {
 .h-\[112\%\] {
   height: 112%;
 }
+.h-\[13px\] {
+  height: 13px;
+}
 .h-\[160px\] {
   height: 160px;
 }
@@ -1268,6 +1274,9 @@ video {
 .\!w-\[21rem\] {
   width: 21rem !important;
 }
+.\!w-\[revert-layer\] {
+  width: revert-layer !important;
+}
 .w-16 {
   width: 4rem;
 }
@@ -1349,6 +1358,9 @@ video {
 .w-\[46px\] {
   width: 46px;
 }
+.w-\[5\%\] {
+  width: 5%;
+}
 .w-\[50rem\] {
   width: 50rem;
 }
@@ -1363,6 +1375,9 @@ video {
 }
 .w-\[7\%\] {
   width: 7%;
+}
+.w-\[8\%\] {
+  width: 8%;
 }
 .w-\[8\.75rem\] {
   width: 8.75rem;
@@ -2792,6 +2807,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.delay-500 {
+  transition-delay: 500ms;
+}
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -3069,7 +3087,7 @@ input:where([data-theme="dark"], [data-theme="dark"] *)::placeholder {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 700ms;
 }
-html:not([data-scroll='0']) .scroll-based-sidebar {
+html:not([data-scroll="0"]) .scroll-based-sidebar {
   margin-top: 3rem;
 }
 .dp-multiple .datepicker-value {
@@ -3201,6 +3219,10 @@ html[data-theme="dark"] .tabs {
   background-color: rgb(249 178 51 / 0.6);
 }
 
+.\*\:fill-black > * {
+  fill: #000;
+}
+
 .\*\:fill-storm-300 > * {
   fill: #b0b0b0;
 }
@@ -3265,6 +3287,20 @@ html[data-theme="dark"] .tabs {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.\*\:transition-colors > * {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\*\:delay-500 > * {
+  transition-delay: 500ms;
+}
+
+.\*\:duration-700 > * {
+  transition-duration: 700ms;
 }
 
 .\*\:theme-color-border > *:where([data-theme="dark"], [data-theme="dark"] *) {
@@ -3355,9 +3391,9 @@ html[data-theme="dark"] .tabs {
   left: 0.2rem;
 }
 
-.before\:left-\[4\.2rem\]::before {
+.before\:left-\[3\.2rem\]::before {
   content: var(--tw-content);
-  left: 4.2rem;
+  left: 3.2rem;
 }
 
 .before\:right-0::before {
@@ -3396,6 +3432,11 @@ html[data-theme="dark"] .tabs {
   height: 1.75rem;
 }
 
+.before\:h-\[108px\]::before {
+  content: var(--tw-content);
+  height: 108px;
+}
+
 .before\:h-\[18px\]::before {
   content: var(--tw-content);
   height: 18px;
@@ -3404,11 +3445,6 @@ html[data-theme="dark"] .tabs {
 .before\:h-\[2\.75rem\]::before {
   content: var(--tw-content);
   height: 2.75rem;
-}
-
-.before\:h-\[5rem\]::before {
-  content: var(--tw-content);
-  height: 5rem;
 }
 
 .before\:w-\[2\.5rem\]::before {
@@ -3421,9 +3457,9 @@ html[data-theme="dark"] .tabs {
   width: 2px;
 }
 
-.before\:w-\[4rem\]::before {
+.before\:w-\[94px\]::before {
   content: var(--tw-content);
-  width: 4rem;
+  width: 94px;
 }
 
 .before\:translate-y-full::before {
@@ -3482,6 +3518,18 @@ html[data-theme="dark"] .tabs {
   content: var(--tw-content);
   --tw-shadow-color: #000;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.before\:transition-all::before {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.before\:duration-700::before {
+  content: var(--tw-content);
+  transition-duration: 700ms;
 }
 
 .before\:content-\[\'\*\'\]::before {
@@ -3723,13 +3771,29 @@ html[data-theme="dark"] .tabs {
   --tw-ring-offset-color: #f8fafc;
 }
 
+.group:hover .group-hover\:-top-16 {
+  top: -4rem;
+}
+
 .group\/c:hover .group-hover\/c\:z-0 {
   z-index: 0;
+}
+
+.group:hover .group-hover\:h-\[60px\] {
+  height: 60px;
 }
 
 .group:hover .group-hover\:bg-storm-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:fill-green-500 {
+  fill: #2fac66;
+}
+
+.group:hover .group-hover\:fill-primary-400 {
+  fill: #F9B233;
 }
 
 .group:hover .group-hover\:text-sky-400 {
@@ -3739,6 +3803,11 @@ html[data-theme="dark"] .tabs {
 
 .group\/c:hover .group-hover\/c\:opacity-100 {
   opacity: 1;
+}
+
+.group:hover .group-hover\:before\:-top-\[4rem\]::before {
+  content: var(--tw-content);
+  top: -4rem;
 }
 
 .group:disabled .group-disabled\:fill-gray-400 {
@@ -4010,8 +4079,8 @@ html[data-theme="dark"] .tabs {
   right: 0px;
 }
 
-.ltr\:right-10:where([dir="ltr"], [dir="ltr"] *) {
-  right: 2.5rem;
+.ltr\:right-\[2\.8rem\]:where([dir="ltr"], [dir="ltr"] *) {
+  right: 2.8rem;
 }
 
 .ltr\:right-auto:where([dir="ltr"], [dir="ltr"] *) {
@@ -4145,9 +4214,9 @@ html[data-theme="dark"] .tabs {
   right: 0.5rem;
 }
 
-.ltr\:before\:right-\[4\.2rem\]:where([dir="ltr"], [dir="ltr"] *)::before {
+.ltr\:before\:right-\[3\.2rem\]:where([dir="ltr"], [dir="ltr"] *)::before {
   content: var(--tw-content);
-  right: 4.2rem;
+  right: 3.2rem;
 }
 
 .rtl\:mr-auto:where([dir="rtl"], [dir="rtl"] *) {
@@ -4164,14 +4233,6 @@ html[data-theme="dark"] .tabs {
 
 .rtl\:border-l:where([dir="rtl"], [dir="rtl"] *) {
   border-left-width: 1px;
-}
-
-.dark\:block:where([data-theme="dark"], [data-theme="dark"] *) {
-  display: block;
-}
-
-.dark\:hidden:where([data-theme="dark"], [data-theme="dark"] *) {
-  display: none;
 }
 
 .dark\:border-black:where([data-theme="dark"], [data-theme="dark"] *) {
@@ -4321,6 +4382,10 @@ html[data-theme="dark"] .tabs {
 .dark\:theme-color--neutral:where([data-theme="dark"], [data-theme="dark"] *):where([data-theme="dark"], [data-theme="dark"] *) {
   --tw-bg-opacity: 1;
   background-color: rgb(109 109 109 / var(--tw-bg-opacity));
+}
+
+.dark\:\*\:fill-white > *:where([data-theme="dark"], [data-theme="dark"] *) {
+  fill: #fff;
 }
 
 .dark\:\*\:stroke-white > *:where([data-theme="dark"], [data-theme="dark"] *) {

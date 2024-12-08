@@ -254,7 +254,7 @@ html[data-theme="dark"] .tabs {
   }
 
   .theme-color-text--secondary {
-    @apply text-gray-500 dark:text-white
+    @apply text-gray-500 dark:text-white;
   }
 
   .th-hover:has(td:hover) {
@@ -285,11 +285,11 @@ html[data-theme="dark"] .tabs {
     @apply border-storm-100 border-2 border-solid;
   }
 
- .dp-multiple .dp-style:nth-child(1):not(.dp-active) {
-    @apply border-e-0
+  .dp-multiple .dp-style:nth-child(1):not(.dp-active) {
+    @apply border-e-0;
   }
- .dp-multiple .dp-style:nth-child(2):not(.dp-active) {
-    @apply border-s-0
+  .dp-multiple .dp-style:nth-child(2):not(.dp-active) {
+    @apply border-s-0;
   }
 
   .dp-focus:not(.dp-active) {
@@ -297,24 +297,26 @@ html[data-theme="dark"] .tabs {
   }
 
   .scroll-based-sidebar {
-    @apply transition-all duration-700
+    @apply transition-all duration-700;
   }
 
-  html:not([data-scroll='0']) .scroll-based-sidebar {
-    @apply mt-12 
+  html:not([data-scroll="0"]) .scroll-based-sidebar {
+    @apply mt-12;
   }
- 
+
   .dp-multiple .datepicker-value {
-    @apply text-x font-normal
+    @apply text-x font-normal;
   }
 
   .dp-multiple .dp-active .datepicker-value {
-   @apply text-base
+    @apply text-base;
+  }
+
+  .select:has(select:focus)::after {
+    @apply !rotate-[134deg]  !-mt-[.1375em];
   }
 
 
 
- .select:has(select:focus)::after {
-    @apply !rotate-[134deg]  !-mt-[.1375em]
-  }
+
 }
