@@ -22,6 +22,7 @@ module.exports = (env) => {
       cart: "./src/ts/cart.ts",
       datepicker: "./src/ts/datepicker.ts",
       home: "./src/ts/index.ts",
+      exchangeInput: "./src/ts/exchangeableInput.ts",
     },
     plugins: [
       new MiniCssExtractPlugin({

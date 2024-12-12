@@ -74,17 +74,6 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
-/***/ "./src/ts/index.ts":
-/*!*************************!*\
-  !*** ./src/ts/index.ts ***!
-  \*************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./exchangeableInput */ \"./src/ts/exchangeableInput.ts\");\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    // Animations\n    const showcase = document.querySelector(\".home-showcase\");\n    const fadeText = document.querySelector(\".fadeText\");\n    showcase === null || showcase === void 0 ? void 0 : showcase.addEventListener(\"mouseover\", () => {\n        fadeText === null || fadeText === void 0 ? void 0 : fadeText.animate([\n            {\n                opacity: \"1\",\n            },\n            {\n                opacity: \"0\",\n            },\n            {\n                opacity: \"1\",\n            },\n        ], {\n            duration: 900,\n            iterations: 1,\n        });\n    });\n    showcase === null || showcase === void 0 ? void 0 : showcase.addEventListener(\"mouseleave\", () => {\n        fadeText === null || fadeText === void 0 ? void 0 : fadeText.classList.remove(\"blink\");\n        fadeText === null || fadeText === void 0 ? void 0 : fadeText.animate([\n            {\n                opacity: fadeText.style.opacity,\n            },\n            {\n                opacity: \"1\",\n            },\n        ], {\n            duration: 900,\n            iterations: 1,\n        });\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/index.ts?");
-
-/***/ }),
-
 /***/ "./src/ts/util.ts":
 /*!************************!*\
   !*** ./src/ts/util.ts ***!
@@ -307,7 +296,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/index.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/exchangeableInput.ts");
 /******/ 	
 /******/ })()
 ;

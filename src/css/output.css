@@ -13,6 +13,8 @@
 
   --tc-bg: #f6f6f6;
   --tc-bg-hover: #f6f6f6;
+
+  --litepicker-is-end-color-bg: #f9b233;
 }
 
 [data-theme="dark"] {
@@ -315,8 +317,4 @@ html[data-theme="dark"] .tabs {
   .select:has(select:focus)::after {
     @apply !rotate-[134deg]  !-mt-[.1375em];
   }
-
-
-
-
 }

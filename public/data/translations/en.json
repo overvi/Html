@@ -287,5 +287,11 @@
   "messageWarning": "Requests Are not guaranteed",
   "addToCart": "Add To Cart",
   "selectRoom": "Select Room",
-  "hotelVoucher": "Hotel Voucher"
+  "hotelVoucher": "Hotel Voucher",
+  "transferList": "Transfer List",
+  "carType": "Car Type",
+  "route": "Route",
+  "freeCancellation": "Free Cancellation",
+  "freeCancellationD": "Until 24 hours after departure You can cancel free",
+  "standardLuggageSize": "Standard Luggage Size"
 }

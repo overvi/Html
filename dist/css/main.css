@@ -801,6 +801,9 @@ video {
 .top-6 {
   top: 1.5rem;
 }
+.top-\[2rem\] {
+  top: 2rem;
+}
 .top-full {
   top: 100%;
 }
@@ -915,6 +918,13 @@ video {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.\!mt-0 {
+  margin-top: 0px !important;
+}
 .\!mt-14 {
   margin-top: 3.5rem !important;
 }
@@ -947,6 +957,9 @@ video {
 }
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 .mb-7 {
   margin-bottom: 1.75rem;
@@ -995,6 +1008,9 @@ video {
 }
 .ms-2 {
   margin-inline-start: 0.5rem;
+}
+.ms-8 {
+  margin-inline-start: 2rem;
 }
 .ms-\[\.8rem\] {
   margin-inline-start: .8rem;
@@ -1059,6 +1075,9 @@ video {
 .mt-\[93px\] {
   margin-top: 93px;
 }
+.mt-auto {
+  margin-top: auto;
+}
 .block {
   display: block;
 }
@@ -1106,6 +1125,10 @@ video {
   width: 12px;
   height: 12px;
 }
+.size-\[18px\] {
+  width: 18px;
+  height: 18px;
+}
 .size-\[20px\] {
   width: 20px;
   height: 20px;
@@ -1133,6 +1156,10 @@ video {
 .size-\[74px\] {
   width: 74px;
   height: 74px;
+}
+.size-\[8px\] {
+  width: 8px;
+  height: 8px;
 }
 .\!h-\[100vh\] {
   height: 100vh !important;
@@ -1164,6 +1191,9 @@ video {
 }
 .h-\[13px\] {
   height: 13px;
+}
+.h-\[15\.3rem\] {
+  height: 15.3rem;
 }
 .h-\[160px\] {
   height: 160px;
@@ -1470,6 +1500,9 @@ video {
 .basis-\[25\%\] {
   flex-basis: 25%;
 }
+.basis-\[27\%\] {
+  flex-basis: 27%;
+}
 .basis-\[30\%\] {
   flex-basis: 30%;
 }
@@ -1479,8 +1512,14 @@ video {
 .basis-\[40\%\] {
   flex-basis: 40%;
 }
+.basis-\[42\%\] {
+  flex-basis: 42%;
+}
 .basis-\[45\%\] {
   flex-basis: 45%;
+}
+.basis-\[46\%\] {
+  flex-basis: 46%;
 }
 .basis-\[50\%\] {
   flex-basis: 50%;
@@ -1490,6 +1529,9 @@ video {
 }
 .basis-\[60\%\] {
   flex-basis: 60%;
+}
+.basis-\[65\%\] {
+  flex-basis: 65%;
 }
 .basis-\[71\%\] {
   flex-basis: 71%;
@@ -1511,6 +1553,9 @@ video {
 }
 .origin-right {
   transform-origin: right;
+}
+.origin-top {
+  transform-origin: top;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1698,6 +1743,9 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.self-start {
+  align-self: flex-start;
 }
 .self-end {
   align-self: flex-end;
@@ -1894,6 +1942,10 @@ video {
 .border-\[\#ECECEC\] {
   --tw-border-opacity: 1;
   border-color: rgb(236 236 236 / var(--tw-border-opacity));
+}
+.border-\[\#F1F1F1\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 241 241 / var(--tw-border-opacity));
 }
 .border-\[\#FAC44F\] {
   --tw-border-opacity: 1;
@@ -2319,6 +2371,10 @@ video {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-\[56px\] {
+  padding-left: 56px;
+  padding-right: 56px;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2367,6 +2423,10 @@ video {
   padding-top: 11px;
   padding-bottom: 11px;
 }
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .\!pb-10 {
   padding-bottom: 2.5rem !important;
 }
@@ -2396,6 +2456,9 @@ video {
 }
 .pb-4 {
   padding-bottom: 1rem;
+}
+.pb-40 {
+  padding-bottom: 10rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
@@ -2477,6 +2540,9 @@ video {
 }
 .text-right {
   text-align: right;
+}
+.text-start {
+  text-align: start;
 }
 .\!align-middle {
   vertical-align: middle !important;
@@ -2716,6 +2782,9 @@ video {
 }
 .opacity-0 {
   opacity: 0;
+}
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
 }
 .\!shadow-none {
   --tw-shadow: 0 0 #0000 !important;
@@ -3112,6 +3181,8 @@ html:not([data-scroll="0"]) .scroll-based-sidebar {
 
   --tc-bg: #f6f6f6;
   --tc-bg-hover: #f6f6f6;
+
+  --litepicker-is-end-color-bg: #f9b233;
 }
 
 [data-theme="dark"] {
@@ -3364,6 +3435,11 @@ html[data-theme="dark"] .tabs {
   right: -1.25rem;
 }
 
+.before\:-top-\[1\.2rem\]::before {
+  content: var(--tw-content);
+  top: -1.2rem;
+}
+
 .before\:-top-\[2\.3rem\]::before {
   content: var(--tw-content);
   top: -2.3rem;
@@ -3402,6 +3478,12 @@ html[data-theme="dark"] .tabs {
 .before\:m-auto::before {
   content: var(--tw-content);
   margin: auto;
+}
+
+.before\:mx-auto::before {
+  content: var(--tw-content);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .before\:me-2::before {
@@ -4317,6 +4399,10 @@ html[data-theme="dark"] .tabs {
 
 .dark\:fill-white:where([data-theme="dark"], [data-theme="dark"] *) {
   fill: #fff;
+}
+
+.dark\:stroke-white:where([data-theme="dark"], [data-theme="dark"] *) {
+  stroke: #fff;
 }
 
 .dark\:text-black:where([data-theme="dark"], [data-theme="dark"] *) {

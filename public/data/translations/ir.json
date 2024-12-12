@@ -293,5 +293,11 @@
   "messageWarning": "درخواست ها گارانتی نیستند",
   "addToCart": "افزودن به سبد خرید",
   "selectRoom": "انتخاب اتاق",
-  "hotelVoucher": "واچر هتل"
+  "hotelVoucher": "واچر هتل",
+  "transferList": "لیست ترانسفر",
+  "carType": "نوع ماشین",
+  "route": "مسیر",
+  "freeCancellation": "لغو رایگان",
+  "freeCancellationD": "تا 24 ساعت قبل از رفتن به صورت رایگان لغو کنید",
+  "standardLuggageSize": "سایز استاندارد چمدان"
 }
