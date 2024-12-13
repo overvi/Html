@@ -299,5 +299,12 @@
   "route": "مسیر",
   "freeCancellation": "لغو رایگان",
   "freeCancellationD": "تا 24 ساعت قبل از رفتن به صورت رایگان لغو کنید",
-  "standardLuggageSize": "سایز استاندارد چمدان"
+  "standardLuggageSize": "سایز استاندارد چمدان",
+  "profileForm": "فرم مشخصات",
+  "routeInfo": "اطلاعات مسیر رفت",
+  "flyNumber": "شماره پرواز (PNR)",
+  "arrivalTime": "ساعت رسیدن به فرودگاه",
+  "passengers": "مسافران ",
+  "passengers_plural": "(نفر {{number}})",
+  "bill": "صورتحساب"
 }

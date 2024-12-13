@@ -293,5 +293,12 @@
   "route": "Route",
   "freeCancellation": "Free Cancellation",
   "freeCancellationD": "Until 24 hours after departure You can cancel free",
-  "standardLuggageSize": "Standard Luggage Size"
+  "standardLuggageSize": "Standard Luggage Size",
+  "profileForm": "Profile Form",
+  "routeInfo": "Route Info",
+  "flyNumber": "Fly Number (PNR)",
+  "arrivalTime": "Arrival Time",
+  "passengers": "Passengers",
+  "passengers_plural": "({{number}} Passenger)",
+  "bill": "Bill"
 }

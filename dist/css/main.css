@@ -1009,6 +1009,9 @@ video {
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
+.ms-4 {
+  margin-inline-start: 1rem;
+}
 .ms-8 {
   margin-inline-start: 2rem;
 }
@@ -2326,6 +2329,10 @@ video {
 }
 .p-\[3px\] {
   padding: 3px;
+}
+.\!py-0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 .\!py-8 {
   padding-top: 2rem !important;

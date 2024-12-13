@@ -52,17 +52,6 @@ eval("\n\nconst consoleLogger = {\n  type: 'logger',\n  log(args) {\n    this.ou
 
 /***/ }),
 
-/***/ "./src/ts/exchangeableInput.ts":
-/*!*************************************!*\
-  !*** ./src/ts/exchangeableInput.ts ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./i18n */ \"./src/ts/i18n.ts\");\nconst util_1 = __webpack_require__(/*! ./util */ \"./src/ts/util.ts\");\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    const destInput = document.getElementById(\"destination-input\");\n    const destInputToggle = document.getElementById(\"destination-input-toggle\");\n    const destRight = document.getElementById(\"destination-right\");\n    const destLeft = document.getElementById(\"destination-left\");\n    destInputToggle === null || destInputToggle === void 0 ? void 0 : destInputToggle.addEventListener(\"click\", () => {\n        (0, util_1.inputExchange)(destRight, destLeft);\n        switch (destRight === null || destRight === void 0 ? void 0 : destRight.getAttribute(\"data-i18n\")) {\n            case \"[placeholder]fromHotel\":\n                destRight.setAttribute(\"data-i18n\", \"[placeholder]fromAirport\");\n                destRight.setAttribute(\"aria-label\", \"From Airport\");\n                (0, util_1.retranslate)(destInput);\n                break;\n            case \"[placeholder]fromAirport\":\n                destRight.setAttribute(\"data-i18n\", \"[placeholder]fromHotel\");\n                destRight.setAttribute(\"aria-label\", \"From Hotel\");\n                (0, util_1.retranslate)(destInput);\n                break;\n        }\n        switch (destLeft === null || destLeft === void 0 ? void 0 : destLeft.getAttribute(\"data-i18n\")) {\n            case \"[placeholder]toHotel\":\n                destLeft.setAttribute(\"data-i18n\", \"[placeholder]toAirport\");\n                destLeft.setAttribute(\"aria-label\", \"To Airport\");\n                (0, util_1.retranslate)(destInput);\n                break;\n            case \"[placeholder]toAirport\":\n                destLeft.setAttribute(\"data-i18n\", \"[placeholder]toHotel\");\n                destLeft.setAttribute(\"aria-label\", \"To Hotel\");\n                (0, util_1.retranslate)(destInput);\n                break;\n        }\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/exchangeableInput.ts?");
-
-/***/ }),
-
 /***/ "./src/ts/i18n.ts":
 /*!************************!*\
   !*** ./src/ts/i18n.ts ***!
@@ -74,14 +63,14 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
-/***/ "./src/ts/util.ts":
-/*!************************!*\
-  !*** ./src/ts/util.ts ***!
-  \************************/
+/***/ "./src/ts/transferForm.ts":
+/*!********************************!*\
+  !*** ./src/ts/transferForm.ts ***!
+  \********************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.retranslate = retranslate;\nexports.inputExchange = inputExchange;\nconst i18next_1 = __importDefault(__webpack_require__(/*! i18next */ \"./node_modules/i18next/dist/cjs/i18next.js\"));\nfunction retranslate(el) {\n    el.querySelectorAll(\"[data-i18n]\").forEach((element) => {\n        var _a;\n        const keys = ((_a = element.getAttribute(\"data-i18n\")) === null || _a === void 0 ? void 0 : _a.split(\";\")) || [];\n        keys.forEach((key) => {\n            const [attr, i18nKey] = key.includes(\"]\")\n                ? key.split(\"]\")\n                : [\"innerHTML\", key];\n            if (attr && i18nKey) {\n                if (attr === \"innerHTML\") {\n                    element.innerHTML = i18next_1.default.t(i18nKey);\n                }\n                else {\n                    element.setAttribute(attr.slice(1), i18next_1.default.t(i18nKey));\n                }\n            }\n        });\n    });\n}\nfunction inputExchange(src, dest) {\n    let rightV = src.value;\n    let leftV = dest.value;\n    (src.value = leftV), (dest.value = rightV);\n}\n\n\n//# sourceURL=webpack:///./src/ts/util.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst i18next_1 = __importDefault(__webpack_require__(/*! i18next */ \"./node_modules/i18next/dist/cjs/i18next.js\"));\n__webpack_require__(/*! ./i18n */ \"./src/ts/i18n.ts\");\nfunction updatePassengers() {\n    const elements = document.querySelectorAll(\".passenger_number\");\n    elements.forEach((el, index) => {\n        el.innerHTML = i18next_1.default.t(\"passengers_plural\", { number: index + 1 });\n    });\n}\ni18next_1.default.on(\"initialized\", () => {\n    updatePassengers();\n});\ni18next_1.default.on(\"languageChanged\", () => {\n    updatePassengers();\n});\n\n\n//# sourceURL=webpack:///./src/ts/transferForm.ts?");
 
 /***/ }),
 
@@ -295,8 +284,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/exchangeableInput.ts");
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/transferForm.ts");
 /******/ 	
 /******/ })()
 ;

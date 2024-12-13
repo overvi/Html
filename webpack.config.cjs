@@ -23,6 +23,7 @@ module.exports = (env) => {
       datepicker: "./src/ts/datepicker.ts",
       home: "./src/ts/index.ts",
       exchangeInput: "./src/ts/exchangeableInput.ts",
+      transferFrom: "./src/ts/transferForm.ts",
     },
     plugins: [
       new MiniCssExtractPlugin({
