@@ -1836,9 +1836,9 @@ video {
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
 }
-.rounded-b-\[10px\] {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+.rounded-b-\[20px\] {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .rounded-b-none {
   border-bottom-right-radius: 0px;
@@ -1864,9 +1864,9 @@ video {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
-.rounded-t-\[10px\] {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.rounded-t-\[20px\] {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .rounded-bl-3\.5xl {
   border-bottom-left-radius: 1.875rem;
@@ -1883,8 +1883,8 @@ video {
 .rounded-tl-3xl {
   border-top-left-radius: 1.5rem;
 }
-.rounded-tl-\[10px\] {
-  border-top-left-radius: 10px;
+.rounded-tl-\[20px\] {
+  border-top-left-radius: 20px;
 }
 .rounded-tl-\[21\.16px\] {
   border-top-left-radius: 21.16px;
@@ -1895,8 +1895,8 @@ video {
 .rounded-tr-3xl {
   border-top-right-radius: 1.5rem;
 }
-.rounded-tr-\[10px\] {
-  border-top-right-radius: 10px;
+.rounded-tr-\[20px\] {
+  border-top-right-radius: 20px;
 }
 .rounded-tr-\[21\.16px\] {
   border-top-right-radius: 21.16px;
@@ -2473,6 +2473,10 @@ video {
 .py-\[20px\] {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .\!pb-10 {
   padding-bottom: 2.5rem !important;
@@ -3395,6 +3399,10 @@ html[data-theme="dark"] .tabs {
   font-weight: 500;
 }
 
+.\*\:font-normal > * {
+  font-weight: 400;
+}
+
 .\*\:font-semibold > * {
   font-weight: 600;
 }
@@ -4289,8 +4297,8 @@ html[data-theme="dark"] .tabs {
   border-top-left-radius: 1.5rem;
 }
 
-.ltr\:rounded-tl-\[10px\]:where([dir="ltr"], [dir="ltr"] *) {
-  border-top-left-radius: 10px;
+.ltr\:rounded-tl-\[20px\]:where([dir="ltr"], [dir="ltr"] *) {
+  border-top-left-radius: 20px;
 }
 
 .ltr\:rounded-tl-\[21\.16px\]:where([dir="ltr"], [dir="ltr"] *) {
@@ -4309,8 +4317,8 @@ html[data-theme="dark"] .tabs {
   border-top-right-radius: 1.5rem;
 }
 
-.ltr\:rounded-tr-\[10px\]:where([dir="ltr"], [dir="ltr"] *) {
-  border-top-right-radius: 10px;
+.ltr\:rounded-tr-\[20px\]:where([dir="ltr"], [dir="ltr"] *) {
+  border-top-right-radius: 20px;
 }
 
 .ltr\:rounded-tr-\[21\.16px\]:where([dir="ltr"], [dir="ltr"] *) {
