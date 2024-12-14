@@ -300,5 +300,13 @@
   "arrivalTime": "Arrival Time",
   "passengers": "Passengers",
   "passengers_plural": "({{number}} Passenger)",
-  "bill": "Bill"
+  "bill": "Bill",
+  "transferVoucher": "Transfer Voucher",
+  "coordinatorInformation": "Coordinator Information",
+  "gateNumber": "Gate Number",
+  "row": "row",
+  "description": "Description",
+  "dateAndTime": "Date And Time",
+  "passengerDetails": "Passengers Details",
+  "flyDetails": "Fly Details"
 }

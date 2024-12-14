@@ -306,5 +306,13 @@
   "arrivalTime": "ساعت رسیدن به فرودگاه",
   "passengers": "مسافران ",
   "passengers_plural": "(نفر {{number}})",
-  "bill": "صورتحساب"
+  "bill": "صورتحساب",
+  "transferVoucher": "واچر ترانسفر",
+  "coordinatorInformation": "اطلاعات هماهنگ کننده (راننده)",
+  "gateNumber": "شماره گیت",
+  "row": "ردیف",
+  "description": "شرح",
+  "dateAndTime": "تاریخ و زمان",
+  "passengerDetails": "اطلاعات مسافران",
+  "flyDetails": "اطلاعات پرواز"
 }
