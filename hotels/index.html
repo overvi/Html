@@ -1822,7 +1822,7 @@
                     class="flex group toggle-room-filter peer items-center input is-rounded justify-between w-full"
                   >
                     <p id="room-details" aria-live="polite">
-                      <span id="t-count">0</span> مسافر ,
+                      <span id="t-count">6</span> مسافر ,
                       <span id="room-count">1</span> اتاق
                     </p>
 
@@ -1885,7 +1885,7 @@
                                 </svg>
                               </button>
                               <p aria-live="polite" class="mt-1 parent-count">
-                                0
+                                4
                               </p>
                               <button
                                 aria-label="Increment Adult"
@@ -1936,7 +1936,7 @@
                                 </svg>
                               </button>
                               <p class="mt-1 child-count" aria-live="polite">
-                                0
+                                2
                               </p>
                               <button
                                 aria-label="Increase Child"
@@ -1963,7 +1963,37 @@
                             </div>
                           </div>
 
-                          <div class="child-fields"></div>
+                          <div class="child-fields">
+                            <div class="select mt-5 is-rounded w-full">
+                              <select
+                                class="select-age rounded-full w-full placeholder:!font-yekan"
+                                data-i18n="[placeholder]all"
+                                aria-label="Select Child Age"
+                                id="${selectId}"
+                              >
+                                <option value="" disabled selected>
+                                  سن کودک اول
+                                </option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                              </select>
+                            </div>
+                            <div class="select mt-5 is-rounded w-full">
+                              <select
+                                class="select-age rounded-full w-full placeholder:!font-yekan"
+                                data-i18n="[placeholder]all"
+                                aria-label="Select Child Age"
+                                id="${selectId}"
+                              >
+                                <option value="" disabled selected>
+                                  سن کودک دوم
+                                </option>
+
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
 

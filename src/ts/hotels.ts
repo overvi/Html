@@ -190,8 +190,8 @@ for (let i = 0; i < CHILD_LIMIT; i++) {
 const tCount = document.getElementById("t-count") as HTMLElement;
 const roomCount = document.getElementById("room-count") as HTMLElement;
 
-let totalRoomsCount = 1;
-let totalPersons = 0;
+let totalRoomsCount = parseInt(roomCount.textContent!);
+let totalPersons = parseInt(tCount.textContent!);
 
 function updateTotal() {
   tCount.textContent = String(totalPersons);
@@ -208,7 +208,7 @@ class IncrementDecrement {
   ) {
     this.current = current;
 
-    this._count = this.init || 0;
+    this._count = parseInt(current.textContent!);
     this.limit = limit;
   }
 
@@ -315,6 +315,7 @@ const renderRooms = (room: HTMLElement) => {
   });
 
   decrementChild?.addEventListener("click", () => {
+    console.log(child.count);
     if (child.count > 0 && childFields.lastElementChild) {
       childFields.removeChild(childFields.lastElementChild);
       child.decrement();
