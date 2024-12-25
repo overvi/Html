@@ -2,7 +2,6 @@ import "toolcool-range-slider";
 import "mapbox-gl/dist/mapbox-gl.css";
 import i18next from "i18next";
 import "./i18n";
-import Pagination from "./pagination";
 import { retranslate } from "./util";
 import "./datepicker";
 import "./carousel";
@@ -173,8 +172,6 @@ collapseToggleText.forEach((toggle, index) => {
 
 // Pagaination
 
-Pagination(".c-c", ".c-c .c-c-item", 3);
-
 // Filters
 
 const CHILD_LIMIT = 4;
@@ -315,7 +312,6 @@ const renderRooms = (room: HTMLElement) => {
   });
 
   decrementChild?.addEventListener("click", () => {
-    console.log(child.count);
     if (child.count > 0 && childFields.lastElementChild) {
       childFields.removeChild(childFields.lastElementChild);
       child.decrement();

@@ -1147,6 +1147,10 @@ video {
   width: 26.67px;
   height: 26.67px;
 }
+.size-\[28px\] {
+  width: 28px;
+  height: 28px;
+}
 .size-\[32px\] {
   width: 32px;
   height: 32px;
@@ -2710,6 +2714,9 @@ video {
 }
 .leading-\[10rem\] {
   line-height: 10rem;
+}
+.leading-none {
+  line-height: 1;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
