@@ -1,5 +1,6 @@
 import "./carousel";
 import "./filter-popover";
+import "./i18n";
 
 // Tables
 
