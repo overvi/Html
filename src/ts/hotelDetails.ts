@@ -1,4 +1,5 @@
 import "./carousel";
+import "./filter-popover";
 
 // Tables
 

@@ -16,6 +16,7 @@ module.exports = (env) => {
       modal: "./src/ts/modal.ts",
       login: "./src/ts/login.ts",
       tabs: "./src/ts/tabs.ts",
+      filter: "./src/ts/filter-popover.ts",
       log: "./src/ts/log.ts",
       darkMode: "./src/ts/darkMode.ts",
       i18n: "./src/ts/i18n.ts",

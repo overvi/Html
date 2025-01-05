@@ -1547,6 +1547,206 @@
                   </div>
                 </div>
               </div>
+              <div class="z-0 relative basis-[35%] font-medium">
+                <button
+                  class="flex group toggle-room-filter peer items-center input is-rounded justify-between w-full"
+                >
+                  <p id="room-details" aria-live="polite">
+                    <span id="t-count">6</span> مسافر ,
+                    <span id="room-count">1</span> اتاق
+                  </p>
+
+                  <svg
+                    class="group-[.opened-filter]:rotate-180"
+                    aria-hidden="hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6199 5.22266L7.81655 9.02599C7.36738 9.47516 6.63238 9.47516 6.18322 9.02599L2.37988 5.22266"
+                      stroke="#B0B0B0"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  id="room-filter"
+                  class="absolute hidden theme-color--primary right-0 rounded-b-3.5xl left-0 -z-50 rounded-t-3.5xl top-0 pb-2 border"
+                >
+                  <div class="pt-14 px-2">
+                    <div
+                      id="rooms"
+                      class="max-h-[33.125rem] overflow-auto rooms-scroll"
+                    >
+                      <div class="room pl-2">
+                        <div class="flex items-center justify-between">
+                          <p>اتاق 1</p>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-between w-full"
+                        >
+                          <p data-i18n="adult"></p>
+                          <div class="flex items-center gap-2">
+                            <button
+                              aria-label="Decrease Adult"
+                              class="bg-gray-200 decrement-adult size-[20px] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6 12L18 12"
+                                  class="stroke-gray-400"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                            <p aria-live="polite" class="mt-1 parent-count">
+                              4
+                            </p>
+                            <button
+                              aria-label="Increment Adult"
+                              class="bg-primary-100 increment-adult size-[20px] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  id="Vector"
+                                  d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                                  class="stroke-primary-400"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center mt-4 justify-between w-full"
+                        >
+                          <p data-i18n="child"></p>
+                          <div class="flex items-center gap-2">
+                            <button
+                              aria-label="Decrease Child"
+                              class="bg-gray-200 decrement-child size-[20px] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6 12L18 12"
+                                  class="stroke-gray-400"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                            <p class="mt-1 child-count" aria-live="polite">2</p>
+                            <button
+                              aria-label="Increase Child"
+                              class="bg-primary-100 increment-child size-[20px] rounded-full flex items-center justify-center"
+                            >
+                              <svg
+                                role="img"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  id="Vector"
+                                  d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                                  class="stroke-primary-400"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="child-fields">
+                          <div class="select mt-5 is-rounded w-full">
+                            <select
+                              class="select-age rounded-full w-full placeholder:!font-yekan"
+                              data-i18n="[placeholder]all"
+                              aria-label="Select Child Age"
+                              id="${selectId}"
+                            >
+                              <option value="" disabled selected>
+                                سن کودک اول
+                              </option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                            </select>
+                          </div>
+                          <div class="select mt-5 is-rounded w-full">
+                            <select
+                              class="select-age rounded-full w-full placeholder:!font-yekan"
+                              data-i18n="[placeholder]all"
+                              aria-label="Select Child Age"
+                              id="${selectId}"
+                            >
+                              <option value="" disabled selected>
+                                سن کودک دوم
+                              </option>
+
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 mt-14">
+                      <div
+                        class="border basis-[60%] border-primary-400 text-primary-400 px-2 rounded-full"
+                      >
+                        <button
+                          class="min-h-[2.5rem] w-full"
+                          id="add-new-room"
+                          data-i18n="addNewRoom"
+                        ></button>
+                      </div>
+                      <div
+                        class="bg-green-500 basis-[40%] text-white rounded-full"
+                      >
+                        <button
+                          class="min-h-[2.5rem] w-full toggle-room-filter"
+                          data-i18n="accept"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="pb-5 pt-4 border-b theme-color-border">
                 <p data-i18n="price" class="font-bold"></p>
