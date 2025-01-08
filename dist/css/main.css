@@ -3667,9 +3667,9 @@ html[data-theme="dark"] .tabs {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.before\:transition-all::before {
+.before\:transition-\[top\]::before {
   content: var(--tw-content);
-  transition-property: all;
+  transition-property: top;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
