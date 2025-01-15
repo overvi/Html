@@ -549,6 +549,9 @@ video {
     font-family: "Yekan", "sens-serif";
   }
 
+  .popover-triangle::before {
+  clip-path: polygon(49% 32%,0% 100%,100% 100%);
+}
   .radio {
   position: relative;
   margin-right: 0.5rem;
@@ -560,7 +563,6 @@ video {
   --tw-content: none;
   content: var(--tw-content);
 }
-
   .radio::after {
   position: absolute;
   top: 50%;
@@ -581,9 +583,6 @@ video {
   transition-duration: 150ms;
 }
 
-  .popover-triangle::before {
-  clip-path: polygon(49% 32%,0% 100%,100% 100%);
-}
 
   .radio-hidden:checked + .radio::after {
   opacity: 1;
@@ -1225,9 +1224,6 @@ video {
 }
 .h-\[206px\] {
   height: 206px;
-}
-.h-\[27rem\] {
-  height: 27rem;
 }
 .h-\[30px\] {
   height: 30px;
@@ -3233,6 +3229,18 @@ html:not([data-scroll="0"]) .scroll-based-sidebar {
   --tw-rotate: 134deg !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
+.litepicker .container__months .month-item:first-child .button-previous-month:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-rotate: 180deg !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+.litepicker .container__months .month-item:first-child .button-next-month:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-rotate: 180deg !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+.litepicker .container__months .month-item-header div>.month-item-year:where([data-theme="dark"], [data-theme="dark"] *) {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
 
 :root {
   --bulma-block-spacing: 0;
@@ -3247,12 +3255,16 @@ html:not([data-scroll="0"]) .scroll-based-sidebar {
   --tc-bg-hover: #f6f6f6;
 
   --litepicker-is-end-color-bg: #f9b233;
+  
 }
 
 [data-theme="dark"] {
   --bulma-text: white;
   --tc-bg: #6d6d6d;
   --tc-bg-hover: #6d6d6d;
+  --litepicker-container-months-color-bg: #616161;
+  --litepicker-day-color: #fff
+  --litepicker-month-header-color: #fff;
 }
 
 .tc-range {

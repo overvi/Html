@@ -15,12 +15,16 @@
   --tc-bg-hover: #f6f6f6;
 
   --litepicker-is-end-color-bg: #f9b233;
+  
 }
 
 [data-theme="dark"] {
   --bulma-text: white;
   --tc-bg: #6d6d6d;
   --tc-bg-hover: #6d6d6d;
+  --litepicker-container-months-color-bg: #616161;
+  --litepicker-day-color: #fff
+  --litepicker-month-header-color: #fff;
 }
 
 .tc-range {
@@ -85,13 +89,13 @@ html[data-theme="dark"] .tabs {
     font-family: "Yekan", "sens-serif";
   }
 
+  .popover-triangle::before {
+    @apply [clip-path:polygon(49%_32%,0%_100%,100%_100%)];
+  }
   .radio {
     @apply after:transition-all content-none after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 after:top-[50%] after:left-[50%]  after:size-[14px] after:rounded-[50%] after:border-4 after:border-primary-400 size-4 rounded-[50%] border relative inline-block after:absolute mr-2;
   }
 
-  .popover-triangle::before {
-    @apply [clip-path:polygon(49%_32%,0%_100%,100%_100%)];
-  }
 
   .radio-hidden:checked + .radio::after {
     @apply opacity-100;
@@ -316,5 +320,16 @@ html[data-theme="dark"] .tabs {
 
   .select:has(select:focus)::after {
     @apply !rotate-[134deg]  !-mt-[.1375em];
+  }
+
+  .litepicker .container__months .month-item:first-child .button-previous-month {
+    @apply rtl:!rotate-180
+  }
+  .litepicker .container__months .month-item:first-child .button-next-month{
+    @apply rtl:!rotate-180
+  }
+
+  .litepicker .container__months .month-item-header div>.month-item-year{
+    @apply dark:!text-white
   }
 }
