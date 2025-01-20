@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,85 @@
     <script defer src="/dist/js/i18n.bundle.js"></script>
 
     <title>Vocuher</title>
+
+    <style>
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        body {
+          color: black;
+          background-color: white;
+          font-size: 12px;
+          line-height: 1.6;
+        }
+        header,
+        main,
+        section,
+        article {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+        }
+        header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          padding-bottom: 10px;
+        }
+
+        header img {
+          max-width: 100px;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        #info {
+          font-size: 10px;
+        }
+        #info .placeholder {
+          background-color: #f6f6f6 !important;
+          print-color-adjust: exact !important;
+          height: 3rem !important;
+        }
+        th {
+          background-color: #f6f6f6 !important;
+        }
+        tbody tr:nth-child(even) {
+          background-color: #f9f9f9 !important;
+        }
+        ul {
+          list-style-type: disc;
+          margin-left: 20px;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+        .hidden-print {
+          display: none !important;
+        }
+        .space-y-10,
+        .space-y-8,
+        .gap-10,
+        .gap-4,
+        .gap-2 {
+          margin: 0;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-white dark:text-white dark:bg-gray-900">
+  <body class="bg-white dark:text-white">
     <main class="p-4 space-y-10">
       <header class="flex justify-between">
         <div class="flex gap-7 basis-[60%] items-center">
-          <div class="bg-slate-100 dark:bg-gray-700 p-3 rounded-2xl">
+          <div class="theme-color--neutral .div p-3 rounded-2xl">
             <div style="translate: 0 -45%">
               <img
                 class="m-auto"
@@ -25,7 +98,7 @@
             <p class="font-bold">هفت هشتاد</p>
           </div>
           <div
-            class="bg-slate-100 dark:bg-gray-700 basis-[60%] font-semibold rounded-2xl p-3"
+            class="theme-color--neutral .div basis-[60%] font-semibold rounded-2xl p-3"
           >
             <div class="flex items-center gap-2">
               <p data-i18n="phoneNumber"></p>
@@ -54,10 +127,10 @@
         </div>
       </header>
       <div class="flex gap-10 items-center *:basis-full">
-        <img width="500" src="/public/assets/images/Rectangle 449.png" alt="" />
-        <div>
+        <img width="350" src="/public/assets/images/Rectangle 449.png" alt="" />
+        <div id="info">
           <div
-            class="h-20 w-full bg-slate-50 dark:bg-gray-700 rounded-t-2xl"
+            class="self-start h-20 placeholder w-full theme-color--neutral rounded-t-2xl"
           ></div>
           <div class="flex gap-4 border rounded-b-2xl">
             <div
@@ -92,92 +165,90 @@
         >
           اطلاعات رزرو
         </h2>
-        <div
-          class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-        >
-          <table class="w-full font-semibold">
-            <thead class="bg-gray-50 dark:bg-gray-950">
-              <tr>
-                <th>
-                  <p class="p-5">تاریخ ورود</p>
-                </th>
-                <th>
-                  <p class="p-2">تاریخ خروج</p>
-                </th>
-                <th c>
-                  <p class="p-2">تعداد شب</p>
-                </th>
-                <th>
-                  <p class="p-2">تعداد اتاق</p>
-                </th>
-                <th>
-                  <p class="p-2">بزرگ‌سال</p>
-                </th>
-                <th>
-                  <p class="p-2">کودک</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="*:border-r">
-                <td>
-                  <p class="p-5 text-center">Test 3232</p>
-                </td>
-                <td><p class="p-4 text-center">اتاق دو</p></td>
-                <td><p class="p-4 text-center">عادی</p></td>
-                <td><p class="p-4 text-center">صبحانه</p></td>
-                <td><p class="p-4 text-center">عادی</p></td>
-                <td><p class="p-4 text-center">صبحانه</p></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table class="w-full font-semibold">
+          <thead>
+            <tr class="*:theme-color--neutral">
+              <th class="rounded-tr-2xl ltr:rounded-tr-0 ltr:rounded-tl-2xl">
+                <p class="p-5">تاریخ ورود</p>
+              </th>
+              <th>
+                <p class="p-2">تاریخ خروج</p>
+              </th>
+              <th c>
+                <p class="p-2">تعداد شب</p>
+              </th>
+              <th>
+                <p class="p-2">تعداد اتاق</p>
+              </th>
+              <th>
+                <p class="p-2">بزرگ‌سال</p>
+              </th>
+              <th class="rounded-tl-2xl ltr:rounded-tl-0 ltr:rounded-tr-2xl">
+                <p class="p-2">کودک</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="shadow-tbody dark:shadow-tbody-dark rounded-b-2xl">
+            <tr
+              class="[&:not(:first-child)]:*:border-r *:dark:border-storm-500 ltr:[&:not(:last-child)]:*:border-r"
+            >
+              <td>
+                <p class="p-5 text-center">Test 3232</p>
+              </td>
+              <td><p class="p-4 text-center">اتاق دو</p></td>
+              <td><p class="p-4 text-center">عادی</p></td>
+              <td><p class="p-4 text-center">صبحانه</p></td>
+              <td><p class="p-4 text-center">عادی</p></td>
+              <td><p class="p-4 text-center">صبحانه</p></td>
+            </tr>
+          </tbody>
+        </table>
+
         <h2
           data-i18n="roomDetails"
           class="font-semibold text-2xl border-b-2 pb-2"
         >
           اطلاعات اتاق
         </h2>
-        <div
-          class="overflow-hidden border-collapse border mt-7 rounded-3xl dark:border-gray-700"
-        >
-          <table class="w-full font-semibold">
-            <thead class="bg-gray-50 dark:bg-gray-950">
-              <tr>
-                <th>
-                  <p class="p-5">تاریخ ورود</p>
-                </th>
-                <th>
-                  <p class="p-2">تاریخ خروج</p>
-                </th>
-                <th c>
-                  <p class="p-2">تعداد شب</p>
-                </th>
-                <th>
-                  <p class="p-2">تعداد اتاق</p>
-                </th>
-                <th>
-                  <p class="p-2">بزرگ‌سال</p>
-                </th>
-                <th>
-                  <p class="p-2">کودک</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="*:border-r">
-                <td>
-                  <p class="p-5 text-center">Test 3232</p>
-                </td>
-                <td><p class="p-4 text-center">اتاق دو</p></td>
-                <td><p class="p-4 text-center">عادی</p></td>
-                <td><p class="p-4 text-center">صبحانه</p></td>
-                <td><p class="p-4 text-center">عادی</p></td>
-                <td><p class="p-4 text-center">صبحانه</p></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+        <table class="w-full font-semibold">
+          <thead class="bg-gray-50 dark:bg-gray-950">
+            <tr class="*:theme-color--neutral">
+              <th class="rounded-tr-2xl ltr:rounded-tr-0 ltr:rounded-tl-2xl">
+                <p class="p-5">تاریخ ورود</p>
+              </th>
+              <th>
+                <p class="p-2">تاریخ خروج</p>
+              </th>
+              <th c>
+                <p class="p-2">تعداد شب</p>
+              </th>
+              <th>
+                <p class="p-2">تعداد اتاق</p>
+              </th>
+              <th>
+                <p class="p-2">بزرگ‌سال</p>
+              </th>
+              <th class="rounded-tl-2xl ltr:rounded-tl-0 ltr:rounded-tr-2xl">
+                <p class="p-2">کودک</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="shadow-tbody dark:shadow-tbody-dark rounded-b-2xl">
+            <tr
+              class="[&:not(:first-child)]:*:border-r *:dark:border-storm-500 ltr:[&:not(:last-child)]:*:border-r"
+            >
+              <td>
+                <p class="p-5 text-center">Test 3232</p>
+              </td>
+              <td><p class="p-4 text-center">اتاق دو</p></td>
+              <td><p class="p-4 text-center">عادی</p></td>
+              <td><p class="p-4 text-center">صبحانه</p></td>
+              <td><p class="p-4 text-center">عادی</p></td>
+              <td><p class="p-4 text-center">صبحانه</p></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <section class="space-y-8">
         <article class="p-3">
