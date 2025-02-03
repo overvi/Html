@@ -76,11 +76,11 @@ export default function Pagination(
       for (let i = 1; i <= totalPages; i++) {
         const li = document.createElement("li");
         li.innerHTML = `
-                <button class="${
+                <button class="size-[1.356875rem] ${
                   i === page
-                    ? "rounded-full px-3  bg-primary-400 text-white border-0"
-                    : "rounded-full px-3  border border-storm-200 shadow-xl"
-                } py-0 flex items-center justify-center button">
+                    ? "rounded-full    bg-primary-400 text-white border-0"
+                    : "rounded-full   border border-storm-200 border-solid shadow-xl"
+                } py-0 flex items-center  justify-center ">
                   <p class="mt-1">${i}</p>
                 </button>
               `;
