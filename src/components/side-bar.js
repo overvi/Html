@@ -132,6 +132,7 @@ style="transform-style : preserve-3d"
     let currentPage = window.location.pathname;
 
     const homeRoutes = ["/", "/hotels", "/hotels/1"];
+    const finance = "/finance";
     const bookingRoutes = ["/booking", "/reservation", "/reservation/1"];
     const tabs = document.querySelectorAll(".side-tab");
 
@@ -144,6 +145,8 @@ style="transform-style : preserve-3d"
         tabs[1].classList.add("active-side-section");
       } else if (homeRoutes.includes(currentPage)) {
         tabs[0].classList.add("active-side-section");
+      } else if (finance.includes(currentPage)) {
+        tabs[tabs.length - 1].classList.add("active-side-section");
       }
     }
   }

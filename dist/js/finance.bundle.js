@@ -20,13 +20,13 @@ eval("\n\nconst consoleLogger = {\n  type: 'logger',\n  log(args) {\n    this.ou
 
 /***/ }),
 
-/***/ "./src/ts/log.ts":
-/*!***********************!*\
-  !*** ./src/ts/log.ts ***!
-  \***********************/
+/***/ "./src/ts/finance.ts":
+/*!***************************!*\
+  !*** ./src/ts/finance.ts ***!
+  \***************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst pagination_1 = __importDefault(__webpack_require__(/*! ./pagination */ \"./src/ts/pagination.ts\"));\n(0, pagination_1.default)(\"#t-all tbody\", \"#t-all tbody tr\", 5, \"-all\");\n(0, pagination_1.default)(\"#t-hotel tbody\", \"#t-hotel tbody tr\", 5, \"-hotel\");\n(0, pagination_1.default)(\"#t-transfer tbody\", \"#t-transfer tbody tr\", 5, \"-transfer\");\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    const datepickerContainers = document.querySelectorAll(\".dp-wrapper\");\n    datepickerContainers.forEach((dp) => {\n        const exchangeDate = dp.querySelector(\".exchange-date\");\n        const datepickers = dp.querySelectorAll(\".datepicker\");\n        const datePickerValues = dp.querySelectorAll(\".datepicker-value\");\n        const src = datepickers[0];\n        const dest = datepickers[1];\n        exchangeDate === null || exchangeDate === void 0 ? void 0 : exchangeDate.addEventListener(\"click\", () => {\n            const srcV = src.value;\n            const destV = dest.value;\n            if (destV && srcV) {\n                src.value = destV;\n                dest.value = srcV;\n                datePickerValues[0].innerHTML = destV;\n                datePickerValues[1].innerHTML = srcV;\n            }\n        });\n    });\n});\n\n\n//# sourceURL=webpack:///./src/ts/log.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst pagination_1 = __importDefault(__webpack_require__(/*! ./pagination */ \"./src/ts/pagination.ts\"));\n(0, pagination_1.default)(\"#t-finance tbody\", \"#t-finance tbody tr\", 2, \"-all\");\n\n\n//# sourceURL=webpack:///./src/ts/finance.ts?");
 
 /***/ }),
 
@@ -81,7 +81,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/log.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/finance.ts");
 /******/ 	
 /******/ })()
 ;

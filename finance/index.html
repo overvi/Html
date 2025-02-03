@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en, ir" />
+    <meta name="description" content="Mangootels" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief description of your website."
+    />
+    <meta property="og:image" content="URL to your image" />
+
+    <script src="/dist/js/darkMode.bundle.js"></script>
+    <script src="/dist/js/i18n.bundle.js"></script>
+    <script defer src="/dist/js/main.bundle.js"></script>
+
+    <script defer src="/dist/js/sidebar.bundle.js"></script>
+    <script defer src="/src/components/side-bar.js"></script>
+
+    <script src="/src/components/nav.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+
+    <title>Messages</title>
+  </head>
+  <body>
+    <main>
+      <nav-bar></nav-bar>
+      <div class="flex gap-6 xxl:gap-13 c-w">
+        <side-bar></side-bar>
+
+        <div class="w-full mt-8">
+          <div class="flex gap-2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              class="dark:fill-transparent"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.765 2.13012L2.7225 5.28012C2.0475 5.80512 1.5 6.92262 1.5 7.77012V13.3276C1.5 15.0676 2.9175 16.4926 4.6575 16.4926H13.3425C15.0825 16.4926 16.5 15.0676 16.5 13.3351V7.87512C16.5 6.96762 15.8925 5.80512 15.15 5.28762L10.515 2.04012C9.465 1.30512 7.7775 1.34262 6.765 2.13012Z"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 13.4924V11.2424"
+                stroke="gray"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <a href="/nav" class="text-gray-400" data-i18n="nav"></a>
+            <p class="text-gray-400">/</p>
+            <a href="/finance" data-i18n="finance"></a>
+          </div>
+          <div class="mt-5 min-h-[80vh] theme-color--primary rounded-3xl p-5">
+            <div class="grid grid-cols-4 gap-5">
+              <div
+                class="flex items-center gap-5 theme-color--neutral rounded-3.5xl p-5"
+              >
+                <img
+                  width="91"
+                  src="/public/assets/images/finance-customer.png"
+                  alt=""
+                />
+                <div class="text-nowrap">
+                  <div class="flex items-center">
+                    <p data-i18n="customerName"></p>
+                    <span>:</span>
+                  </div>
+                  <p class="font-semibold text-2xl mt-1">هف هشتاد</p>
+                </div>
+              </div>
+              <div class="gap-5 theme-color--neutral rounded-3.5xl p-5">
+                <div
+                  class="rounded-full size-fit theme-color--primary p-[11px]"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M15.9993 29.1999C23.3631 29.1999 29.3327 23.2303 29.3327 15.8665C29.3327 8.50274 23.3631 2.5332 15.9993 2.5332C8.63555 2.5332 2.66602 8.50274 2.66602 15.8665C2.66602 23.2303 8.63555 29.1999 15.9993 29.1999Z"
+                      fill="#F9B233"
+                    />
+                    <path
+                      d="M19.0135 16L17.0002 15.2933V10.7733H17.4802C18.5602 10.7733 19.4402 11.72 19.4402 12.88C19.4402 13.4267 19.8935 13.88 20.4402 13.88C20.9869 13.88 21.4402 13.4267 21.4402 12.88C21.4402 10.6133 19.6669 8.77333 17.4802 8.77333H17.0002V8C17.0002 7.45333 16.5469 7 16.0002 7C15.4535 7 15.0002 7.45333 15.0002 8V8.77333H14.1335C12.1602 8.77333 10.5469 10.44 10.5469 12.48C10.5469 14.8667 11.9335 15.6267 12.9869 16L15.0002 16.7067V21.2133H14.5202C13.4402 21.2133 12.5602 20.2667 12.5602 19.1067C12.5602 18.56 12.1069 18.1067 11.5602 18.1067C11.0135 18.1067 10.5602 18.56 10.5602 19.1067C10.5602 21.3733 12.3335 23.2133 14.5202 23.2133H15.0002V24C15.0002 24.5467 15.4535 25 16.0002 25C16.5469 25 17.0002 24.5467 17.0002 24V23.2267H17.8669C19.8402 23.2267 21.4535 21.56 21.4535 19.52C21.4402 17.12 20.0535 16.36 19.0135 16ZM13.6535 14.12C12.9735 13.88 12.5602 13.6533 12.5602 12.4933C12.5602 11.5467 13.2669 10.7867 14.1469 10.7867H15.0135V14.6L13.6535 14.12ZM17.8669 21.2267H17.0002V17.4133L18.3469 17.88C19.0269 18.12 19.4402 18.3467 19.4402 19.5067C19.4402 20.4533 18.7335 21.2267 17.8669 21.2267Z"
+                      fill="#F9B233"
+                    />
+                  </svg>
+                </div>
+                <div class="flex justify-end">
+                  <div class="text-nowrap">
+                    <p
+                      class="text-end text-storm-300"
+                      data-i18n="remaining"
+                    ></p>
+
+                    <p class="font-semibold text-primary-400 text-2xl mt-1">
+                      USD 3,194.80
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="gap-5 theme-color--neutral rounded-3.5xl p-5">
+                <div class="rounded-full size-fit bg-primary-400 p-[11px]">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M22.666 10.3327C22.4127 10.3327 22.1593 10.2393 21.9593 10.0393C21.5727 9.65268 21.5727 9.01268 21.9593 8.62602L24.6927 5.89268C22.346 3.89268 19.3193 2.66602 15.9993 2.66602C8.63935 2.66602 2.66602 8.63935 2.66602 15.9993C2.66602 23.3593 8.63935 29.3327 15.9993 29.3327C23.3593 29.3327 29.3327 23.3593 29.3327 15.9993C29.3327 12.6793 28.106 9.65269 26.106 7.30602L23.3727 10.0393C23.1727 10.2393 22.9193 10.3327 22.666 10.3327Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M18.3327 15.76L16.9993 15.2933V12.3333H17.106C17.786 12.3333 18.3327 12.9333 18.3327 13.6667C18.3327 14.2133 18.786 14.6667 19.3327 14.6667C19.8793 14.6667 20.3327 14.2133 20.3327 13.6667C20.3327 11.8267 18.8927 10.3333 17.106 10.3333H16.9993V10C16.9993 9.45333 16.546 9 15.9993 9C15.4527 9 14.9993 9.45333 14.9993 10V10.3333H14.5994C12.986 10.3333 11.666 11.6933 11.666 13.3733C11.666 15.32 12.7993 15.9467 13.666 16.2533L14.9993 16.72V19.68H14.8927C14.2127 19.68 13.666 19.08 13.666 18.3467C13.666 17.8 13.2127 17.3467 12.666 17.3467C12.1193 17.3467 11.666 17.8 11.666 18.3467C11.666 20.1867 13.106 21.68 14.8927 21.68H14.9993V22.0133C14.9993 22.56 15.4527 23.0133 15.9993 23.0133C16.546 23.0133 16.9993 22.56 16.9993 22.0133V21.68H17.3993C19.0127 21.68 20.3327 20.32 20.3327 18.64C20.3327 16.68 19.1993 16.0533 18.3327 15.76ZM14.3193 14.3467C13.866 14.1867 13.666 14.0933 13.666 13.36C13.666 12.7867 14.0927 12.32 14.5994 12.32H14.9993V14.5733L14.3193 14.3467ZM17.3993 19.6667H16.9993V17.4133L17.6794 17.6533C18.1327 17.8133 18.3327 17.9067 18.3327 18.64C18.3327 19.2 17.906 19.6667 17.3993 19.6667Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M30.253 2.28097C30.1463 2.04097 29.9597 1.84097 29.7063 1.7343C29.5863 1.68097 29.453 1.6543 29.3197 1.6543H23.9863C23.4397 1.6543 22.9863 2.10763 22.9863 2.6543C22.9863 3.20096 23.4397 3.6543 23.9863 3.6543H26.9063L24.6797 5.88097C25.1864 6.32097 25.653 6.78763 26.093 7.2943L28.3197 5.06764V8.00097C28.3197 8.54763 28.773 9.00097 29.3197 9.00097C29.8663 9.00097 30.3197 8.54763 30.3197 8.00097V2.66763C30.333 2.5343 30.3063 2.4143 30.253 2.28097Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="flex justify-end">
+                  <div class="text-nowrap">
+                    <p class="text-end text-storm-300" data-i18n="debtor"></p>
+
+                    <p class="font-semibold text-2xl mt-1">USD 3,194.80</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gap-5 theme-color--neutral rounded-3.5xl p-5">
+                <div class="rounded-full size-fit bg-primary-400 p-[11px]">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M22.666 10.3327C22.4127 10.3327 22.1593 10.2393 21.9593 10.0393C21.5727 9.65268 21.5727 9.01268 21.9593 8.62602L24.6927 5.89268C22.346 3.89268 19.3193 2.66602 15.9993 2.66602C8.63935 2.66602 2.66602 8.63935 2.66602 15.9993C2.66602 23.3593 8.63935 29.3327 15.9993 29.3327C23.3593 29.3327 29.3327 23.3593 29.3327 15.9993C29.3327 12.6793 28.106 9.65269 26.106 7.30602L23.3727 10.0393C23.1727 10.2393 22.9193 10.3327 22.666 10.3327Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M18.3327 15.76L16.9993 15.2933V12.3333H17.106C17.786 12.3333 18.3327 12.9333 18.3327 13.6667C18.3327 14.2133 18.786 14.6667 19.3327 14.6667C19.8793 14.6667 20.3327 14.2133 20.3327 13.6667C20.3327 11.8267 18.8927 10.3333 17.106 10.3333H16.9993V10C16.9993 9.45333 16.546 9 15.9993 9C15.4527 9 14.9993 9.45333 14.9993 10V10.3333H14.5994C12.986 10.3333 11.666 11.6933 11.666 13.3733C11.666 15.32 12.7993 15.9467 13.666 16.2533L14.9993 16.72V19.68H14.8927C14.2127 19.68 13.666 19.08 13.666 18.3467C13.666 17.8 13.2127 17.3467 12.666 17.3467C12.1193 17.3467 11.666 17.8 11.666 18.3467C11.666 20.1867 13.106 21.68 14.8927 21.68H14.9993V22.0133C14.9993 22.56 15.4527 23.0133 15.9993 23.0133C16.546 23.0133 16.9993 22.56 16.9993 22.0133V21.68H17.3993C19.0127 21.68 20.3327 20.32 20.3327 18.64C20.3327 16.68 19.1993 16.0533 18.3327 15.76ZM14.3193 14.3467C13.866 14.1867 13.666 14.0933 13.666 13.36C13.666 12.7867 14.0927 12.32 14.5994 12.32H14.9993V14.5733L14.3193 14.3467ZM17.3993 19.6667H16.9993V17.4133L17.6794 17.6533C18.1327 17.8133 18.3327 17.9067 18.3327 18.64C18.3327 19.2 17.906 19.6667 17.3993 19.6667Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M30.253 2.28097C30.1463 2.04097 29.9597 1.84097 29.7063 1.7343C29.5863 1.68097 29.453 1.6543 29.3197 1.6543H23.9863C23.4397 1.6543 22.9863 2.10763 22.9863 2.6543C22.9863 3.20096 23.4397 3.6543 23.9863 3.6543H26.9063L24.6797 5.88097C25.1864 6.32097 25.653 6.78763 26.093 7.2943L28.3197 5.06764V8.00097C28.3197 8.54763 28.773 9.00097 29.3197 9.00097C29.8663 9.00097 30.3197 8.54763 30.3197 8.00097V2.66763C30.333 2.5343 30.3063 2.4143 30.253 2.28097Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="flex justify-end">
+                  <div class="text-nowrap">
+                    <p class="text-end text-storm-300" data-i18n="creditor"></p>
+
+                    <p class="font-semibold text-2xl mt-1">USD 3,194.80</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-color-border mt-5">
+              <table id="t-finance" class="w-full">
+                <thead
+                  class="theme-color--neutral text-sm dark:theme-color--neutral"
+                >
+                  <tr class="*:align-middle *:font-medium">
+                    <th
+                      class="rounded-tr-3.5xl py-1 ltr:rounded-tr-none ltr:rounded-tl-3.5xl"
+                    >
+                      <p
+                        class="p-5 border-e dark:theme-color-border border-[#ECECEC]"
+                        data-i18n="reservationDate"
+                      ></p>
+                    </th>
+                    <th>
+                      <p
+                        class="p-5 text-nowrap dark:theme-color-border border-e border-[#ECECEC]"
+                        data-i18n="description"
+                      ></p>
+                    </th>
+                    <th>
+                      <p
+                        class="p-5 text-nowrap text-center dark:theme-color-border border-e border-[#ECECEC]"
+                        data-i18n="payWay"
+                      ></p>
+                    </th>
+                    <th>
+                      <p
+                        class="p-4 text-center dark:theme-color-border border-e border-[#ECECEC] text-nowrap"
+                        data-i18n="debtor"
+                      ></p>
+                    </th>
+                    <th class="w-[11%]">
+                      <p
+                        class="p-4 text-center dark:theme-color-border border-e border-[#ECECEC]"
+                        data-i18n="creditor"
+                      ></p>
+                    </th>
+                    <th>
+                      <p
+                        class="p-4 text-center dark:theme-color-border border-e border-[#ECECEC]"
+                        data-i18n="remaining"
+                      ></p>
+                    </th>
+                    <th
+                      class="rounded-tl-3.5xl py-2 ltr:rounded-tl-none ltr:rounded-tr-3.5xl"
+                    >
+                      <p
+                        class="p-4 text-center dark:theme-color-border"
+                        data-i18n="action"
+                      ></p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="shadow-tbody-light *:theme-color-border [&:not(:first-child)]:*:border-t *:border-[#ECECEC] dark:shadow-tbody-dark rounded-b-3.5xl"
+                >
+                  <tr class="*:align-middle *:ps-4 *:py-[26px]">
+                    <td>
+                      <p>1403/03/8 7:44</p>
+                    </td>
+                    <td>
+                      <div>
+                        <p>شماره رزرو: 778899000</p>
+                      </div>
+                    </td>
+                    <td><p class="text-center">درگاه پرداخت</p></td>
+                    <td>
+                      <p class="text-center">250.00 USD</p>
+                    </td>
+                    <td>
+                      <p>400.00 USD</p>
+                    </td>
+                    <td>
+                      <p class="text-center">150.00 USD</p>
+                    </td>
+
+                    <td class="">
+                      <div class="w-24 flex justify-center items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M12.2795 14.72C11.9895 14.43 11.5095 14.43 11.2195 14.72L10.4995 15.44V11.25C10.4995 10.84 10.1595 10.5 9.74945 10.5C9.33945 10.5 8.99945 10.84 8.99945 11.25V15.44L8.27945 14.72C7.98945 14.43 7.50945 14.43 7.21945 14.72C6.92945 15.01 6.92945 15.49 7.21945 15.78L9.21945 17.78C9.22945 17.79 9.23945 17.79 9.23945 17.8C9.29945 17.86 9.37945 17.91 9.45945 17.95C9.55945 17.98 9.64945 18 9.74945 18C9.84945 18 9.93945 17.98 10.0295 17.94C10.1195 17.9 10.1995 17.85 10.2795 17.78L12.2795 15.78C12.5695 15.49 12.5695 15.01 12.2795 14.72Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="*:align-middle *:ps-4 *:py-[26px]">
+                    <td>
+                      <p>1403/03/8 7:44</p>
+                    </td>
+                    <td>
+                      <div>
+                        <p>شماره رزرو: 778899000</p>
+                      </div>
+                    </td>
+                    <td><p class="text-center">درگاه پرداخت</p></td>
+                    <td>
+                      <p class="text-center">250.00 USD</p>
+                    </td>
+                    <td>
+                      <p>400.00 USD</p>
+                    </td>
+                    <td>
+                      <p class="text-center">150.00 USD</p>
+                    </td>
+
+                    <td class="">
+                      <div class="w-24 flex justify-center items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M12.2795 14.72C11.9895 14.43 11.5095 14.43 11.2195 14.72L10.4995 15.44V11.25C10.4995 10.84 10.1595 10.5 9.74945 10.5C9.33945 10.5 8.99945 10.84 8.99945 11.25V15.44L8.27945 14.72C7.98945 14.43 7.50945 14.43 7.21945 14.72C6.92945 15.01 6.92945 15.49 7.21945 15.78L9.21945 17.78C9.22945 17.79 9.23945 17.79 9.23945 17.8C9.29945 17.86 9.37945 17.91 9.45945 17.95C9.55945 17.98 9.64945 18 9.74945 18C9.84945 18 9.93945 17.98 10.0295 17.94C10.1195 17.9 10.1995 17.85 10.2795 17.78L12.2795 15.78C12.5695 15.49 12.5695 15.01 12.2795 14.72Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="*:align-middle *:ps-4 *:py-[26px]">
+                    <td>
+                      <p>1403/03/8 7:44</p>
+                    </td>
+                    <td>
+                      <div>
+                        <p>شماره رزرو: 778899000</p>
+                      </div>
+                    </td>
+                    <td><p class="text-center">درگاه پرداخت</p></td>
+                    <td>
+                      <p class="text-center">250.00 USD</p>
+                    </td>
+                    <td>
+                      <p>400.00 USD</p>
+                    </td>
+                    <td>
+                      <p class="text-center">150.00 USD</p>
+                    </td>
+
+                    <td class="">
+                      <div class="w-24 flex justify-center items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M12.2795 14.72C11.9895 14.43 11.5095 14.43 11.2195 14.72L10.4995 15.44V11.25C10.4995 10.84 10.1595 10.5 9.74945 10.5C9.33945 10.5 8.99945 10.84 8.99945 11.25V15.44L8.27945 14.72C7.98945 14.43 7.50945 14.43 7.21945 14.72C6.92945 15.01 6.92945 15.49 7.21945 15.78L9.21945 17.78C9.22945 17.79 9.23945 17.79 9.23945 17.8C9.29945 17.86 9.37945 17.91 9.45945 17.95C9.55945 17.98 9.64945 18 9.74945 18C9.84945 18 9.93945 17.98 10.0295 17.94C10.1195 17.9 10.1995 17.85 10.2795 17.78L12.2795 15.78C12.5695 15.49 12.5695 15.01 12.2795 14.72Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="*:align-middle *:ps-4 *:py-[26px]">
+                    <td>
+                      <p>1406/03/8 7:44</p>
+                    </td>
+                    <td>
+                      <div>
+                        <p>شماره رزرو: 778899000</p>
+                      </div>
+                    </td>
+                    <td><p class="text-center">درگاه پرداخت</p></td>
+                    <td>
+                      <p class="text-center">250.00 USD</p>
+                    </td>
+                    <td>
+                      <p>400.00 USD</p>
+                    </td>
+                    <td>
+                      <p class="text-center">150.00 USD</p>
+                    </td>
+
+                    <td class="">
+                      <div class="w-24 flex justify-center items-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.4"
+                            d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048Z"
+                            fill="#F9B233"
+                          />
+                          <path
+                            d="M12.2795 14.72C11.9895 14.43 11.5095 14.43 11.2195 14.72L10.4995 15.44V11.25C10.4995 10.84 10.1595 10.5 9.74945 10.5C9.33945 10.5 8.99945 10.84 8.99945 11.25V15.44L8.27945 14.72C7.98945 14.43 7.50945 14.43 7.21945 14.72C6.92945 15.01 6.92945 15.49 7.21945 15.78L9.21945 17.78C9.22945 17.79 9.23945 17.79 9.23945 17.8C9.29945 17.86 9.37945 17.91 9.45945 17.95C9.55945 17.98 9.64945 18 9.74945 18C9.84945 18 9.93945 17.98 10.0295 17.94C10.1195 17.9 10.1995 17.85 10.2795 17.78L12.2795 15.78C12.5695 15.49 12.5695 15.01 12.2795 14.72Z"
+                            fill="#F9B233"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center gap-2">
+                <div class="relative is-rounded">
+                  <div class="select z-30 opacity-0 w-full absolute bottom-0">
+                    <select
+                      autocomplete="new-password"
+                      name=""
+                      id="selectRowInpage-all"
+                      class="w-full"
+                    >
+                      <option selected value="2">2</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div
+                    class="flex shadow-none border-0 gap-3 button is-rounded justify-between"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      class="theme-color-f"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.375 12.5625H13.6875V10.875C13.6875 10.5675 13.4325 10.3125 13.125 10.3125C12.8175 10.3125 12.5625 10.5675 12.5625 10.875V12.5625H10.875C10.5675 12.5625 10.3125 12.8175 10.3125 13.125C10.3125 13.4325 10.5675 13.6875 10.875 13.6875H12.5625V15.375C12.5625 15.6825 12.8175 15.9375 13.125 15.9375C13.4325 15.9375 13.6875 15.6825 13.6875 15.375V13.6875H15.375C15.6825 13.6875 15.9375 13.4325 15.9375 13.125C15.9375 12.8175 15.6825 12.5625 15.375 12.5625Z"
+                        fill="#767676"
+                      />
+                      <path
+                        opacity="0.4"
+                        d="M16.5 6.39V2.985C16.5 1.9275 16.02 1.5 14.8275 1.5H11.7975C10.605 1.5 10.125 1.9275 10.125 2.985V6.3825C10.125 7.4475 10.605 7.8675 11.7975 7.8675H14.8275C16.02 7.875 16.5 7.4475 16.5 6.39Z"
+                        fill="#767676"
+                      />
+                      <path
+                        d="M7.875 6.39V2.985C7.875 1.9275 7.395 1.5 6.2025 1.5H3.1725C1.98 1.5 1.5 1.9275 1.5 2.985V6.3825C1.5 7.4475 1.98 7.8675 3.1725 7.8675H6.2025C7.395 7.875 7.875 7.4475 7.875 6.39Z"
+                        fill="#767676"
+                      />
+                      <path
+                        opacity="0.4"
+                        d="M7.875 14.8275V11.7975C7.875 10.605 7.395 10.125 6.2025 10.125H3.1725C1.98 10.125 1.5 10.605 1.5 11.7975V14.8275C1.5 16.02 1.98 16.5 3.1725 16.5H6.2025C7.395 16.5 7.875 16.02 7.875 14.8275Z"
+                        fill="#767676"
+                      />
+                    </svg>
+                    <div
+                      class="flex theme-color-text--secondary items-center gap-1"
+                    >
+                      <span class="rowsCount">2</span>
+                      <p
+                        class="theme-color-text--secondary font-normal"
+                        data-i18n="showInPage"
+                      ></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center">
+                <div>
+                  <button class="prev-table ltr:rotate-180 mt-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.8223 22C18.3451 22 22.8223 17.5228 22.8223 12C22.8223 6.47715 18.3451 2 12.8223 2C7.29942 2 2.82227 6.47715 2.82227 12C2.82227 17.5228 7.29942 22 12.8223 22Z"
+                        stroke="#F9B233"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.32227 12H15.3223"
+                        stroke="#F9B233"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.3223 15L16.3223 12L13.3223 9"
+                        stroke="#F9B233"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <ul
+                  id="pagination-all"
+                  class="border pagination p-3 rounded-2xl items-center flex gap-3"
+                ></ul>
+                <div>
+                  <button class="next-table mt-2">
+                    <svg
+                      class="ltr:rotate-180"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="#424242"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.5 12H9.5"
+                        stroke="#424242"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.5 9L8.5 12L11.5 15"
+                        stroke="#424242"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script defer src="/dist/js/finance.bundle.js"></script>
+  </body>
+</html>

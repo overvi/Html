@@ -308,5 +308,13 @@
   "description": "Description",
   "dateAndTime": "Date And Time",
   "passengerDetails": "Passengers Details",
-  "flyDetails": "Fly Details"
+  "flyDetails": "Fly Details",
+  "noPrice": "Unfortunately, there is no rate available on this date!",
+  "noHotels": "Unfortunately, no results were found for the desired hotel on this date!",
+  "backToHotelList": "Back To Hotel List",
+  "finance": "finance",
+  "remaining": "Remaining",
+  "debtor": "Debtor Amount",
+  "creditor": "Creditor Amount",
+  "payWay": "Pay Way"
 }

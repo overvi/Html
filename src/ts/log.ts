@@ -1,5 +1,4 @@
 import Pagination from "./pagination";
-import { inputExchange } from "./util";
 
 Pagination("#t-all tbody", "#t-all tbody tr", 5, "-all");
 Pagination("#t-hotel tbody", "#t-hotel tbody tr", 5, "-hotel");

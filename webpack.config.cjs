@@ -18,6 +18,7 @@ module.exports = (env) => {
       tabs: "./src/ts/tabs.ts",
       filter: "./src/ts/filter-popover.ts",
       log: "./src/ts/log.ts",
+      finance: "./src/ts/finance.ts",
       darkMode: "./src/ts/darkMode.ts",
       i18n: "./src/ts/i18n.ts",
       cart: "./src/ts/cart.ts",
